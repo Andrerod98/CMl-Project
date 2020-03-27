@@ -1,0 +1,20 @@
+<cv_controls>
+    <invert>
+        <val_0>0</val_0>
+    </invert>
+    <threshold>
+        <val_0>29</val_0>
+    </threshold>
+</cv_controls>
+<difference_mode>
+    <val_0>0</val_0>
+</difference_mode>
+<PickedFile>
+    <val_0></val_0>
+</PickedFile>
+<PickedColor>
+    <val_0>4, 89, 163, 255</val_0>
+</PickedColor>
+<MultiTogg>
+    <val_0>0</val_0>
+</MultiTogg>
