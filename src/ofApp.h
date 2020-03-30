@@ -1,25 +1,18 @@
 #pragma once
 
 #include "ofMain.h"
+#include "VideoGalleryTab.h"
+#include "ImageGalleryTab.h"
+#include "PageSelector.h"
+#include "Screen.h"
+#include "ScreenSelector.h"
+#include "CameraScreen.h"
 
 class ofApp : public ofBaseApp {
 public:
 	void setup();
 	void update();
 	void draw();
-
-	void loadImages();
-	void loadVideos();
-	void setupPos();
-
-	//Draws the navigation menu
-	void drawScreenSelector();
-	//Draws the image gallery
-	void drawImages();
-	//Draws the video gallery
-	void drawVideos();
-	//Draws the page navigator
-	void drawPageNavigator();
 
 	void keyPressed(int key);
 	void keyReleased(int key);
@@ -31,24 +24,17 @@ public:
 	void dragEvent(ofDragInfo dragInfo);
 	void gotMessage(ofMessage msg);
 
-	ofTrueTypeFont title;
-	ofTrueTypeFont text;
-	string title_image, title_video;
-	bool pageSelectedImages;
-
-	vector<ofVec2f> positions;
-	ofVec2f pos;
-
-	ofDirectory dirI;
-	vector<ofImage> images;
-
-	ofDirectory dirV;
-	vector<ofVideoPlayer> videos;
-
-	int currentImage;
-	int currentVideo;
-	int currentPage;
-	int currentPageV;
-	int maxPage;
-	int maxPageV;
+	
+    VideoGalleryTab* videoGallery;
+    ImageGalleryTab* imageGallery;
+    
+    PageSelector* imageSelector;
+    PageSelector* videoSelector;
+    
+    CameraScreen* cameraScreen;
+    
+    ScreenSelector* screenSelector;
+    
+    
+    
 };
