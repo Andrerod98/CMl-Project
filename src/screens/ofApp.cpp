@@ -28,8 +28,9 @@ void ofApp::setup() {
 
     currentScreen = galleryScreen;
     liveMode =  false;
+
    
-    
+	xml = new XMLutils("metadata.xml");
 }
 
 void ofApp::update() {

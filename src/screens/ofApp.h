@@ -11,6 +11,7 @@
 #include "MetadataScreen.h"
 #include "LiveScreen.h"
 #include "Settings.h"
+#include "XMLutils.h"
 
 class ofApp : public ofBaseApp, public Observer {
     
@@ -55,5 +56,6 @@ public:
     LiveScreen* liveScreen;
     
     Header* header;
-    
+
+	XMLutils* xml;
 };
