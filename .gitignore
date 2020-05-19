@@ -1,4 +1,6 @@
 .vs/
+*.sln
+*.vcxproj*
 
 bin/
 !bin/data/
