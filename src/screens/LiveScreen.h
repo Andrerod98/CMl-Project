@@ -14,10 +14,10 @@
 
 class LiveScreen: public Screen{
     
-    Media* media;
+    MediaGUI* media;
     
 public:
-    LiveScreen(string title,int width, int height,int x, int y, Media* media);
+    LiveScreen(string title,int width, int height,int x, int y, MediaGUI* media);
     
     void update();
     void mousePressed(int x, int y, int button);

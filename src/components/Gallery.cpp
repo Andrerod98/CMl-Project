@@ -30,7 +30,7 @@ void Gallery::setSize(int w, int h){
     
     createPositions();
     
-    for(Media* media: medias){
+    for(MediaGUI* media: medias){
         media->setSize(itemWidth, itemHeight);
     }
 }
@@ -40,7 +40,7 @@ float Gallery::getNMedia(){
     return medias.size();
 }
 
-Media* Gallery::getMedias(int i) {
+MediaGUI* Gallery::getMedias(int i) {
 	return medias[i];
 }
 
@@ -64,7 +64,7 @@ void Gallery::loadVideos() {
         ofVideoPlayer* video = new ofVideoPlayer();
         video->load(diretory.getPath(i));
         video->setLoopState(OF_LOOP_NORMAL);
-        Media* media = new Media(video, diretory.getName(i));
+        MediaGUI* media = new MediaGUI(video, diretory.getName(i));
         media->setSize(itemWidth, itemHeight);
         medias.push_back(media);
     }
@@ -88,7 +88,7 @@ void Gallery::loadImages() {
         ofImage* image = new ofImage();
         image->load(diretory.getPath(i));
         
-        Media* media = new Media(image, diretory.getName(i));
+        MediaGUI* media = new MediaGUI(image, diretory.getName(i));
         media->setSize(itemWidth, itemHeight);
         medias.push_back(media);
         
@@ -119,7 +119,7 @@ void Gallery::draw(){
     
 }
 
-Media* Gallery::getSelectedMedia(){
+MediaGUI* Gallery::getSelectedMedia(){
     return medias[selectedMedia];
 }
 
@@ -176,13 +176,11 @@ void Gallery::mousePressed(int x, int y, int button) {
     
     int start = (currentPage-1) * 8;
     int end = (currentPage) * 8;
-    cout << start << "\n";
-    cout << end << "\n";
+
     if(end > medias.size())
         end =medias.size();
     for(int i = start; i < end; i++){
-        cout << i << "\n";
-        cout <<medias[i]->getPosition() << "\n";
+
         if(medias[i]->inside(x,y)){
             selectedMedia = i;
             

@@ -1,29 +1,15 @@
 #ifndef Media_h
 #define Media_h
 
+
 class Media{
+     bool isImg;
+     string filename;
     
-    ofImage* image;
-    ofVideoPlayer* video;
-    
-    bool isImg;
-    ofVec2f position;
-    
-    int width;
-    int height;
-    
-    string filename;
 public:
-    Media(ofVideoPlayer* video, string filename){
-        this->video = video;
+    Media(string filename, bool isImg){
         this->filename = filename;
-        isImg = false;
-    };
-    
-    Media(ofImage* image, string filename){
-        this->image = image;
-        this->filename = filename;
-        isImg = true;
+        this->isImg = isImg;
     };
     
     string getFileName(){
@@ -37,6 +23,32 @@ public:
     bool isImage(){
         return isImg;
     }
+};
+
+class MediaGUI : public Media{
+    
+    ofImage* image;
+    ofVideoPlayer* video;
+    
+   
+    ofVec2f position;
+    
+    int width;
+    int height;
+    
+
+    
+   
+public:
+    MediaGUI(ofVideoPlayer* video, string filename):Media(filename, false){
+        this->video = video;
+    };
+    
+    MediaGUI(ofImage* image, string filename):Media(filename, true){
+        this->image = image;
+    };
+    
+    
     
     ofVideoPlayer* getVideo(){
         return video;

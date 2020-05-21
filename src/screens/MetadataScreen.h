@@ -16,7 +16,7 @@
 
 class MetadataScreen: public Screen{
     
-    Media* media;
+    MediaGUI* media;
     
     void setup();
     void drawPlayer();
@@ -32,7 +32,7 @@ class MetadataScreen: public Screen{
     ofxDatGuiLabel* colorPat;
     ofxDatGuiLabel* audio;
 public:
-    MetadataScreen(string title,int width, int height,int x, int y, Media* media);
+    MetadataScreen(string title,int width, int height,int x, int y, MediaGUI* media);
     
     void update();
     void mousePressed(int x, int y, int button);

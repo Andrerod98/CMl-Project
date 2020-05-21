@@ -7,7 +7,7 @@
 
 #include "LiveScreen.h"
 
-LiveScreen::LiveScreen(string title,int width, int height,int x, int y, Media* media):Screen(title, width, height,x,y){
+LiveScreen::LiveScreen(string title,int width, int height,int x, int y, MediaGUI* media):Screen(title, width, height,x,y){
     this->media = media;
 }
 

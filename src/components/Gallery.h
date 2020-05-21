@@ -28,7 +28,7 @@ class Gallery : public Screen{
     int itemWidth, itemHeight, spaceBetween, selectedMedia, currentMedia;
     
     ofDirectory diretory;
-    vector<Media*> medias;
+    vector<MediaGUI*> medias;
     
     int currentPage;
 public:
@@ -44,9 +44,9 @@ public:
     
     float getNMedia();
 
-	Media* getMedias(int i);
+	MediaGUI* getMedias(int i);
     
-    Media* getSelectedMedia();
+    MediaGUI* getSelectedMedia();
     
 };
 
