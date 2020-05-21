@@ -18,6 +18,8 @@ class MediaUtils{
     
 public:
     
+    static ofImage processThumbnail(Media* media);
+    
     static float processLuminance(Media* media);
     
     static ofColor processColor(Media* media);

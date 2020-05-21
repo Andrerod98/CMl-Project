@@ -11,6 +11,18 @@
 #include <stdio.h>
 
 
+class CameraUtils{
+    
 
+         
+    static int nPeopleOnCamera();
+    static bool peopleOnCamera();
+    static bool isMotion();
+    static float handGestures();
+    static bool audioDetected();
+    static bool objectRecognized();
+    static bool colorPattern();
+    
+};
 
 #endif /* CameraUtils_h */
