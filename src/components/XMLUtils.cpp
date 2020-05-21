@@ -160,7 +160,6 @@ bool XMLutils::findMedia(string filename, bool isImage) {
 			for (int i = 0; i < nrImages; i++) {
 				name = XML.getValue("image:filename", "null", i);
 				if (name == filename) {
-					cout << "currently at media: " << name << endl;
 					XML.pushTag("image", i);
 					return true;
 				}
@@ -178,7 +177,6 @@ bool XMLutils::findMedia(string filename, bool isImage) {
 			}
 		}
 	}
-	cout << "currently at FALSE media: " << name << endl;
 	return false;
 }
 

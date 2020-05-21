@@ -43,6 +43,8 @@ public:
     void setSize(int w, int h);
     
     float getNMedia();
+
+	Media* getMedias(int i);
     
     Media* getSelectedMedia();
     

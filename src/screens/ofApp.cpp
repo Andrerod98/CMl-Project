@@ -31,6 +31,12 @@ void ofApp::setup() {
 
    
 	xml = new XMLutils("metadata.xml");
+
+	// populate xml with loaded medias
+	for (int i = 0; i < gallery->getNMedia(); i++) {
+		xml->createMedia(gallery->getMedias(i)->getFileName(), gallery->getMedias(i)->isImage());
+	}
+
 	/* xml testing... TODO: remove
 	xml->createMedia("randomImage", true);
 	xml->createMedia("novaImagem", true);

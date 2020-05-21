@@ -40,6 +40,10 @@ float Gallery::getNMedia(){
     return medias.size();
 }
 
+Media* Gallery::getMedias(int i) {
+	return medias[i];
+}
+
 void Gallery::load() {
     loadImages();
     loadVideos();
