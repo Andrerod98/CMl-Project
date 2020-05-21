@@ -38,6 +38,23 @@ void ofApp::setup() {
 	}
 
 	/* xml testing... TODO: remove
+
+	cout << "xml teste: " << xml->setMetadata("DSC09302.jpg", true, "color", "green") << endl;
+	string myints[] = { "ola", "adeus" };
+	std::list<string> fifth(myints, myints + sizeof(myints) / sizeof(string));
+	cout << "xml tag teste: " << xml->setTags("DSC09302.jpg", true, fifth) << endl;
+
+	map <string, string>meta = xml->getMetadata("DSC09302.jpg", true);
+	for ( map<string,string>::iterator i = meta.begin(); i!=meta.end(); ++i)
+		cout << "Metadata read: tag: " << i->first << " value: " << i->second << endl;
+	
+	list<string> tags = xml->getTags("DSC09302.jpg", true);
+	for (list<string>::iterator i = tags.begin(); i != tags.end(); ++i) {
+		cout << "tag: " << *i << endl;
+	}
+
+
+	
 	xml->createMedia("randomImage", true);
 	xml->createMedia("novaImagem", true);
 	xml->createMedia("novovideo", false);

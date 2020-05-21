@@ -1,7 +1,7 @@
 #include "XMLutils.h"
 #include <fstream>
 
-XMLutils::XMLutils(string filename){
+XMLutils::XMLutils(string filename) {
 
 	if (this->XML.loadFile(filename))
 		cout << "XML File: " << filename << " loaded sucefuly!" << endl;
@@ -14,11 +14,11 @@ XMLutils::XMLutils(string filename){
 			cout << "XML File: " << filename << " was not loaded!" << endl;
 	}
 
-	
+
 	if (XML.tagExists("metadata")) {
 		XML.pushTag("metadata");
 		this->nrImages = XML.getNumTags("image");
-		this->nrVideos = XML.getNumTags("video");		
+		this->nrVideos = XML.getNumTags("video");
 		cout << "Previous xml loaded with iamges: " << nrImages << " and videos: " << nrVideos << endl;
 	}
 	else {
@@ -33,18 +33,17 @@ XMLutils::XMLutils(string filename){
 }
 
 map <string, string> XMLutils::getMetadata(string mediaName, bool isImage) {
-	string name;
 	map <string, string> result;
+	string tags[7] = { "luminance", "color", "nrFaces", "edgeDistribution", "textureCaracteristics", "nrTimes", "rhythm" };
 
 	if (isImage) {
 		if (nrImages > 0) {
 			if (findMedia(mediaName, true)) {
-				result.insert(pair<string, string>("luminance", XML.getValue("luminance", "luminance")));
-				result.insert(pair<string, string>("color", XML.getValue("color", "color")));
-				result.insert(pair<string, string>("nrFaces", XML.getValue("nrFaces", "nrFaces")));
-				result.insert(pair<string, string>("edgeDistribution", XML.getValue("edgeDistribution", "edgeDistribution")));
-				result.insert(pair<string, string>("textureCaracteristics", XML.getValue("textureCaracteristics", "textureCaracteristics")));
-				result.insert(pair<string, string>("nrTimes", XML.getValue("nrTimes", "nrTimes")));
+				for (int i = 0; i < 6; i++) {
+					if (XML.tagExists(tags[i])) {
+						result.insert(pair<string, string>(tags[i], XML.getValue(tags[i], tags[i])));
+					}
+				}
 				XML.popTag();
 				return result;
 			}
@@ -53,13 +52,11 @@ map <string, string> XMLutils::getMetadata(string mediaName, bool isImage) {
 	else {
 		if (nrVideos > 0) {
 			if (findMedia(mediaName, false)) {
-				result.insert(pair<string, string>("luminance", XML.getValue("luminance", "luminance")));
-				result.insert(pair<string, string>("color", XML.getValue("color", "color")));
-				result.insert(pair<string, string>("nrFaces", XML.getValue("nrFaces", "nrFaces")));
-				result.insert(pair<string, string>("edgeDistribution", XML.getValue("edgeDistribution", "edgeDistribution")));
-				result.insert(pair<string, string>("textureCaracteristics", XML.getValue("textureCaracteristics", "textureCaracteristics")));
-				result.insert(pair<string, string>("nrTimes", XML.getValue("nrTimes", "nrTimes")));
-				result.insert(pair<string, string>("nrTimes", XML.getValue("rhythm", "rhythm")));
+				for (int i = 0; i < 7; i++) {
+					if (XML.tagExists(tags[i])) {
+						result.insert(pair<string, string>(tags[i], XML.getValue(tags[i], tags[i])));
+					}
+				}
 				XML.popTag();
 				return result;
 			}
@@ -77,7 +74,7 @@ list <string> XMLutils::getTags(string mediaName, bool isImage) {
 		int nrTags = XML.getNumTags("tag");
 
 		for (int i = 0; i < nrTags; i++) {
-			result.push_back(XML.getValue("tag", "tag"));
+			result.push_back(XML.getValue("tag", "tag", i));
 		}
 		XML.popTag(); // out of tags
 		XML.popTag(); // out of media
