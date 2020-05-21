@@ -7,12 +7,12 @@
 
 #ifndef Metadata_h
 #define Metadata_h
-
+#include "ofMain.h"
 
 
 class Metadata{
     
-    vector<string> tags;
+    vector<std::string> tags;
     float luminance;
     float edgeDistribution;
     float rhythm;
@@ -34,15 +34,15 @@ public:
              int nObject,
              ofColor color){
         
-        this.tags = tags;
-        this.luminance=luminance;
-        this.edgeDistribution=edgeDistribution;
-        this.rhythm=rhythm;
-        this.texture=texture;
-        this.audioAmplitude=audioAmplitude;
-        this.nFaces=nFaces;
-        this.nObject=nObject;
-        this.color = color;
+        this->tags = tags;
+        this->luminance=luminance;
+        this->edgeDistribution=edgeDistribution;
+        this->rhythm=rhythm;
+        this->texture=texture;
+        this->audioAmplitude=audioAmplitude;
+        this->nFaces=nFaces;
+        this->nObject=nObject;
+        this->color = color;
     };
     
     vector<string> getTags(){
@@ -62,7 +62,7 @@ public:
     };
     
     float getRhythmValue(){
-        return rythm;
+        return rhythm;
     }
     
     float getTextureValue(){
@@ -82,6 +82,6 @@ public:
     };
 
 
-}
+};
 
 #endif /* Metadata_h */

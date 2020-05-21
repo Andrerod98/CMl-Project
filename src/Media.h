@@ -5,11 +5,20 @@
 class Media{
      bool isImg;
      string filename;
+    ofImage* image;
+    ofVideoPlayer* video;
     
 public:
-    Media(string filename, bool isImg){
+    Media(string filename, ofVideoPlayer* video){
         this->filename = filename;
-        this->isImg = isImg;
+        this->isImg = false;
+        this->video = video;
+    };
+    
+    Media(string filename, ofImage* image){
+        this->filename = filename;
+        this->isImg = true;
+        this->image = image;
     };
     
     string getFileName(){
@@ -23,32 +32,6 @@ public:
     bool isImage(){
         return isImg;
     }
-};
-
-class MediaGUI : public Media{
-    
-    ofImage* image;
-    ofVideoPlayer* video;
-    
-   
-    ofVec2f position;
-    
-    int width;
-    int height;
-    
-
-    
-   
-public:
-    MediaGUI(ofVideoPlayer* video, string filename):Media(filename, false){
-        this->video = video;
-    };
-    
-    MediaGUI(ofImage* image, string filename):Media(filename, true){
-        this->image = image;
-    };
-    
-    
     
     ofVideoPlayer* getVideo(){
         return video;
@@ -56,6 +39,21 @@ public:
     
     ofImage* getImage(){
         return image;
+    };
+};
+
+class MediaGUI : public Media{
+
+    ofVec2f position;
+    
+    int width;
+    int height;
+
+public:
+    MediaGUI(ofVideoPlayer* video, string filename):Media(filename, video){
+    };
+    
+    MediaGUI(ofImage* image, string filename):Media(filename, image){
     };
     
     void setPosition(ofVec2f pos){
