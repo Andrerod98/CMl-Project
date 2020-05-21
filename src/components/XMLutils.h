@@ -11,8 +11,12 @@ class XMLutils {
 	int nrImages;
 	int nrVideos;
 
+	string xmlFileName;
+
 public: 
 	XMLutils(string filename);
+
+	void createMedia(string mediaName, bool isImage);
 
 	map <string, string> getMetadata(string mediaName, bool isImage);
 
@@ -25,6 +29,12 @@ public:
 	int getNrVideos() {
 		return nrVideos;
 	}
+
+	bool setMetadata(string mediaName, bool isImage, string tag, string value);
+
+	bool setTags(string mediaName, bool isImage, list <string> tags);
+
+	bool exists(string mediaName, bool isImage);
 
 private:
 	/*

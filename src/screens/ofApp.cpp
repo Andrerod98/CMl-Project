@@ -31,6 +31,18 @@ void ofApp::setup() {
 
    
 	xml = new XMLutils("metadata.xml");
+	/* xml testing... TODO: remove
+	xml->createMedia("randomImage", true);
+	xml->createMedia("novaImagem", true);
+	xml->createMedia("novovideo", false);
+	xml->createMedia("DSC09302", true);
+	cout << "xml teste: " << xml->setMetadata("DSC09302", true, "teste", "verificado!") << endl;
+
+	string myints[] = {  "ola", "adeus" };
+	std::list<string> fifth(myints, myints + sizeof(myints) / sizeof(string));
+	cout << "xml tag teste: " << xml->setTags("novaImagem", true, fifth) << endl;
+	*/
+	
 }
 
 void ofApp::update() {
