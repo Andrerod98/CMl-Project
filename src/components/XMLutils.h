@@ -4,6 +4,7 @@
 #define XMLutils_h
 
 #include "ofxXmlSettings.h"
+#include "Metadata.h"
 #endif /* XMLutils_hpp */
 
 class XMLutils {
@@ -18,9 +19,11 @@ public:
 
 	void createMedia(string mediaName, bool isImage);
 
-	map <string, string> getMetadata(string mediaName, bool isImage);
+	map <string, string> getMetadataMap(string mediaName, bool isImage);
 
-	list <string> getTags(string mediaName, bool isImage);
+	Metadata getMetadata(string mediaName, bool isImage);
+
+	list <string> getTagsList(string mediaName, bool isImage);
 
 	int getNrImages() {
 		return nrImages;
@@ -31,6 +34,8 @@ public:
 	}
 
 	bool setMetadata(string mediaName, bool isImage, string tag, string value);
+
+	bool setMetadata(string mediaName, bool isImage, Metadata metadata);
 
 	bool setTags(string mediaName, bool isImage, list <string> tags);
 
