@@ -36,7 +36,10 @@ public:
     
     static float processAudioAmplitude(Media* media);
     
+	static Metadata processMedia(Media* media);
 
+private:
+	static float processGabor(ofImage image);
 };
 
 
