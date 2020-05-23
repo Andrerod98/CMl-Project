@@ -7,6 +7,11 @@
 
 #include "MediaUtils.h"
 #include "ofxOpenCv.h"
+#include "ofxCv.h"
+#include "ofxCvHaarFinder.h"
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/highgui/highgui.hpp>
+
 
 ofImage MediaUtils::processThumbnail(Media* media) {
 	ofVideoPlayer video = *media->getVideo();
@@ -89,13 +94,30 @@ Metadata MediaUtils::processMedia(Media* media) {
 }
 
 float MediaUtils::processGabor(ofImage image) {
-	float result;
+	float sumGabor = 0.0f;
 
 	float sigma = 10.0f;
 	float gamma = 0.5f;
+	float lambda = 20.0f;
+	float theta = 0.0f;
 	cv::Mat kernel;
 	cv::Mat input = ofxCv::toCv(image);
 	cv::Mat output;
 	cv::Size size = cv::Size(5, 5);
+	int count = 0;
+
+	for (lambda = 20.0f; lambda <= 100.0f; lambda += 20.0f) {
+		for (theta = 0.0f; theta <= (2.0f * (float)CV_PI); theta += ((float)CV_PI / 4.0f)) {
+			kernel = cv::getGaborKernel(size, sigma, theta, lambda, gamma);
+			cv::filter2D(input, output, -1, kernel);
+			sumGabor += cv::mean(output)[0];
+			// for debug porposes
+				string path = count + "kernel.png";
+				cv::imwrite("debug/" + path, output);
+			count++;
+		}
+	}
+
+	return sumGabor / count;
 }
 
