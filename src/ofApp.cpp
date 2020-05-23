@@ -1,6 +1,4 @@
 #include "ofApp.h"
-#include <math.h>
-#include "ofxDatGui.h"
 
 void ofApp::setup() {
     ofBackground(settings::SECONDARY_COLOR);
@@ -31,11 +29,24 @@ void ofApp::setup() {
 
    
 	xml = new XMLutils("metadata.xml");
+	
+	cout << "starting algorithm" << endl;
 
+	auto start = std::chrono::high_resolution_clock::now();
 	// populate xml with loaded medias
 	for (int i = 0; i < gallery->getNMedia(); i++) {
-		xml->createMedia(gallery->getMedias(i)->getFileName(), gallery->getMedias(i)->isImage());
+		
+		if (!xml->exists(gallery->getMedias(i)->getFileName(), gallery->getMedias(i)->isImage())) {
+			xml->createMedia(gallery->getMedias(i)->getFileName(), gallery->getMedias(i)->isImage());
+			xml->setMetadata(gallery->getMedias(i)->getFileName(), gallery->getMedias(i)->isImage(), MediaUtils::processMedia(gallery->getMedias(i)));
+		}
+		
 	}
+
+	auto stop = std::chrono::high_resolution_clock::now();
+	auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
+	cout << "execution time: " << duration.count() << " miliseconds" << endl;
+
 
 	/* xml testing... TODO: remove
 

@@ -12,6 +12,8 @@
 #include "LiveScreen.h"
 #include "Settings.h"
 #include "XMLutils.h"
+#include "MediaUtils.h"
+#include <math.h>
 
 class ofApp : public ofBaseApp, public Observer {
     

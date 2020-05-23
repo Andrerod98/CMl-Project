@@ -6,11 +6,6 @@
 //
 
 #include "MediaUtils.h"
-#include "ofxOpenCv.h"
-#include "ofxCv.h"
-#include "ofxCvHaarFinder.h"
-#include <opencv2/imgproc/imgproc.hpp>
-#include <opencv2/highgui/highgui.hpp>
 
 
 ofImage MediaUtils::processThumbnail(Media* media) {
@@ -25,35 +20,35 @@ ofImage MediaUtils::processThumbnail(Media* media) {
 }
 
 float MediaUtils::processLuminance(Media* media){
-    
+	return 0.0f;
 }
 
 ofColor MediaUtils::processColor(Media* media){
-    
+	return ofColor();
 }
 
 int MediaUtils::processNFaces(Media* media){
-    
+	return 0;
 }
 
 float MediaUtils::processEdgeDistribution(Media* media){
-    
+	return 0.0f;
 }
 
 float MediaUtils::processTextures(Media* media){
-    
+	return 0.0f;
 }
 
 int MediaUtils::processNTimesObject(ofImage image,Media* media){
-    
+	return 0;
 }
 
 float MediaUtils::processRythm(Media* media){
-    
+	return 0.0f;
 }
 
 float MediaUtils::processAudioAmplitude(Media* media){
-    
+	return 0.0f;
 }
 
 Metadata MediaUtils::processMedia(Media* media) {
@@ -82,6 +77,7 @@ Metadata MediaUtils::processMedia(Media* media) {
 
 		// average luminance
 		luminance = sumLuminance / (width * height);
+		texture = processGabor(image);
 	}
 	else {
 		ofVideoPlayer video = *media->getVideo();
@@ -111,12 +107,14 @@ float MediaUtils::processGabor(ofImage image) {
 			kernel = cv::getGaborKernel(size, sigma, theta, lambda, gamma);
 			cv::filter2D(input, output, -1, kernel);
 			sumGabor += cv::mean(output)[0];
-			// for debug porposes
-				string path = count + "kernel.png";
-				cv::imwrite("debug/" + path, output);
+			
 			count++;
 		}
 	}
+
+	// for debug porposes
+	//string path = count + "-kernel.png";
+	//cv::imwrite(path, output);
 
 	return sumGabor / count;
 }
