@@ -38,13 +38,19 @@ void GalleryScreen::setup(){
     theme->font.ptr = ofxSmartFont::add(theme->font.file, theme->font.size);
     searchInput = new ofxDatGuiTextInput("Search", "Write what you want to search...");
     searchInput->setTheme(theme);
+    searchInput->setBackgroundColor(settings::MAIN_COLOR);
+    searchInput->setLabelColor(settings::FONT_COLOR);
+    searchInput->setStripeColor(settings::MAIN_COLOR);
     
     filtersFolder = new ofxDatGuiFolder("Filters", ofColor::white);
     filtersFolder->setTheme(theme);
+    filtersFolder->setBackgroundColor(settings::MAIN_COLOR);
+    filtersFolder->setLabelColor(settings::FONT_COLOR);
     vector<string> options = {"All", "Videos", "Images"};
     typeMedia = new ofxDatGuiDropdown("All",options);
     typeMedia->setTheme(theme);
-    
+    typeMedia->setBackgroundColor(settings::MAIN_COLOR);
+    typeMedia->setLabelColor(settings::FONT_COLOR);
     
 }
 
@@ -88,7 +94,7 @@ void GalleryScreen::draw(){
     int yPos =(getY() + padding*2) + 140/2 - 25;
     drawPage(currentPage);
     
-    ofSetColor(255);
+    ofSetColor(FONT_COLOR);
     filter.drawString("ALL", start  , yPos);
     
     

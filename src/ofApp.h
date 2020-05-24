@@ -20,7 +20,21 @@ class ofApp : public ofBaseApp, public Observer {
     ofxDatGuiButton* helpButton;
     ofxDatGuiToggle* darkButton;
     
+    Camera* camera;
+    
     Screen* currentScreen;
+    
+    Gallery* gallery;
+    
+    GalleryScreen* galleryScreen;
+    GalleryScreen* videoSelector;
+    
+    CameraScreen* cameraScreen;
+    MetadataScreen* metadataScreen;
+    LiveScreen* liveScreen;
+    
+    Header* header;
+
     
     void setButtons(int w, int h);
     void drawHeader();
@@ -46,16 +60,6 @@ public:
     
     void onButtonEvent(ofxDatGuiButtonEvent e);
     
-    Gallery* gallery;
     
-    GalleryScreen* galleryScreen;
-    GalleryScreen* videoSelector;
-    
-    CameraScreen* cameraScreen;
-    MetadataScreen* metadataScreen;
-    LiveScreen* liveScreen;
-    
-    Header* header;
-
 	XMLutils* xml;
 };

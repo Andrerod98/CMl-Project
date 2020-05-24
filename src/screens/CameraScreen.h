@@ -4,14 +4,11 @@
 #include <stdio.h>
 #include "Screen.h"
 #include "ofxDatGui.h"
+#include "Camera.h"
+#include "ofxOpenCv.h"
 class CameraScreen : public Screen{
     void setup();
-    //Video capture
-    ofVideoGrabber vidGrabber;
-    int camWidth;
-    int camHeight;
-    
-    ofTrueTypeFont font;
+
     
     ofxDatGuiLabel* gestures;
     ofxDatGuiLabel* people;
@@ -19,8 +16,16 @@ class CameraScreen : public Screen{
     ofxDatGuiLabel* object;
     ofxDatGuiLabel* colorPat;
     ofxDatGuiLabel* audio;
+    
+    Camera* camera;
+    
+    
+   
+    
+    
+    
 public:
-    CameraScreen(string title,int width, int height,int x, int y);
+    CameraScreen(string title,int width, int height,int x, int y,Camera* camera);
     
     void update();
     void keyPressed(int key);

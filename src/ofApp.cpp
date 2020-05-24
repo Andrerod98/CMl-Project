@@ -12,7 +12,9 @@ void ofApp::setup() {
     gallery = new Gallery("image_gallery",galleryWidth,ofGetHeight()-settings::HEADER_HEIGHT - (padding*2) - 200,60,250, 30);
     
     galleryScreen = new GalleryScreen("GALLERY", ofGetWidth(),ofGetHeight()-settings::HEADER_HEIGHT,0,settings::HEADER_HEIGHT,20,gallery);
-    cameraScreen = new CameraScreen("CAMERA",ofGetWidth(),ofGetHeight()-settings::HEADER_HEIGHT,0,settings::HEADER_HEIGHT);
+    
+    camera = new Camera();
+    cameraScreen = new CameraScreen("CAMERA",ofGetWidth(),ofGetHeight()-settings::HEADER_HEIGHT,0,settings::HEADER_HEIGHT, camera);
     
     vector<string> screens = {"GALLERY", "CAMERA"};
     
@@ -116,7 +118,7 @@ void ofApp::update(Event event) {
             break;
         case LIVE_BUTTON_PRESS:
             liveMode = true;
-            liveScreen = new LiveScreen("Live", ofGetWidth(),ofGetHeight(),0,0,gallery->getSelectedMedia());
+            liveScreen = new LiveScreen("Live", ofGetWidth(),ofGetHeight(),0,0,gallery->getSelectedMedia(),camera);
             
             
             currentScreen = liveScreen;
@@ -134,6 +136,8 @@ void ofApp::update(Event event) {
             
             
             currentScreen = metadataScreen;
+            break;
+        default:
             break;
     }
 }
