@@ -18,6 +18,8 @@ class MetadataScreen: public Screen{
     
     MediaGUI* media;
     
+    void onTextInputEvent(ofxDatGuiTextInputEvent e);
+    
     void setup();
     void drawPlayer();
     
@@ -31,6 +33,9 @@ class MetadataScreen: public Screen{
     ofxDatGuiLabel* object;
     ofxDatGuiLabel* colorPat;
     ofxDatGuiLabel* audio;
+    ofxDatGuiTextInput* tags;
+    ofxDatGuiButton* saveButton;
+    
 public:
     MetadataScreen(string title,int width, int height,int x, int y, MediaGUI* media);
     

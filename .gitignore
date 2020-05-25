@@ -2,6 +2,12 @@
 *.sln
 *.vcxproj*
 
+*.exe
+*.exp
+*.ilk
+*.lib
+*.pdb
+
 obj/
 
 #Because im using xcode instead of visual studio 2017

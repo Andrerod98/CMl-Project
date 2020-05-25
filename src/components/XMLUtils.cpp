@@ -32,7 +32,7 @@ XMLutils::XMLutils(string filename) {
 	this->xmlFileName = filename;
 }
 
-map <string, string> XMLutils::getMetadata(string mediaName, bool isImage) {
+map <string, string> XMLutils::getMetadataMap(string mediaName, bool isImage) {
 	map <string, string> result;
 	string tags[7] = { "luminance", "color", "nrFaces", "edgeDistribution", "textureCaracteristics", "nrTimes", "rhythm" };
 
@@ -66,7 +66,40 @@ map <string, string> XMLutils::getMetadata(string mediaName, bool isImage) {
 	return result;
 }
 
-list <string> XMLutils::getTags(string mediaName, bool isImage) {
+Metadata XMLutils::getMetadata(string mediaName, bool isImage) {
+	vector<std::string> tags;
+	float luminance;
+	float edgeDistribution;
+	float rhythm;
+	float texture;
+	float audioAmplitude;
+	int nFaces;
+	int nObject;
+	ofColor color;
+
+	if (findMedia(mediaName, isImage)) {
+		XML.pushTag("tags");
+		const int nrTags = XML.getNumTags("tag");
+		for (int i = 0; i < nrTags; i++)
+			tags.insert(tags.begin() + i, XML.getValue("tag", "tag", i));
+		XML.popTag(); // out of tags
+
+		luminance = (float) XML.getValue("luminance", -1.0);
+		edgeDistribution = (float)XML.getValue("edgeDistribution", -1.0);
+		rhythm = (float)XML.getValue("rhythm", -1.0);
+		texture = (float)XML.getValue("texture", -1.0);
+		audioAmplitude = (float)XML.getValue("audioAmplitude", -1.0);
+		nFaces = (int)XML.getValue("nFaces", -1);
+		nObject = (int)XML.getValue("nObject", -1);
+		color = ofColor(XML.getValue("color:red", 0), XML.getValue("color:green", 0), XML.getValue("color:blue", 0));
+
+		XML.popTag(); // out of media
+	}
+
+	return Metadata(tags, luminance, edgeDistribution, rhythm, texture, audioAmplitude, nFaces, nObject, color);
+}
+
+list <string> XMLutils::getTagsList(string mediaName, bool isImage) {
 	list <string> result;
 	
 	if (findMedia(mediaName, isImage)) {
@@ -96,6 +129,36 @@ bool XMLutils::setMetadata(string mediaName, bool isImage, string tag, string va
 		return true;
 	}
 
+	return false;
+}
+
+bool XMLutils::setMetadata(string mediaName, bool isImage, Metadata metadata) {
+	if (findMedia(mediaName, isImage)) {
+		XML.removeTag("tags"); // removes previous content
+		XML.addTag("tags");
+		XML.pushTag("tags");
+		vector<std::string> tags = metadata.getTags();
+		for (int i = 0; i < tags.size(); i++) {
+			XML.addValue("tag", tags[i]);
+		}
+		XML.popTag(); // out of tags
+
+		XML.addValue("luminance", metadata.getLuminanceValue());
+		XML.addValue("edgeDistribuion", metadata.getEdgeDistribution());
+		XML.addValue("rhythm", metadata.getRhythmValue());
+		XML.addValue("texture", metadata.getTextureValue());
+		XML.addValue("audioAmplitude", metadata.getAudioAmplitude());
+		XML.addValue("nFaces", metadata.getFacesNumber());
+		XML.addValue("nObject", metadata.getObjectNumber());
+
+		ofColor color = metadata.getColorValue();
+		XML.addValue("color:red", color.r);
+		XML.addValue("color:green", color.g);
+		XML.addValue("color:blue", color.b);
+
+		XML.popTag();
+		return true;
+	}
 	return false;
 }
 
