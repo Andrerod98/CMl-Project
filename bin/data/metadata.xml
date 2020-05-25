@@ -1,161 +1,605 @@
 <metadata>
     <image>
         <filename>DSC09302.jpg</filename>
+        <tags></tags>
+        <luminance>170.447662354</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>3.771570206</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </image>
     <image>
         <filename>DSC09305.jpg</filename>
+        <tags></tags>
+        <luminance>171.488571167</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>5.152708054</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </image>
     <image>
         <filename>DSC09307.jpg</filename>
+        <tags></tags>
+        <luminance>169.852813721</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>5.706576824</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </image>
     <image>
         <filename>DSC09310.jpg</filename>
+        <tags></tags>
+        <luminance>181.076583862</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>7.198081970</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </image>
     <image>
         <filename>DSC09311.jpg</filename>
+        <tags></tags>
+        <luminance>176.430206299</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>8.256234169</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </image>
     <image>
         <filename>DSC09315.jpg</filename>
+        <tags></tags>
+        <luminance>173.790435791</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>3.766511440</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </image>
     <image>
         <filename>DSC09316.jpg</filename>
+        <tags></tags>
+        <luminance>175.843826294</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>6.264538765</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </image>
     <image>
         <filename>DSC09318.jpg</filename>
+        <tags></tags>
+        <luminance>207.640625000</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>1.774958968</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </image>
     <image>
         <filename>DSC09320.jpg</filename>
+        <tags></tags>
+        <luminance>203.465438843</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>1.646274328</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </image>
     <image>
         <filename>DSC09322.jpg</filename>
+        <tags></tags>
+        <luminance>200.924148560</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>4.479238987</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </image>
     <image>
         <filename>DSC09324.jpg</filename>
+        <tags></tags>
+        <luminance>187.542602539</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>5.727421284</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </image>
     <image>
         <filename>DSC09326.jpg</filename>
+        <tags></tags>
+        <luminance>169.103195190</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>8.416174889</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </image>
     <image>
         <filename>DSC09327.jpg</filename>
+        <tags></tags>
+        <luminance>170.588851929</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>5.093967915</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </image>
     <image>
         <filename>DSC09329.jpg</filename>
+        <tags></tags>
+        <luminance>162.246627808</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>6.432940483</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </image>
     <image>
         <filename>DSC09330.jpg</filename>
+        <tags></tags>
+        <luminance>202.888351440</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>5.879651546</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </image>
     <image>
         <filename>DSC09334.jpg</filename>
+        <tags></tags>
+        <luminance>168.023605347</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>4.453467369</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </image>
     <image>
         <filename>DSC09336.jpg</filename>
+        <tags></tags>
+        <luminance>186.304672241</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>5.174789906</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </image>
     <image>
         <filename>DSC09337.jpg</filename>
+        <tags></tags>
+        <luminance>178.904373169</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>4.660512924</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </image>
     <image>
         <filename>DSC09341.jpg</filename>
+        <tags></tags>
+        <luminance>165.340332031</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>5.602390289</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </image>
     <image>
         <filename>DSC09343.jpg</filename>
+        <tags></tags>
+        <luminance>174.579971313</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>6.209889889</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </image>
     <image>
         <filename>DSC09344.jpg</filename>
+        <tags></tags>
+        <luminance>171.785903931</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>4.941998005</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </image>
     <image>
         <filename>DSC09347.jpg</filename>
+        <tags></tags>
+        <luminance>179.880615234</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>5.208194733</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </image>
     <video>
         <filename>fingers - Copy (2).mov</filename>
+        <tags></tags>
+        <luminance>0.000000000</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>0.000000000</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </video>
     <video>
         <filename>fingers - Copy (3).mov</filename>
+        <tags></tags>
+        <luminance>0.000000000</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>0.000000000</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </video>
     <video>
         <filename>fingers - Copy (4).mov</filename>
+        <tags></tags>
+        <luminance>0.000000000</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>0.000000000</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </video>
     <video>
         <filename>fingers - Copy (5).mov</filename>
+        <tags></tags>
+        <luminance>0.000000000</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>0.000000000</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </video>
     <video>
         <filename>fingers - Copy (6).mov</filename>
+        <tags></tags>
+        <luminance>0.000000000</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>0.000000000</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </video>
     <video>
         <filename>fingers - Copy (7).mov</filename>
+        <tags></tags>
+        <luminance>0.000000000</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>0.000000000</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </video>
     <video>
         <filename>fingers - Copy (8).mov</filename>
+        <tags></tags>
+        <luminance>0.000000000</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>0.000000000</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </video>
     <video>
         <filename>fingers - Copy.mov</filename>
+        <tags></tags>
+        <luminance>0.000000000</luminance>
+        <edgeDistribuion>0.000000000</edgeDistribuion>
+        <rhythm>0.000000000</rhythm>
+        <texture>0.000000000</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <color>
+            <red>255</red>
+        </color>
+        <color>
+            <green>255</green>
+        </color>
+        <color>
+            <blue>255</blue>
+        </color>
     </video>
     <video>
         <filename>fingers.mov</filename>
-    </video>
-    <video>
-        <filename>DSC09302.jpg</filename>
-    </video>
-    <video>
-        <filename>DSC09305.jpg</filename>
-    </video>
-    <video>
-        <filename>DSC09307.jpg</filename>
-    </video>
-    <video>
-        <filename>DSC09310.jpg</filename>
-    </video>
-    <video>
-        <filename>DSC09311.jpg</filename>
-    </video>
-    <video>
-        <filename>DSC09315.jpg</filename>
-    </video>
-    <video>
-        <filename>DSC09316.jpg</filename>
-    </video>
-    <video>
-        <filename>DSC09318.jpg</filename>
-    </video>
-    <video>
-        <filename>DSC09320.jpg</filename>
-    </video>
-    <video>
-        <filename>DSC09322.jpg</filename>
-    </video>
-    <video>
-        <filename>DSC09324.jpg</filename>
-    </video>
-    <video>
-        <filename>DSC09326.jpg</filename>
-    </video>
-    <video>
-        <filename>DSC09327.jpg</filename>
-    </video>
-    <video>
-        <filename>DSC09329.jpg</filename>
-    </video>
-    <video>
-        <filename>DSC09330.jpg</filename>
-    </video>
-    <video>
-        <filename>DSC09334.jpg</filename>
-    </video>
-    <video>
-        <filename>DSC09336.jpg</filename>
-    </video>
-    <video>
-        <filename>DSC09337.jpg</filename>
-    </video>
-    <video>
-        <filename>DSC09341.jpg</filename>
-    </video>
-    <video>
-        <filename>DSC09343.jpg</filename>
-    </video>
-    <video>
-        <filename>DSC09344.jpg</filename>
-    </video>
-    <video>
-        <filename>DSC09347.jpg</filename>
     </video>
 </metadata>

@@ -44,10 +44,33 @@ public:
         this->nObject=nObject;
         this->color = color;
     };
+
+	Metadata(float luminance,
+		float edgeDistribution,
+		float rhythm,
+		float texture,
+		float audioAmplitude,
+		int nrFaces,
+		int nrObjects,
+		ofColor color) {
+
+		this->luminance = luminance;
+		this->edgeDistribution = edgeDistribution;
+		this->rhythm = rhythm;
+		this->texture = texture;
+		this->audioAmplitude = audioAmplitude;
+		this->nFaces = nrFaces;
+		this->nObject = nrObjects;
+		this->color = color;
+	}
     
     vector<string> getTags(){
         return tags;
     };
+
+	void setTags(vector<string> tags) {
+		this->tags = tags;
+	}
     
     float getLuminanceValue(){
         return luminance;

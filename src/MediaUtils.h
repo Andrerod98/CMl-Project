@@ -11,9 +11,14 @@
 #include <stdio.h>
 #include "Metadata.h"
 #include "Media.h"
+#include "ofxOpenCv.h"
+#include "ofxCv.h"
+#include "ofxCvHaarFinder.h"
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/highgui/highgui.hpp>
 
 class MediaUtils{
-    
+	
     
     
 public:
@@ -36,7 +41,9 @@ public:
     
     static float processAudioAmplitude(Media* media);
     
+	static Metadata processMedia(Media* media);
 
+	static float processGabor(ofImage image);
 };
 
 
