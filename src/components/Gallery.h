@@ -14,6 +14,8 @@
 #include "Screen.h"
 
 #include "Media.h"
+#include "XmlManager.h"
+
 
 #pragma once
 
@@ -31,8 +33,10 @@ class Gallery : public Screen{
     vector<MediaGUI*> medias;
     
     int currentPage;
+    
+    XmlManager* xmlManager;
 public:
-    Gallery(string title,int width, int height,int x, int y, int spaceBetween);
+    Gallery(string title,int width, int height,int x, int y, int spaceBetween, XmlManager* xmlManager);
     void load();
     void drawPage(int selected);
     void draw();

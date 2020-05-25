@@ -9,7 +9,9 @@ void ofApp::setup() {
     
     int padding = 10;
     int galleryWidth = ofGetWidth()-(padding*4)-100;
-    gallery = new Gallery("image_gallery",galleryWidth,ofGetHeight()-settings::HEADER_HEIGHT - (padding*2) - 200,60,250, 30);
+        xml = new XmlManager("metadata.xml");
+    
+    gallery = new Gallery("image_gallery",galleryWidth,ofGetHeight()-settings::HEADER_HEIGHT - (padding*2) - 200,60,250, 30,xml);
     
     galleryScreen = new GalleryScreen("GALLERY", ofGetWidth(),ofGetHeight()-settings::HEADER_HEIGHT,0,settings::HEADER_HEIGHT,20,gallery);
     
@@ -32,13 +34,13 @@ void ofApp::setup() {
     liveMode =  false;
 
    
-	xml = new XMLutils("metadata.xml");
 
+/*
 	// populate xml with loaded medias
 	for (int i = 0; i < gallery->getNMedia(); i++) {
 		xml->createMedia(gallery->getMedias(i)->getFileName(), gallery->getMedias(i)->isImage());
 	}
-
+*/
 	/* xml testing... TODO: remove
 
 	cout << "xml teste: " << xml->setMetadata("DSC09302.jpg", true, "color", "green") << endl;

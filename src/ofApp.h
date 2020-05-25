@@ -11,7 +11,7 @@
 #include "MetadataScreen.h"
 #include "LiveScreen.h"
 #include "Settings.h"
-#include "XMLutils.h"
+#include "XmlManager.h"
 
 class ofApp : public ofBaseApp, public Observer {
     
@@ -61,5 +61,5 @@ public:
     void onButtonEvent(ofxDatGuiButtonEvent e);
     
     
-	XMLutils* xml;
+	XmlManager* xml;
 };

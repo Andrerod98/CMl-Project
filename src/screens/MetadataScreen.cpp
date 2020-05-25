@@ -23,46 +23,54 @@ void MetadataScreen::setup(){
     theme->init();
     
     
-    theme->font.size = 14;
+    theme->font.size = 10;
     theme->layout.height = 50;
     theme->font.ptr = ofxSmartFont::add(theme->font.file, theme->font.size);
     
-    gestures = new ofxDatGuiLabel("Luminance");
+    gestures = new ofxDatGuiLabel("Luminance:" + to_string((media->getMetadata())->getLuminanceValue()));
     
     gestures->setPosition(xInfo, yInfo);
     gestures->setTheme(theme);
     gestures->setWidth(end - xInfo, 10);
     gestures->setLabelUpperCase(false);
     
-    
-    people = new ofxDatGuiLabel("People");
+    /*
+    Tags (keywords)
+    Luminance
+    Color - based on first moment
+    Number of faces appearing in the image or video
+    Edge distribution
+    Texture characteristics (for images and only for one sample frame of the video)
+    Number of times a specific object (input as an image) appears in the video frame
+    */
+    people = new ofxDatGuiLabel("Color:");
     people->setPosition(xInfo, yInfo + 50);
     people->setTheme(theme);
     people->setWidth(end - xInfo, 60);
     people->setLabelUpperCase(false);
     
     
-    nPeople = new ofxDatGuiLabel("Nº People");
+    nPeople = new ofxDatGuiLabel("Nº Faces:" + to_string((media->getMetadata())->getFacesNumber()));
     nPeople->setPosition(xInfo, yInfo + 100);
     nPeople->setTheme(theme);
     nPeople->setWidth(end - xInfo, 110);
     nPeople->setLabelUpperCase(false);
     
     
-    object = new ofxDatGuiLabel("Object");
+    object = new ofxDatGuiLabel("Nº objects:" + to_string((media->getMetadata())->getObjectNumber()));
     object->setPosition(xInfo, yInfo + 150);
     object->setTheme(theme);
     object->setWidth(end - xInfo, 160);
     object->setLabelUpperCase(false);
     
-    colorPat = new ofxDatGuiLabel("Color pattern");
+    colorPat = new ofxDatGuiLabel("Edge Distribution:" + to_string((media->getMetadata())->getEdgeDistribution()));
     colorPat->setPosition(xInfo, yInfo +  200);
     colorPat->setTheme(theme);
     colorPat->setWidth(end - xInfo, 210);
     colorPat->setLabelUpperCase(false);
     
     
-    audio = new ofxDatGuiLabel("Audio");
+    audio = new ofxDatGuiLabel("Texture:"+ to_string((media->getMetadata())->getTextureValue()));
     audio->setPosition(xInfo, yInfo+ 250);
     audio->setTheme(theme);
     audio->setWidth(end - xInfo, 260);

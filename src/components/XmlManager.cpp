@@ -1,7 +1,7 @@
-#include "XMLutils.h"
+#include "XmlManager.h"
 #include <fstream>
 
-XMLutils::XMLutils(string filename) {
+XmlManager::XmlManager(string filename) {
 
 	if (this->XML.loadFile(filename))
 		cout << "XML File: " << filename << " loaded sucefuly!" << endl;
@@ -32,7 +32,7 @@ XMLutils::XMLutils(string filename) {
 	this->xmlFileName = filename;
 }
 
-map <string, string> XMLutils::getMetadataMap(string mediaName, bool isImage) {
+map <string, string> XmlManager::getMetadataMap(string mediaName, bool isImage) {
 	map <string, string> result;
 	string tags[7] = { "luminance", "color", "nrFaces", "edgeDistribution", "textureCaracteristics", "nrTimes", "rhythm" };
 
@@ -66,7 +66,7 @@ map <string, string> XMLutils::getMetadataMap(string mediaName, bool isImage) {
 	return result;
 }
 
-Metadata XMLutils::getMetadata(string mediaName, bool isImage) {
+Metadata* XmlManager::getMetadata(string mediaName, bool isImage) {
 	vector<std::string> tags;
 	float luminance;
 	float edgeDistribution;
@@ -76,6 +76,8 @@ Metadata XMLutils::getMetadata(string mediaName, bool isImage) {
 	int nFaces;
 	int nObject;
 	ofColor color;
+    
+    cout << "Getting metadata of " << mediaName << "\n";
 
 	if (findMedia(mediaName, isImage)) {
 		XML.pushTag("tags");
@@ -85,6 +87,7 @@ Metadata XMLutils::getMetadata(string mediaName, bool isImage) {
 		XML.popTag(); // out of tags
 
 		luminance = (float) XML.getValue("luminance", -1.0);
+        cout << "Luminance:" << luminance << "\n";
 		edgeDistribution = (float)XML.getValue("edgeDistribution", -1.0);
 		rhythm = (float)XML.getValue("rhythm", -1.0);
 		texture = (float)XML.getValue("texture", -1.0);
@@ -96,10 +99,10 @@ Metadata XMLutils::getMetadata(string mediaName, bool isImage) {
 		XML.popTag(); // out of media
 	}
 
-	return Metadata(tags, luminance, edgeDistribution, rhythm, texture, audioAmplitude, nFaces, nObject, color);
+	return new Metadata(tags, luminance, edgeDistribution, rhythm, texture, audioAmplitude, nFaces, nObject, color);
 }
 
-list <string> XMLutils::getTagsList(string mediaName, bool isImage) {
+list <string> XmlManager::getTagsList(string mediaName, bool isImage) {
 	list <string> result;
 	
 	if (findMedia(mediaName, isImage)) {
@@ -115,7 +118,7 @@ list <string> XMLutils::getTagsList(string mediaName, bool isImage) {
 	return result;
 }
 
-bool XMLutils::setMetadata(string mediaName, bool isImage, string tag, string value) {
+bool XmlManager::setMetadata(string mediaName, bool isImage, string tag, string value) {
 
 	if (findMedia(mediaName, isImage)) {
 		if (XML.getNumTags(tag) == 0) {
@@ -132,7 +135,7 @@ bool XMLutils::setMetadata(string mediaName, bool isImage, string tag, string va
 	return false;
 }
 
-bool XMLutils::setMetadata(string mediaName, bool isImage, Metadata metadata) {
+bool XmlManager::setMetadata(string mediaName, bool isImage, Metadata metadata) {
 	if (findMedia(mediaName, isImage)) {
 		XML.removeTag("tags"); // removes previous content
 		XML.addTag("tags");
@@ -162,7 +165,7 @@ bool XMLutils::setMetadata(string mediaName, bool isImage, Metadata metadata) {
 	return false;
 }
 
-bool XMLutils::setTags(string mediaName, bool isImage, list<string> tags) {
+bool XmlManager::setTags(string mediaName, bool isImage, list<string> tags) {
 	if (findMedia(mediaName, isImage)) {
 		if (XML.getNumTags("tags") == 0) {
 			XML.addTag("tags");
@@ -187,7 +190,7 @@ bool XMLutils::setTags(string mediaName, bool isImage, list<string> tags) {
 	return false;
 }
 
-bool XMLutils::exists(string filename, bool isImage) {
+bool XmlManager::exists(string filename, bool isImage) {
 	string name;
 	if (isImage) {
 		if (nrImages > 0) {
@@ -213,12 +216,15 @@ bool XMLutils::exists(string filename, bool isImage) {
 	return false;
 }
 
-bool XMLutils::findMedia(string filename, bool isImage) {
+bool XmlManager::findMedia(string filename, bool isImage) {
 	string name;
+    cout << "Finding:" << filename << isImage << "\n";
 	if (isImage) {
 		if (nrImages > 0) {
+            
 			for (int i = 0; i < nrImages; i++) {
 				name = XML.getValue("image:filename", "null", i);
+                cout << "Nome:" << name << "\n";
 				if (name == filename) {
 					XML.pushTag("image", i);
 					return true;
@@ -240,7 +246,7 @@ bool XMLutils::findMedia(string filename, bool isImage) {
 	return false;
 }
 
-void XMLutils::createMedia(string mediaName, bool isImage) {
+void XmlManager::createMedia(string mediaName, bool isImage) {
 	if (!exists(mediaName, isImage)) {
 		if (isImage) {
 			XML.addValue("image:filename", mediaName);

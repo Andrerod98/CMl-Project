@@ -10,12 +10,13 @@
 
 const int NIMAGES = 4;
 
-Gallery::Gallery(string title,int width, int height,int x, int y, int spaceBetween): Screen(title, width, height,x,y){
+Gallery::Gallery(string title,int width, int height,int x, int y, int spaceBetween, XmlManager* xmlManager): Screen(title, width, height,x,y){
     
     
     this->itemWidth = (getWidth()-3*spaceBetween)/(NIMAGES);
     this->itemHeight = (getHeight()-spaceBetween)/2;
     this->spaceBetween = spaceBetween;
+    this->xmlManager = xmlManager;
     createPositions();
     currentMedia = 0;
     selectedMedia = 0;
@@ -65,7 +66,10 @@ void Gallery::loadVideos() {
         ofVideoPlayer* video = new ofVideoPlayer();
         video->load(diretory.getPath(i));
         video->setLoopState(OF_LOOP_NORMAL);
-        MediaGUI* media = new MediaGUI(video, diretory.getName(i));
+        
+        Metadata* meta = xmlManager->getMetadata(diretory.getName(i), false);
+        
+        MediaGUI* media = new MediaGUI(video, diretory.getName(i), meta);
         media->setSize(itemWidth, itemHeight);
         medias.push_back(media);
     }
@@ -89,7 +93,9 @@ void Gallery::loadImages() {
         ofImage* image = new ofImage();
         image->load(diretory.getPath(i));
         
-        MediaGUI* media = new MediaGUI(image, diretory.getName(i));
+        Metadata* meta = xmlManager->getMetadata(diretory.getName(i), true);
+        
+        MediaGUI* media = new MediaGUI(image, diretory.getName(i), meta);
         media->setSize(itemWidth, itemHeight);
         medias.push_back(media);
         

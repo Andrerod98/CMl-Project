@@ -7,7 +7,7 @@
 #include "Metadata.h"
 #endif /* XMLutils_hpp */
 
-class XMLutils {
+class XmlManager {
 	ofxXmlSettings XML;
 	int nrImages;
 	int nrVideos;
@@ -15,13 +15,13 @@ class XMLutils {
 	string xmlFileName;
 
 public: 
-	XMLutils(string filename);
+	XmlManager(string filename);
 
 	void createMedia(string mediaName, bool isImage);
 
 	map <string, string> getMetadataMap(string mediaName, bool isImage);
 
-	Metadata getMetadata(string mediaName, bool isImage);
+	Metadata* getMetadata(string mediaName, bool isImage);
 
 	list <string> getTagsList(string mediaName, bool isImage);
 
