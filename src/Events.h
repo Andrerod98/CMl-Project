@@ -8,8 +8,16 @@ enum Event{
     LIVE_BUTTON_PRESS,
     HELP_BUTTON_PRESS,
     METADATA_BUTTON_PRESS,
-    BACK_BUTTON_PRESS
+    BACK_BUTTON_PRESS,
     
+    NONE,
+    ONE_PERSON,
+    TWO_PERSON,
+    MULTIPLE_PEOPLE,
+    MOTION,
+    SOUND
 };
+
+
 
 #endif

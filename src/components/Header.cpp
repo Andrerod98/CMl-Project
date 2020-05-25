@@ -32,13 +32,13 @@ void Header::drawTabs() {
     int i = 1;
     int a = 0;
     for (string screenTitle : screens) {
-        ofSetColor(255);
+        ofSetColor(settings::FONT_COLOR);
     
         
         title.drawString(screenTitle, (containerWidth /(screens.size()*2)) * i - (title.stringWidth(screenTitle) / 2), (containerHeight* 0.75 - title.stringHeight(screenTitle) * 0.5));
         
         if(a == currentScreen){
-            ofSetColor(255);
+            ofSetColor(settings::FONT_COLOR);
             ofDrawLine((containerWidth /(screens.size()*2)) * i - (title.stringWidth(screenTitle) / 2), (containerHeight* 0.75 - title.stringHeight(screenTitle) * 0.5) + 10, (containerWidth /(screens.size()*2)) * i - (title.stringWidth(screenTitle) / 2) + title.stringWidth(screenTitle) , (containerHeight* 0.75 - title.stringHeight(screenTitle) * 0.5) + 10);
         }
         
@@ -109,9 +109,13 @@ void Header::setFullHeader(){
     liveButton->setWidth(50, 100);
     liveButton->setLabelUpperCase(false);
     
+    
     ofColor color(0, 0, 0);
-    liveButton->setBackgroundColor(settings::SECONDARY_COLOR);
+    
     liveButton->setStripeColor(ofColor::red);
+    //liveButton->setBorder(settings::FONT_COLOR, 1);
+    liveButton->setBackgroundColor(settings::SECONDARY_COLOR);
+    liveButton->setLabelColor(ofColor::red);
     liveButton->onButtonEvent(this, &Header::liveButtonPress);
     
     configButton = new ofxDatGuiButton("Config");
@@ -120,6 +124,8 @@ void Header::setFullHeader(){
     configButton->setWidth(70, 10);
     configButton->setLabelUpperCase(false);
     configButton->onButtonEvent(this, &Header::configButtonPress);
+    configButton->setBackgroundColor(settings::SECONDARY_COLOR);
+    configButton->setLabelColor(settings::FONT_COLOR);
     
     
     helpButton = new ofxDatGuiButton("Help");
@@ -128,12 +134,16 @@ void Header::setFullHeader(){
     helpButton->setWidth(70, 10);
     helpButton->setLabelUpperCase(false);
     helpButton->onButtonEvent(this, &Header::helpButtonPress);
+    helpButton->setBackgroundColor(settings::SECONDARY_COLOR);
+    helpButton->setLabelColor(settings::FONT_COLOR);
     
     darkButton = new ofxDatGuiToggle("Dark mode");
     darkButton->setTheme(theme);
     darkButton->setPosition(getWidth()-425, 40-15);
     darkButton->setWidth(100, 10);
     darkButton->setLabelUpperCase(false);
+    darkButton->setBackgroundColor(settings::SECONDARY_COLOR);
+    darkButton->setLabelColor(settings::FONT_COLOR);
     
     isMetadata = false;
 }

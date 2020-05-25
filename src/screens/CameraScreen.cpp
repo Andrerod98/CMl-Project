@@ -7,34 +7,26 @@
 
 #include "CameraScreen.h"
 
-CameraScreen::CameraScreen(string title,int width, int height,int x, int y):Screen(title, width, height,x,y){
+CameraScreen::CameraScreen(string title,int width, int height,int x, int y, Camera* camera):Screen(title, width, height,x,y){
     
-    
+    this->camera = camera;//new CameraUtils();
     setup();
 }
 
 void CameraScreen::setup(){
-    
-    // try to grab at this size
-    camWidth = getWidth() * 0.8;
-    camHeight = getHeight()-50;
-    camWidth = 1024;
-    camHeight = 768;
-    
-    vidGrabber.setVerbose(true);
-    vidGrabber.setup(camWidth,camHeight);
-    
-    font.load("fonts/Roboto-Medium.ttf", 9);
-    
-    ofEnableAlphaBlending();
-    
+
     int xInfo = getWidth()*0.7 + 30 + 20;
     int yInfo =140;
     
     int end = getWidth() - 20;
     
+    
+
+    
     ofxDatGuiTheme* theme = new ofxDatGuiTheme();
     theme->init();
+    
+    
     
     
     theme->font.size = 14;
@@ -81,23 +73,18 @@ void CameraScreen::setup(){
     audio->setTheme(theme);
     audio->setWidth(end - xInfo, 260);
     audio->setLabelUpperCase(false);
+    
+
 
 }
 
 void CameraScreen::draw(){
     
-    // change background video alpha value based on the cursor's x-position
-    float videoAlphaValue = ofMap(ofGetAppPtr()->mouseX, 0, ofGetWidth(), 0, 255);
-    
-    // set a white fill color with the alpha generated above
-    ofSetColor(255,255,255,videoAlphaValue);
+
     
     // draw the raw video frame with the alpha value generated above
-    vidGrabber.draw(30,140, getWidth()*0.7, getHeight()-120);
-    
-    ofPixelsRef pixelsRef = vidGrabber.getPixels();
-    
-    ofSetHexColor(0xffffff);
+    camera->getVideoGrabber().draw(30,140, getWidth()*0.7, getHeight()-120);
+   
 
     gestures->draw();
     people->draw();
@@ -109,7 +96,10 @@ void CameraScreen::draw(){
 }
 
 void CameraScreen::update(){
-    vidGrabber.update();
+
+    camera->update();
+    nPeople->setLabel(std::to_string(camera->getNPeople()));
+
 }
 
 void CameraScreen::keyPressed  (int key){
@@ -121,7 +111,7 @@ void CameraScreen::keyPressed  (int key){
     // window. we are working on a fix for this...
     
     if (key == 's' || key == 'S'){
-        vidGrabber.videoSettings();
+        camera->getVideoGrabber().videoSettings();
     }
     
 }
