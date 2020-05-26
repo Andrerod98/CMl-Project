@@ -152,9 +152,12 @@ bool XMLutils::setMetadata(string mediaName, bool isImage, Metadata metadata) {
 		XML.addValue("nObject", metadata.getObjectNumber());
 
 		ofColor color = metadata.getColorValue();
-		XML.addValue("color:red", color.r);
-		XML.addValue("color:green", color.g);
-		XML.addValue("color:blue", color.b);
+		XML.addTag("color");
+		XML.pushTag("color");
+		XML.addValue("red", color.r);
+		XML.addValue("green", color.g);
+		XML.addValue("blue", color.b);
+		XML.popTag();
 
 		XML.popTag();
 		return true;
