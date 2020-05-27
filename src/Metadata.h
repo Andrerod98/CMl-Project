@@ -67,6 +67,15 @@ public:
     vector<string> getTags(){
         return tags;
     };
+    
+    string getTagsString(){
+        string fullS = "";
+        for(string s : tags){
+            fullS = fullS + s;
+        }
+        
+        return fullS;
+    }
 
 	void setTags(vector<string> tags) {
 		this->tags = tags;

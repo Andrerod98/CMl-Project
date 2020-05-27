@@ -10,13 +10,16 @@
 
 const int NIMAGES = 4;
 
-Gallery::Gallery(string title,int width, int height,int x, int y, int spaceBetween, XmlManager* xmlManager): Screen(title, width, height,x,y){
+XmlManager *XmlManager::instance = 0;
+
+Gallery::Gallery(string title,int width, int height,int x, int y, int spaceBetween, PlaylistManager* playlistManager): Screen(title, width, height,x,y){
     
     
     this->itemWidth = (getWidth()-3*spaceBetween)/(NIMAGES);
     this->itemHeight = (getHeight()-spaceBetween)/2;
     this->spaceBetween = spaceBetween;
-    this->xmlManager = xmlManager;
+    this->xmlManager = xmlManager->getInstance();
+    this->playlistManager  = playlistManager;
     createPositions();
     currentMedia = 0;
     selectedMedia = 0;
@@ -70,6 +73,11 @@ void Gallery::loadVideos() {
         Metadata* meta = xmlManager->getMetadata(diretory.getName(i), false);
         
         MediaGUI* media = new MediaGUI(video, diretory.getName(i), meta);
+        
+        for(string tag: meta->getTags()){
+            playlistManager->addToPlaylist(tag,media);
+        }
+        
         media->setSize(itemWidth, itemHeight);
         medias.push_back(media);
     }
@@ -97,6 +105,9 @@ void Gallery::loadImages() {
         
         MediaGUI* media = new MediaGUI(image, diretory.getName(i), meta);
         media->setSize(itemWidth, itemHeight);
+        for(string tag: meta->getTags()){
+            playlistManager->addToPlaylist(tag,media);
+        }
         medias.push_back(media);
         
         

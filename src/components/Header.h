@@ -17,7 +17,7 @@ class Header : public Screen, public Subject{
     ofxDatGuiButton* liveButton;
     ofxDatGuiButton* configButton;
     ofxDatGuiButton* helpButton;
-    ofxDatGuiToggle* darkButton;
+    ofxDatGuiButton* refreshMetadata;
     
     ofImage backButton;
     

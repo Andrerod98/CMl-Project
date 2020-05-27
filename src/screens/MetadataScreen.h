@@ -12,6 +12,7 @@
 #include "Screen.h"
 #include "Media.h"
 #include "ofxDatGui.h"
+#include "XmlManager.h"
 #endif /* MetadataScreen_hpp */
 
 class MetadataScreen: public Screen{
@@ -27,14 +28,20 @@ class MetadataScreen: public Screen{
     ofImage pauseButton;
     ofImage replayButton;
     
-    ofxDatGuiLabel* gestures;
-    ofxDatGuiLabel* people;
-    ofxDatGuiLabel* nPeople;
-    ofxDatGuiLabel* object;
-    ofxDatGuiLabel* colorPat;
-    ofxDatGuiLabel* audio;
+    ofxDatGuiLabel* luminance;
+    ofxDatGuiLabel* edgeDistribution;
+    ofxDatGuiLabel* rythm;
+    ofxDatGuiLabel* texture;
+    ofxDatGuiLabel* nFaces;
+    ofxDatGuiLabel* nObject;
+    ofxDatGuiLabel* colorLabel;
+    ofxDatGuiLabel* audioAmplitude;
+    ofxDatGuiLabel* tagsLabel;
+     ofRectangle* color;
     ofxDatGuiTextInput* tags;
     ofxDatGuiButton* saveButton;
+    
+    static vector<string> split(const string& str, const string& delim);
     
 public:
     MetadataScreen(string title,int width, int height,int x, int y, MediaGUI* media);

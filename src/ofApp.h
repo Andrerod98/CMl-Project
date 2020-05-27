@@ -11,7 +11,6 @@
 #include "MetadataScreen.h"
 #include "LiveScreen.h"
 #include "Settings.h"
-#include "XMLutils.h"
 #include "MediaUtils.h"
 #include <math.h>
 #include "XmlManager.h"
@@ -35,6 +34,7 @@ class ofApp : public ofBaseApp, public Observer {
     CameraScreen* cameraScreen;
     MetadataScreen* metadataScreen;
     LiveScreen* liveScreen;
+    PlaylistManager* playlistManager;
     
     Header* header;
 

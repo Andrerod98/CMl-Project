@@ -7,14 +7,45 @@ void ofApp::setup() {
     
     int padding = 10;
     int galleryWidth = ofGetWidth()-(padding*4)-100;
-        xml = new XmlManager("metadata.xml");
+    xml = xml->getInstance();
     
-    gallery = new Gallery("image_gallery",galleryWidth,ofGetHeight()-settings::HEADER_HEIGHT - (padding*2) - 200,60,250, 30,xml);
+    playlistManager = new PlaylistManager();
+    
+    gallery = new Gallery("image_gallery",galleryWidth,ofGetHeight()-settings::HEADER_HEIGHT - (padding*2) - 200,60,250, 30, playlistManager);
+    
+    cout << "starting algorithm" << endl;
+    
+    auto start = std::chrono::high_resolution_clock::now();
+    // populate xml with loaded medias
+    for (int i = 0; i < gallery->getNMedia(); i++) {
+        
+        if (!xml->exists(gallery->getMedias(i)->getFileName(), gallery->getMedias(i)->isImage())) {
+            xml->createMedia(gallery->getMedias(i)->getFileName(), gallery->getMedias(i)->isImage());
+            xml->setMetadata(gallery->getMedias(i)->getFileName(), gallery->getMedias(i)->isImage(), MediaUtils::processMedia(gallery->getMedias(i)));
+        }
+        
+    }
+    
+    auto stop = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
+    cout << "execution time: " << duration.count() << " miliseconds" << endl;
+    
+    
+    
+    
+    
+    
     
     galleryScreen = new GalleryScreen("GALLERY", ofGetWidth(),ofGetHeight()-settings::HEADER_HEIGHT,0,settings::HEADER_HEIGHT,20,gallery);
     
     camera = new Camera();
     cameraScreen = new CameraScreen("CAMERA",ofGetWidth(),ofGetHeight()-settings::HEADER_HEIGHT,0,settings::HEADER_HEIGHT, camera);
+    
+    
+    
+    liveScreen = new LiveScreen("Live", ofGetWidth(),ofGetHeight(),0,0,camera, playlistManager);
+    
+    
     
     vector<string> screens = {"GALLERY", "CAMERA"};
     
@@ -32,24 +63,8 @@ void ofApp::setup() {
     liveMode =  false;
 
    
-	xml = new XMLutils("metadata.xml");
 	
-	cout << "starting algorithm" << endl;
-
-	auto start = std::chrono::high_resolution_clock::now();
-	// populate xml with loaded medias
-	for (int i = 0; i < gallery->getNMedia(); i++) {
-		
-		if (!xml->exists(gallery->getMedias(i)->getFileName(), gallery->getMedias(i)->isImage())) {
-			xml->createMedia(gallery->getMedias(i)->getFileName(), gallery->getMedias(i)->isImage());
-			xml->setMetadata(gallery->getMedias(i)->getFileName(), gallery->getMedias(i)->isImage(), MediaUtils::processMedia(gallery->getMedias(i)));
-		}
-		
-	}
-
-	auto stop = std::chrono::high_resolution_clock::now();
-	auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
-	cout << "execution time: " << duration.count() << " miliseconds" << endl;
+	
 
 
 	/* xml testing... TODO: remove
@@ -131,8 +146,6 @@ void ofApp::update(Event event) {
             break;
         case LIVE_BUTTON_PRESS:
             liveMode = true;
-            liveScreen = new LiveScreen("Live", ofGetWidth(),ofGetHeight(),0,0,gallery->getSelectedMedia(),camera);
-            
             
             currentScreen = liveScreen;
             break;
@@ -208,12 +221,18 @@ void ofApp::windowResized(int w, int h) {
     
     cameraScreen->setWidth(w);
     cameraScreen->setHeight(h-settings::HEADER_HEIGHT);
+    cameraScreen->setup();
     
     header->setWidth(w);
     header->setHeight(settings::HEADER_HEIGHT);
     
+    
+    
     currentScreen->setWidth(w);
     currentScreen->setHeight(h - settings::HEADER_HEIGHT);
+    
+    liveScreen->setWidth(w);
+    liveScreen->setHeight(h);
     
     header->setHeader(gallery->getSelectedMedia());
 

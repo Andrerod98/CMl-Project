@@ -7,15 +7,13 @@
 #include "Camera.h"
 #include "ofxOpenCv.h"
 class CameraScreen : public Screen{
-    void setup();
+    
 
     
     ofxDatGuiLabel* gestures;
-    ofxDatGuiLabel* people;
-    ofxDatGuiLabel* nPeople;
-    ofxDatGuiLabel* object;
-    ofxDatGuiLabel* colorPat;
-    ofxDatGuiLabel* audio;
+    ofxDatGuiLabel* nPeopleWatching;
+    ofxDatGuiLabel* anywoneWatching;
+    ofxDatGuiLabel* sound;
     
     Camera* camera;
     
@@ -32,6 +30,7 @@ public:
     void mousePressed(int x, int y, int button);
     
     void draw();
+    void setup();
     
 };
 #endif

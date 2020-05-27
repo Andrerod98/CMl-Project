@@ -27,12 +27,18 @@ void MetadataScreen::setup(){
     theme->layout.height = 50;
     theme->font.ptr = ofxSmartFont::add(theme->font.file, theme->font.size);
     
-    gestures = new ofxDatGuiLabel("Luminance:" + to_string((media->getMetadata())->getLuminanceValue()));
+
+
+
+
+
+    ofxDatGuiLabel* audioAmplitude;
+    luminance = new ofxDatGuiLabel("Luminance:" + to_string((media->getMetadata())->getLuminanceValue()));
     
-    gestures->setPosition(xInfo, yInfo);
-    gestures->setTheme(theme);
-    gestures->setWidth(end - xInfo, 10);
-    gestures->setLabelUpperCase(false);
+    luminance->setPosition(xInfo, yInfo);
+    luminance->setTheme(theme);
+    luminance->setWidth(end - xInfo, 10);
+    luminance->setLabelUpperCase(false);
     
     /*
     Tags (keywords)
@@ -43,38 +49,51 @@ void MetadataScreen::setup(){
     Texture characteristics (for images and only for one sample frame of the video)
     Number of times a specific object (input as an image) appears in the video frame
     */
-    people = new ofxDatGuiLabel("Color:");
-    people->setPosition(xInfo, yInfo + 50);
-    people->setTheme(theme);
-    people->setWidth(end - xInfo, 60);
-    people->setLabelUpperCase(false);
     
     
-    nPeople = new ofxDatGuiLabel("Nº Faces:" + to_string((media->getMetadata())->getFacesNumber()));
-    nPeople->setPosition(xInfo, yInfo + 100);
-    nPeople->setTheme(theme);
-    nPeople->setWidth(end - xInfo, 110);
-    nPeople->setLabelUpperCase(false);
+    rythm = new ofxDatGuiLabel("Rythm:" + to_string((media->getMetadata())->getRhythmValue()));
+    rythm->setPosition(xInfo, yInfo + 50);
+    rythm->setTheme(theme);
+    rythm->setWidth(end - xInfo, 60);
+    rythm->setLabelUpperCase(false);
+    
+    edgeDistribution = new ofxDatGuiLabel("Edge Distribution:" + to_string((media->getMetadata())->getEdgeDistribution()));
+    edgeDistribution->setPosition(xInfo, yInfo +  200);
+    edgeDistribution->setTheme(theme);
+    edgeDistribution->setWidth(end - xInfo, 210);
+    edgeDistribution->setLabelUpperCase(false);
     
     
-    object = new ofxDatGuiLabel("Nº objects:" + to_string((media->getMetadata())->getObjectNumber()));
-    object->setPosition(xInfo, yInfo + 150);
-    object->setTheme(theme);
-    object->setWidth(end - xInfo, 160);
-    object->setLabelUpperCase(false);
-    
-    colorPat = new ofxDatGuiLabel("Edge Distribution:" + to_string((media->getMetadata())->getEdgeDistribution()));
-    colorPat->setPosition(xInfo, yInfo +  200);
-    colorPat->setTheme(theme);
-    colorPat->setWidth(end - xInfo, 210);
-    colorPat->setLabelUpperCase(false);
+    nFaces = new ofxDatGuiLabel("Nº Faces:" + to_string((media->getMetadata())->getFacesNumber()));
+    nFaces->setPosition(xInfo, yInfo + 100);
+    nFaces->setTheme(theme);
+    nFaces->setWidth(end - xInfo, 110);
+    nFaces->setLabelUpperCase(false);
     
     
-    audio = new ofxDatGuiLabel("Texture:"+ to_string((media->getMetadata())->getTextureValue()));
-    audio->setPosition(xInfo, yInfo+ 250);
-    audio->setTheme(theme);
-    audio->setWidth(end - xInfo, 260);
-    audio->setLabelUpperCase(false);
+    nObject = new ofxDatGuiLabel("Nº objects:" + to_string((media->getMetadata())->getObjectNumber()));
+    nObject->setPosition(xInfo, yInfo + 150);
+    nObject->setTheme(theme);
+    nObject->setWidth(end - xInfo, 160);
+    nObject->setLabelUpperCase(false);
+    
+    
+    
+    
+    texture = new ofxDatGuiLabel("Texture:"+ to_string((media->getMetadata())->getTextureValue()));
+    texture->setPosition(xInfo, yInfo+ 250);
+    texture->setTheme(theme);
+    texture->setWidth(end - xInfo, 260);
+    texture->setLabelUpperCase(false);
+    
+    colorLabel = new ofxDatGuiLabel("Color: ("+ to_string((media->getMetadata())->getColorValue().r)
+                                    + "," +to_string((media->getMetadata())->getColorValue().g)
+                                    + "," +to_string((media->getMetadata())->getColorValue().b) + ")");
+    colorLabel->setPosition(xInfo, yInfo+ 300);
+    colorLabel->setTheme(theme);
+    colorLabel->setWidth(end - xInfo, 260);
+    colorLabel->setLabelUpperCase(false);
+
     
     
     theme->layout.height = 60;
@@ -88,11 +107,11 @@ void MetadataScreen::setup(){
     saveButton->setStripeWidth(0);
     
     theme->layout.height = 30;
-    audio = new ofxDatGuiLabel("Tags");
-    audio->setPosition(30, getHeight() - 40);
-    audio->setTheme(theme);
-    audio->setWidth(getWidth()*0.7, 260);
-    audio->setLabelUpperCase(false);
+    tagsLabel = new ofxDatGuiLabel("Tags");
+    tagsLabel->setPosition(30, getHeight() - 40);
+    tagsLabel->setTheme(theme);
+    tagsLabel->setWidth(getWidth()*0.7, 260);
+    tagsLabel->setLabelUpperCase(false);
     
     
     
@@ -109,7 +128,9 @@ void MetadataScreen::setup(){
     
     tags->setPosition(30, getHeight() - 10);
     tags->setTheme(theme);
-   
+ 
+    tags->setText(this->media->getMetadata()->getTagsString());
+    
     
     
     
@@ -123,13 +144,53 @@ void MetadataScreen::setup(){
     replayButton.load("icons/replay.png");
     
 }
+vector<string> MetadataScreen::split(const string& str, const string& delim)
+{
+    vector<string> tokens;
+    size_t prev = 0, pos = 0;
+    do
+    {
+        pos = str.find(delim, prev);
+        if (pos == string::npos) pos = str.length();
+        string token = str.substr(prev, pos-prev);
+        if (!token.empty()) tokens.push_back(token);
+        prev = pos + delim.length();
+    }
+    while (pos < str.length() && prev < str.length());
+    return tokens;
+}
 
 void MetadataScreen::onTextInputEvent(ofxDatGuiTextInputEvent e)
 {
     // text input events carry the text of the input field //
-    cout << "From Event Object: " << e.text << endl;
-    // although you can also retrieve it from the event target //
-    cout << "From Event Target: " << e.target->getText() << endl;
+    cout << "Saving tags " << e.text << endl;
+ 
+    std::string delimiter = "#";
+    
+    size_t pos = 0;
+    std::string token;
+    std::string s = e.text;
+    
+    vector<std::string> r = {};
+    vector<std::string> l = split(s, delimiter);
+    
+    for(string a : l){
+        cout << "Token:" << a << "\n";
+        r.push_back("#"+a);
+    }
+    
+    
+    
+    
+    this->media->getMetadata()->setTags(r);
+    XmlManager *xml = xml->getInstance();
+    
+    bool sucess = xml->setTags(this->media->getFileName(), this->media->isImage(), r);
+    cout << sucess;
+    
+    
+    
+
 }
 
 void MetadataScreen::drawPlayer(){
@@ -162,18 +223,31 @@ void MetadataScreen::draw(){
         drawPlayer();
     }
    
-    gestures->draw();
+    luminance->draw();
     
-    people->draw();
+    edgeDistribution->draw();
     
-    nPeople->draw();
+    nFaces->draw();
     
-    object->draw();
+    nObject->draw();
     
-    colorPat->draw();
+    rythm->draw();
     
-    audio->draw();
+    texture->draw();
     
+    colorLabel->draw();
+    ofSetColor(media->getMetadata()->getColorValue());
+    
+    int xInfo = getWidth()*0.7 + 30 + 20;
+    int yInfo =140;
+      int end = getWidth() - 20;
+    colorLabel->setPosition(xInfo, yInfo+ 300);
+    ofDrawRectangle(end - 35, yInfo+ 315, 25, 25);
+    
+    ofSetColor(0,0,0);
+    
+    
+    tagsLabel->draw();
     tags->draw();
     
     saveButton->draw();

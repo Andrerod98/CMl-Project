@@ -32,6 +32,12 @@ XmlManager::XmlManager(string filename) {
 	this->xmlFileName = filename;
 }
 
+XmlManager* XmlManager::getInstance() {
+    if (!instance)
+        instance = new XmlManager("metadata.xml");
+    return instance;
+}
+
 map <string, string> XmlManager::getMetadataMap(string mediaName, bool isImage) {
 	map <string, string> result;
 	string tags[7] = { "luminance", "color", "nrFaces", "edgeDistribution", "textureCaracteristics", "nrTimes", "rhythm" };
@@ -76,8 +82,6 @@ Metadata* XmlManager::getMetadata(string mediaName, bool isImage) {
 	int nFaces;
 	int nObject;
 	ofColor color;
-    
-    cout << "Getting metadata of " << mediaName << "\n";
 
 	if (findMedia(mediaName, isImage)) {
 		XML.pushTag("tags");
@@ -87,7 +91,6 @@ Metadata* XmlManager::getMetadata(string mediaName, bool isImage) {
 		XML.popTag(); // out of tags
 
 		luminance = (float) XML.getValue("luminance", -1.0);
-        cout << "Luminance:" << luminance << "\n";
 		edgeDistribution = (float)XML.getValue("edgeDistribution", -1.0);
 		rhythm = (float)XML.getValue("rhythm", -1.0);
 		texture = (float)XML.getValue("texture", -1.0);
@@ -147,25 +150,29 @@ bool XmlManager::setMetadata(string mediaName, bool isImage, Metadata metadata) 
 		XML.popTag(); // out of tags
 
 		XML.addValue("luminance", metadata.getLuminanceValue());
-		XML.addValue("edgeDistribuion", metadata.getEdgeDistribution());
+		XML.addValue("edgeDistribution", metadata.getEdgeDistribution());
 		XML.addValue("rhythm", metadata.getRhythmValue());
 		XML.addValue("texture", metadata.getTextureValue());
 		XML.addValue("audioAmplitude", metadata.getAudioAmplitude());
 		XML.addValue("nFaces", metadata.getFacesNumber());
 		XML.addValue("nObject", metadata.getObjectNumber());
-
+        
+        
 		ofColor color = metadata.getColorValue();
-		XML.addValue("color:red", color.r);
-		XML.addValue("color:green", color.g);
-		XML.addValue("color:blue", color.b);
-
+        XML.addTag("color");
+        XML.pushTag("color");
+		XML.addValue("red", color.r);
+		XML.addValue("green", color.g);
+		XML.addValue("blue", color.b);
+        XML.popTag();
 		XML.popTag();
 		return true;
 	}
 	return false;
 }
 
-bool XmlManager::setTags(string mediaName, bool isImage, list<string> tags) {
+bool XmlManager::setTags(string mediaName, bool isImage, vector<string> tags) {
+    cout << mediaName;
 	if (findMedia(mediaName, isImage)) {
 		if (XML.getNumTags("tags") == 0) {
 			XML.addTag("tags");
@@ -184,7 +191,7 @@ bool XmlManager::setTags(string mediaName, bool isImage, list<string> tags) {
 			XML.popTag();
 		}
 		XML.popTag();
-		XML.save(xmlFileName);
+		XML.saveFile(xmlFileName);
 		return true;
 	}	
 	return false;
@@ -218,13 +225,10 @@ bool XmlManager::exists(string filename, bool isImage) {
 
 bool XmlManager::findMedia(string filename, bool isImage) {
 	string name;
-    cout << "Finding:" << filename << isImage << "\n";
 	if (isImage) {
-		if (nrImages > 0) {
-            
+		if (this->nrImages > 0) {
 			for (int i = 0; i < nrImages; i++) {
 				name = XML.getValue("image:filename", "null", i);
-                cout << "Nome:" << name << "\n";
 				if (name == filename) {
 					XML.pushTag("image", i);
 					return true;

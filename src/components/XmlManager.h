@@ -13,10 +13,16 @@ class XmlManager {
 	int nrVideos;
 
 	string xmlFileName;
+    
+    static XmlManager *instance;
+   
+    
+    XmlManager(string filename);
 
 public: 
-	XmlManager(string filename);
-
+	
+    static XmlManager *getInstance();
+    
 	void createMedia(string mediaName, bool isImage);
 
 	map <string, string> getMetadataMap(string mediaName, bool isImage);
@@ -26,18 +32,18 @@ public:
 	list <string> getTagsList(string mediaName, bool isImage);
 
 	int getNrImages() {
-		return nrImages;
+		return this->nrImages;
 	}
 
 	int getNrVideos() {
-		return nrVideos;
+		return this->nrVideos;
 	}
 
 	bool setMetadata(string mediaName, bool isImage, string tag, string value);
 
 	bool setMetadata(string mediaName, bool isImage, Metadata metadata);
 
-	bool setTags(string mediaName, bool isImage, list <string> tags);
+	bool setTags(string mediaName, bool isImage, vector <string> tags);
 
 	bool exists(string mediaName, bool isImage);
 
@@ -48,4 +54,5 @@ private:
 	*/
 	bool findMedia(string mediaName, bool isImage);
 };
+
 

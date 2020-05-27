@@ -15,6 +15,7 @@
 
 #include "Media.h"
 #include "XmlManager.h"
+#include "PlaylistManager.h"
 
 
 #pragma once
@@ -35,8 +36,9 @@ class Gallery : public Screen{
     int currentPage;
     
     XmlManager* xmlManager;
+    PlaylistManager* playlistManager;
 public:
-    Gallery(string title,int width, int height,int x, int y, int spaceBetween, XmlManager* xmlManager);
+    Gallery(string title,int width, int height,int x, int y, int spaceBetween, PlaylistManager* playlistManager);
     void load();
     void drawPage(int selected);
     void draw();
