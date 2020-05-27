@@ -54,6 +54,10 @@ float MediaUtils::processAudioAmplitude(Media* media){
 Metadata MediaUtils::processMedia(Media* media) {
 	float luminance = 0.0;
 	float sumLuminance = 0.0;
+	int red, green, blue;
+	red = green = blue = 0;
+	float redMean, greenMean, blueMean;
+	redMean = greenMean = blueMean = 0.0;
 
 	float edgeDistribution = 0.0;
 	float rhythm = 0.0;
@@ -71,13 +75,22 @@ Metadata MediaUtils::processMedia(Media* media) {
 		// for all pixels
 		for (int x = 0; x < width; x++) {
 			for (int y = 0; y < height; y++) {
-				sumLuminance += image.getColor(x, y).getLightness();
+				color = image.getColor(x, y);
+				red += color.r;
+				green += color.g;
+				blue += color.b;
+				sumLuminance += (0.2125*color.r + 0.7154*color.g + 0.0721*color.b);
 			}
 		}
 
 		// average luminance
 		luminance = sumLuminance / (width * height);
+		redMean = red / (width * height);
+		greenMean = green / (width * height);
+		blueMean = blue / (width * height);
 		texture = processGabor(image);
+
+		color = ofColor(redMean, greenMean, blueMean);
 	}
 	else {
 		ofVideoPlayer video = *media->getVideo();
