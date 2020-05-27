@@ -9,6 +9,7 @@
 #include "ofxDatGui.h"
 #include "Media.h"
 #include "Settings.h"
+#include "XmlManager.h"
 
 
 
@@ -25,6 +26,7 @@ class Header : public Screen, public Subject{
     void configButtonPress(ofxDatGuiButtonEvent e);
     void helpButtonPress(ofxDatGuiButtonEvent e);
     void darkButtonPress(ofxDatGuiButtonEvent e);
+	void refreshButtonPress(ofxDatGuiButtonEvent e);
     
     void drawMetadataHeader();
     void drawFullHeader();
