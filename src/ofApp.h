@@ -11,9 +11,9 @@
 #include "MetadataScreen.h"
 #include "LiveScreen.h"
 #include "Settings.h"
-#include "XMLutils.h"
 #include "MediaUtils.h"
 #include <math.h>
+#include "XmlManager.h"
 
 class ofApp : public ofBaseApp, public Observer {
     
@@ -22,7 +22,22 @@ class ofApp : public ofBaseApp, public Observer {
     ofxDatGuiButton* helpButton;
     ofxDatGuiToggle* darkButton;
     
+    Camera* camera;
+    
     Screen* currentScreen;
+    
+    Gallery* gallery;
+    
+    GalleryScreen* galleryScreen;
+    GalleryScreen* videoSelector;
+    
+    CameraScreen* cameraScreen;
+    MetadataScreen* metadataScreen;
+    LiveScreen* liveScreen;
+    PlaylistManager* playlistManager;
+    
+    Header* header;
+
     
     void setButtons(int w, int h);
     void drawHeader();
@@ -48,16 +63,6 @@ public:
     
     void onButtonEvent(ofxDatGuiButtonEvent e);
     
-    Gallery* gallery;
     
-    GalleryScreen* galleryScreen;
-    GalleryScreen* videoSelector;
-    
-    CameraScreen* cameraScreen;
-    MetadataScreen* metadataScreen;
-    LiveScreen* liveScreen;
-    
-    Header* header;
-
-	XMLutils* xml;
+	XmlManager* xml;
 };

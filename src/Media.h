@@ -1,24 +1,27 @@
 #ifndef Media_h
 #define Media_h
-
+#include "Metadata.h"
 
 class Media{
-     bool isImg;
-     string filename;
+    bool isImg;
+    string filename;
     ofImage* image;
     ofVideoPlayer* video;
+    Metadata* metadata;
     
 public:
-    Media(string filename, ofVideoPlayer* video){
+    Media(string filename, ofVideoPlayer* video, Metadata* metadata){
         this->filename = filename;
         this->isImg = false;
         this->video = video;
+        this->metadata = metadata;
     };
     
-    Media(string filename, ofImage* image){
+    Media(string filename, ofImage* image, Metadata* metadata){
         this->filename = filename;
         this->isImg = true;
         this->image = image;
+        this->metadata = metadata;
     };
     
     string getFileName(){
@@ -40,6 +43,10 @@ public:
     ofImage* getImage(){
         return image;
     };
+    
+    Metadata* getMetadata(){
+        return metadata;
+    }
 };
 
 class MediaGUI : public Media{
@@ -50,10 +57,10 @@ class MediaGUI : public Media{
     int height;
 
 public:
-    MediaGUI(ofVideoPlayer* video, string filename):Media(filename, video){
+    MediaGUI(ofVideoPlayer* video, string filename, Metadata* metadata):Media(filename, video, metadata){
     };
     
-    MediaGUI(ofImage* image, string filename):Media(filename, image){
+    MediaGUI(ofImage* image, string filename, Metadata* metadata):Media(filename, image, metadata){
     };
     
     void setPosition(ofVec2f pos){
@@ -72,6 +79,7 @@ public:
     bool inside(int x, int y){
         return position.x < x && position.x + width > x && position.y < y && position.y + height > y;
     }
+    
     
 };
 #endif /* Media_h */

@@ -32,13 +32,13 @@ void Header::drawTabs() {
     int i = 1;
     int a = 0;
     for (string screenTitle : screens) {
-        ofSetColor(255);
+        ofSetColor(settings::FONT_COLOR);
     
         
         title.drawString(screenTitle, (containerWidth /(screens.size()*2)) * i - (title.stringWidth(screenTitle) / 2), (containerHeight* 0.75 - title.stringHeight(screenTitle) * 0.5));
         
         if(a == currentScreen){
-            ofSetColor(255);
+            ofSetColor(settings::FONT_COLOR);
             ofDrawLine((containerWidth /(screens.size()*2)) * i - (title.stringWidth(screenTitle) / 2), (containerHeight* 0.75 - title.stringHeight(screenTitle) * 0.5) + 10, (containerWidth /(screens.size()*2)) * i - (title.stringWidth(screenTitle) / 2) + title.stringWidth(screenTitle) , (containerHeight* 0.75 - title.stringHeight(screenTitle) * 0.5) + 10);
         }
         
@@ -76,14 +76,14 @@ void Header::update(){
     liveButton->update();
     configButton->update();
     helpButton->update();
-    darkButton->update();
+    refreshMetadata->update();
 }
 
 void Header::drawFullHeader(){
     liveButton->draw();
     configButton->draw();
     helpButton->draw();
-    darkButton->draw();
+    refreshMetadata->draw();
     
     drawTabs();
 }
@@ -109,9 +109,13 @@ void Header::setFullHeader(){
     liveButton->setWidth(50, 100);
     liveButton->setLabelUpperCase(false);
     
+    
     ofColor color(0, 0, 0);
-    liveButton->setBackgroundColor(settings::SECONDARY_COLOR);
+    
     liveButton->setStripeColor(ofColor::red);
+    //liveButton->setBorder(settings::FONT_COLOR, 1);
+    liveButton->setBackgroundColor(settings::SECONDARY_COLOR);
+    liveButton->setLabelColor(ofColor::red);
     liveButton->onButtonEvent(this, &Header::liveButtonPress);
     
     configButton = new ofxDatGuiButton("Config");
@@ -120,6 +124,8 @@ void Header::setFullHeader(){
     configButton->setWidth(70, 10);
     configButton->setLabelUpperCase(false);
     configButton->onButtonEvent(this, &Header::configButtonPress);
+    configButton->setBackgroundColor(settings::SECONDARY_COLOR);
+    configButton->setLabelColor(settings::FONT_COLOR);
     
     
     helpButton = new ofxDatGuiButton("Help");
@@ -128,12 +134,16 @@ void Header::setFullHeader(){
     helpButton->setWidth(70, 10);
     helpButton->setLabelUpperCase(false);
     helpButton->onButtonEvent(this, &Header::helpButtonPress);
+    helpButton->setBackgroundColor(settings::SECONDARY_COLOR);
+    helpButton->setLabelColor(settings::FONT_COLOR);
     
-    darkButton = new ofxDatGuiToggle("Dark mode");
-    darkButton->setTheme(theme);
-    darkButton->setPosition(getWidth()-425, 40-15);
-    darkButton->setWidth(100, 10);
-    darkButton->setLabelUpperCase(false);
+    refreshMetadata = new ofxDatGuiButton("Refresh Metadata");
+    refreshMetadata->setTheme(theme);
+    refreshMetadata->setPosition(getWidth()-475, 40-15);
+    refreshMetadata->setWidth(150, 10);
+    refreshMetadata->setLabelUpperCase(false);
+    refreshMetadata->setBackgroundColor(settings::SECONDARY_COLOR);
+    refreshMetadata->setLabelColor(settings::FONT_COLOR);
     
     isMetadata = false;
 }
@@ -141,7 +151,7 @@ void Header::setFullHeader(){
 void Header::drawMetadataHeader(){
     liveButton->draw();
     helpButton->draw();
-    darkButton->draw();
+    refreshMetadata->draw();
     
     ofSetColor(255);
     title.drawString(this->media->getFileName(), 80, getHeight() / 2 + 5);
@@ -175,11 +185,13 @@ void Header::setMetadataHeader( Media* media){
     helpButton->setWidth(70, 10);
     helpButton->setLabelUpperCase(false);
     
-    darkButton = new ofxDatGuiToggle("Dark mode");
-    darkButton->setTheme(theme);
-    darkButton->setPosition(getWidth()-330, 40-15);
-    darkButton->setWidth(100, 10);
-    darkButton->setLabelUpperCase(false);
+    refreshMetadata = new ofxDatGuiButton("Refresh Metadata");
+    refreshMetadata->setTheme(theme);
+    refreshMetadata->setPosition(getWidth()-380, 40-15);
+    refreshMetadata->setWidth(150, 10);
+    refreshMetadata->setLabelUpperCase(false);
+    
+
     
     
     

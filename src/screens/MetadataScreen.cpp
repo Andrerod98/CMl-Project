@@ -23,121 +23,262 @@ void MetadataScreen::setup(){
     theme->init();
     
     
-    theme->font.size = 14;
+    theme->font.size = 10;
     theme->layout.height = 50;
     theme->font.ptr = ofxSmartFont::add(theme->font.file, theme->font.size);
     
-    gestures = new ofxDatGuiLabel("Luminance");
+
+
+
+
+
+    ofxDatGuiLabel* audioAmplitude;
+    luminance = new ofxDatGuiLabel("Luminance:" + to_string((media->getMetadata())->getLuminanceValue()));
     
-    gestures->setPosition(xInfo, yInfo);
-    gestures->setTheme(theme);
-    gestures->setWidth(end - xInfo, 10);
-    gestures->setLabelUpperCase(false);
+    luminance->setPosition(xInfo, yInfo);
+    luminance->setTheme(theme);
+    luminance->setWidth(end - xInfo, 10);
+    luminance->setLabelUpperCase(false);
     
-    
-    people = new ofxDatGuiLabel("People");
-    people->setPosition(xInfo, yInfo + 50);
-    people->setTheme(theme);
-    people->setWidth(end - xInfo, 60);
-    people->setLabelUpperCase(false);
-    
-    
-    nPeople = new ofxDatGuiLabel("Nº People");
-    nPeople->setPosition(xInfo, yInfo + 100);
-    nPeople->setTheme(theme);
-    nPeople->setWidth(end - xInfo, 110);
-    nPeople->setLabelUpperCase(false);
-    
-    
-    object = new ofxDatGuiLabel("Object");
-    object->setPosition(xInfo, yInfo + 150);
-    object->setTheme(theme);
-    object->setWidth(end - xInfo, 160);
-    object->setLabelUpperCase(false);
-    
-    colorPat = new ofxDatGuiLabel("Color pattern");
-    colorPat->setPosition(xInfo, yInfo +  200);
-    colorPat->setTheme(theme);
-    colorPat->setWidth(end - xInfo, 210);
-    colorPat->setLabelUpperCase(false);
+    /*
+    Tags (keywords)
+    Luminance
+    Color - based on first moment
+    Number of faces appearing in the image or video
+    Edge distribution
+    Texture characteristics (for images and only for one sample frame of the video)
+    Number of times a specific object (input as an image) appears in the video frame
+    */
     
     
-    audio = new ofxDatGuiLabel("Audio");
-    audio->setPosition(xInfo, yInfo+ 250);
-    audio->setTheme(theme);
-    audio->setWidth(end - xInfo, 260);
-    audio->setLabelUpperCase(false);
+    rythm = new ofxDatGuiLabel("Rythm:" + to_string((media->getMetadata())->getRhythmValue()));
+    rythm->setPosition(xInfo, yInfo + 50);
+    rythm->setTheme(theme);
+    rythm->setWidth(end - xInfo, 60);
+    rythm->setLabelUpperCase(false);
+    
+    edgeDistribution = new ofxDatGuiLabel("Edge Distribution:" + to_string((media->getMetadata())->getEdgeDistribution()));
+    edgeDistribution->setPosition(xInfo, yInfo +  200);
+    edgeDistribution->setTheme(theme);
+    edgeDistribution->setWidth(end - xInfo, 210);
+    edgeDistribution->setLabelUpperCase(false);
+    
+    
+    nFaces = new ofxDatGuiLabel("Nº Faces:" + to_string((media->getMetadata())->getFacesNumber()));
+    nFaces->setPosition(xInfo, yInfo + 100);
+    nFaces->setTheme(theme);
+    nFaces->setWidth(end - xInfo, 110);
+    nFaces->setLabelUpperCase(false);
+    
+    
+    nObject = new ofxDatGuiLabel("Nº objects:" + to_string((media->getMetadata())->getObjectNumber()));
+    nObject->setPosition(xInfo, yInfo + 150);
+    nObject->setTheme(theme);
+    nObject->setWidth(end - xInfo, 160);
+    nObject->setLabelUpperCase(false);
+    
+    
+    
+    
+    texture = new ofxDatGuiLabel("Texture:"+ to_string((media->getMetadata())->getTextureValue()));
+    texture->setPosition(xInfo, yInfo+ 250);
+    texture->setTheme(theme);
+    texture->setWidth(end - xInfo, 260);
+    texture->setLabelUpperCase(false);
+    
+    colorLabel = new ofxDatGuiLabel("Color: ("+ to_string((media->getMetadata())->getColorValue().r)
+                                    + "," +to_string((media->getMetadata())->getColorValue().g)
+                                    + "," +to_string((media->getMetadata())->getColorValue().b) + ")");
+    colorLabel->setPosition(xInfo, yInfo+ 300);
+    colorLabel->setTheme(theme);
+    colorLabel->setWidth(end - xInfo, 260);
+    colorLabel->setLabelUpperCase(false);
+
+    
+    
+    theme->layout.height = 60;
+    saveButton = new ofxDatGuiButton("Save");
+    saveButton->setPosition(30 + getWidth()*0.7 + 10, getHeight() - 40);
+    saveButton->setTheme(theme);
+    saveButton->setLabelUpperCase(false);
+    saveButton->setWidth(end - xInfo + 10);
+    saveButton->setBorder(ofColor::white, 1);
+    saveButton->setLabelAlignment(ofxDatGuiAlignment::CENTER);
+    saveButton->setStripeWidth(0);
+    
+    theme->layout.height = 30;
+    tagsLabel = new ofxDatGuiLabel("Tags");
+    tagsLabel->setPosition(30, getHeight() - 40);
+    tagsLabel->setTheme(theme);
+    tagsLabel->setWidth(getWidth()*0.7, 260);
+    tagsLabel->setLabelUpperCase(false);
+    
+    
+    
+    
+    theme->layout.width = getWidth()*0.7;
+    theme->layout.labelWidth = 2;
+    theme->layout.breakHeight = 5;
+   
+    theme->font.size = 12;
+  
+    theme->font.ptr = ofxSmartFont::add(theme->font.file, theme->font.size);
+    
+    tags = new ofxDatGuiTextInput("tags", "#teste");
+    
+    tags->setPosition(30, getHeight() - 10);
+    tags->setTheme(theme);
+ 
+    tags->setText(this->media->getMetadata()->getTagsString());
+    
+    
+    
+    
+   // tags->setStripe(ofColor::white, 50);
+    tags->onTextInputEvent(this, &MetadataScreen::onTextInputEvent);
+    
+    tags->setLabelUpperCase(false);
     
     playButton.load("icons/play.png");
     pauseButton.load("icons/pause.png");
     replayButton.load("icons/replay.png");
     
 }
+vector<string> MetadataScreen::split(const string& str, const string& delim)
+{
+    vector<string> tokens;
+    size_t prev = 0, pos = 0;
+    do
+    {
+        pos = str.find(delim, prev);
+        if (pos == string::npos) pos = str.length();
+        string token = str.substr(prev, pos-prev);
+        if (!token.empty()) tokens.push_back(token);
+        prev = pos + delim.length();
+    }
+    while (pos < str.length() && prev < str.length());
+    return tokens;
+}
+
+void MetadataScreen::onTextInputEvent(ofxDatGuiTextInputEvent e)
+{
+    // text input events carry the text of the input field //
+    cout << "Saving tags " << e.text << endl;
+ 
+    std::string delimiter = "#";
+    
+    size_t pos = 0;
+    std::string token;
+    std::string s = e.text;
+    
+    vector<std::string> r = {};
+    vector<std::string> l = split(s, delimiter);
+    
+    for(string a : l){
+        cout << "Token:" << a << "\n";
+        r.push_back("#"+a);
+    }
+    
+    
+    
+    
+    this->media->getMetadata()->setTags(r);
+    XmlManager *xml = xml->getInstance();
+    
+    bool sucess = xml->setTags(this->media->getFileName(), this->media->isImage(), r);
+    cout << sucess;
+    
+    
+    
+
+}
 
 void MetadataScreen::drawPlayer(){
     ofColor TEST_COLOR(44,44,44);
     ofSetColor(TEST_COLOR);
     ofFill();
-    ofDrawRectangle(30,140 + getHeight()-120 - 50, getWidth()*0.7, 50);
+    ofDrawRectangle(30,140 + getHeight()-120 - 50 - 70, getWidth()*0.7, 50);
     
-    replayButton.draw(80,140 + getHeight()-120 - 50 + 25 - 15, 30, 30);
+    replayButton.draw(80,140 + getHeight()-120 - 50 + 25 - 15 - 70, 30, 30);
     
     if((media->getVideo())->isPaused()){
-        playButton.draw(40,140 + getHeight()-120 - 50 + 25 - 15, 30, 30);
+        playButton.draw(40,140 + getHeight()-120 - 50 + 25 - 15 - 70, 30, 30);
     }else{
-        pauseButton.draw(40,140 + getHeight()-120 - 50 + 25 - 15, 30,30);
+        pauseButton.draw(40,140 + getHeight()-120 - 50 + 25 - 15 - 70, 30,30);
     }
 }
 
 void MetadataScreen::draw(){
-    ofSetColor(0);
-    ofFill();
-    ofDrawRectangle(30,140, getWidth()*0.7, getHeight()-120);
+    
+    
     ofSetColor(255);
     if(media->isImage()){
-        (media->getImage())->draw(30,140, getWidth()*0.7, getHeight()-120);
+        (media->getImage())->draw(30,140, getWidth()*0.7, getHeight()-120 - 70);
         
         
     }else if(media->isVideo()){
         ofSetHexColor(0xFFFFFF);
-        (media->getVideo())->draw(30,140, getWidth()*0.7, getHeight()-120 - 50);
+        (media->getVideo())->draw(30,140, getWidth()*0.7, getHeight()-120 - 50 - 50);
         
         drawPlayer();
     }
    
-    gestures->draw();
+    luminance->draw();
     
-    people->draw();
+    edgeDistribution->draw();
     
-    nPeople->draw();
+    nFaces->draw();
     
-    object->draw();
+    nObject->draw();
     
-    colorPat->draw();
+    rythm->draw();
     
-    audio->draw();
+    texture->draw();
+    
+    colorLabel->draw();
+    ofSetColor(media->getMetadata()->getColorValue());
+    
+    int xInfo = getWidth()*0.7 + 30 + 20;
+    int yInfo =140;
+      int end = getWidth() - 20;
+    colorLabel->setPosition(xInfo, yInfo+ 300);
+    ofDrawRectangle(end - 35, yInfo+ 315, 25, 25);
+    
+    ofSetColor(0,0,0);
+    
+    
+    tagsLabel->draw();
+    tags->draw();
+    
+    saveButton->draw();
     
 }
 
 void MetadataScreen::update(){
+    saveButton->update();
+    tags->update();
     if(media->isVideo()){
         (media->getVideo())->update();
     }
+    
+    
 }
 
 void MetadataScreen::mousePressed(int x, int y, int button){
     int playButtonX = 40;
-    int playButtonY = 140 + getHeight()-120 - 50 + 25 - 15;
-    
-    
-    //Play and pause
-    if (x >= playButtonX && x <= playButtonX + 30 && y >= playButtonY && y <= playButtonY+30) {
-        if((media->getVideo())->isPaused()){
-            (media->getVideo())->play();
-        }else{
-            (media->getVideo())->setPaused(true);
+    int playButtonY = 140 + getHeight()-120 - 50 + 25 - 15 - 70;
+  
+    if(media->isVideo()){
+        //Play and pause
+        if (x >= playButtonX && x <= playButtonX + 30 && y >= playButtonY && y <= playButtonY+30) {
+            if((media->getVideo())->isPaused()){
+                (media->getVideo())->play();
+            }else{
+                (media->getVideo())->setPaused(true);
+            }
+        }else if (x >= playButtonX + 40 && x <= playButtonX  + 40 + 30 && y >= playButtonY && y <= playButtonY+30){
+            (media->getVideo())->stop();
         }
-    }else if (x >= playButtonX + 40 && x <= playButtonX  + 40 + 30 && y >= playButtonY && y <= playButtonY+30){
-        (media->getVideo())->stop();
     }
+    
 }
