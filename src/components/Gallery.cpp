@@ -23,6 +23,14 @@ Gallery::Gallery(string title,int width, int height,int x, int y, int spaceBetwe
     createPositions();
     currentMedia = 0;
     selectedMedia = 0;
+    mediaType = "0";
+    maxLuminance = 1000;
+    maxEdge= 1000;
+    maxNFaces= 1000;
+    maxNObject= 1000;
+    maxTexture= 1000;
+    maxRythm= 1000;
+    ofColor color=ofColor::black;
     
     load();
 }
@@ -47,6 +55,103 @@ float Gallery::getNMedia(){
 
 MediaGUI* Gallery::getMedias(int i) {
 	return medias[i];
+}
+
+
+bool Gallery::meetFilter(MediaGUI* m){
+    return m->getMetadata()->getLuminanceValue() < maxLuminance &&
+    m->getMetadata()->getEdgeDistribution() < maxEdge &&
+    m->getMetadata()->getFacesNumber() < maxNFaces &&
+    m->getMetadata()->getObjectNumber() < maxNObject &&
+    m->getMetadata()->getTextureValue() < maxTexture &&
+    m->getMetadata()->getRhythmValue() < maxRythm;
+    //m->getMetadata()->getColorValue() == color;
+}
+
+void Gallery::filter(){
+    createPositions();
+    currentMedia = 0;
+    selectedMedia = 0;
+    
+    medias.clear();
+    for(MediaGUI* m : totalMedias){
+        
+        if(mediaType == "0"){
+            if(meetFilter(m))
+                medias.push_back(m);
+            
+        }else if(mediaType == "1"){
+            if(m->isVideo()){
+                if(meetFilter(m))
+                    medias.push_back(m);
+            }
+        }else if(mediaType == "2"){
+            if(m->isImage()){
+                if(meetFilter(m))
+                    medias.push_back(m);
+            }
+        }
+    }
+}
+
+void Gallery::search(string filename){
+    createPositions();
+    currentMedia = 0;
+    selectedMedia = 0;
+    
+    medias.clear();
+    for(MediaGUI* m : totalMedias){
+        
+        if(m->getFileName().rfind(filename, 0) == 0){
+            if(mediaType == "0"){
+                medias.push_back(m);
+                
+            }else if(mediaType == "1"){
+                if(m->isVideo()){
+                    medias.push_back(m);
+                }
+            }else if(mediaType == "2"){
+                if(m->isImage()){
+                    medias.push_back(m);
+                }
+            }
+        }
+    }
+}
+
+void Gallery::filterByMetadata(string label, float value){
+
+    if(label == "Max Luminance"){
+        maxLuminance = value;
+        }
+        
+        if(label == "Max Edge distribution"){
+            maxEdge = value;
+        }
+        
+        if(label == "Max NFaces"){
+            maxNFaces = value;
+        }
+    
+        if(label == "Max NObject"){
+            maxNObject = value;
+        }
+        
+        if(label == "Max Rythm"){
+            maxRythm = value;
+        }
+        
+        if(label == "Max Texture"){
+            maxTexture = value;
+        }
+        
+    
+
+}
+
+void Gallery::filterByType(string type){
+    mediaType = type;
+    filter();
 }
 
 void Gallery::load() {
@@ -80,6 +185,7 @@ void Gallery::loadVideos() {
         
         media->setSize(itemWidth, itemHeight);
         medias.push_back(media);
+        totalMedias.push_back(media);
     }
     
     
@@ -109,7 +215,7 @@ void Gallery::loadImages() {
             playlistManager->addToPlaylist(tag,media);
         }
         medias.push_back(media);
-        
+        totalMedias.push_back(media);
         
     }
     

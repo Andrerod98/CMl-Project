@@ -194,11 +194,12 @@ void MetadataScreen::onTextInputEvent(ofxDatGuiTextInputEvent e)
 }
 
 void MetadataScreen::drawPlayer(){
-    ofColor TEST_COLOR(44,44,44);
+    ofColor TEST_COLOR(0,0,0, 100);
     ofSetColor(TEST_COLOR);
     ofFill();
     ofDrawRectangle(30,140 + getHeight()-120 - 50 - 70, getWidth()*0.7, 50);
-    
+    ofSetColor(ofColor::white);
+    ofFill();
     replayButton.draw(80,140 + getHeight()-120 - 50 + 25 - 15 - 70, 30, 30);
     
     if((media->getVideo())->isPaused()){
@@ -211,17 +212,7 @@ void MetadataScreen::drawPlayer(){
 void MetadataScreen::draw(){
     
     
-    ofSetColor(255);
-    if(media->isImage()){
-        (media->getImage())->draw(30,140, getWidth()*0.7, getHeight()-120 - 70);
-        
-        
-    }else if(media->isVideo()){
-        ofSetHexColor(0xFFFFFF);
-        (media->getVideo())->draw(30,140, getWidth()*0.7, getHeight()-120 - 50 - 50);
-        
-        drawPlayer();
-    }
+    
    
     luminance->draw();
     
@@ -251,6 +242,18 @@ void MetadataScreen::draw(){
     tags->draw();
     
     saveButton->draw();
+    
+    ofSetColor(255);
+    if(media->isImage()){
+        (media->getImage())->draw(30,140, getWidth()*0.7, getHeight()-120 - 70);
+        
+        
+    }else if(media->isVideo()){
+        ofSetHexColor(0xFFFFFF);
+        (media->getVideo())->draw(30,140, getWidth()*0.7, getHeight()-120 - 50 - 50-20);
+        
+        drawPlayer();
+    }
     
 }
 

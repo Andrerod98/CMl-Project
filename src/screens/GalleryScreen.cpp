@@ -41,17 +41,84 @@ void GalleryScreen::setup(){
     searchInput->setBackgroundColor(settings::MAIN_COLOR);
     searchInput->setLabelColor(settings::FONT_COLOR);
     searchInput->setStripeColor(settings::MAIN_COLOR);
+    searchInput->onTextInputEvent(this, &GalleryScreen::onTextInputEvent);
     
+    theme->layout.labelWidth = 200;
+    theme->layout.width = 200;
     filtersFolder = new ofxDatGuiFolder("Filters", ofColor::white);
     filtersFolder->setTheme(theme);
     filtersFolder->setBackgroundColor(settings::MAIN_COLOR);
     filtersFolder->setLabelColor(settings::FONT_COLOR);
+    filtersFolder->setWidth(200,200);
+    ofxDatGuiSlider* maxLuminance = filtersFolder->addSlider("Max Luminance", 0, 200);
+
+    ofxDatGuiSlider* maxEdge= filtersFolder->addSlider("Max Edge distribution", 0, 200);
+    ofxDatGuiSlider* maxNFaces=filtersFolder->addSlider("Max NFaces", 0, 200);
+    ofxDatGuiSlider* maxNObject=filtersFolder->addSlider("Max NObject", 0, 200);
+    ofxDatGuiSlider* maxRythm =filtersFolder->addSlider("Max Rythm", 0, 200);
+    ofxDatGuiSlider* maxTexture=filtersFolder->addSlider("Max Texture", 0, 200);
+    ofxDatGuiColorPicker* color= filtersFolder->addColorPicker("Color:");
+    filtersFolder->addButton("Apply");
+    filtersFolder->onSliderEvent(this, &GalleryScreen::onSliderEvent);
+    filtersFolder->onColorPickerEvent(this, &GalleryScreen::onColorPickerEvent);
+    filtersFolder->onButtonEvent(this, &GalleryScreen::onButtonEvent);
+    
     vector<string> options = {"All", "Videos", "Images"};
     typeMedia = new ofxDatGuiDropdown("All",options);
     typeMedia->setTheme(theme);
     typeMedia->setBackgroundColor(settings::MAIN_COLOR);
     typeMedia->setLabelColor(settings::FONT_COLOR);
+    typeMedia->onDropdownEvent(this, &GalleryScreen::onDropdownEvent);
     
+    
+}
+
+void GalleryScreen::onTextInputEvent(ofxDatGuiTextInputEvent e)
+{
+    // text input events carry the text of the input field //
+    cout << "From Event Object: " << e.text << endl;
+    // although you can also retrieve it from the event target //
+    cout << "From Event Target: " << e.target->getText() << endl;
+    this->screen->search(e.text);
+    currentPage = 1;
+    this->nPages = ceil(screen->getNMedia() / 8);
+
+}
+
+
+void GalleryScreen::onButtonEvent(ofxDatGuiButtonEvent e)
+{
+    cout << e.target->getName();
+    this->screen->filter();
+    currentPage = 1;
+    this->nPages = ceil(screen->getNMedia() / 8);
+    filtersFolder->collapse();
+    searchInput->setText("Write what you want to search...");
+    
+}
+
+void GalleryScreen::onSliderEvent(ofxDatGuiSliderEvent e)
+{
+    cout << e.target->getName();
+    this->screen->filterByMetadata(e.target->getName(), e.value);
+
+
+}
+
+void GalleryScreen::onColorPickerEvent(ofxDatGuiColorPickerEvent e)
+{
+    //cout <<to_string(e.color);
+  
+    
+}
+
+void GalleryScreen::onDropdownEvent(ofxDatGuiDropdownEvent e)
+{
+    cout <<to_string(e.child);
+    screen->filterByType(to_string(e.child));
+    currentPage = 1;
+    this->nPages = ceil(screen->getNMedia() / 8);
+ 
 }
 
 void GalleryScreen::nextPage(){
@@ -95,7 +162,15 @@ void GalleryScreen::draw(){
     drawPage(currentPage);
     
     ofSetColor(FONT_COLOR);
-    filter.drawString("ALL", start  , yPos);
+    string filterText = "";
+    if(this->screen->getMediaType() == "0")
+        filterText = "ALL";
+    else if(this->screen->getMediaType() == "1")
+        filterText = "VIDEOS";
+    else if(this->screen->getMediaType() == "2")
+        filterText = "IMAGES";
+    
+    filter.drawString(filterText, start  , yPos);
     
     
     searchInput->setPosition(start + 20 + 70, yPos - 20);
@@ -103,7 +178,7 @@ void GalleryScreen::draw(){
     
   
     filtersFolder->setPosition(start + 20 + 70, yPos + 20);
-    filtersFolder->setWidth((end - 100)-(start + 20 + 70)- 20, 40);
+    filtersFolder->setWidth((end - 100)-(start + 20 + 70)- 20, 200);
     filtersFolder->draw();
     
     
@@ -121,6 +196,25 @@ void GalleryScreen::update(){
     searchInput->update();
     filtersFolder->update();
     typeMedia->update();
+}
+void GalleryScreen::keyPressed(int key) {
+    if (key == OF_KEY_RIGHT) {
+        nextPage();
+    } else if (key == OF_KEY_LEFT) {
+        previousPage();
+    } else if (key == 'a') {
+        screen->filterByType("0");
+        currentPage = 1;
+        this->nPages = ceil(screen->getNMedia() / 8);
+    } else if (key == 'v') {
+        screen->filterByType("1");
+        currentPage = 1;
+        this->nPages = ceil(screen->getNMedia() / 8);
+    } else if (key == 'i') {
+        screen->filterByType("2");
+        currentPage = 1;
+        this->nPages = ceil(screen->getNMedia() / 8);
+    }
 }
 
 void GalleryScreen::mousePressed(int x, int y, int button) {

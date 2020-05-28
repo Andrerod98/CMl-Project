@@ -238,7 +238,24 @@ void Header::notifyObservers(Event event) {
         observer->update(event);
     }
 }
+void Header::keyPressed(int key) {
+    if (key == 'g') {
+        notifyObservers(Event::GALLERY_TAB_CHANGE);
+        currentScreen = 0;
+    }else if(key == 'c') {
+        currentScreen = 1;
+        notifyObservers(Event::CAMERA_TAB_CHANGE);
+    }else if(key == 'l') {
+    
+        notifyObservers(Event::LIVE_BUTTON_PRESS);
+    }else if(key == 'm') {
 
+        notifyObservers(Event::METADATA_BUTTON_PRESS);
+    }else if(key == 'h') {
+
+        notifyObservers(Event::HELP_BUTTON_PRESS);
+    }
+}
 //TODO
 void Header::mousePressed(int x, int y, int button) {
     

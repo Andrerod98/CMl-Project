@@ -2,7 +2,8 @@
 
 void ofApp::setup() {
     ofBackground(settings::SECONDARY_COLOR);
-    
+    shortcut.load("fonts/Roboto-Medium.ttf", 26);
+
     ofSetVerticalSync(true);
     
     int padding = 10;
@@ -62,7 +63,6 @@ void ofApp::setup() {
     currentScreen = galleryScreen;
     liveMode =  false;
 
-   
 	
 	
 
@@ -115,6 +115,23 @@ void ofApp::drawHelp(){
     ofFill();
     ofDrawRectangle(ofGetWidth()/2 - (ofGetWidth()*0.5)/2,80 + 20, ofGetWidth()*0.5, ofGetHeight() * 0.8);
     
+    ofxDatGuiTheme* theme = new ofxDatGuiTheme();
+    theme->init();
+    
+    
+    theme->font.size = 10;
+    theme->layout.height = 50;
+    theme->font.ptr = ofxSmartFont::add(theme->font.file, theme->font.size);
+    
+    shortcut.drawString("Shortchut", ofGetWidth()/2 - (ofGetWidth()*0.5)/2 + 10,80 + 20 );
+
+    ofxDatGuiLabel*  sh1 = new ofxDatGuiLabel("Luminance:");
+    
+    sh1->setPosition(ofGetWidth()/2 - (ofGetWidth()*0.5)/2 + 10,80 + 20 + 10 + 50);
+    sh1->setTheme(theme);
+    sh1->setWidth(ofGetWidth()*0.5 - 30, 10);
+    sh1->setLabelUpperCase(false);
+    sh1->draw();
 }
 
 void ofApp::draw() {
@@ -175,7 +192,15 @@ void ofApp::update(Event event) {
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key) {
     
+    this->galleryScreen->keyPressed(key);
+    this->header->keyPressed(key);
     
+    if(liveMode){
+        if(key == 'b'){
+            currentScreen = galleryScreen;
+            liveMode = false;
+        }
+    }
 }
 
 //--------------------------------------------------------------

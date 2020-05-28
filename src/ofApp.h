@@ -21,6 +21,7 @@ class ofApp : public ofBaseApp, public Observer {
     ofxDatGuiButton* configButton;
     ofxDatGuiButton* helpButton;
     ofxDatGuiToggle* darkButton;
+    ofTrueTypeFont shortcut;
     
     Camera* camera;
     

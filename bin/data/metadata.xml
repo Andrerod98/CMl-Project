@@ -1,9 +1,7 @@
 <metadata>
     <image>
         <filename>DSC09302.jpg</filename>
-        <tags>
-            <tag>#none</tag>
-        </tags>
+        <tags />
         <luminance>169.592895508</luminance>
         <edgeDistribution>0.000000000</edgeDistribution>
         <rhythm>0.000000000</rhythm>
@@ -19,6 +17,7 @@
     </image>
     <image>
         <filename>DSC09305.jpg</filename>
+        <tags />
         <luminance>170.638488770</luminance>
         <edgeDistribution>0.000000000</edgeDistribution>
         <rhythm>0.000000000</rhythm>
@@ -487,7 +486,7 @@
 <image>
     <filename>DSC09302.jpg</filename>
     <tags>
-        <tag>#TESTE</tag>
+        <tag>#ONE</tag>
     </tags>
     <luminance>169.592895508</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
@@ -504,7 +503,7 @@
 </image>
 <image>
     <filename>DSC09305.jpg</filename>
-    <tags></tags>
+    <tags />
     <luminance>170.638488770</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -520,7 +519,7 @@
 </image>
 <image>
     <filename>DSC09307.jpg</filename>
-    <tags></tags>
+    <tags />
     <luminance>169.014465332</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -536,7 +535,7 @@
 </image>
 <image>
     <filename>DSC09310.jpg</filename>
-    <tags></tags>
+    <tags />
     <luminance>180.227020264</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -552,7 +551,7 @@
 </image>
 <image>
     <filename>DSC09311.jpg</filename>
-    <tags></tags>
+    <tags />
     <luminance>175.584411621</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -568,7 +567,7 @@
 </image>
 <image>
     <filename>DSC09315.jpg</filename>
-    <tags></tags>
+    <tags />
     <luminance>172.937774658</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -584,7 +583,7 @@
 </image>
 <image>
     <filename>DSC09316.jpg</filename>
-    <tags></tags>
+    <tags />
     <luminance>174.997192383</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -600,7 +599,7 @@
 </image>
 <image>
     <filename>DSC09318.jpg</filename>
-    <tags></tags>
+    <tags />
     <luminance>206.730438232</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -616,7 +615,7 @@
 </image>
 <image>
     <filename>DSC09320.jpg</filename>
-    <tags></tags>
+    <tags />
     <luminance>202.406021118</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -632,7 +631,7 @@
 </image>
 <image>
     <filename>DSC09322.jpg</filename>
-    <tags></tags>
+    <tags />
     <luminance>200.074783325</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -648,7 +647,7 @@
 </image>
 <image>
     <filename>DSC09324.jpg</filename>
-    <tags></tags>
+    <tags />
     <luminance>186.697540283</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -664,7 +663,7 @@
 </image>
 <image>
     <filename>DSC09326.jpg</filename>
-    <tags></tags>
+    <tags />
     <luminance>168.257507324</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -680,7 +679,7 @@
 </image>
 <image>
     <filename>DSC09327.jpg</filename>
-    <tags></tags>
+    <tags />
     <luminance>169.729827881</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -696,7 +695,7 @@
 </image>
 <image>
     <filename>DSC09329.jpg</filename>
-    <tags></tags>
+    <tags />
     <luminance>161.407150269</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -712,7 +711,7 @@
 </image>
 <image>
     <filename>DSC09330.jpg</filename>
-    <tags></tags>
+    <tags />
     <luminance>202.044265747</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -728,7 +727,7 @@
 </image>
 <image>
     <filename>DSC09334.jpg</filename>
-    <tags></tags>
+    <tags />
     <luminance>167.156539917</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -744,7 +743,7 @@
 </image>
 <image>
     <filename>DSC09336.jpg</filename>
-    <tags></tags>
+    <tags />
     <luminance>185.456115723</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -760,7 +759,7 @@
 </image>
 <image>
     <filename>DSC09337.jpg</filename>
-    <tags></tags>
+    <tags />
     <luminance>178.062393188</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -776,7 +775,7 @@
 </image>
 <image>
     <filename>DSC09341.jpg</filename>
-    <tags></tags>
+    <tags />
     <luminance>164.480560303</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -792,7 +791,7 @@
 </image>
 <image>
     <filename>DSC09343.jpg</filename>
-    <tags></tags>
+    <tags />
     <luminance>173.737564087</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -808,7 +807,7 @@
 </image>
 <image>
     <filename>DSC09344.jpg</filename>
-    <tags></tags>
+    <tags />
     <luminance>170.940399170</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -824,7 +823,7 @@
 </image>
 <image>
     <filename>DSC09347.jpg</filename>
-    <tags></tags>
+    <tags />
     <luminance>179.020339966</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -840,7 +839,7 @@
 </image>
 <video>
     <filename>fingers - Copy (2).mov</filename>
-    <tags></tags>
+    <tags />
     <luminance>0.000000000</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -856,9 +855,7 @@
 </video>
 <video>
     <filename>fingers - Copy (3).mov</filename>
-     <tags>
-        <tag>#one</tag>
-    </tags>
+    <tags />
     <luminance>0.000000000</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -874,7 +871,7 @@
 </video>
 <video>
     <filename>fingers - Copy (4).mov</filename>
-    <tags></tags>
+    <tags />
     <luminance>0.000000000</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -890,7 +887,7 @@
 </video>
 <video>
     <filename>fingers - Copy (5).mov</filename>
-    <tags></tags>
+    <tags />
     <luminance>0.000000000</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -906,7 +903,7 @@
 </video>
 <video>
     <filename>fingers - Copy (6).mov</filename>
-    <tags></tags>
+    <tags />
     <luminance>0.000000000</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -922,7 +919,7 @@
 </video>
 <video>
     <filename>fingers - Copy (7).mov</filename>
-    <tags></tags>
+    <tags />
     <luminance>0.000000000</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -938,7 +935,7 @@
 </video>
 <video>
     <filename>fingers - Copy (8).mov</filename>
-    <tags></tags>
+    <tags />
     <luminance>0.000000000</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -954,7 +951,7 @@
 </video>
 <video>
     <filename>fingers - Copy.mov</filename>
-    <tags></tags>
+    <tags />
     <luminance>0.000000000</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
@@ -970,17 +967,4 @@
 </video>
 <video>
     <filename>fingers.mov</filename>
-    <tags></tags>
-    <luminance>0.000000000</luminance>
-    <edgeDistribution>0.000000000</edgeDistribution>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
-    </color>
 </video>

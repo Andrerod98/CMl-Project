@@ -32,11 +32,25 @@ class Gallery : public Screen{
     
     ofDirectory diretory;
     vector<MediaGUI*> medias;
+    vector<MediaGUI*> totalMedias;
     
     int currentPage;
     
     XmlManager* xmlManager;
     PlaylistManager* playlistManager;
+    
+    bool meetFilter(MediaGUI* m);
+    
+    
+    string mediaType;
+    float maxLuminance;
+    float maxEdge;
+    float maxNFaces;
+    float maxNObject;
+    float maxTexture;
+    float maxRythm;
+    ofColor color;
+
 public:
     Gallery(string title,int width, int height,int x, int y, int spaceBetween, PlaylistManager* playlistManager);
     void load();
@@ -46,13 +60,23 @@ public:
     
     void update();
     
+    void filter();
+    
     void setSize(int w, int h);
     
     float getNMedia();
+    
+    string getMediaType(){
+        return mediaType;
+    }
 
 	MediaGUI* getMedias(int i);
     
     MediaGUI* getSelectedMedia();
+    void search(string filename);
+    
+    void filterByType(string type);
+    void filterByMetadata(string label, float value);
     
 };
 
