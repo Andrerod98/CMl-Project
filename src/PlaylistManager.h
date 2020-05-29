@@ -11,12 +11,20 @@
 #include <stdio.h>
 #include <Media.h>
 typedef std::vector<MediaGUI*> MediasVector;
+
+
+
 class PlaylistManager{
     map<string, MediasVector> playlists;
-   
+    
+    static PlaylistManager *instance;
+    PlaylistManager();
     
 public:
-    PlaylistManager();
+    
+    static PlaylistManager *getInstance();
+    
+    
     
     MediasVector getPlaylist(string tag);
     void addToPlaylist(string tag, MediaGUI* media);

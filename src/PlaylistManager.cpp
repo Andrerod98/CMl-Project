@@ -7,9 +7,16 @@
 
 #include "PlaylistManager.h"
 
+PlaylistManager *PlaylistManager::instance = 0;
 
 PlaylistManager::PlaylistManager(){
     
+}
+
+PlaylistManager* PlaylistManager::getInstance() {
+    if (!instance)
+        instance = new PlaylistManager();
+    return instance;
 }
 
 vector<MediaGUI*> PlaylistManager::getPlaylist(string tag){

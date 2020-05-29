@@ -57,6 +57,8 @@ public:
     void removeObserver(Observer *observer);
     void notifyObservers(Event event) ;
     
+    void keyPressed(int key);
+    
     void setMetadataHeader(Media* media);
     void setFullHeader();
     

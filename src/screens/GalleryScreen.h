@@ -26,6 +26,16 @@ class GalleryScreen : public Screen{
     ofxDatGuiFolder* filtersFolder;
     ofxDatGuiDropdown* typeMedia;
     
+    MediaManager* mediaManager;
+    
+    void onDropdownEvent(ofxDatGuiDropdownEvent e);
+    void onSliderEvent(ofxDatGuiSliderEvent e);
+    void onButtonEvent(ofxDatGuiButtonEvent e);
+    void onTextInputEvent(ofxDatGuiTextInputEvent e);
+
+
+    void onColorPickerEvent(ofxDatGuiColorPickerEvent e);
+    
     int currentPage;
     int nPages;
     int padding;
@@ -43,6 +53,8 @@ public:
     void nextPage();
     void previousPage();
     void update();
+    
+    void keyPressed(int key);
     
     void mousePressed(int x, int y, int button);
     

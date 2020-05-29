@@ -16,6 +16,7 @@
 #include "Media.h"
 #include "XmlManager.h"
 #include "PlaylistManager.h"
+#include "MediaManager.h"
 
 
 #pragma once
@@ -23,22 +24,24 @@
 class Gallery : public Screen{
     
     void createPositions();
-    void loadImages();
-    void loadVideos();
+   
     
     vector<ofVec2f> positions;
     
-    int itemWidth, itemHeight, spaceBetween, selectedMedia, currentMedia;
+    int itemWidth, itemHeight, spaceBetween;
     
-    ofDirectory diretory;
-    vector<MediaGUI*> medias;
+    
     
     int currentPage;
     
-    XmlManager* xmlManager;
-    PlaylistManager* playlistManager;
+   
+    MediaManager* mediaManager;
+    
+    
+    
+
 public:
-    Gallery(string title,int width, int height,int x, int y, int spaceBetween, PlaylistManager* playlistManager);
+    Gallery(string title,int width, int height,int x, int y, int spaceBetween);
     void load();
     void drawPage(int selected);
     void draw();
@@ -46,13 +49,17 @@ public:
     
     void update();
     
+    void filter();
+    
     void setSize(int w, int h);
     
-    float getNMedia();
-
-	MediaGUI* getMedias(int i);
     
-    MediaGUI* getSelectedMedia();
+    
+    
+    void search(string filename);
+    
+    void filterByType(string type);
+    void filterByMetadata(string label, float value);
     
 };
 

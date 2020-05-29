@@ -131,6 +131,8 @@ void LiveScreen::update(Event event) {
             break;
     }
 }
+
+
 void LiveScreen::mousePressed(int x, int y, int button){
     
 }
