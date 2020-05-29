@@ -223,9 +223,12 @@ bool XmlManager::exists(string filename, bool isImage) {
 		if (nrImages > 0) {
 			for (int i = 0; i < nrImages; i++) {
 				name = XML.getValue("image:filename", "null", i);
+				//cout << "EXISTS filename: " << filename << " name found: " << name;
 				if (name == filename) {
+					//cout << " FOUND" << endl;
 					return true;
 				}
+				//cout << endl;
 			}
 		}
 	}
@@ -233,9 +236,12 @@ bool XmlManager::exists(string filename, bool isImage) {
 		if (nrVideos > 0) {
 			for (int i = 0; i < nrVideos; i++) {
 				name = XML.getValue("video:filename", "null", i);
+				//cout << "EXISTS filename: " << filename << " name found: " << name;
 				if (name == filename) {
+					//cout << " FOUND" << endl;
 					return true;
 				}
+				//cout << " NOT FOUND" << endl;
 			}
 		}
 	}
