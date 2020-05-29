@@ -47,15 +47,24 @@ void MediaManager::loadVideos() {
     diretory.allowExt("mov");
     diretory.sort();
     
+	cout << "Processing videos";
     
     for (int i = 0; i < (int)diretory.size(); i++) {
         ofVideoPlayer* video = new ofVideoPlayer();
         video->load(diretory.getPath(i));
         video->setLoopState(OF_LOOP_NORMAL);
         
-        Metadata* meta = xmlManager->getMetadata(diretory.getName(i), false);
-        
+        Metadata* meta = xmlManager->getMetadata(diretory.getName(i), false);        
         MediaGUI* media = new MediaGUI(video, diretory.getName(i), meta);
+
+		// getting metadata
+		if (!xmlManager->exists(diretory.getName(i), true)) {
+			cout << ".";
+			xmlManager->createMedia(diretory.getName(i), false);
+			xmlManager->setMetadata(diretory.getName(i), false, processMedia(media));
+			meta = xmlManager->getMetadata(diretory.getName(i), false);
+			media = new MediaGUI(video, diretory.getName(i), meta);
+		}
         
         for(string tag: meta->getTags()){
             playlistManager->addToPlaylist(tag,media);
@@ -64,38 +73,42 @@ void MediaManager::loadVideos() {
         medias.push_back(media);
         totalMedias.push_back(media);
     }
-    
-    
-    
-    
+	cout << " done" << endl;
 }
+
 //Loads images from storage
 void MediaManager::loadImages() {
     //Load images
     diretory.listDir("images/of_logos/");
     diretory.allowExt("jpg");
-    diretory.sort(); // in linux the file system doesn't return file lists ordered in alphabetical order
-    
-    
-    
+    diretory.sort(); // in linux the file system doesn't return file lists ordered in alphabetical order   
+
+	cout << "Processing images ";
     
     // you can now iterate through the files and load them into the ofImage vector
     for (int i = 0; i < (int)diretory.size(); i++) {
         ofImage* image = new ofImage();
         image->load(diretory.getPath(i));
-        
-        Metadata* meta = xmlManager->getMetadata(diretory.getName(i), true);
-        
+
+        Metadata* meta = xmlManager->getMetadata(diretory.getName(i), true);        
         MediaGUI* media = new MediaGUI(image, diretory.getName(i), meta);
+
+		// getting metadata
+		if (!xmlManager->exists(diretory.getName(i), true)) {
+			cout << ".";
+			xmlManager->createMedia(diretory.getName(i), true);
+			xmlManager->setMetadata(diretory.getName(i), true, processMedia(media));
+			meta = xmlManager->getMetadata(diretory.getName(i), true);
+			media = new MediaGUI(image, diretory.getName(i), meta);
+		}
        
         for(string tag: meta->getTags()){
             playlistManager->addToPlaylist(tag,media);
         }
         medias.push_back(media);
-        totalMedias.push_back(media);
-        
+        totalMedias.push_back(media);        
     }
-    
+	cout << " done" << endl;
 }
 void MediaManager::selectMedia(int i){
     selectedMedia = i;

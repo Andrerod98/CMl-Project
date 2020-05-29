@@ -12,7 +12,7 @@ void ofApp::setup() {
     playlistManager = playlistManager->getInstance();
     mediaManager = mediaManager->getInstance();
     
-    /*Run meta algorithms*/
+    /*Run meta algorithms
     cout << "starting algorithm" << endl;
     
     auto start = std::chrono::high_resolution_clock::now();
@@ -29,6 +29,7 @@ void ofApp::setup() {
     auto stop = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
     cout << "execution time: " << duration.count() << " miliseconds" << endl;
+	*/
     
     gallery = new Gallery("image_gallery",galleryWidth,ofGetHeight()-settings::HEADER_HEIGHT - (padding*2) - 200,60,250, 30);
     
