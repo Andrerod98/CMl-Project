@@ -84,6 +84,7 @@ Metadata* XmlManager::getMetadata(string mediaName, bool isImage) {
 	ofColor color = ofColor(0,0,0);
 
 	if (findMedia(mediaName, isImage)) {
+        /*
 		XML.pushTag("tags");
 		const int nrTags = XML.getNumTags("tag");
 		for (int i = 0; i < nrTags; i++)
@@ -97,7 +98,7 @@ Metadata* XmlManager::getMetadata(string mediaName, bool isImage) {
 		edgeDistribution.insert(edgeDistribution.begin()+3, XML.getValue("d135", 1));
 		edgeDistribution.insert(edgeDistribution.begin()+4, XML.getValue("nonDirectional", 1));
 		XML.popTag(); // out of edges
-
+*/
 		luminance = (float) XML.getValue("luminance", -1.0);
 		rhythm = (float)XML.getValue("rhythm", -1.0);
 		texture = (float)XML.getValue("texture", -1.0);
@@ -155,7 +156,8 @@ bool XmlManager::setMetadata(string mediaName, bool isImage, Metadata metadata) 
 			XML.addValue("tag", tags[i]);
 		}
 		XML.popTag(); // out of tags
-
+ 
+        
 		XML.removeTag("edges");
 		XML.addTag("edges");
 		XML.pushTag("edges");

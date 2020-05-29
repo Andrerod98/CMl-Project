@@ -1,3712 +1,489 @@
 <metadata>
     <image>
         <filename>DSC09302.jpg</filename>
-        <tags />
-        <<<<<<< HEAD
-        <luminance>169.592895508
+        <tags></tags>
+        <edges>
+            <vertical>4879</vertical>
+            <horizontal>1520</horizontal>
+            <d45>2854</d45>
+            <d135>3488</d135>
+            <nonDirectional>2080</nonDirectional>
+        </edges>
+        <luminance>172.709625244</luminance>
+        <rhythm>0.000000000</rhythm>
+        <texture>3.762146711</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>47</nObject>
+        <color>
+            <red>187</red>
+            <green>170</green>
+            <blue>151</blue>
+        </color>
     </image>
+    <image>
+        <filename>DSC09305.jpg</filename>
+        <tags></tags>
+        <edges>
+            <vertical>7935</vertical>
+            <horizontal>3292</horizontal>
+            <d45>5165</d45>
+            <d135>5636</d135>
+            <nonDirectional>2881</nonDirectional>
+        </edges>
+        <luminance>175.198638916</luminance>
+        <rhythm>0.000000000</rhythm>
+        <texture>5.152142525</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>50</nObject>
+        <color>
+            <red>193</red>
+            <green>172</green>
+            <blue>145</blue>
+        </color>
+    </image>
+    <image>
+        <filename>DSC09307.jpg</filename>
+        <tags></tags>
+        <edges>
+            <vertical>9285</vertical>
+            <horizontal>2962</horizontal>
+            <d45>5869</d45>
+            <d135>6738</d135>
+            <nonDirectional>2810</nonDirectional>
+        </edges>
+        <luminance>172.334426880</luminance>
+        <rhythm>0.000000000</rhythm>
+        <texture>5.701965332</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>50</nObject>
+        <color>
+            <red>183</red>
+            <green>171</green>
+            <blue>152</blue>
+        </color>
+    </image>
+    <image>
+        <filename>DSC09310.jpg</filename>
+        <tags></tags>
+        <edges>
+            <vertical>8357</vertical>
+            <horizontal>4030</horizontal>
+            <d45>5881</d45>
+            <d135>6833</d135>
+            <nonDirectional>4115</nonDirectional>
+        </edges>
+        <luminance>185.130706787</luminance>
+        <rhythm>0.000000000</rhythm>
+        <texture>7.197669983</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>50</nObject>
+        <color>
+            <red>200</red>
+            <green>183</green>
+            <blue>156</blue>
+        </color>
+    </image>
+    <image>
+        <filename>DSC09311.jpg</filename>
+        <tags></tags>
+        <edges>
+            <vertical>8577</vertical>
+            <horizontal>5133</horizontal>
+            <d45>6841</d45>
+            <d135>7419</d135>
+            <nonDirectional>4804</nonDirectional>
+        </edges>
+        <luminance>178.651504517</luminance>
+        <rhythm>0.000000000</rhythm>
+        <texture>8.253330231</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>50</nObject>
+        <color>
+            <red>194</red>
+            <green>176</green>
+            <blue>155</blue>
+        </color>
+    </image>
+    <image>
+        <filename>DSC09315.jpg</filename>
+        <tags></tags>
+        <edges>
+            <vertical>5216</vertical>
+            <horizontal>2300</horizontal>
+            <d45>3637</d45>
+            <d135>3826</d135>
+            <nonDirectional>2725</nonDirectional>
+        </edges>
+        <luminance>177.359649658</luminance>
+        <rhythm>0.000000000</rhythm>
+        <texture>3.772083282</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>50</nObject>
+        <color>
+            <red>198</red>
+            <green>174</green>
+            <blue>145</blue>
+        </color>
+    </image>
+    <image>
+        <filename>DSC09316.jpg</filename>
+        <tags></tags>
+        <edges>
+            <vertical>9237</vertical>
+            <horizontal>4231</horizontal>
+            <d45>6764</d45>
+            <d135>7674</d135>
+            <nonDirectional>3616</nonDirectional>
+        </edges>
+        <luminance>179.399826050</luminance>
+        <rhythm>0.000000000</rhythm>
+        <texture>6.260978699</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>50</nObject>
+        <color>
+            <red>195</red>
+            <green>177</green>
+            <blue>151</blue>
+        </color>
+    </image>
+    <image>
+        <filename>DSC09318.jpg</filename>
+        <tags></tags>
+        <edges>
+            <vertical>1466</vertical>
+            <horizontal>1359</horizontal>
+            <d45>1817</d45>
+            <d135>1960</d135>
+            <nonDirectional>1218</nonDirectional>
+        </edges>
+        <luminance>206.492950439</luminance>
+        <rhythm>0.000000000</rhythm>
+        <texture>1.770900846</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>41</nObject>
+        <color>
+            <red>206</red>
+            <green>206</green>
+            <blue>206</blue>
+        </color>
+    </image>
+    <image>
+        <filename>DSC09320.jpg</filename>
+        <tags></tags>
+        <edges>
+            <vertical>1134</vertical>
+            <horizontal>1170</horizontal>
+            <d45>1358</d45>
+            <d135>1351</d135>
+            <nonDirectional>1093</nonDirectional>
+        </edges>
+        <luminance>202.216247559</luminance>
+        <rhythm>0.000000000</rhythm>
+        <texture>1.558752298</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>42</nObject>
+        <color>
+            <red>203</red>
+            <green>201</green>
+            <blue>201</blue>
+        </color>
+    </image>
+    <image>
+        <filename>DSC09322.jpg</filename>
+        <tags></tags>
+        <edges>
+            <vertical>7958</vertical>
+            <horizontal>3236</horizontal>
+            <d45>4931</d45>
+            <d135>5206</d135>
+            <nonDirectional>3823</nonDirectional>
+        </edges>
+        <luminance>203.606628418</luminance>
+        <rhythm>0.000000000</rhythm>
+        <texture>4.479598045</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>50</nObject>
+        <color>
+            <red>218</red>
+            <green>201</green>
+            <blue>179</blue>
+        </color>
+    </image>
+    <image>
+        <filename>DSC09324.jpg</filename>
+        <tags></tags>
+        <edges>
+            <vertical>8004</vertical>
+            <horizontal>2953</horizontal>
+            <d45>5706</d45>
+            <d135>6083</d135>
+            <nonDirectional>2658</nonDirectional>
+        </edges>
+        <luminance>189.998382568</luminance>
+        <rhythm>0.000000000</rhythm>
+        <texture>5.718405724</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>50</nObject>
+        <color>
+            <red>205</red>
+            <green>187</green>
+            <blue>166</blue>
+        </color>
+    </image>
+    <image>
+        <filename>DSC09326.jpg</filename>
+        <tags></tags>
+        <edges>
+            <vertical>10623</vertical>
+            <horizontal>6197</horizontal>
+            <d45>8482</d45>
+            <d135>8936</d135>
+            <nonDirectional>6966</nonDirectional>
+        </edges>
+        <luminance>170.960540771</luminance>
+        <rhythm>0.000000000</rhythm>
+        <texture>8.417150497</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>50</nObject>
+        <color>
+            <red>186</red>
+            <green>168</green>
+            <blue>149</blue>
+        </color>
+    </image>
+    <image>
+        <filename>DSC09327.jpg</filename>
+        <tags></tags>
+        <edges>
+            <vertical>7454</vertical>
+            <horizontal>3450</horizontal>
+            <d45>4732</d45>
+            <d135>5672</d135>
+            <nonDirectional>4083</nonDirectional>
+        </edges>
+        <luminance>171.976959229</luminance>
+        <rhythm>0.000000000</rhythm>
+        <texture>5.087967396</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>50</nObject>
+        <color>
+            <red>189</red>
+            <green>168</green>
+            <blue>150</blue>
+        </color>
+    </image>
+    <image>
+        <filename>DSC09329.jpg</filename>
+        <tags></tags>
+        <edges>
+            <vertical>7045</vertical>
+            <horizontal>3436</horizontal>
+            <d45>4970</d45>
+            <d135>5856</d135>
+            <nonDirectional>3801</nonDirectional>
+        </edges>
+        <luminance>164.002090454</luminance>
+        <rhythm>0.000000000</rhythm>
+        <texture>6.425928593</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>50</nObject>
+        <color>
+            <red>175</red>
+            <green>162</green>
+            <blue>146</blue>
+        </color>
+    </image>
+    <image>
+        <filename>DSC09330.jpg</filename>
+        <tags></tags>
+        <edges>
+            <vertical>6156</vertical>
+            <horizontal>2803</horizontal>
+            <d45>4177</d45>
+            <d135>4496</d135>
+            <nonDirectional>3433</nonDirectional>
+        </edges>
+        <luminance>209.647659302</luminance>
+        <rhythm>0.000000000</rhythm>
+        <texture>5.876970768</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>50</nObject>
+        <color>
+            <red>222</red>
+            <green>209</green>
+            <blue>173</blue>
+        </color>
+    </image>
+    <image>
+        <filename>DSC09334.jpg</filename>
+        <tags></tags>
+        <edges>
+            <vertical>9269</vertical>
+            <horizontal>1783</horizontal>
+            <d45>5366</d45>
+            <d135>6342</d135>
+            <nonDirectional>1751</nonDirectional>
+        </edges>
+        <luminance>171.694732666</luminance>
+        <rhythm>0.000000000</rhythm>
+        <texture>4.459353447</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>50</nObject>
+        <color>
+            <red>191</red>
+            <green>168</green>
+            <blue>141</blue>
+        </color>
+    </image>
+    <image>
+        <filename>DSC09336.jpg</filename>
+        <tags></tags>
+        <edges>
+            <vertical>10374</vertical>
+            <horizontal>4512</horizontal>
+            <d45>7546</d45>
+            <d135>7552</d135>
+            <nonDirectional>6007</nonDirectional>
+        </edges>
+        <luminance>189.028045654</luminance>
+        <rhythm>0.000000000</rhythm>
+        <texture>5.174271584</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>50</nObject>
+        <color>
+            <red>209</red>
+            <green>185</green>
+            <blue>161</blue>
+        </color>
+    </image>
+    <image>
+        <filename>DSC09337.jpg</filename>
+        <tags></tags>
+        <edges>
+            <vertical>10244</vertical>
+            <horizontal>3719</horizontal>
+            <d45>7073</d45>
+            <d135>7385</d135>
+            <nonDirectional>4508</nonDirectional>
+        </edges>
+        <luminance>179.311813354</luminance>
+        <rhythm>0.000000000</rhythm>
+        <texture>4.652066708</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>50</nObject>
+        <color>
+            <red>207</red>
+            <green>173</green>
+            <blue>153</blue>
+        </color>
+    </image>
+    <image>
+        <filename>DSC09341.jpg</filename>
+        <tags></tags>
+        <edges>
+            <vertical>9776</vertical>
+            <horizontal>3755</horizontal>
+            <d45>5876</d45>
+            <d135>7120</d135>
+            <nonDirectional>4691</nonDirectional>
+        </edges>
+        <luminance>167.143112183</luminance>
+        <rhythm>0.000000000</rhythm>
+        <texture>5.606771946</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>50</nObject>
+        <color>
+            <red>187</red>
+            <green>163</green>
+            <blue>142</blue>
+        </color>
+    </image>
+    <image>
+        <filename>DSC09343.jpg</filename>
+        <tags></tags>
+        <edges>
+            <vertical>9771</vertical>
+            <horizontal>3788</horizontal>
+            <d45>6534</d45>
+            <d135>6925</d135>
+            <nonDirectional>4460</nonDirectional>
+        </edges>
+        <luminance>176.627960205</luminance>
+        <rhythm>0.000000000</rhythm>
+        <texture>6.211616516</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>50</nObject>
+        <color>
+            <red>190</red>
+            <green>174</green>
+            <blue>156</blue>
+        </color>
+    </image>
+    <image>
+        <filename>DSC09344.jpg</filename>
+        <tags></tags>
+        <edges>
+            <vertical>8935</vertical>
+            <horizontal>2537</horizontal>
+            <d45>5419</d45>
+            <d135>5992</d135>
+            <nonDirectional>3668</nonDirectional>
+        </edges>
+        <luminance>173.890075684</luminance>
+        <rhythm>0.000000000</rhythm>
+        <texture>4.937335491</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>50</nObject>
+        <color>
+            <red>185</red>
+            <green>172</green>
+            <blue>154</blue>
+        </color>
+    </image>
+    <image>
+        <filename>DSC09347.jpg</filename>
+        <tags></tags>
+        <edges>
+            <vertical>14923</vertical>
+            <horizontal>5182</horizontal>
+            <d45>9936</d45>
+            <d135>8712</d135>
+            <nonDirectional>7017</nonDirectional>
+        </edges>
+        <luminance>180.521804810</luminance>
+        <rhythm>0.000000000</rhythm>
+        <texture>5.206544399</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>50</nObject>
+        <color>
+            <red>188</red>
+            <green>179</green>
+            <blue>169</blue>
+        </color>
+    </image>
+    <video>
+        <filename>fingers.mov</filename>
+    </video>
 </metadata>
-<metadata />
-<image>
-    <filename>DSC09302.jpg</filename>
-    <tags />
-    <edges>
-        <vertical>4879</vertical>
-        <horizontal>1520</horizontal>
-        <d45>2854</d45>
-        <d135>3488</d135>
-        <nonDirectional>2080</nonDirectional>
-    </edges>
-    <luminance>172.709625244</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>3.762146711</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>187</red>
-        <green>170</green>
-        <blue>151</blue>
-    </color>
-</image>
-<image>
-    <filename>DSC09305.jpg</filename>
-    <luminance>175.198638916</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.152142525</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>193</red>
-        <green>172</green>
-        <blue>145</blue>
-        <red>193</red>
-        <green>172</green>
-        <blue>145</blue>
-        <red>193</red>
-        <green>172</green>
-        <blue>145</blue>
-        <red>193</red>
-        <green>172</green>
-        <blue>145</blue>
-        <red>193</red>
-        <green>172</green>
-        <blue>145</blue>
-        <red>193</red>
-        <green>172</green>
-        <blue>145</blue>
-        <red>193</red>
-        <green>172</green>
-        <blue>145</blue>
-        <red>193</red>
-        <green>172</green>
-        <blue>145</blue>
-        <red>193</red>
-        <green>172</green>
-        <blue>145</blue>
-    </color>
-    <luminance>175.198638916</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.152142525</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>175.198638916</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.152142525</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>175.198638916</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.152142525</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>175.198638916</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.152142525</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>175.198638916</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.152142525</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>175.198638916</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.152142525</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>175.198638916</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.152142525</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>7935</vertical>
-        <horizontal>3292</horizontal>
-        <d45>5165</d45>
-        <d135>5636</d135>
-        <nonDirectional>2881</nonDirectional>
-    </edges>
-    <luminance>175.198638916</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.152142525</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</image>
-<image>
-    <filename>DSC09307.jpg</filename>
-    <luminance>172.334426880</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.701965332</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>183</red>
-        <green>171</green>
-        <blue>152</blue>
-        <red>183</red>
-        <green>171</green>
-        <blue>152</blue>
-        <red>183</red>
-        <green>171</green>
-        <blue>152</blue>
-        <red>183</red>
-        <green>171</green>
-        <blue>152</blue>
-        <red>183</red>
-        <green>171</green>
-        <blue>152</blue>
-        <red>183</red>
-        <green>171</green>
-        <blue>152</blue>
-        <red>183</red>
-        <green>171</green>
-        <blue>152</blue>
-        <red>183</red>
-        <green>171</green>
-        <blue>152</blue>
-        <red>183</red>
-        <green>171</green>
-        <blue>152</blue>
-    </color>
-    <luminance>172.334426880</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.701965332</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>172.334426880</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.701965332</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>172.334426880</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.701965332</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>172.334426880</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.701965332</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>172.334426880</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.701965332</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>172.334426880</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.701965332</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>172.334426880</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.701965332</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>9285</vertical>
-        <horizontal>2962</horizontal>
-        <d45>5869</d45>
-        <d135>6738</d135>
-        <nonDirectional>2810</nonDirectional>
-    </edges>
-    <luminance>172.334426880</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.701965332</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</image>
-<image>
-    <filename>DSC09310.jpg</filename>
-    <luminance>185.130706787</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>7.197669983</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>200</red>
-        <green>183</green>
-        <blue>156</blue>
-        <red>200</red>
-        <green>183</green>
-        <blue>156</blue>
-        <red>200</red>
-        <green>183</green>
-        <blue>156</blue>
-        <red>200</red>
-        <green>183</green>
-        <blue>156</blue>
-        <red>200</red>
-        <green>183</green>
-        <blue>156</blue>
-        <red>200</red>
-        <green>183</green>
-        <blue>156</blue>
-        <red>200</red>
-        <green>183</green>
-        <blue>156</blue>
-        <red>200</red>
-        <green>183</green>
-        <blue>156</blue>
-        <red>200</red>
-        <green>183</green>
-        <blue>156</blue>
-    </color>
-    <luminance>185.130706787</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>7.197669983</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>185.130706787</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>7.197669983</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>185.130706787</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>7.197669983</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>185.130706787</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>7.197669983</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>185.130706787</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>7.197669983</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>185.130706787</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>7.197669983</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>185.130706787</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>7.197669983</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>8357</vertical>
-        <horizontal>4030</horizontal>
-        <d45>5881</d45>
-        <d135>6833</d135>
-        <nonDirectional>4115</nonDirectional>
-    </edges>
-    <luminance>185.130706787</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>7.197669983</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</image>
-<image>
-    <filename>DSC09311.jpg</filename>
-    <luminance>178.651504517</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>8.253330231</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>194</red>
-        <green>176</green>
-        <blue>155</blue>
-        <red>194</red>
-        <green>176</green>
-        <blue>155</blue>
-        <red>194</red>
-        <green>176</green>
-        <blue>155</blue>
-        <red>194</red>
-        <green>176</green>
-        <blue>155</blue>
-        <red>194</red>
-        <green>176</green>
-        <blue>155</blue>
-        <red>194</red>
-        <green>176</green>
-        <blue>155</blue>
-        <red>194</red>
-        <green>176</green>
-        <blue>155</blue>
-        <red>194</red>
-        <green>176</green>
-        <blue>155</blue>
-        <red>194</red>
-        <green>176</green>
-        <blue>155</blue>
-    </color>
-    <luminance>178.651504517</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>8.253330231</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>178.651504517</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>8.253330231</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>178.651504517</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>8.253330231</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>178.651504517</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>8.253330231</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>178.651504517</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>8.253330231</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>178.651504517</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>8.253330231</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>178.651504517</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>8.253330231</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>8577</vertical>
-        <horizontal>5133</horizontal>
-        <d45>6841</d45>
-        <d135>7419</d135>
-        <nonDirectional>4804</nonDirectional>
-    </edges>
-    <luminance>178.651504517</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>8.253330231</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</image>
-<image>
-    <filename>DSC09315.jpg</filename>
-    <luminance>177.359649658</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>3.772083282</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>198</red>
-        <green>174</green>
-        <blue>145</blue>
-        <red>198</red>
-        <green>174</green>
-        <blue>145</blue>
-        <red>198</red>
-        <green>174</green>
-        <blue>145</blue>
-        <red>198</red>
-        <green>174</green>
-        <blue>145</blue>
-        <red>198</red>
-        <green>174</green>
-        <blue>145</blue>
-        <red>198</red>
-        <green>174</green>
-        <blue>145</blue>
-        <red>198</red>
-        <green>174</green>
-        <blue>145</blue>
-        <red>198</red>
-        <green>174</green>
-        <blue>145</blue>
-        <red>198</red>
-        <green>174</green>
-        <blue>145</blue>
-    </color>
-    <luminance>177.359649658</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>3.772083282</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>177.359649658</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>3.772083282</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>177.359649658</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>3.772083282</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>177.359649658</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>3.772083282</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>177.359649658</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>3.772083282</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>177.359649658</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>3.772083282</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>177.359649658</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>3.772083282</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>5216</vertical>
-        <horizontal>2300</horizontal>
-        <d45>3637</d45>
-        <d135>3826</d135>
-        <nonDirectional>2725</nonDirectional>
-    </edges>
-    <luminance>177.359649658</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>3.772083282</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</image>
-<image>
-    <filename>DSC09316.jpg</filename>
-    <luminance>179.399826050</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>6.260978699</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>195</red>
-        <green>177</green>
-        <blue>151</blue>
-        <red>195</red>
-        <green>177</green>
-        <blue>151</blue>
-        <red>195</red>
-        <green>177</green>
-        <blue>151</blue>
-        <red>195</red>
-        <green>177</green>
-        <blue>151</blue>
-        <red>195</red>
-        <green>177</green>
-        <blue>151</blue>
-        <red>195</red>
-        <green>177</green>
-        <blue>151</blue>
-        <red>195</red>
-        <green>177</green>
-        <blue>151</blue>
-        <red>195</red>
-        <green>177</green>
-        <blue>151</blue>
-        <red>195</red>
-        <green>177</green>
-        <blue>151</blue>
-    </color>
-    <luminance>179.399826050</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>6.260978699</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>179.399826050</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>6.260978699</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>179.399826050</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>6.260978699</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>179.399826050</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>6.260978699</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>179.399826050</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>6.260978699</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>179.399826050</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>6.260978699</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>179.399826050</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>6.260978699</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>9237</vertical>
-        <horizontal>4231</horizontal>
-        <d45>6764</d45>
-        <d135>7674</d135>
-        <nonDirectional>3616</nonDirectional>
-    </edges>
-    <luminance>179.399826050</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>6.260978699</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</image>
-<image>
-    <filename>DSC09318.jpg</filename>
-    <luminance>206.492950439</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>1.770900846</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>206</red>
-        <green>206</green>
-        <blue>206</blue>
-        <red>206</red>
-        <green>206</green>
-        <blue>206</blue>
-        <red>206</red>
-        <green>206</green>
-        <blue>206</blue>
-        <red>206</red>
-        <green>206</green>
-        <blue>206</blue>
-        <red>206</red>
-        <green>206</green>
-        <blue>206</blue>
-        <red>206</red>
-        <green>206</green>
-        <blue>206</blue>
-        <red>206</red>
-        <green>206</green>
-        <blue>206</blue>
-        <red>206</red>
-        <green>206</green>
-        <blue>206</blue>
-        <red>206</red>
-        <green>206</green>
-        <blue>206</blue>
-    </color>
-    <luminance>206.492950439</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>1.770900846</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>206.492950439</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>1.770900846</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>206.492950439</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>1.770900846</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>206.492950439</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>1.770900846</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>206.492950439</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>1.770900846</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>206.492950439</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>1.770900846</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>206.492950439</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>1.770900846</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>1466</vertical>
-        <horizontal>1359</horizontal>
-        <d45>1817</d45>
-        <d135>1960</d135>
-        <nonDirectional>1218</nonDirectional>
-    </edges>
-    <luminance>206.492950439</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>1.770900846</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</image>
-<image>
-    <filename>DSC09320.jpg</filename>
-    <luminance>202.216247559</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>1.558752298</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>203</red>
-        <green>201</green>
-        <blue>201</blue>
-        <red>203</red>
-        <green>201</green>
-        <blue>201</blue>
-        <red>203</red>
-        <green>201</green>
-        <blue>201</blue>
-        <red>203</red>
-        <green>201</green>
-        <blue>201</blue>
-        <red>203</red>
-        <green>201</green>
-        <blue>201</blue>
-        <red>203</red>
-        <green>201</green>
-        <blue>201</blue>
-        <red>203</red>
-        <green>201</green>
-        <blue>201</blue>
-        <red>203</red>
-        <green>201</green>
-        <blue>201</blue>
-        <red>203</red>
-        <green>201</green>
-        <blue>201</blue>
-    </color>
-    <luminance>202.216247559</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>1.558752298</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>202.216247559</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>1.558752298</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>202.216247559</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>1.558752298</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>202.216247559</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>1.558752298</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>202.216247559</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>1.558752298</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>202.216247559</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>1.558752298</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>202.216247559</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>1.558752298</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>1134</vertical>
-        <horizontal>1170</horizontal>
-        <d45>1358</d45>
-        <d135>1351</d135>
-        <nonDirectional>1093</nonDirectional>
-    </edges>
-    <luminance>202.216247559</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>1.558752298</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</image>
-<image>
-    <filename>DSC09322.jpg</filename>
-    <luminance>203.606628418</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.479598045</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>218</red>
-        <green>201</green>
-        <blue>179</blue>
-        <red>218</red>
-        <green>201</green>
-        <blue>179</blue>
-        <red>218</red>
-        <green>201</green>
-        <blue>179</blue>
-        <red>218</red>
-        <green>201</green>
-        <blue>179</blue>
-        <red>218</red>
-        <green>201</green>
-        <blue>179</blue>
-        <red>218</red>
-        <green>201</green>
-        <blue>179</blue>
-        <red>218</red>
-        <green>201</green>
-        <blue>179</blue>
-        <red>218</red>
-        <green>201</green>
-        <blue>179</blue>
-        <red>218</red>
-        <green>201</green>
-        <blue>179</blue>
-    </color>
-    <luminance>203.606628418</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.479598045</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>203.606628418</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.479598045</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>203.606628418</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.479598045</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>203.606628418</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.479598045</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>203.606628418</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.479598045</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>203.606628418</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.479598045</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>203.606628418</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.479598045</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>7958</vertical>
-        <horizontal>3236</horizontal>
-        <d45>4931</d45>
-        <d135>5206</d135>
-        <nonDirectional>3823</nonDirectional>
-    </edges>
-    <luminance>203.606628418</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.479598045</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</image>
-<image>
-    <filename>DSC09324.jpg</filename>
-    <luminance>189.998382568</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.718405724</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>205</red>
-        <green>187</green>
-        <blue>166</blue>
-        <red>205</red>
-        <green>187</green>
-        <blue>166</blue>
-        <red>205</red>
-        <green>187</green>
-        <blue>166</blue>
-        <red>205</red>
-        <green>187</green>
-        <blue>166</blue>
-        <red>205</red>
-        <green>187</green>
-        <blue>166</blue>
-        <red>205</red>
-        <green>187</green>
-        <blue>166</blue>
-        <red>205</red>
-        <green>187</green>
-        <blue>166</blue>
-        <red>205</red>
-        <green>187</green>
-        <blue>166</blue>
-        <red>205</red>
-        <green>187</green>
-        <blue>166</blue>
-    </color>
-    <luminance>189.998382568</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.718405724</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>189.998382568</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.718405724</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>189.998382568</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.718405724</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>189.998382568</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.718405724</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>189.998382568</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.718405724</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>189.998382568</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.718405724</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>189.998382568</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.718405724</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>8004</vertical>
-        <horizontal>2953</horizontal>
-        <d45>5706</d45>
-        <d135>6083</d135>
-        <nonDirectional>2658</nonDirectional>
-    </edges>
-    <luminance>189.998382568</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.718405724</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</image>
-<image>
-    <filename>DSC09326.jpg</filename>
-    <luminance>170.960540771</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>8.417150497</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>186</red>
-        <green>168</green>
-        <blue>149</blue>
-        <red>186</red>
-        <green>168</green>
-        <blue>149</blue>
-        <red>186</red>
-        <green>168</green>
-        <blue>149</blue>
-        <red>186</red>
-        <green>168</green>
-        <blue>149</blue>
-        <red>186</red>
-        <green>168</green>
-        <blue>149</blue>
-        <red>186</red>
-        <green>168</green>
-        <blue>149</blue>
-        <red>186</red>
-        <green>168</green>
-        <blue>149</blue>
-        <red>186</red>
-        <green>168</green>
-        <blue>149</blue>
-        <red>186</red>
-        <green>168</green>
-        <blue>149</blue>
-    </color>
-    <luminance>170.960540771</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>8.417150497</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>170.960540771</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>8.417150497</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>170.960540771</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>8.417150497</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>170.960540771</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>8.417150497</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>170.960540771</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>8.417150497</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>170.960540771</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>8.417150497</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>170.960540771</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>8.417150497</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>10623</vertical>
-        <horizontal>6197</horizontal>
-        <d45>8482</d45>
-        <d135>8936</d135>
-        <nonDirectional>6966</nonDirectional>
-    </edges>
-    <luminance>170.960540771</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>8.417150497</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</image>
-<image>
-    <filename>DSC09327.jpg</filename>
-    <luminance>171.976959229</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.087967396</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>189</red>
-        <green>168</green>
-        <blue>150</blue>
-        <red>189</red>
-        <green>168</green>
-        <blue>150</blue>
-        <red>189</red>
-        <green>168</green>
-        <blue>150</blue>
-        <red>189</red>
-        <green>168</green>
-        <blue>150</blue>
-        <red>189</red>
-        <green>168</green>
-        <blue>150</blue>
-        <red>189</red>
-        <green>168</green>
-        <blue>150</blue>
-        <red>189</red>
-        <green>168</green>
-        <blue>150</blue>
-        <red>189</red>
-        <green>168</green>
-        <blue>150</blue>
-        <red>189</red>
-        <green>168</green>
-        <blue>150</blue>
-    </color>
-    <luminance>171.976959229</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.087967396</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>171.976959229</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.087967396</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>171.976959229</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.087967396</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>171.976959229</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.087967396</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>171.976959229</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.087967396</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>171.976959229</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.087967396</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>171.976959229</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.087967396</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>7454</vertical>
-        <horizontal>3450</horizontal>
-        <d45>4732</d45>
-        <d135>5672</d135>
-        <nonDirectional>4083</nonDirectional>
-    </edges>
-    <luminance>171.976959229</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.087967396</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</image>
-<image>
-    <filename>DSC09329.jpg</filename>
-    <luminance>164.002090454</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>6.425928593</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>175</red>
-        <green>162</green>
-        <blue>146</blue>
-        <red>175</red>
-        <green>162</green>
-        <blue>146</blue>
-        <red>175</red>
-        <green>162</green>
-        <blue>146</blue>
-        <red>175</red>
-        <green>162</green>
-        <blue>146</blue>
-        <red>175</red>
-        <green>162</green>
-        <blue>146</blue>
-        <red>175</red>
-        <green>162</green>
-        <blue>146</blue>
-        <red>175</red>
-        <green>162</green>
-        <blue>146</blue>
-        <red>175</red>
-        <green>162</green>
-        <blue>146</blue>
-        <red>175</red>
-        <green>162</green>
-        <blue>146</blue>
-    </color>
-    <luminance>164.002090454</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>6.425928593</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>164.002090454</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>6.425928593</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>164.002090454</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>6.425928593</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>164.002090454</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>6.425928593</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>164.002090454</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>6.425928593</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>164.002090454</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>6.425928593</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>164.002090454</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>6.425928593</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>7045</vertical>
-        <horizontal>3436</horizontal>
-        <d45>4970</d45>
-        <d135>5856</d135>
-        <nonDirectional>3801</nonDirectional>
-    </edges>
-    <luminance>164.002090454</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>6.425928593</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</image>
-<image>
-    <filename>DSC09330.jpg</filename>
-    <luminance>209.647659302</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.876970768</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>222</red>
-        <green>209</green>
-        <blue>173</blue>
-        <red>222</red>
-        <green>209</green>
-        <blue>173</blue>
-        <red>222</red>
-        <green>209</green>
-        <blue>173</blue>
-        <red>222</red>
-        <green>209</green>
-        <blue>173</blue>
-        <red>222</red>
-        <green>209</green>
-        <blue>173</blue>
-        <red>222</red>
-        <green>209</green>
-        <blue>173</blue>
-        <red>222</red>
-        <green>209</green>
-        <blue>173</blue>
-        <red>222</red>
-        <green>209</green>
-        <blue>173</blue>
-        <red>222</red>
-        <green>209</green>
-        <blue>173</blue>
-    </color>
-    <luminance>209.647659302</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.876970768</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>209.647659302</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.876970768</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>209.647659302</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.876970768</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>209.647659302</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.876970768</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>209.647659302</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.876970768</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>209.647659302</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.876970768</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>209.647659302</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.876970768</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>6156</vertical>
-        <horizontal>2803</horizontal>
-        <d45>4177</d45>
-        <d135>4496</d135>
-        <nonDirectional>3433</nonDirectional>
-    </edges>
-    <luminance>209.647659302</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.876970768</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</image>
-<image>
-    <filename>DSC09334.jpg</filename>
-    <luminance>171.694732666</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.459353447</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>191</red>
-        <green>168</green>
-        <blue>141</blue>
-        <red>191</red>
-        <green>168</green>
-        <blue>141</blue>
-        <red>191</red>
-        <green>168</green>
-        <blue>141</blue>
-        <red>191</red>
-        <green>168</green>
-        <blue>141</blue>
-        <red>191</red>
-        <green>168</green>
-        <blue>141</blue>
-        <red>191</red>
-        <green>168</green>
-        <blue>141</blue>
-        <red>191</red>
-        <green>168</green>
-        <blue>141</blue>
-        <red>191</red>
-        <green>168</green>
-        <blue>141</blue>
-        <red>191</red>
-        <green>168</green>
-        <blue>141</blue>
-    </color>
-    <luminance>171.694732666</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.459353447</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>171.694732666</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.459353447</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>171.694732666</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.459353447</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>171.694732666</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.459353447</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>171.694732666</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.459353447</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>171.694732666</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.459353447</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>171.694732666</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.459353447</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>9269</vertical>
-        <horizontal>1783</horizontal>
-        <d45>5366</d45>
-        <d135>6342</d135>
-        <nonDirectional>1751</nonDirectional>
-    </edges>
-    <luminance>171.694732666</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.459353447</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</image>
-<image>
-    <filename>DSC09336.jpg</filename>
-    <luminance>189.028045654</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.174271584</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>209</red>
-        <green>185</green>
-        <blue>161</blue>
-        <red>209</red>
-        <green>185</green>
-        <blue>161</blue>
-        <red>209</red>
-        <green>185</green>
-        <blue>161</blue>
-        <red>209</red>
-        <green>185</green>
-        <blue>161</blue>
-        <red>209</red>
-        <green>185</green>
-        <blue>161</blue>
-        <red>209</red>
-        <green>185</green>
-        <blue>161</blue>
-        <red>209</red>
-        <green>185</green>
-        <blue>161</blue>
-        <red>209</red>
-        <green>185</green>
-        <blue>161</blue>
-        <red>209</red>
-        <green>185</green>
-        <blue>161</blue>
-    </color>
-    <luminance>189.028045654</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.174271584</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>189.028045654</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.174271584</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>189.028045654</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.174271584</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>189.028045654</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.174271584</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>189.028045654</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.174271584</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>189.028045654</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.174271584</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>189.028045654</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.174271584</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>10374</vertical>
-        <horizontal>4512</horizontal>
-        <d45>7546</d45>
-        <d135>7552</d135>
-        <nonDirectional>6007</nonDirectional>
-    </edges>
-    <luminance>189.028045654</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.174271584</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</image>
-<image>
-    <filename>DSC09337.jpg</filename>
-    <luminance>179.311813354</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.652066708</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>207</red>
-        <green>173</green>
-        <blue>153</blue>
-        <red>207</red>
-        <green>173</green>
-        <blue>153</blue>
-        <red>207</red>
-        <green>173</green>
-        <blue>153</blue>
-        <red>207</red>
-        <green>173</green>
-        <blue>153</blue>
-        <red>207</red>
-        <green>173</green>
-        <blue>153</blue>
-        <red>207</red>
-        <green>173</green>
-        <blue>153</blue>
-        <red>207</red>
-        <green>173</green>
-        <blue>153</blue>
-        <red>207</red>
-        <green>173</green>
-        <blue>153</blue>
-        <red>207</red>
-        <green>173</green>
-        <blue>153</blue>
-    </color>
-    <luminance>179.311813354</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.652066708</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>179.311813354</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.652066708</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>179.311813354</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.652066708</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>179.311813354</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.652066708</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>179.311813354</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.652066708</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>179.311813354</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.652066708</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>179.311813354</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.652066708</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>10244</vertical>
-        <horizontal>3719</horizontal>
-        <d45>7073</d45>
-        <d135>7385</d135>
-        <nonDirectional>4508</nonDirectional>
-    </edges>
-    <luminance>179.311813354</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.652066708</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</image>
-<image>
-    <filename>DSC09341.jpg</filename>
-    <luminance>167.143112183</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.606771946</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>187</red>
-        <green>163</green>
-        <blue>142</blue>
-        <red>187</red>
-        <green>163</green>
-        <blue>142</blue>
-        <red>187</red>
-        <green>163</green>
-        <blue>142</blue>
-        <red>187</red>
-        <green>163</green>
-        <blue>142</blue>
-        <red>187</red>
-        <green>163</green>
-        <blue>142</blue>
-        <red>187</red>
-        <green>163</green>
-        <blue>142</blue>
-        <red>187</red>
-        <green>163</green>
-        <blue>142</blue>
-        <red>187</red>
-        <green>163</green>
-        <blue>142</blue>
-        <red>187</red>
-        <green>163</green>
-        <blue>142</blue>
-    </color>
-    <luminance>167.143112183</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.606771946</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>167.143112183</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.606771946</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>167.143112183</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.606771946</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>167.143112183</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.606771946</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>167.143112183</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.606771946</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>167.143112183</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.606771946</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>167.143112183</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.606771946</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>9776</vertical>
-        <horizontal>3755</horizontal>
-        <d45>5876</d45>
-        <d135>7120</d135>
-        <nonDirectional>4691</nonDirectional>
-    </edges>
-    <luminance>167.143112183</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.606771946</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</image>
-<image>
-    <filename>DSC09343.jpg</filename>
-    <luminance>176.627960205</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>6.211616516</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>190</red>
-        <green>174</green>
-        <blue>156</blue>
-        <red>190</red>
-        <green>174</green>
-        <blue>156</blue>
-        <red>190</red>
-        <green>174</green>
-        <blue>156</blue>
-        <red>190</red>
-        <green>174</green>
-        <blue>156</blue>
-        <red>190</red>
-        <green>174</green>
-        <blue>156</blue>
-        <red>190</red>
-        <green>174</green>
-        <blue>156</blue>
-        <red>190</red>
-        <green>174</green>
-        <blue>156</blue>
-        <red>190</red>
-        <green>174</green>
-        <blue>156</blue>
-        <red>190</red>
-        <green>174</green>
-        <blue>156</blue>
-    </color>
-    <luminance>176.627960205</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>6.211616516</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>176.627960205</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>6.211616516</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>176.627960205</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>6.211616516</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>176.627960205</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>6.211616516</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>176.627960205</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>6.211616516</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>176.627960205</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>6.211616516</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>176.627960205</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>6.211616516</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>9771</vertical>
-        <horizontal>3788</horizontal>
-        <d45>6534</d45>
-        <d135>6925</d135>
-        <nonDirectional>4460</nonDirectional>
-    </edges>
-    <luminance>176.627960205</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>6.211616516</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</image>
-<image>
-    <filename>DSC09344.jpg</filename>
-    <luminance>173.890075684</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.937335491</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>185</red>
-        <green>172</green>
-        <blue>154</blue>
-        <red>185</red>
-        <green>172</green>
-        <blue>154</blue>
-        <red>185</red>
-        <green>172</green>
-        <blue>154</blue>
-        <red>185</red>
-        <green>172</green>
-        <blue>154</blue>
-        <red>185</red>
-        <green>172</green>
-        <blue>154</blue>
-        <red>185</red>
-        <green>172</green>
-        <blue>154</blue>
-        <red>185</red>
-        <green>172</green>
-        <blue>154</blue>
-        <red>185</red>
-        <green>172</green>
-        <blue>154</blue>
-        <red>185</red>
-        <green>172</green>
-        <blue>154</blue>
-    </color>
-    <luminance>173.890075684</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.937335491</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>173.890075684</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.937335491</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>173.890075684</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.937335491</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>173.890075684</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.937335491</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>173.890075684</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.937335491</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>173.890075684</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.937335491</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>173.890075684</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.937335491</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>8935</vertical>
-        <horizontal>2537</horizontal>
-        <d45>5419</d45>
-        <d135>5992</d135>
-        <nonDirectional>3668</nonDirectional>
-    </edges>
-    <luminance>173.890075684</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>4.937335491</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</image>
-<image>
-    <filename>DSC09347.jpg</filename>
-    <luminance>180.521804810</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.206544399</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>188</red>
-        <green>179</green>
-        <blue>169</blue>
-        <red>188</red>
-        <green>179</green>
-        <blue>169</blue>
-        <red>188</red>
-        <green>179</green>
-        <blue>169</blue>
-        <red>188</red>
-        <green>179</green>
-        <blue>169</blue>
-        <red>188</red>
-        <green>179</green>
-        <blue>169</blue>
-        <red>188</red>
-        <green>179</green>
-        <blue>169</blue>
-        <red>188</red>
-        <green>179</green>
-        <blue>169</blue>
-        <red>188</red>
-        <green>179</green>
-        <blue>169</blue>
-        <red>188</red>
-        <green>179</green>
-        <blue>169</blue>
-    </color>
-    <luminance>180.521804810</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.206544399</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>180.521804810</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.206544399</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>180.521804810</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.206544399</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>180.521804810</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.206544399</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>180.521804810</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.206544399</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>180.521804810</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.206544399</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>180.521804810</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.206544399</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>14923</vertical>
-        <horizontal>5182</horizontal>
-        <d45>9936</d45>
-        <d135>8712</d135>
-        <nonDirectional>7017</nonDirectional>
-    </edges>
-    <luminance>180.521804810</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>5.206544399</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</image>
-<video>
-    <filename>fingers - Copy (2).mov</filename>
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-    </color>
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>0</vertical>
-        <horizontal>0</horizontal>
-        <d45>0</d45>
-        <d135>0</d135>
-        <nonDirectional>0</nonDirectional>
-    </edges>
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</video>
-<video>
-    <filename>fingers - Copy (3).mov</filename>
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-    </color>
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>0</vertical>
-        <horizontal>0</horizontal>
-        <d45>0</d45>
-        <d135>0</d135>
-        <nonDirectional>0</nonDirectional>
-    </edges>
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</video>
-<video>
-    <filename>fingers - Copy (4).mov</filename>
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-    </color>
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>0</vertical>
-        <horizontal>0</horizontal>
-        <d45>0</d45>
-        <d135>0</d135>
-        <nonDirectional>0</nonDirectional>
-    </edges>
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</video>
-<video>
-    <filename>fingers - Copy (5).mov</filename>
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-    </color>
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>0</vertical>
-        <horizontal>0</horizontal>
-        <d45>0</d45>
-        <d135>0</d135>
-        <nonDirectional>0</nonDirectional>
-    </edges>
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</video>
-<video>
-    <filename>fingers - Copy (6).mov</filename>
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-    </color>
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>0</vertical>
-        <horizontal>0</horizontal>
-        <d45>0</d45>
-        <d135>0</d135>
-        <nonDirectional>0</nonDirectional>
-    </edges>
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</video>
-<video>
-    <filename>fingers - Copy (7).mov</filename>
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-    </color>
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>0</vertical>
-        <horizontal>0</horizontal>
-        <d45>0</d45>
-        <d135>0</d135>
-        <nonDirectional>0</nonDirectional>
-    </edges>
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</video>
-<video>
-    <filename>fingers - Copy (8).mov</filename>
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-    </color>
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>0</vertical>
-        <horizontal>0</horizontal>
-        <d45>0</d45>
-        <d135>0</d135>
-        <nonDirectional>0</nonDirectional>
-    </edges>
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</video>
-<video>
-    <filename>fingers - Copy.mov</filename>
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-    </color>
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color />
-    <tags></tags>
-    <edges>
-        <vertical>0</vertical>
-        <horizontal>0</horizontal>
-        <d45>0</d45>
-        <d135>0</d135>
-        <nonDirectional>0</nonDirectional>
-    </edges>
-    <luminance>0.000000000</luminance>
-    <rhythm>0.000000000</rhythm>
-    <texture>0.000000000</texture>
-    <audioAmplitude>0.000000000</audioAmplitude>
-    <nFaces>0</nFaces>
-    <nObject>0</nObject>
-    <color></color>
-</video>
-<video>
-    <filename>fingers.mov</filename>
-</video>
-<image>
-    <filename>DSC09305.jpg</filename>
-</image>
-<image>
-    <filename>DSC09307.jpg</filename>
-</image>
-<image>
-    <filename>DSC09310.jpg</filename>
-</image>
-<image>
-    <filename>DSC09311.jpg</filename>
-</image>
-<image>
-    <filename>DSC09315.jpg</filename>
-</image>
-<image>
-    <filename>DSC09316.jpg</filename>
-</image>
-<image>
-    <filename>DSC09318.jpg</filename>
-</image>
-<image>
-    <filename>DSC09320.jpg</filename>
-</image>
-<image>
-    <filename>DSC09322.jpg</filename>
-</image>
-<image>
-    <filename>DSC09324.jpg</filename>
-</image>
-<image>
-    <filename>DSC09326.jpg</filename>
-</image>
-<image>
-    <filename>DSC09327.jpg</filename>
-</image>
-<image>
-    <filename>DSC09329.jpg</filename>
-</image>
-<image>
-    <filename>DSC09330.jpg</filename>
-</image>
-<image>
-    <filename>DSC09334.jpg</filename>
-</image>
-<image>
-    <filename>DSC09336.jpg</filename>
-</image>
-<image>
-    <filename>DSC09337.jpg</filename>
-</image>
-<image>
-    <filename>DSC09341.jpg</filename>
-</image>
-<image>
-    <filename>DSC09343.jpg</filename>
-</image>
-<image>
-    <filename>DSC09344.jpg</filename>
-</image>
-<image>
-    <filename>DSC09347.jpg</filename>
-</image>
-<video>
-    <filename>fingers - Copy (2).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (3).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (4).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (5).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (6).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (7).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (8).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy.mov</filename>
-</video>
-<video>
-    <filename>fingers.mov</filename>
-</video>
-<image>
-    <filename>DSC09305.jpg</filename>
-</image>
-<image>
-    <filename>DSC09307.jpg</filename>
-</image>
-<image>
-    <filename>DSC09310.jpg</filename>
-</image>
-<image>
-    <filename>DSC09311.jpg</filename>
-</image>
-<image>
-    <filename>DSC09315.jpg</filename>
-</image>
-<image>
-    <filename>DSC09316.jpg</filename>
-</image>
-<image>
-    <filename>DSC09318.jpg</filename>
-</image>
-<image>
-    <filename>DSC09320.jpg</filename>
-</image>
-<image>
-    <filename>DSC09322.jpg</filename>
-</image>
-<image>
-    <filename>DSC09324.jpg</filename>
-</image>
-<image>
-    <filename>DSC09326.jpg</filename>
-</image>
-<image>
-    <filename>DSC09327.jpg</filename>
-</image>
-<image>
-    <filename>DSC09329.jpg</filename>
-</image>
-<image>
-    <filename>DSC09330.jpg</filename>
-</image>
-<image>
-    <filename>DSC09334.jpg</filename>
-</image>
-<image>
-    <filename>DSC09336.jpg</filename>
-</image>
-<image>
-    <filename>DSC09337.jpg</filename>
-</image>
-<image>
-    <filename>DSC09341.jpg</filename>
-</image>
-<image>
-    <filename>DSC09343.jpg</filename>
-</image>
-<image>
-    <filename>DSC09344.jpg</filename>
-</image>
-<image>
-    <filename>DSC09347.jpg</filename>
-</image>
-<video>
-    <filename>fingers - Copy (2).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (3).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (4).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (5).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (6).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (7).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (8).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy.mov</filename>
-</video>
-<video>
-    <filename>fingers.mov</filename>
-</video>
-<image>
-    <filename>DSC09305.jpg</filename>
-</image>
-<image>
-    <filename>DSC09307.jpg</filename>
-</image>
-<image>
-    <filename>DSC09310.jpg</filename>
-</image>
-<image>
-    <filename>DSC09311.jpg</filename>
-</image>
-<image>
-    <filename>DSC09315.jpg</filename>
-</image>
-<image>
-    <filename>DSC09316.jpg</filename>
-</image>
-<image>
-    <filename>DSC09318.jpg</filename>
-</image>
-<image>
-    <filename>DSC09320.jpg</filename>
-</image>
-<image>
-    <filename>DSC09322.jpg</filename>
-</image>
-<image>
-    <filename>DSC09324.jpg</filename>
-</image>
-<image>
-    <filename>DSC09326.jpg</filename>
-</image>
-<image>
-    <filename>DSC09327.jpg</filename>
-</image>
-<image>
-    <filename>DSC09329.jpg</filename>
-</image>
-<image>
-    <filename>DSC09330.jpg</filename>
-</image>
-<image>
-    <filename>DSC09334.jpg</filename>
-</image>
-<image>
-    <filename>DSC09336.jpg</filename>
-</image>
-<image>
-    <filename>DSC09337.jpg</filename>
-</image>
-<image>
-    <filename>DSC09341.jpg</filename>
-</image>
-<image>
-    <filename>DSC09343.jpg</filename>
-</image>
-<image>
-    <filename>DSC09344.jpg</filename>
-</image>
-<image>
-    <filename>DSC09347.jpg</filename>
-</image>
-<video>
-    <filename>fingers - Copy (2).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (3).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (4).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (5).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (6).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (7).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (8).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy.mov</filename>
-</video>
-<video>
-    <filename>fingers.mov</filename>
-</video>
-<image>
-    <filename>DSC09305.jpg</filename>
-</image>
-<image>
-    <filename>DSC09307.jpg</filename>
-</image>
-<image>
-    <filename>DSC09310.jpg</filename>
-</image>
-<image>
-    <filename>DSC09311.jpg</filename>
-</image>
-<image>
-    <filename>DSC09315.jpg</filename>
-</image>
-<image>
-    <filename>DSC09316.jpg</filename>
-</image>
-<image>
-    <filename>DSC09318.jpg</filename>
-</image>
-<image>
-    <filename>DSC09320.jpg</filename>
-</image>
-<image>
-    <filename>DSC09322.jpg</filename>
-</image>
-<image>
-    <filename>DSC09324.jpg</filename>
-</image>
-<image>
-    <filename>DSC09326.jpg</filename>
-</image>
-<image>
-    <filename>DSC09327.jpg</filename>
-</image>
-<image>
-    <filename>DSC09329.jpg</filename>
-</image>
-<image>
-    <filename>DSC09330.jpg</filename>
-</image>
-<image>
-    <filename>DSC09334.jpg</filename>
-</image>
-<image>
-    <filename>DSC09336.jpg</filename>
-</image>
-<image>
-    <filename>DSC09337.jpg</filename>
-</image>
-<image>
-    <filename>DSC09341.jpg</filename>
-</image>
-<image>
-    <filename>DSC09343.jpg</filename>
-</image>
-<image>
-    <filename>DSC09344.jpg</filename>
-</image>
-<image>
-    <filename>DSC09347.jpg</filename>
-</image>
-<video>
-    <filename>fingers - Copy (2).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (3).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (4).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (5).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (6).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (7).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (8).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy.mov</filename>
-</video>
-<video>
-    <filename>fingers.mov</filename>
-</video>
-<image>
-    <filename>DSC09305.jpg</filename>
-</image>
-<image>
-    <filename>DSC09307.jpg</filename>
-</image>
-<image>
-    <filename>DSC09310.jpg</filename>
-</image>
-<image>
-    <filename>DSC09311.jpg</filename>
-</image>
-<image>
-    <filename>DSC09315.jpg</filename>
-</image>
-<image>
-    <filename>DSC09316.jpg</filename>
-</image>
-<image>
-    <filename>DSC09318.jpg</filename>
-</image>
-<image>
-    <filename>DSC09320.jpg</filename>
-</image>
-<image>
-    <filename>DSC09322.jpg</filename>
-</image>
-<image>
-    <filename>DSC09324.jpg</filename>
-</image>
-<image>
-    <filename>DSC09326.jpg</filename>
-</image>
-<image>
-    <filename>DSC09327.jpg</filename>
-</image>
-<image>
-    <filename>DSC09329.jpg</filename>
-</image>
-<image>
-    <filename>DSC09330.jpg</filename>
-</image>
-<image>
-    <filename>DSC09334.jpg</filename>
-</image>
-<image>
-    <filename>DSC09336.jpg</filename>
-</image>
-<image>
-    <filename>DSC09337.jpg</filename>
-</image>
-<image>
-    <filename>DSC09341.jpg</filename>
-</image>
-<image>
-    <filename>DSC09343.jpg</filename>
-</image>
-<image>
-    <filename>DSC09344.jpg</filename>
-</image>
-<image>
-    <filename>DSC09347.jpg</filename>
-</image>
-<video>
-    <filename>fingers - Copy (2).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (3).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (4).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (5).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (6).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (7).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (8).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy.mov</filename>
-</video>
-<video>
-    <filename>fingers.mov</filename>
-</video>
-<image>
-    <filename>DSC09305.jpg</filename>
-</image>
-<image>
-    <filename>DSC09307.jpg</filename>
-</image>
-<image>
-    <filename>DSC09310.jpg</filename>
-</image>
-<image>
-    <filename>DSC09311.jpg</filename>
-</image>
-<image>
-    <filename>DSC09315.jpg</filename>
-</image>
-<image>
-    <filename>DSC09316.jpg</filename>
-</image>
-<image>
-    <filename>DSC09318.jpg</filename>
-</image>
-<image>
-    <filename>DSC09320.jpg</filename>
-</image>
-<image>
-    <filename>DSC09322.jpg</filename>
-</image>
-<image>
-    <filename>DSC09324.jpg</filename>
-</image>
-<image>
-    <filename>DSC09326.jpg</filename>
-</image>
-<image>
-    <filename>DSC09327.jpg</filename>
-</image>
-<image>
-    <filename>DSC09329.jpg</filename>
-</image>
-<image>
-    <filename>DSC09330.jpg</filename>
-</image>
-<image>
-    <filename>DSC09334.jpg</filename>
-</image>
-<image>
-    <filename>DSC09336.jpg</filename>
-</image>
-<image>
-    <filename>DSC09337.jpg</filename>
-</image>
-<image>
-    <filename>DSC09341.jpg</filename>
-</image>
-<image>
-    <filename>DSC09343.jpg</filename>
-</image>
-<image>
-    <filename>DSC09344.jpg</filename>
-</image>
-<image>
-    <filename>DSC09347.jpg</filename>
-</image>
-<video>
-    <filename>fingers - Copy (2).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (3).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (4).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (5).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (6).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (7).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (8).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy.mov</filename>
-</video>
-<video>
-    <filename>fingers.mov</filename>
-</video>
-<image>
-    <filename>DSC09305.jpg</filename>
-</image>
-<image>
-    <filename>DSC09307.jpg</filename>
-</image>
-<image>
-    <filename>DSC09310.jpg</filename>
-</image>
-<image>
-    <filename>DSC09311.jpg</filename>
-</image>
-<image>
-    <filename>DSC09315.jpg</filename>
-</image>
-<image>
-    <filename>DSC09316.jpg</filename>
-</image>
-<image>
-    <filename>DSC09318.jpg</filename>
-</image>
-<image>
-    <filename>DSC09320.jpg</filename>
-</image>
-<image>
-    <filename>DSC09322.jpg</filename>
-</image>
-<image>
-    <filename>DSC09324.jpg</filename>
-</image>
-<image>
-    <filename>DSC09326.jpg</filename>
-</image>
-<image>
-    <filename>DSC09327.jpg</filename>
-</image>
-<image>
-    <filename>DSC09329.jpg</filename>
-</image>
-<image>
-    <filename>DSC09330.jpg</filename>
-</image>
-<image>
-    <filename>DSC09334.jpg</filename>
-</image>
-<image>
-    <filename>DSC09336.jpg</filename>
-</image>
-<image>
-    <filename>DSC09337.jpg</filename>
-</image>
-<image>
-    <filename>DSC09341.jpg</filename>
-</image>
-<image>
-    <filename>DSC09343.jpg</filename>
-</image>
-<image>
-    <filename>DSC09344.jpg</filename>
-</image>
-<image>
-    <filename>DSC09347.jpg</filename>
-</image>
-<video>
-    <filename>fingers - Copy (2).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (3).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (4).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (5).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (6).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (7).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (8).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy.mov</filename>
-</video>
-<video>
-    <filename>fingers.mov</filename>
-</video>
-<image>
-    <filename>DSC09305.jpg</filename>
-</image>
-<image>
-    <filename>DSC09307.jpg</filename>
-</image>
-<image>
-    <filename>DSC09310.jpg</filename>
-</image>
-<image>
-    <filename>DSC09311.jpg</filename>
-</image>
-<image>
-    <filename>DSC09315.jpg</filename>
-</image>
-<image>
-    <filename>DSC09316.jpg</filename>
-</image>
-<image>
-    <filename>DSC09318.jpg</filename>
-</image>
-<image>
-    <filename>DSC09320.jpg</filename>
-</image>
-<image>
-    <filename>DSC09322.jpg</filename>
-</image>
-<image>
-    <filename>DSC09324.jpg</filename>
-</image>
-<image>
-    <filename>DSC09326.jpg</filename>
-</image>
-<image>
-    <filename>DSC09327.jpg</filename>
-</image>
-<image>
-    <filename>DSC09329.jpg</filename>
-</image>
-<image>
-    <filename>DSC09330.jpg</filename>
-</image>
-<image>
-    <filename>DSC09334.jpg</filename>
-</image>
-<image>
-    <filename>DSC09336.jpg</filename>
-</image>
-<image>
-    <filename>DSC09337.jpg</filename>
-</image>
-<image>
-    <filename>DSC09341.jpg</filename>
-</image>
-<image>
-    <filename>DSC09343.jpg</filename>
-</image>
-<image>
-    <filename>DSC09344.jpg</filename>
-</image>
-<image>
-    <filename>DSC09347.jpg</filename>
-</image>
-<video>
-    <filename>fingers - Copy (2).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (3).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (4).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (5).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (6).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (7).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy (8).mov</filename>
-</video>
-<video>
-    <filename>fingers - Copy.mov</filename>
-</video>
-<video>
-    <filename>fingers.mov</filename>
-</video>

@@ -47,6 +47,10 @@ public:
     Metadata* getMetadata(){
         return metadata;
     }
+    
+    void setMetadata(Metadata* metadata){
+        this->metadata = metadata;
+    }
 };
 
 class MediaGUI : public Media{

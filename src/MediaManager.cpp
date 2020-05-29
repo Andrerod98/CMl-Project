@@ -8,11 +8,16 @@
 #include "MediaManager.h"
 
 MediaManager *MediaManager::instance = 0;
-
+const double kDistanceCoef = 4.0;
+const int kMaxMatchingSize = 50;
+using namespace cv;
 MediaManager::MediaManager(){
     
     this->xmlManager = xmlManager->getInstance();
     this->playlistManager  = playlistManager->getInstance();
+    
+    finder.setup("haarcascade_frontalface_default.xml");
+    finder.setScaleHaar(2);
     
     loadImages();
     loadVideos();
@@ -38,6 +43,8 @@ MediaManager* MediaManager::getInstance() {
 int MediaManager::getSelectedMediaIndex(){
     return selectedMedia;
 }
+
+
 //Loads videos from storega
 void MediaManager::loadVideos() {
     
@@ -53,9 +60,18 @@ void MediaManager::loadVideos() {
         video->load(diretory.getPath(i));
         video->setLoopState(OF_LOOP_NORMAL);
         
+        
+        MediaGUI* media = new MediaGUI(video, diretory.getName(i), NULL);
+        if (!xmlManager->exists(diretory.getName(i), false)) {
+            xmlManager->createMedia(diretory.getName(i), false);
+            xmlManager->setMetadata(diretory.getName(i), false, MediaManager::processMedia(media));
+        }
+        
         Metadata* meta = xmlManager->getMetadata(diretory.getName(i), false);
         
-        MediaGUI* media = new MediaGUI(video, diretory.getName(i), meta);
+        media->setMetadata(meta);
+        
+       
         
         for(string tag: meta->getTags()){
             playlistManager->addToPlaylist(tag,media);
@@ -84,9 +100,15 @@ void MediaManager::loadImages() {
         ofImage* image = new ofImage();
         image->load(diretory.getPath(i));
         
+        MediaGUI* media = new MediaGUI(image, diretory.getName(i), NULL);
+        if (!xmlManager->exists(diretory.getName(i), true)) {
+            xmlManager->createMedia(diretory.getName(i), true);
+            xmlManager->setMetadata(diretory.getName(i), true, MediaManager::processMedia(media));
+        }
+        
         Metadata* meta = xmlManager->getMetadata(diretory.getName(i), true);
         
-        MediaGUI* media = new MediaGUI(image, diretory.getName(i), meta);
+        media->setMetadata(meta);
        
         for(string tag: meta->getTags()){
             playlistManager->addToPlaylist(tag,media);
@@ -216,6 +238,7 @@ ofImage MediaManager::processThumbnail(Media* media) {
 	ofImage thumbnail;
 
 	// getting thumbnail (first frame of the video)
+    
 	video.setFrame(0);
 	thumbnail.setFromPixels(video.getPixels());
 
@@ -230,8 +253,13 @@ ofColor MediaManager::processColor(Media* media){
 	return ofColor();
 }
 
-int MediaManager::processNFaces(Media* media){
-	return 0;
+int MediaManager::processNFaces(ofImage image){
+
+    ofxCvGrayscaleImage     grayImg;
+    
+    grayImg = image;
+    finder.findHaarObjects(grayImg);
+	return finder.blobs.size();
 }
 
 float MediaManager::processEdgeDistribution(Media* media){
@@ -351,8 +379,80 @@ float MediaManager::processTextures(Media* media){
 	return 0.0f;
 }
 
-int MediaManager::processNTimesObject(ofImage image,Media* media){
-	return 0;
+inline void match(Mat& desc1, Mat& desc2, vector<DMatch>& matches) {
+    matches.clear();
+
+        BFMatcher desc_matcher(cv::NORM_L2, true);
+        vector< vector<DMatch> > vmatches;
+        desc_matcher.knnMatch(desc1, desc2, vmatches, 2);
+        for (int i = 0; i < matches.size(); ++i)
+        {
+            const float ratio = 0.8; // As in Lowe's paper; can be tuned
+            if (vmatches[i][0].distance < ratio * vmatches[i][1].distance)
+            {
+                matches.push_back(vmatches[i][0]);
+            }
+        }
+    
+}
+
+inline void findKeyPointsHomography(vector<KeyPoint>& kpts1, vector<KeyPoint>& kpts2,
+                                    vector<DMatch>& matches, vector<char>& match_mask) {
+    if (static_cast<int>(match_mask.size()) < 3) {
+        return;
+    }
+    vector<Point2f> pts1;
+    vector<Point2f> pts2;
+    for (int i = 0; i < static_cast<int>(matches.size()); ++i) {
+        pts1.push_back(kpts1[matches[i].queryIdx].pt);
+        pts2.push_back(kpts2[matches[i].trainIdx].pt);
+    }
+    findHomography(pts1, pts2, cv::RANSAC, 4, match_mask);
+}
+
+int MediaManager::processNTimesObject(ofImage image,ofImage media){
+    
+
+    
+    Mat img_1 = ofxCv::toCv(image);
+    Mat img_2 = ofxCv::toCv(media);
+    
+
+    cvtColor(img_1, img_1, cv::COLOR_RGB2GRAY);
+    cvtColor(img_2, img_2, cv::COLOR_RGB2GRAY);
+    Mat descriptors_1;
+    Mat descriptors_2;
+    std::vector<cv::KeyPoint> keypoints_1, keypoints_2;
+    Ptr<ORB> orb = ORB::create();
+    orb->detectAndCompute(img_1, Mat(), keypoints_1, descriptors_1);
+    orb->detectAndCompute(img_2, Mat(), keypoints_2, descriptors_2);
+
+
+    // if one of the images has no descriptors return 0
+    if (descriptors_1.empty() || descriptors_2.empty()) {
+        return 0;
+    }
+
+    vector< cv::DMatch>  matches;
+    BFMatcher matcher(cv::NORM_L2, true);
+    matcher.match(descriptors_1, descriptors_2, matches);
+
+
+    
+    std::sort(matches.begin(), matches.end());
+    while (matches.front().distance * kDistanceCoef < matches.back().distance) {
+        matches.pop_back();
+    }
+    while (matches.size() > kMaxMatchingSize) {
+        matches.pop_back();
+    }
+    
+    vector<char> match_mask(matches.size(), 1);
+    findKeyPointsHomography(keypoints_1, keypoints_2, matches, match_mask);
+
+    // Return the amount of "good matches"
+    return matches.size();
+
 }
 
 float MediaManager::processRythm(Media* media){
@@ -362,10 +462,74 @@ float MediaManager::processRythm(Media* media){
 float MediaManager::processAudioAmplitude(Media* media){
 	return 0.0f;
 }
+Metadata MediaManager::processImage(ofImage image){
+    
+    //Luminance variables
+    float luminance = 0.0;
+    float sumLuminance = 0.0;
+    
+    //Color - based on first moment
+    double sumRed, sumGreen, sumBlue;
+    double red, green, blue;
+    ofColor color;
+    //NFaces
+    int nFaces = 0;
+    //Edge distribution
+    vector<int> edgeDistribution = {};
+    //Texture characteristics
+    float texture = 0.0;
+    //NObject
+    int nObjects = 0;
+    
+    float width = image.getWidth();
+    float height = image.getHeight();
+    
+    // for all pixels
+    for (int x = 0; x < width; x++) {
+        for (int y = 0; y < height; y++) {
+            color = image.getColor(x, y);
+            sumRed += color.r;
+            sumGreen += color.g;
+            sumBlue += color.b;
+            sumLuminance += (0.2125*color.r + 0.7154*color.g + 0.0721*color.b);
+        }
+    }
+    
+    red = sumRed / (width * height);
+    green = sumGreen / (width * height);
+    blue = sumBlue / (width * height);
+    color = ofColor(red, green, blue);
+    luminance = sumLuminance / (width * height);
+    nFaces = processNFaces(image);
+    edgeDistribution = processEdges(image);
+    texture = processGabor(image);
+    
+    string path = "objects/";
+    ofDirectory dir(path);
+    dir.allowExt("jpg");
+    dir.listDir();
+    
+    for(int i = 0; i < dir.size(); i++){
+        ofImage img;
+        img.load(dir.getPath(i));
+        nObjects = processNTimesObject(img, image);
+    }
+    
+    return Metadata(luminance, edgeDistribution, 0, texture, 0, nFaces, nObjects, color);
+
+    
+}
+
+int getVariance(Mat hist1, Mat hist2){
+    Mat res;
+    absdiff(hist1, hist2, res);
+    cout << sum(res)[0] << "\n";
+    return sum(res)[0];
+}
 
 Metadata MediaManager::processMedia(Media* media) {
 	float luminance = 0.0;
-	float sumLuminance = 0.0;
+
 	int red, green, blue;
 	red = green = blue = 0;
 	float redMean, greenMean, blueMean;
@@ -378,43 +542,171 @@ Metadata MediaManager::processMedia(Media* media) {
 	int nFaces = 0;
 	int nObject = 0;
 	ofColor color = ofColor(0,0,0);
+    
+    float frameLuminance = 0;
+    //Color Variables
+   
+    double reds = 0;
+    double greens = 0;
+    double blues = 0;
+    float meanReds = 0;
+    float meanGreens = 0;
+    float meanBlues = 0;
+    
+    //Rhythm Variables
+   
+    float meanRhythm = 0;
+    float rhythmFrame = 0;
+    vector <float> rhythmPerFrame;
+    vector <float> rhythmVariations;
 
+    
+    int maxFaces = 0;
+    int maxObjects = 0;
+    float sumLuminance = 0;
 	if (media->isImage()) {
 		ofImage image = *media->getImage();
-		float width = image.getWidth();
-		float height = image.getHeight();
-
-		// for all pixels
-		for (int x = 0; x < width; x++) {
-			for (int y = 0; y < height; y++) {
-				color = image.getColor(x, y);
-				red += color.r;
-				green += color.g;
-				blue += color.b;
-				sumLuminance += (0.2125*color.r + 0.7154*color.g + 0.0721*color.b);
-			}
-		}
-
-		// average luminance
-		luminance = sumLuminance / (width * height);
-		redMean = red / (width * height);
-		greenMean = green / (width * height);
-		blueMean = blue / (width * height);
-		texture = processGabor(image);
-
-		// color
-		color = ofColor(redMean, greenMean, blueMean);
-
-		// edge distribution
-		edgeDistribution = processEdges(image);
+        return processImage(image);
 	}
 	else {
 		ofVideoPlayer video = *media->getVideo();
-		ofImage thumbnail = processThumbnail(media);
+        ofImage image;
+        vector<int> rythmVariance = {};
+        /// Establish the number of bins
+        int histSize = 256;
+        
+        /// Set the ranges ( for B,G,R) )
+        float range[] = { 0, 256 } ;
+        const float* histRange = { range };
 
-		edgeDistribution = processEdges(thumbnail);
+        int max = video.getTotalNumFrames();
+        
+
+        
+        
+        
+       
+     
+        //normalize(current_hist, current_hist, 0, 255, NORM_MINMAX, -1, Mat() );
+        Mat current_hist;
+        Mat previous_hist;
+        Mat image_gray;
+   
+        for (int i = 0; i < max; i++) {
+            video.setFrame(i);
+            image.setFromPixels(video.getPixels());
+            image_gray = ofxCv::toCv(image);
+            cv::cvtColor(image_gray, image_gray, CV_BGR2GRAY);
+            
+           // Metadata metadata = processImage(image);
+            
+
+       
+            
+            if(i == 0){
+              //  color = metadata.getColorValue();
+               // texture = metadata.getTextureValue();
+                calcHist( &image_gray, 1, 0, Mat(), previous_hist, 1, &histSize, &histRange, true, false );
+                /*
+                ofPixels pixels = video.getPixels();
+                
+                ofImage thumbnail = processThumbnail(media);
+                
+                thumbnail.save("teste.jpg");
+                
+                edgeDistribution = processEdges(thumbnail);
+                */
+            }else{
+                calcHist( &image_gray, 1, 0, Mat(), current_hist, 1, &histSize, &histRange, true, false );
+                rythmVariance.push_back(getVariance(previous_hist, current_hist));
+                previous_hist = current_hist.clone();
+            }
+            
+            
+            /*
+            sumLuminance += metadata.getLuminanceValue();
+           
+            if (maxFaces < metadata.getFacesNumber())
+                maxFaces = metadata.getFacesNumber();
+                
+            if (maxObjects < metadata.getObjectNumber())
+                maxObjects = metadata.getObjectNumber();
+            */
+            
+        }
+        
+
+     
+        // Save average luminance
+        luminance = sumLuminance / video.getTotalNumFrames();
+
+        
+        // Calculate mean of RGB colors of the Video
+      /*  meanReds    = reds  / (video.getTotalNumFrames() * image.getWidth() * image.getHeight());
+        meanGreens  = greens / (video.getTotalNumFrames() * image.getWidth() * image.getHeight());
+        meanBlues   = blues  / (video.getTotalNumFrames() * image.getWidth() * image.getHeight());
+        
+        color = ofColor(meanReds, meanGreens, meanBlues);
+       
+        // Calculate Rhythm Variations between each frame (based on luminance)
+        for (int i = 1; i < rhythmPerFrame.size(); i++) {
+            
+            float variation = std::abs(rhythmPerFrame.at(i - 1) - rhythmPerFrame.at(i));
+            rhythmVariations.push_back(variation);
+            rhythm += variation;
+        }
+        
+        // Calculate Mean Rhythm
+        rhythm = rhythm / ( rhythmPerFrame.size() - 1 );
+        
+   
+        
+        // CUT DETECTION
+        // The greater the rhythm variation the better the frame is suited to become a "key" Frame
+        // initialize original index locations
+        vector<size_t> idx(rhythmVariations.size());
+        iota(idx.begin(), idx.end(), 0);
+        
+        // sort indexes based on comparing values in rhythmVariations
+        sort(idx.begin(), idx.end(),
+             [&rhythmVariations](size_t i1, size_t i2) {return rhythmVariations[i1] < rhythmVariations[i2]; });
+        
+        
+        // For the 5 frames with the greatest variations save the images for moving icons
+        for (int i = idx.size()-1, c = 0; c < 5 ; c++, i--) {
+            
+            video.setFrame(idx.at(i));
+            image.setFromPixels(video.getPixels());
+
+            
+            image.save("thumbnails/" + media->getFileName() + to_string(c) + ".png");
+            
+          //  settings.setValue("metadata:imageUrl" + std::to_string(c) , imagePath);
+        }
+         */
+        
+
+    
 	}
-
+    
+    /*
+    
+    string path = "objects/";
+    ofDirectory dir(path);
+    //only show png files
+    dir.allowExt("jpg");
+    //populate the directory object
+    dir.listDir();
+    
+    //go through and print out all the paths
+    
+    for(int i = 0; i < dir.size(); i++){
+        ofImage image;
+        image.load(dir.getPath(i));
+        nObject = processNTimesObject(image, media);
+        cout << "Object:" << nObject;
+    }
+*/
 	return Metadata(luminance, edgeDistribution, rhythm, texture, audioAmplitude, nFaces, nObject, color);
 }
 

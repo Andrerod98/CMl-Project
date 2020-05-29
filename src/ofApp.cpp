@@ -16,15 +16,7 @@ void ofApp::setup() {
     cout << "starting algorithm" << endl;
     
     auto start = std::chrono::high_resolution_clock::now();
-    // populate xml with loaded medias
-    for (int i = 0; i < mediaManager->getNMedia(); i++) {
-        
-        if (!xmlManager->exists(mediaManager->getMedia(i)->getFileName(), mediaManager->getMedia(i)->isImage())) {
-            xmlManager->createMedia(mediaManager->getMedia(i)->getFileName(), mediaManager->getMedia(i)->isImage());
-            xmlManager->setMetadata(mediaManager->getMedia(i)->getFileName(), mediaManager->getMedia(i)->isImage(), MediaManager::processMedia(mediaManager->getMedia(i)));
-        }
-        
-    }
+   
     
     auto stop = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
