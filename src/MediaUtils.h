@@ -32,6 +32,8 @@ public:
     static int processNFaces(Media* media);
     
     static float processEdgeDistribution(Media* media);
+
+	static vector<int> processEdges(ofImage image);
     
     static float processTextures(Media* media);
     

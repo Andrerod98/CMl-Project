@@ -73,15 +73,15 @@ map <string, string> XmlManager::getMetadataMap(string mediaName, bool isImage) 
 }
 
 Metadata* XmlManager::getMetadata(string mediaName, bool isImage) {
-	vector<std::string> tags;
-	float luminance;
-	float edgeDistribution;
-	float rhythm;
-	float texture;
-	float audioAmplitude;
-	int nFaces;
-	int nObject;
-	ofColor color;
+	vector<std::string> tags = {};
+	float luminance = 0.0;
+	vector<int> edgeDistribution = {};
+	float rhythm = 0.0;
+	float texture = 0.0;
+	float audioAmplitude = 0.0;
+	int nFaces = 0;
+	int nObject = 0;
+	ofColor color = ofColor(0,0,0);
 
 	if (findMedia(mediaName, isImage)) {
 		XML.pushTag("tags");
@@ -90,8 +90,15 @@ Metadata* XmlManager::getMetadata(string mediaName, bool isImage) {
 			tags.insert(tags.begin() + i, XML.getValue("tag", "tag", i));
 		XML.popTag(); // out of tags
 
+		XML.pushTag("edges");
+		edgeDistribution.insert(edgeDistribution.begin(), XML.getValue("vertical", 1));
+		edgeDistribution.insert(edgeDistribution.begin()+1, XML.getValue("horizontal", 1));
+		edgeDistribution.insert(edgeDistribution.begin()+2, XML.getValue("d45", 1));
+		edgeDistribution.insert(edgeDistribution.begin()+3, XML.getValue("d135", 1));
+		edgeDistribution.insert(edgeDistribution.begin()+4, XML.getValue("nonDirectional", 1));
+		XML.popTag(); // out of edges
+
 		luminance = (float) XML.getValue("luminance", -1.0);
-		edgeDistribution = (float)XML.getValue("edgeDistribution", -1.0);
 		rhythm = (float)XML.getValue("rhythm", -1.0);
 		texture = (float)XML.getValue("texture", -1.0);
 		audioAmplitude = (float)XML.getValue("audioAmplitude", -1.0);
@@ -149,8 +156,18 @@ bool XmlManager::setMetadata(string mediaName, bool isImage, Metadata metadata) 
 		}
 		XML.popTag(); // out of tags
 
+		XML.removeTag("edges");
+		XML.addTag("edges");
+		XML.pushTag("edges");
+		vector<int> edges = metadata.getEdgeDistribution();
+		XML.addValue("vertical",edges[0]);
+		XML.addValue("horizontal", edges[1]);
+		XML.addValue("d45", edges[2]);
+		XML.addValue("d135", edges[3]);
+		XML.addValue("nonDirectional", edges[4]);
+		XML.popTag(); // out of edges
+
 		XML.addValue("luminance", metadata.getLuminanceValue());
-		XML.addValue("edgeDistribution", metadata.getEdgeDistribution());
 		XML.addValue("rhythm", metadata.getRhythmValue());
 		XML.addValue("texture", metadata.getTextureValue());
 		XML.addValue("audioAmplitude", metadata.getAudioAmplitude());

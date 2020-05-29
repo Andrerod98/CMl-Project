@@ -142,6 +142,7 @@ void Header::setFullHeader(){
     refreshMetadata->setPosition(getWidth()-475, 40-15);
     refreshMetadata->setWidth(150, 10);
     refreshMetadata->setLabelUpperCase(false);
+	refreshMetadata->onButtonEvent(this, &Header::refreshButtonPress);
     refreshMetadata->setBackgroundColor(settings::SECONDARY_COLOR);
     refreshMetadata->setLabelColor(settings::FONT_COLOR);
     
@@ -163,7 +164,6 @@ void Header::drawSelected(int selected){
 void Header::setMetadataHeader( Media* media){
     ofxDatGuiTheme* theme = new ofxDatGuiTheme();
     theme->init();
-    
     
     theme->font.size = 10;
     theme->layout.height = 40;
@@ -191,10 +191,6 @@ void Header::setMetadataHeader( Media* media){
     refreshMetadata->setWidth(150, 10);
     refreshMetadata->setLabelUpperCase(false);
     
-
-    
-    
-    
     backButton.load("icons/back.png");
     this->media = media;
     
@@ -205,9 +201,6 @@ void Header::liveButtonPress(ofxDatGuiButtonEvent e){
     notifyObservers(Event::LIVE_BUTTON_PRESS);
 }
 void Header::configButtonPress(ofxDatGuiButtonEvent e){
-    
-    
-    
     notifyObservers(Event::METADATA_BUTTON_PRESS);
 }
 void Header::helpButtonPress(ofxDatGuiButtonEvent e){
@@ -217,8 +210,9 @@ void Header::darkButtonPress(ofxDatGuiButtonEvent e){
     notifyObservers(Event::GALLERY_TAB_CHANGE);
 }
 void Header::registerObserver(Observer *observer) {
-
     observers.push_back(observer);
+}
+void Header::refreshButtonPress(ofxDatGuiButtonEvent e) {
 
 }
 

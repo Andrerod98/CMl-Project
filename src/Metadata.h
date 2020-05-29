@@ -14,7 +14,7 @@ class Metadata{
     
     vector<std::string> tags;
     float luminance;
-    float edgeDistribution;
+    vector<int> edgeDistribution;
     float rhythm;
     float texture;
     float audioAmplitude;
@@ -26,7 +26,7 @@ public:
     
     Metadata(vector<string> tags,
              float luminance,
-             float edgeDistribution,
+             vector<int> edgeDistribution,
              float rhythm,
              float texture,
              float audioAmplitude,
@@ -46,7 +46,7 @@ public:
     };
 
 	Metadata(float luminance,
-		float edgeDistribution,
+		vector<int> edgeDistribution,
 		float rhythm,
 		float texture,
 		float audioAmplitude,
@@ -89,7 +89,7 @@ public:
         return nFaces;
     };
     
-    float getEdgeDistribution(){
+    vector<int> getEdgeDistribution(){
         return edgeDistribution;
     };
     
@@ -112,8 +112,6 @@ public:
     float getAudioAmplitude(){
         return audioAmplitude;
     };
-
-
 };
 
 #endif /* Metadata_h */

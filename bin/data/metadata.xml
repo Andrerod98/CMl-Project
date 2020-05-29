@@ -2,481 +2,671 @@
     <image>
         <filename>DSC09302.jpg</filename>
         <tags />
+<<<<<<< HEAD
         <luminance>169.592895508</luminance>
         <edgeDistribution>0.000000000</edgeDistribution>
+=======
+        <edges>
+            <vertical>4950</vertical>
+            <horizontal>1518</horizontal>
+            <d45>2872</d45>
+            <d135>3505</d135>
+            <nonDirectional>2097</nonDirectional>
+        </edges>
+        <luminance>173.041259766</luminance>
+>>>>>>> origin/media_utils
         <rhythm>0.000000000</rhythm>
-        <texture>3.762146711</texture>
+        <texture>3.771570206</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>188</red>
+            <green>170</green>
+            <blue>152</blue>
         </color>
     </image>
     <image>
         <filename>DSC09305.jpg</filename>
         <tags />
+<<<<<<< HEAD
         <luminance>170.638488770</luminance>
         <edgeDistribution>0.000000000</edgeDistribution>
+=======
+        <edges>
+            <vertical>7928</vertical>
+            <horizontal>3274</horizontal>
+            <d45>5188</d45>
+            <d135>5617</d135>
+            <nonDirectional>2885</nonDirectional>
+        </edges>
+        <luminance>175.533432007</luminance>
+>>>>>>> origin/media_utils
         <rhythm>0.000000000</rhythm>
-        <texture>5.152142525</texture>
+        <texture>5.152708054</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>194</red>
+            <green>172</green>
+            <blue>147</blue>
         </color>
     </image>
     <image>
         <filename>DSC09307.jpg</filename>
         <tags />
-        <luminance>169.014465332</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
+        <edges>
+            <vertical>9282</vertical>
+            <horizontal>2983</horizontal>
+            <d45>5875</d45>
+            <d135>6702</d135>
+            <nonDirectional>2793</nonDirectional>
+        </edges>
+        <luminance>172.653671265</luminance>
         <rhythm>0.000000000</rhythm>
-        <texture>5.701965332</texture>
+        <texture>5.706576824</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>184</red>
+            <green>171</green>
+            <blue>154</blue>
         </color>
     </image>
     <image>
         <filename>DSC09310.jpg</filename>
         <tags />
-        <luminance>180.227020264</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
+        <edges>
+            <vertical>8414</vertical>
+            <horizontal>4042</horizontal>
+            <d45>5937</d45>
+            <d135>6831</d135>
+            <nonDirectional>4015</nonDirectional>
+        </edges>
+        <luminance>185.469146729</luminance>
         <rhythm>0.000000000</rhythm>
-        <texture>7.197669983</texture>
+        <texture>7.198081970</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>201</red>
+            <green>183</green>
+            <blue>158</blue>
         </color>
     </image>
     <image>
         <filename>DSC09311.jpg</filename>
         <tags />
-        <luminance>175.584411621</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
+        <edges>
+            <vertical>8659</vertical>
+            <horizontal>5133</horizontal>
+            <d45>6880</d45>
+            <d135>7396</d135>
+            <nonDirectional>4838</nonDirectional>
+        </edges>
+        <luminance>178.972854614</luminance>
         <rhythm>0.000000000</rhythm>
-        <texture>8.253330231</texture>
+        <texture>8.256234169</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>195</red>
+            <green>176</green>
+            <blue>157</blue>
         </color>
     </image>
     <image>
         <filename>DSC09315.jpg</filename>
         <tags />
-        <luminance>172.937774658</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
+        <edges>
+            <vertical>5154</vertical>
+            <horizontal>2309</horizontal>
+            <d45>3623</d45>
+            <d135>3855</d135>
+            <nonDirectional>2708</nonDirectional>
+        </edges>
+        <luminance>177.688156128</luminance>
         <rhythm>0.000000000</rhythm>
-        <texture>3.772083282</texture>
+        <texture>3.766511440</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>199</red>
+            <green>174</green>
+            <blue>147</blue>
         </color>
     </image>
     <image>
         <filename>DSC09316.jpg</filename>
         <tags />
-        <luminance>174.997192383</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
+        <edges>
+            <vertical>9349</vertical>
+            <horizontal>4237</horizontal>
+            <d45>6817</d45>
+            <d135>7653</d135>
+            <nonDirectional>3632</nonDirectional>
+        </edges>
+        <luminance>179.725860596</luminance>
         <rhythm>0.000000000</rhythm>
-        <texture>6.260978699</texture>
+        <texture>6.264538765</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>196</red>
+            <green>177</green>
+            <blue>153</blue>
         </color>
     </image>
     <image>
         <filename>DSC09318.jpg</filename>
         <tags />
-        <luminance>206.730438232</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
+        <edges>
+            <vertical>1447</vertical>
+            <horizontal>1345</horizontal>
+            <d45>1803</d45>
+            <d135>1945</d135>
+            <nonDirectional>1205</nonDirectional>
+        </edges>
+        <luminance>206.865371704</luminance>
         <rhythm>0.000000000</rhythm>
-        <texture>1.770900846</texture>
+        <texture>1.774958968</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>207</red>
+            <green>206</green>
+            <blue>208</blue>
         </color>
     </image>
     <image>
         <filename>DSC09320.jpg</filename>
         <tags />
-        <luminance>202.406021118</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
+        <edges>
+            <vertical>1131</vertical>
+            <horizontal>1181</horizontal>
+            <d45>1373</d45>
+            <d135>1349</d135>
+            <nonDirectional>1096</nonDirectional>
+        </edges>
+        <luminance>202.566864014</luminance>
         <rhythm>0.000000000</rhythm>
-        <texture>1.558752298</texture>
+        <texture>1.646274328</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>204</red>
+            <green>201</green>
+            <blue>203</blue>
         </color>
     </image>
     <image>
         <filename>DSC09322.jpg</filename>
         <tags />
-        <luminance>200.074783325</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
+        <edges>
+            <vertical>7942</vertical>
+            <horizontal>3212</horizontal>
+            <d45>4953</d45>
+            <d135>5189</d135>
+            <nonDirectional>3834</nonDirectional>
+        </edges>
+        <luminance>203.910736084</luminance>
         <rhythm>0.000000000</rhythm>
-        <texture>4.479598045</texture>
+        <texture>4.479238987</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>219</red>
+            <green>201</green>
+            <blue>181</blue>
         </color>
     </image>
     <image>
         <filename>DSC09324.jpg</filename>
         <tags />
-        <luminance>186.697540283</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
+        <edges>
+            <vertical>7995</vertical>
+            <horizontal>2919</horizontal>
+            <d45>5698</d45>
+            <d135>6132</d135>
+            <nonDirectional>2620</nonDirectional>
+        </edges>
+        <luminance>190.309799194</luminance>
         <rhythm>0.000000000</rhythm>
-        <texture>5.718405724</texture>
+        <texture>5.727421284</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>206</red>
+            <green>187</green>
+            <blue>168</blue>
         </color>
     </image>
     <image>
         <filename>DSC09326.jpg</filename>
         <tags />
-        <luminance>168.257507324</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
+        <edges>
+            <vertical>10677</vertical>
+            <horizontal>6179</horizontal>
+            <d45>8462</d45>
+            <d135>8961</d135>
+            <nonDirectional>6947</nonDirectional>
+        </edges>
+        <luminance>171.298690796</luminance>
         <rhythm>0.000000000</rhythm>
-        <texture>8.417150497</texture>
+        <texture>8.416174889</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>187</red>
+            <green>168</green>
+            <blue>151</blue>
         </color>
     </image>
     <image>
         <filename>DSC09327.jpg</filename>
         <tags />
-        <luminance>169.729827881</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
+        <edges>
+            <vertical>7504</vertical>
+            <horizontal>3446</horizontal>
+            <d45>4730</d45>
+            <d135>5679</d135>
+            <nonDirectional>4085</nonDirectional>
+        </edges>
+        <luminance>172.316986084</luminance>
         <rhythm>0.000000000</rhythm>
-        <texture>5.087967396</texture>
+        <texture>5.093967915</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>190</red>
+            <green>168</green>
+            <blue>152</blue>
         </color>
     </image>
     <image>
         <filename>DSC09329.jpg</filename>
         <tags />
-        <luminance>161.407150269</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
+        <edges>
+            <vertical>7074</vertical>
+            <horizontal>3455</horizontal>
+            <d45>4912</d45>
+            <d135>5879</d135>
+            <nonDirectional>3763</nonDirectional>
+        </edges>
+        <luminance>164.318191528</luminance>
         <rhythm>0.000000000</rhythm>
-        <texture>6.425928593</texture>
+        <texture>6.432940483</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>176</red>
+            <green>162</green>
+            <blue>147</blue>
         </color>
     </image>
     <image>
         <filename>DSC09330.jpg</filename>
         <tags />
-        <luminance>202.044265747</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
+        <edges>
+            <vertical>6183</vertical>
+            <horizontal>2862</horizontal>
+            <d45>4145</d45>
+            <d135>4496</d135>
+            <nonDirectional>3473</nonDirectional>
+        </edges>
+        <luminance>209.965240479</luminance>
         <rhythm>0.000000000</rhythm>
-        <texture>5.876970768</texture>
+        <texture>5.879651546</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>224</red>
+            <green>209</green>
+            <blue>175</blue>
         </color>
     </image>
     <image>
         <filename>DSC09334.jpg</filename>
         <tags />
-        <luminance>167.156539917</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
+        <edges>
+            <vertical>9303</vertical>
+            <horizontal>1752</horizontal>
+            <d45>5343</d45>
+            <d135>6398</d135>
+            <nonDirectional>1713</nonDirectional>
+        </edges>
+        <luminance>172.031082153</luminance>
         <rhythm>0.000000000</rhythm>
-        <texture>4.459353447</texture>
+        <texture>4.453467369</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>192</red>
+            <green>168</green>
+            <blue>142</blue>
         </color>
     </image>
     <image>
         <filename>DSC09336.jpg</filename>
         <tags />
-        <luminance>185.456115723</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
+        <edges>
+            <vertical>10336</vertical>
+            <horizontal>4469</horizontal>
+            <d45>7509</d45>
+            <d135>7556</d135>
+            <nonDirectional>5868</nonDirectional>
+        </edges>
+        <luminance>189.361419678</luminance>
         <rhythm>0.000000000</rhythm>
-        <texture>5.174271584</texture>
+        <texture>5.174789906</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>210</red>
+            <green>185</green>
+            <blue>162</blue>
         </color>
     </image>
     <image>
         <filename>DSC09337.jpg</filename>
         <tags />
-        <luminance>178.062393188</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
+        <edges>
+            <vertical>10225</vertical>
+            <horizontal>3720</horizontal>
+            <d45>7088</d45>
+            <d135>7422</d135>
+            <nonDirectional>4548</nonDirectional>
+        </edges>
+        <luminance>179.641891479</luminance>
         <rhythm>0.000000000</rhythm>
-        <texture>4.652066708</texture>
+        <texture>4.660512924</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>208</red>
+            <green>173</green>
+            <blue>154</blue>
         </color>
     </image>
     <image>
         <filename>DSC09341.jpg</filename>
         <tags />
-        <luminance>164.480560303</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
+        <edges>
+            <vertical>9758</vertical>
+            <horizontal>3729</horizontal>
+            <d45>5963</d45>
+            <d135>7047</d135>
+            <nonDirectional>4663</nonDirectional>
+        </edges>
+        <luminance>167.482727051</luminance>
         <rhythm>0.000000000</rhythm>
-        <texture>5.606771946</texture>
+        <texture>5.602390289</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>189</red>
+            <green>163</green>
+            <blue>143</blue>
         </color>
     </image>
     <image>
         <filename>DSC09343.jpg</filename>
         <tags />
-        <luminance>173.737564087</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
+        <edges>
+            <vertical>9761</vertical>
+            <horizontal>3784</horizontal>
+            <d45>6454</d45>
+            <d135>6912</d135>
+            <nonDirectional>4463</nonDirectional>
+        </edges>
+        <luminance>176.957260132</luminance>
         <rhythm>0.000000000</rhythm>
-        <texture>6.211616516</texture>
+        <texture>6.209889889</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>191</red>
+            <green>174</green>
+            <blue>157</blue>
         </color>
     </image>
     <image>
         <filename>DSC09344.jpg</filename>
         <tags />
-        <luminance>170.940399170</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
+        <edges>
+            <vertical>9022</vertical>
+            <horizontal>2549</horizontal>
+            <d45>5395</d45>
+            <d135>5972</d135>
+            <nonDirectional>3641</nonDirectional>
+        </edges>
+        <luminance>174.222747803</luminance>
         <rhythm>0.000000000</rhythm>
-        <texture>4.937335491</texture>
+        <texture>4.941998005</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>187</red>
+            <green>172</green>
+            <blue>155</blue>
         </color>
     </image>
     <image>
         <filename>DSC09347.jpg</filename>
         <tags />
-        <luminance>179.020339966</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
+        <edges>
+            <vertical>14991</vertical>
+            <horizontal>5188</horizontal>
+            <d45>10010</d45>
+            <d135>8673</d135>
+            <nonDirectional>7082</nonDirectional>
+        </edges>
+        <luminance>180.859527588</luminance>
         <rhythm>0.000000000</rhythm>
-        <texture>5.206544399</texture>
+        <texture>5.208194733</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>189</red>
+            <green>179</green>
+            <blue>171</blue>
         </color>
     </image>
     <video>
         <filename>fingers - Copy (2).mov</filename>
         <tags />
+        <edges>
+            <vertical>0</vertical>
+            <horizontal>0</horizontal>
+            <d45>0</d45>
+            <d135>0</d135>
+            <nonDirectional>0</nonDirectional>
+        </edges>
         <luminance>0.000000000</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
         <rhythm>0.000000000</rhythm>
         <texture>0.000000000</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
         </color>
     </video>
     <video>
         <filename>fingers - Copy (3).mov</filename>
         <tags />
+        <edges>
+            <vertical>0</vertical>
+            <horizontal>0</horizontal>
+            <d45>0</d45>
+            <d135>0</d135>
+            <nonDirectional>0</nonDirectional>
+        </edges>
         <luminance>0.000000000</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
         <rhythm>0.000000000</rhythm>
         <texture>0.000000000</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
         </color>
     </video>
     <video>
         <filename>fingers - Copy (4).mov</filename>
         <tags />
+        <edges>
+            <vertical>0</vertical>
+            <horizontal>0</horizontal>
+            <d45>0</d45>
+            <d135>0</d135>
+            <nonDirectional>0</nonDirectional>
+        </edges>
         <luminance>0.000000000</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
         <rhythm>0.000000000</rhythm>
         <texture>0.000000000</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
         </color>
     </video>
     <video>
         <filename>fingers - Copy (5).mov</filename>
         <tags />
+        <edges>
+            <vertical>0</vertical>
+            <horizontal>0</horizontal>
+            <d45>0</d45>
+            <d135>0</d135>
+            <nonDirectional>0</nonDirectional>
+        </edges>
         <luminance>0.000000000</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
         <rhythm>0.000000000</rhythm>
         <texture>0.000000000</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
         </color>
     </video>
     <video>
         <filename>fingers - Copy (6).mov</filename>
         <tags />
+        <edges>
+            <vertical>0</vertical>
+            <horizontal>0</horizontal>
+            <d45>0</d45>
+            <d135>0</d135>
+            <nonDirectional>0</nonDirectional>
+        </edges>
         <luminance>0.000000000</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
         <rhythm>0.000000000</rhythm>
         <texture>0.000000000</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
         </color>
     </video>
     <video>
         <filename>fingers - Copy (7).mov</filename>
         <tags />
+        <edges>
+            <vertical>0</vertical>
+            <horizontal>0</horizontal>
+            <d45>0</d45>
+            <d135>0</d135>
+            <nonDirectional>0</nonDirectional>
+        </edges>
         <luminance>0.000000000</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
         <rhythm>0.000000000</rhythm>
         <texture>0.000000000</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
         </color>
     </video>
     <video>
         <filename>fingers - Copy (8).mov</filename>
         <tags />
+        <edges>
+            <vertical>0</vertical>
+            <horizontal>0</horizontal>
+            <d45>0</d45>
+            <d135>0</d135>
+            <nonDirectional>0</nonDirectional>
+        </edges>
         <luminance>0.000000000</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
         <rhythm>0.000000000</rhythm>
         <texture>0.000000000</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
         </color>
     </video>
     <video>
         <filename>fingers - Copy.mov</filename>
         <tags />
+        <edges>
+            <vertical>0</vertical>
+            <horizontal>0</horizontal>
+            <d45>0</d45>
+            <d135>0</d135>
+            <nonDirectional>0</nonDirectional>
+        </edges>
         <luminance>0.000000000</luminance>
-        <edgeDistribution>0.000000000</edgeDistribution>
         <rhythm>0.000000000</rhythm>
         <texture>0.000000000</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <nObject>0</nObject>
         <color>
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
         </color>
     </video>
     <video>
@@ -485,484 +675,828 @@
 </metadata>
 <image>
     <filename>DSC09302.jpg</filename>
+<<<<<<< HEAD
     <tags>
         <tag>#ONE</tag>
     </tags>
     <luminance>169.592895508</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
+=======
+    <tags></tags>
+    <edges>
+        <vertical>4950</vertical>
+        <horizontal>1518</horizontal>
+        <d45>2872</d45>
+        <d135>3505</d135>
+        <nonDirectional>2097</nonDirectional>
+    </edges>
+    <luminance>173.041259766</luminance>
+>>>>>>> origin/media_utils
     <rhythm>0.000000000</rhythm>
-    <texture>3.762146711</texture>
+    <texture>3.771570206</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>188</red>
+        <green>170</green>
+        <blue>152</blue>
     </color>
 </image>
 <image>
     <filename>DSC09305.jpg</filename>
+<<<<<<< HEAD
     <tags />
     <luminance>170.638488770</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
+=======
+    <tags></tags>
+    <edges>
+        <vertical>7928</vertical>
+        <horizontal>3274</horizontal>
+        <d45>5188</d45>
+        <d135>5617</d135>
+        <nonDirectional>2885</nonDirectional>
+    </edges>
+    <luminance>175.533432007</luminance>
+>>>>>>> origin/media_utils
     <rhythm>0.000000000</rhythm>
-    <texture>5.152142525</texture>
+    <texture>5.152708054</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>194</red>
+        <green>172</green>
+        <blue>147</blue>
     </color>
 </image>
 <image>
     <filename>DSC09307.jpg</filename>
+<<<<<<< HEAD
     <tags />
     <luminance>169.014465332</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
+=======
+    <tags></tags>
+    <edges>
+        <vertical>9282</vertical>
+        <horizontal>2983</horizontal>
+        <d45>5875</d45>
+        <d135>6702</d135>
+        <nonDirectional>2793</nonDirectional>
+    </edges>
+    <luminance>172.653671265</luminance>
+>>>>>>> origin/media_utils
     <rhythm>0.000000000</rhythm>
-    <texture>5.701965332</texture>
+    <texture>5.706576824</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>184</red>
+        <green>171</green>
+        <blue>154</blue>
     </color>
 </image>
 <image>
     <filename>DSC09310.jpg</filename>
+<<<<<<< HEAD
     <tags />
     <luminance>180.227020264</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
+=======
+    <tags></tags>
+    <edges>
+        <vertical>8414</vertical>
+        <horizontal>4042</horizontal>
+        <d45>5937</d45>
+        <d135>6831</d135>
+        <nonDirectional>4015</nonDirectional>
+    </edges>
+    <luminance>185.469146729</luminance>
+>>>>>>> origin/media_utils
     <rhythm>0.000000000</rhythm>
-    <texture>7.197669983</texture>
+    <texture>7.198081970</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>201</red>
+        <green>183</green>
+        <blue>158</blue>
     </color>
 </image>
 <image>
     <filename>DSC09311.jpg</filename>
+<<<<<<< HEAD
     <tags />
     <luminance>175.584411621</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
+=======
+    <tags></tags>
+    <edges>
+        <vertical>8659</vertical>
+        <horizontal>5133</horizontal>
+        <d45>6880</d45>
+        <d135>7396</d135>
+        <nonDirectional>4838</nonDirectional>
+    </edges>
+    <luminance>178.972854614</luminance>
+>>>>>>> origin/media_utils
     <rhythm>0.000000000</rhythm>
-    <texture>8.253330231</texture>
+    <texture>8.256234169</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>195</red>
+        <green>176</green>
+        <blue>157</blue>
     </color>
 </image>
 <image>
     <filename>DSC09315.jpg</filename>
+<<<<<<< HEAD
     <tags />
     <luminance>172.937774658</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
+=======
+    <tags></tags>
+    <edges>
+        <vertical>5154</vertical>
+        <horizontal>2309</horizontal>
+        <d45>3623</d45>
+        <d135>3855</d135>
+        <nonDirectional>2708</nonDirectional>
+    </edges>
+    <luminance>177.688156128</luminance>
+>>>>>>> origin/media_utils
     <rhythm>0.000000000</rhythm>
-    <texture>3.772083282</texture>
+    <texture>3.766511440</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>199</red>
+        <green>174</green>
+        <blue>147</blue>
     </color>
 </image>
 <image>
     <filename>DSC09316.jpg</filename>
+<<<<<<< HEAD
     <tags />
     <luminance>174.997192383</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
+=======
+    <tags></tags>
+    <edges>
+        <vertical>9349</vertical>
+        <horizontal>4237</horizontal>
+        <d45>6817</d45>
+        <d135>7653</d135>
+        <nonDirectional>3632</nonDirectional>
+    </edges>
+    <luminance>179.725860596</luminance>
+>>>>>>> origin/media_utils
     <rhythm>0.000000000</rhythm>
-    <texture>6.260978699</texture>
+    <texture>6.264538765</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>196</red>
+        <green>177</green>
+        <blue>153</blue>
     </color>
 </image>
 <image>
     <filename>DSC09318.jpg</filename>
+<<<<<<< HEAD
     <tags />
     <luminance>206.730438232</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
+=======
+    <tags></tags>
+    <edges>
+        <vertical>1447</vertical>
+        <horizontal>1345</horizontal>
+        <d45>1803</d45>
+        <d135>1945</d135>
+        <nonDirectional>1205</nonDirectional>
+    </edges>
+    <luminance>206.865371704</luminance>
+>>>>>>> origin/media_utils
     <rhythm>0.000000000</rhythm>
-    <texture>1.770900846</texture>
+    <texture>1.774958968</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>207</red>
+        <green>206</green>
+        <blue>208</blue>
     </color>
 </image>
 <image>
     <filename>DSC09320.jpg</filename>
+<<<<<<< HEAD
     <tags />
     <luminance>202.406021118</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
+=======
+    <tags></tags>
+    <edges>
+        <vertical>1131</vertical>
+        <horizontal>1181</horizontal>
+        <d45>1373</d45>
+        <d135>1349</d135>
+        <nonDirectional>1096</nonDirectional>
+    </edges>
+    <luminance>202.566864014</luminance>
+>>>>>>> origin/media_utils
     <rhythm>0.000000000</rhythm>
-    <texture>1.558752298</texture>
+    <texture>1.646274328</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>204</red>
+        <green>201</green>
+        <blue>203</blue>
     </color>
 </image>
 <image>
     <filename>DSC09322.jpg</filename>
+<<<<<<< HEAD
     <tags />
     <luminance>200.074783325</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
+=======
+    <tags></tags>
+    <edges>
+        <vertical>7942</vertical>
+        <horizontal>3212</horizontal>
+        <d45>4953</d45>
+        <d135>5189</d135>
+        <nonDirectional>3834</nonDirectional>
+    </edges>
+    <luminance>203.910736084</luminance>
+>>>>>>> origin/media_utils
     <rhythm>0.000000000</rhythm>
-    <texture>4.479598045</texture>
+    <texture>4.479238987</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>219</red>
+        <green>201</green>
+        <blue>181</blue>
     </color>
 </image>
 <image>
     <filename>DSC09324.jpg</filename>
+<<<<<<< HEAD
     <tags />
     <luminance>186.697540283</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
+=======
+    <tags></tags>
+    <edges>
+        <vertical>7995</vertical>
+        <horizontal>2919</horizontal>
+        <d45>5698</d45>
+        <d135>6132</d135>
+        <nonDirectional>2620</nonDirectional>
+    </edges>
+    <luminance>190.309799194</luminance>
+>>>>>>> origin/media_utils
     <rhythm>0.000000000</rhythm>
-    <texture>5.718405724</texture>
+    <texture>5.727421284</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>206</red>
+        <green>187</green>
+        <blue>168</blue>
     </color>
 </image>
 <image>
     <filename>DSC09326.jpg</filename>
+<<<<<<< HEAD
     <tags />
     <luminance>168.257507324</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
+=======
+    <tags></tags>
+    <edges>
+        <vertical>10677</vertical>
+        <horizontal>6179</horizontal>
+        <d45>8462</d45>
+        <d135>8961</d135>
+        <nonDirectional>6947</nonDirectional>
+    </edges>
+    <luminance>171.298690796</luminance>
+>>>>>>> origin/media_utils
     <rhythm>0.000000000</rhythm>
-    <texture>8.417150497</texture>
+    <texture>8.416174889</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>187</red>
+        <green>168</green>
+        <blue>151</blue>
     </color>
 </image>
 <image>
     <filename>DSC09327.jpg</filename>
+<<<<<<< HEAD
     <tags />
     <luminance>169.729827881</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
+=======
+    <tags></tags>
+    <edges>
+        <vertical>7504</vertical>
+        <horizontal>3446</horizontal>
+        <d45>4730</d45>
+        <d135>5679</d135>
+        <nonDirectional>4085</nonDirectional>
+    </edges>
+    <luminance>172.316986084</luminance>
+>>>>>>> origin/media_utils
     <rhythm>0.000000000</rhythm>
-    <texture>5.087967396</texture>
+    <texture>5.093967915</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>190</red>
+        <green>168</green>
+        <blue>152</blue>
     </color>
 </image>
 <image>
     <filename>DSC09329.jpg</filename>
+<<<<<<< HEAD
     <tags />
     <luminance>161.407150269</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
+=======
+    <tags></tags>
+    <edges>
+        <vertical>7074</vertical>
+        <horizontal>3455</horizontal>
+        <d45>4912</d45>
+        <d135>5879</d135>
+        <nonDirectional>3763</nonDirectional>
+    </edges>
+    <luminance>164.318191528</luminance>
+>>>>>>> origin/media_utils
     <rhythm>0.000000000</rhythm>
-    <texture>6.425928593</texture>
+    <texture>6.432940483</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>176</red>
+        <green>162</green>
+        <blue>147</blue>
     </color>
 </image>
 <image>
     <filename>DSC09330.jpg</filename>
+<<<<<<< HEAD
     <tags />
     <luminance>202.044265747</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
+=======
+    <tags></tags>
+    <edges>
+        <vertical>6183</vertical>
+        <horizontal>2862</horizontal>
+        <d45>4145</d45>
+        <d135>4496</d135>
+        <nonDirectional>3473</nonDirectional>
+    </edges>
+    <luminance>209.965240479</luminance>
+>>>>>>> origin/media_utils
     <rhythm>0.000000000</rhythm>
-    <texture>5.876970768</texture>
+    <texture>5.879651546</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>224</red>
+        <green>209</green>
+        <blue>175</blue>
     </color>
 </image>
 <image>
     <filename>DSC09334.jpg</filename>
+<<<<<<< HEAD
     <tags />
     <luminance>167.156539917</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
+=======
+    <tags></tags>
+    <edges>
+        <vertical>9303</vertical>
+        <horizontal>1752</horizontal>
+        <d45>5343</d45>
+        <d135>6398</d135>
+        <nonDirectional>1713</nonDirectional>
+    </edges>
+    <luminance>172.031082153</luminance>
+>>>>>>> origin/media_utils
     <rhythm>0.000000000</rhythm>
-    <texture>4.459353447</texture>
+    <texture>4.453467369</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>192</red>
+        <green>168</green>
+        <blue>142</blue>
     </color>
 </image>
 <image>
     <filename>DSC09336.jpg</filename>
+<<<<<<< HEAD
     <tags />
     <luminance>185.456115723</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
+=======
+    <tags></tags>
+    <edges>
+        <vertical>10336</vertical>
+        <horizontal>4469</horizontal>
+        <d45>7509</d45>
+        <d135>7556</d135>
+        <nonDirectional>5868</nonDirectional>
+    </edges>
+    <luminance>189.361419678</luminance>
+>>>>>>> origin/media_utils
     <rhythm>0.000000000</rhythm>
-    <texture>5.174271584</texture>
+    <texture>5.174789906</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>210</red>
+        <green>185</green>
+        <blue>162</blue>
     </color>
 </image>
 <image>
     <filename>DSC09337.jpg</filename>
+<<<<<<< HEAD
     <tags />
     <luminance>178.062393188</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
+=======
+    <tags></tags>
+    <edges>
+        <vertical>10225</vertical>
+        <horizontal>3720</horizontal>
+        <d45>7088</d45>
+        <d135>7422</d135>
+        <nonDirectional>4548</nonDirectional>
+    </edges>
+    <luminance>179.641891479</luminance>
+>>>>>>> origin/media_utils
     <rhythm>0.000000000</rhythm>
-    <texture>4.652066708</texture>
+    <texture>4.660512924</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>208</red>
+        <green>173</green>
+        <blue>154</blue>
     </color>
 </image>
 <image>
     <filename>DSC09341.jpg</filename>
+<<<<<<< HEAD
     <tags />
     <luminance>164.480560303</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
+=======
+    <tags></tags>
+    <edges>
+        <vertical>9758</vertical>
+        <horizontal>3729</horizontal>
+        <d45>5963</d45>
+        <d135>7047</d135>
+        <nonDirectional>4663</nonDirectional>
+    </edges>
+    <luminance>167.482727051</luminance>
+>>>>>>> origin/media_utils
     <rhythm>0.000000000</rhythm>
-    <texture>5.606771946</texture>
+    <texture>5.602390289</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>189</red>
+        <green>163</green>
+        <blue>143</blue>
     </color>
 </image>
 <image>
     <filename>DSC09343.jpg</filename>
+<<<<<<< HEAD
     <tags />
     <luminance>173.737564087</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
+=======
+    <tags></tags>
+    <edges>
+        <vertical>9761</vertical>
+        <horizontal>3784</horizontal>
+        <d45>6454</d45>
+        <d135>6912</d135>
+        <nonDirectional>4463</nonDirectional>
+    </edges>
+    <luminance>176.957260132</luminance>
+>>>>>>> origin/media_utils
     <rhythm>0.000000000</rhythm>
-    <texture>6.211616516</texture>
+    <texture>6.209889889</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>191</red>
+        <green>174</green>
+        <blue>157</blue>
     </color>
 </image>
 <image>
     <filename>DSC09344.jpg</filename>
+<<<<<<< HEAD
     <tags />
     <luminance>170.940399170</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
+=======
+    <tags></tags>
+    <edges>
+        <vertical>9022</vertical>
+        <horizontal>2549</horizontal>
+        <d45>5395</d45>
+        <d135>5972</d135>
+        <nonDirectional>3641</nonDirectional>
+    </edges>
+    <luminance>174.222747803</luminance>
+>>>>>>> origin/media_utils
     <rhythm>0.000000000</rhythm>
-    <texture>4.937335491</texture>
+    <texture>4.941998005</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>187</red>
+        <green>172</green>
+        <blue>155</blue>
     </color>
 </image>
 <image>
     <filename>DSC09347.jpg</filename>
+<<<<<<< HEAD
     <tags />
     <luminance>179.020339966</luminance>
     <edgeDistribution>0.000000000</edgeDistribution>
+=======
+    <tags></tags>
+    <edges>
+        <vertical>14991</vertical>
+        <horizontal>5188</horizontal>
+        <d45>10010</d45>
+        <d135>8673</d135>
+        <nonDirectional>7082</nonDirectional>
+    </edges>
+    <luminance>180.859527588</luminance>
+>>>>>>> origin/media_utils
     <rhythm>0.000000000</rhythm>
-    <texture>5.206544399</texture>
+    <texture>5.208194733</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>189</red>
+        <green>179</green>
+        <blue>171</blue>
     </color>
 </image>
 <video>
     <filename>fingers - Copy (2).mov</filename>
+<<<<<<< HEAD
     <tags />
+=======
+    <tags></tags>
+    <edges>
+        <vertical>0</vertical>
+        <horizontal>0</horizontal>
+        <d45>0</d45>
+        <d135>0</d135>
+        <nonDirectional>0</nonDirectional>
+    </edges>
+>>>>>>> origin/media_utils
     <luminance>0.000000000</luminance>
-    <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
     <texture>0.000000000</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
     </color>
 </video>
 <video>
     <filename>fingers - Copy (3).mov</filename>
+<<<<<<< HEAD
     <tags />
+=======
+    <tags></tags>
+    <edges>
+        <vertical>0</vertical>
+        <horizontal>0</horizontal>
+        <d45>0</d45>
+        <d135>0</d135>
+        <nonDirectional>0</nonDirectional>
+    </edges>
+>>>>>>> origin/media_utils
     <luminance>0.000000000</luminance>
-    <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
     <texture>0.000000000</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
     </color>
 </video>
 <video>
     <filename>fingers - Copy (4).mov</filename>
+<<<<<<< HEAD
     <tags />
+=======
+    <tags></tags>
+    <edges>
+        <vertical>0</vertical>
+        <horizontal>0</horizontal>
+        <d45>0</d45>
+        <d135>0</d135>
+        <nonDirectional>0</nonDirectional>
+    </edges>
+>>>>>>> origin/media_utils
     <luminance>0.000000000</luminance>
-    <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
     <texture>0.000000000</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
     </color>
 </video>
 <video>
     <filename>fingers - Copy (5).mov</filename>
+<<<<<<< HEAD
     <tags />
+=======
+    <tags></tags>
+    <edges>
+        <vertical>0</vertical>
+        <horizontal>0</horizontal>
+        <d45>0</d45>
+        <d135>0</d135>
+        <nonDirectional>0</nonDirectional>
+    </edges>
+>>>>>>> origin/media_utils
     <luminance>0.000000000</luminance>
-    <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
     <texture>0.000000000</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
     </color>
 </video>
 <video>
     <filename>fingers - Copy (6).mov</filename>
+<<<<<<< HEAD
     <tags />
+=======
+    <tags></tags>
+    <edges>
+        <vertical>0</vertical>
+        <horizontal>0</horizontal>
+        <d45>0</d45>
+        <d135>0</d135>
+        <nonDirectional>0</nonDirectional>
+    </edges>
+>>>>>>> origin/media_utils
     <luminance>0.000000000</luminance>
-    <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
     <texture>0.000000000</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
     </color>
 </video>
 <video>
     <filename>fingers - Copy (7).mov</filename>
+<<<<<<< HEAD
     <tags />
+=======
+    <tags></tags>
+    <edges>
+        <vertical>0</vertical>
+        <horizontal>0</horizontal>
+        <d45>0</d45>
+        <d135>0</d135>
+        <nonDirectional>0</nonDirectional>
+    </edges>
+>>>>>>> origin/media_utils
     <luminance>0.000000000</luminance>
-    <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
     <texture>0.000000000</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
     </color>
 </video>
 <video>
     <filename>fingers - Copy (8).mov</filename>
+<<<<<<< HEAD
     <tags />
+=======
+    <tags></tags>
+    <edges>
+        <vertical>0</vertical>
+        <horizontal>0</horizontal>
+        <d45>0</d45>
+        <d135>0</d135>
+        <nonDirectional>0</nonDirectional>
+    </edges>
+>>>>>>> origin/media_utils
     <luminance>0.000000000</luminance>
-    <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
     <texture>0.000000000</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
     </color>
 </video>
 <video>
     <filename>fingers - Copy.mov</filename>
+<<<<<<< HEAD
     <tags />
+=======
+    <tags></tags>
+    <edges>
+        <vertical>0</vertical>
+        <horizontal>0</horizontal>
+        <d45>0</d45>
+        <d135>0</d135>
+        <nonDirectional>0</nonDirectional>
+    </edges>
+>>>>>>> origin/media_utils
     <luminance>0.000000000</luminance>
-    <edgeDistribution>0.000000000</edgeDistribution>
     <rhythm>0.000000000</rhythm>
     <texture>0.000000000</texture>
     <audioAmplitude>0.000000000</audioAmplitude>
     <nFaces>0</nFaces>
     <nObject>0</nObject>
     <color>
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
     </color>
 </video>
 <video>

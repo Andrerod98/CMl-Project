@@ -57,11 +57,11 @@ void MetadataScreen::setup(){
     rythm->setWidth(end - xInfo, 60);
     rythm->setLabelUpperCase(false);
     
-    edgeDistribution = new ofxDatGuiLabel("Edge Distribution:" + to_string((media->getMetadata())->getEdgeDistribution()));
-    edgeDistribution->setPosition(xInfo, yInfo +  200);
-    edgeDistribution->setTheme(theme);
-    edgeDistribution->setWidth(end - xInfo, 210);
-    edgeDistribution->setLabelUpperCase(false);
+    //edgeDistribution = new ofxDatGuiLabel("Edge Distribution:" + to_string((media->getMetadata())->getEdgeDistribution()));
+    //edgeDistribution->setPosition(xInfo, yInfo +  200);
+    //edgeDistribution->setTheme(theme);
+    //edgeDistribution->setWidth(end - xInfo, 210);
+    //edgeDistribution->setLabelUpperCase(false);
     
     
     nFaces = new ofxDatGuiLabel("Nº Faces:" + to_string((media->getMetadata())->getFacesNumber()));
@@ -216,7 +216,7 @@ void MetadataScreen::draw(){
    
     luminance->draw();
     
-    edgeDistribution->draw();
+    //edgeDistribution->draw();
     
     nFaces->draw();
     
