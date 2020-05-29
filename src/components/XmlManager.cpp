@@ -155,8 +155,7 @@ bool XmlManager::setMetadata(string mediaName, bool isImage, Metadata metadata) 
 		for (int i = 0; i < tags.size(); i++) {
 			XML.addValue("tag", tags[i]);
 		}
-		XML.popTag(); // out of tags
- 
+		XML.popTag(); // out of tags 
         
 		XML.removeTag("edges");
 		XML.addTag("edges");
@@ -186,6 +185,8 @@ bool XmlManager::setMetadata(string mediaName, bool isImage, Metadata metadata) 
 		XML.addValue("blue", color.b);
         XML.popTag();
 		XML.popTag();
+
+		XML.save(xmlFileName);
 		return true;
 	}
 	return false;
