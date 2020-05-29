@@ -12,8 +12,11 @@ using namespace settings;
 
 
 GalleryScreen::GalleryScreen(string title,int width, int height,int x, int y,int padding, Gallery* gallery):Screen(title, width, height,x,y){
+    
+    mediaManager = mediaManager->getInstance();
+    
     this->screen = gallery;
-    this->nPages = ceil(gallery->getNMedia() / 8);
+    this->nPages = ceil(mediaManager->getNMedia() / 8);
 
     
     currentPage = 1; //starts at 1
@@ -79,9 +82,9 @@ void GalleryScreen::onTextInputEvent(ofxDatGuiTextInputEvent e)
     cout << "From Event Object: " << e.text << endl;
     // although you can also retrieve it from the event target //
     cout << "From Event Target: " << e.target->getText() << endl;
-    this->screen->search(e.text);
+    this->mediaManager->search(e.text);
     currentPage = 1;
-    this->nPages = ceil(screen->getNMedia() / 8);
+    this->nPages = ceil(mediaManager->getNMedia() / 8);
 
 }
 
@@ -89,9 +92,9 @@ void GalleryScreen::onTextInputEvent(ofxDatGuiTextInputEvent e)
 void GalleryScreen::onButtonEvent(ofxDatGuiButtonEvent e)
 {
     cout << e.target->getName();
-    this->screen->filter();
+    this->mediaManager->filter();
     currentPage = 1;
-    this->nPages = ceil(screen->getNMedia() / 8);
+    this->nPages = ceil(mediaManager->getNMedia() / 8);
     filtersFolder->collapse();
     searchInput->setText("Write what you want to search...");
     
@@ -100,7 +103,7 @@ void GalleryScreen::onButtonEvent(ofxDatGuiButtonEvent e)
 void GalleryScreen::onSliderEvent(ofxDatGuiSliderEvent e)
 {
     cout << e.target->getName();
-    this->screen->filterByMetadata(e.target->getName(), e.value);
+    this->mediaManager->filterByMetadata(e.target->getName(), e.value);
 
 
 }
@@ -115,9 +118,9 @@ void GalleryScreen::onColorPickerEvent(ofxDatGuiColorPickerEvent e)
 void GalleryScreen::onDropdownEvent(ofxDatGuiDropdownEvent e)
 {
     cout <<to_string(e.child);
-    screen->filterByType(to_string(e.child));
+    mediaManager->filterByType(to_string(e.child));
     currentPage = 1;
-    this->nPages = ceil(screen->getNMedia() / 8);
+    this->nPages = ceil(mediaManager->getNMedia() / 8);
  
 }
 
@@ -163,11 +166,11 @@ void GalleryScreen::draw(){
     
     ofSetColor(FONT_COLOR);
     string filterText = "";
-    if(this->screen->getMediaType() == "0")
+    if(this->mediaManager->getMediaType() == "0")
         filterText = "ALL";
-    else if(this->screen->getMediaType() == "1")
+    else if(this->mediaManager->getMediaType() == "1")
         filterText = "VIDEOS";
-    else if(this->screen->getMediaType() == "2")
+    else if(this->mediaManager->getMediaType() == "2")
         filterText = "IMAGES";
     
     filter.drawString(filterText, start  , yPos);
@@ -203,17 +206,17 @@ void GalleryScreen::keyPressed(int key) {
     } else if (key == OF_KEY_LEFT) {
         previousPage();
     } else if (key == 'a') {
-        screen->filterByType("0");
+        mediaManager->filterByType("0");
         currentPage = 1;
-        this->nPages = ceil(screen->getNMedia() / 8);
+        this->nPages = ceil(mediaManager->getNMedia() / 8);
     } else if (key == 'v') {
-        screen->filterByType("1");
+        mediaManager->filterByType("1");
         currentPage = 1;
-        this->nPages = ceil(screen->getNMedia() / 8);
+        this->nPages = ceil(mediaManager->getNMedia() / 8);
     } else if (key == 'i') {
-        screen->filterByType("2");
+        mediaManager->filterByType("2");
         currentPage = 1;
-        this->nPages = ceil(screen->getNMedia() / 8);
+        this->nPages = ceil(mediaManager->getNMedia() / 8);
     }
 }
 

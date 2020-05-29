@@ -2,14 +2,14 @@
 #include <fstream>
 
 XmlManager::XmlManager(string filename) {
-
+    
 	if (this->XML.loadFile(filename))
 		cout << "XML File: " << filename << " loaded sucefuly!" << endl;
 	else {
 		XML.addTag("metadata");
 		XML.saveFile(filename);
 		if (XML.loadFile(filename))
-			cout << "XML File: " << filename << " loaded sucefuly!" << endl;
+			cout << "XML Created File: " << filename << " loaded sucefuly!" << endl;
 		else
 			cout << "XML File: " << filename << " was not loaded!" << endl;
 	}

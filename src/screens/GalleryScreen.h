@@ -26,6 +26,8 @@ class GalleryScreen : public Screen{
     ofxDatGuiFolder* filtersFolder;
     ofxDatGuiDropdown* typeMedia;
     
+    MediaManager* mediaManager;
+    
     void onDropdownEvent(ofxDatGuiDropdownEvent e);
     void onSliderEvent(ofxDatGuiSliderEvent e);
     void onButtonEvent(ofxDatGuiButtonEvent e);

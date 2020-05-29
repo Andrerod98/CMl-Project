@@ -8,21 +8,20 @@ void ofApp::setup() {
     
     int padding = 10;
     int galleryWidth = ofGetWidth()-(padding*4)-100;
-    xml = xml->getInstance();
+    xmlManager = xmlManager->getInstance();
+    playlistManager = playlistManager->getInstance();
+    mediaManager = mediaManager->getInstance();
     
-    playlistManager = new PlaylistManager();
-    
-    gallery = new Gallery("image_gallery",galleryWidth,ofGetHeight()-settings::HEADER_HEIGHT - (padding*2) - 200,60,250, 30, playlistManager);
-    
+    /*Run meta algorithms*/
     cout << "starting algorithm" << endl;
     
     auto start = std::chrono::high_resolution_clock::now();
     // populate xml with loaded medias
-    for (int i = 0; i < gallery->getNMedia(); i++) {
+    for (int i = 0; i < mediaManager->getNMedia(); i++) {
         
-        if (!xml->exists(gallery->getMedias(i)->getFileName(), gallery->getMedias(i)->isImage())) {
-            xml->createMedia(gallery->getMedias(i)->getFileName(), gallery->getMedias(i)->isImage());
-            xml->setMetadata(gallery->getMedias(i)->getFileName(), gallery->getMedias(i)->isImage(), MediaUtils::processMedia(gallery->getMedias(i)));
+        if (!xmlManager->exists(mediaManager->getMedia(i)->getFileName(), mediaManager->getMedia(i)->isImage())) {
+            xmlManager->createMedia(mediaManager->getMedia(i)->getFileName(), mediaManager->getMedia(i)->isImage());
+            xmlManager->setMetadata(mediaManager->getMedia(i)->getFileName(), mediaManager->getMedia(i)->isImage(), MediaManager::processMedia(mediaManager->getMedia(i)));
         }
         
     }
@@ -30,6 +29,10 @@ void ofApp::setup() {
     auto stop = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
     cout << "execution time: " << duration.count() << " miliseconds" << endl;
+    
+    gallery = new Gallery("image_gallery",galleryWidth,ofGetHeight()-settings::HEADER_HEIGHT - (padding*2) - 200,60,250, 30);
+    
+    
     
     
     
@@ -174,8 +177,8 @@ void ofApp::update(Event event) {
             currentScreen = galleryScreen;
             break;
         case METADATA_BUTTON_PRESS:
-            header->setMetadataHeader(gallery->getSelectedMedia());
-            metadataScreen = new MetadataScreen("Metadata", ofGetWidth(),ofGetHeight()-settings::HEADER_HEIGHT,0,settings::HEADER_HEIGHT,gallery->getSelectedMedia());
+            header->setMetadataHeader(mediaManager->getSelectedMedia());
+            metadataScreen = new MetadataScreen("Metadata", ofGetWidth(),ofGetHeight()-settings::HEADER_HEIGHT,0,settings::HEADER_HEIGHT,mediaManager->getSelectedMedia());
             
             
             currentScreen = metadataScreen;
@@ -259,7 +262,7 @@ void ofApp::windowResized(int w, int h) {
     liveScreen->setWidth(w);
     liveScreen->setHeight(h);
     
-    header->setHeader(gallery->getSelectedMedia());
+    header->setHeader(mediaManager->getSelectedMedia());
 
     
 }
