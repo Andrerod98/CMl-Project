@@ -170,12 +170,13 @@ bool XmlManager::setMetadata(string mediaName, bool isImage, Metadata metadata) 
 		XML.popTag(); // out of edges
 
 		XML.addValue("luminance", metadata.getLuminanceValue());
-		XML.addValue("rhythm", metadata.getRhythmValue());
 		XML.addValue("texture", metadata.getTextureValue());
 		XML.addValue("audioAmplitude", metadata.getAudioAmplitude());
 		XML.addValue("nFaces", metadata.getFacesNumber());
 		XML.addValue("nObject", metadata.getObjectNumber());
         
+		if(!isImage)
+			XML.addValue("rhythm", metadata.getRhythmValue());
         
 		ofColor color = metadata.getColorValue();
         XML.addTag("color");
