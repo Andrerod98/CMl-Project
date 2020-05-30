@@ -25,7 +25,7 @@ public:
     
 	void createMedia(string mediaName, bool isImage);
 
-	map <string, string> getMetadataMap(string mediaName, bool isImage);
+	//map <string, string> getMetadataMap(string mediaName, bool isImage);
 
 	Metadata* getMetadata(string mediaName, bool isImage);
 

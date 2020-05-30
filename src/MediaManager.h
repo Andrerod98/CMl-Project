@@ -26,6 +26,7 @@
 #include "opencv2/imgcodecs/imgcodecs.hpp"
 
 
+
 using std::cout;
 using std::cerr;
 using std::vector;
@@ -51,6 +52,8 @@ class MediaManager{
     ofDirectory diretory;
     vector<MediaGUI*> medias;
     vector<MediaGUI*> totalMedias;
+    vector<string> objects;
+    vector<ofImage> objectsImages;
     
     XmlManager* xmlManager;
     PlaylistManager* playlistManager;
@@ -78,6 +81,7 @@ public:
     
     int processNFaces(ofImage image);
     
+    
     static float processEdgeDistribution(Media* media);
 
 	static vector<int> processEdges(ofImage image);
@@ -100,6 +104,8 @@ public:
     
     void loadVideos();
     
+    void loadObjects();
+    
     float getNMedia();
     
     void setSize(int w, int h);
@@ -107,6 +113,10 @@ public:
     MediaGUI* getMedia(int i);
     
     bool meetFilter(MediaGUI* m);
+    
+    vector<string> getObjectsNames(){
+        return objects;
+    }
     
     string getMediaType(){
         return mediaType;

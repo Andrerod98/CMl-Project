@@ -19,8 +19,10 @@ MediaManager::MediaManager(){
     finder.setup("haarcascade_frontalface_default.xml");
     finder.setScaleHaar(2);
     
+    loadObjects();
     loadImages();
     loadVideos();
+    
     
     mediaType = "0";
     maxLuminance = 1000;
@@ -44,6 +46,20 @@ int MediaManager::getSelectedMediaIndex(){
     return selectedMedia;
 }
 
+void MediaManager::loadObjects(){
+    string path = "objects/";
+    ofDirectory dir(path);
+    dir.allowExt("jpg");
+    dir.listDir();
+    dir.sort();
+    
+    for (int i = 0; i < (int)dir.size(); i++) {
+        objects.push_back(dir.getName(i));
+        ofImage image;
+        image.load(dir.getPath(i));
+        objectsImages.push_back(image);
+    }
+}
 //Loads videos from storega
 void MediaManager::loadVideos() {
     
@@ -228,7 +244,7 @@ bool MediaManager::meetFilter(MediaGUI* m){
     return m->getMetadata()->getLuminanceValue() < maxLuminance &&
     //m->getMetadata()->getEdgeDistribution() < maxEdge &&
     m->getMetadata()->getFacesNumber() < maxNFaces &&
-    m->getMetadata()->getObjectNumber() < maxNObject &&
+    //m->getMetadata()->getObjectNumber() < maxNObject &&
     m->getMetadata()->getTextureValue() < maxTexture &&
     m->getMetadata()->getRhythmValue() < maxRythm;
     //m->getMetadata()->getColorValue() == color;
@@ -286,11 +302,7 @@ ofColor MediaManager::processColor(Media* media){
 }
 
 int MediaManager::processNFaces(ofImage image){
-
-    ofxCvGrayscaleImage     grayImg;
-    
-    grayImg = image;
-    finder.findHaarObjects(grayImg);
+    finder.findHaarObjects(image);
 	return finder.blobs.size();
 }
 
@@ -504,7 +516,7 @@ Metadata MediaManager::processImage(ofImage image){
     //Texture characteristics
     float texture = 0.0;
     //NObject
-    int nObjects = 0;
+    vector<int> nObjects = {};
     
     float width = image.getWidth();
     float height = image.getHeight();
@@ -529,15 +541,11 @@ Metadata MediaManager::processImage(ofImage image){
     edgeDistribution = processEdges(image);
     texture = processGabor(image);
     
-    string path = "objects/";
-    ofDirectory dir(path);
-    dir.allowExt("jpg");
-    dir.listDir();
+   
     
-    for(int i = 0; i < dir.size(); i++){
-        ofImage img;
-        img.load(dir.getPath(i));
-        nObjects += processNTimesObject(img, image);
+    for(ofImage img: objectsImages){
+       
+        nObjects.push_back(processNTimesObject(img, image));
     }
     
     return Metadata(luminance, edgeDistribution, 0, texture, 0, nFaces, nObjects, color);
@@ -710,7 +718,7 @@ Metadata MediaManager::processMedia(Media* media) {
 		nObject = maxObjects;
 		nFaces = maxFaces;
 	}
-	return Metadata(luminance, edgeDistribution, rhythm, texture, audioAmplitude, nFaces, nObject, color);
+    return Metadata(luminance, edgeDistribution, rhythm, texture, audioAmplitude, nFaces, {}, color);
 }
 
 float MediaManager::processGabor(ofImage image) {

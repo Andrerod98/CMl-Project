@@ -19,7 +19,7 @@ class Metadata{
     float texture;
     float audioAmplitude;
     int nFaces;
-    int nObject;
+    vector<int> nObject;
     ofColor color;
 	string thumbPath;
     
@@ -32,7 +32,7 @@ public:
              float texture,
              float audioAmplitude,
              int nFaces,
-             int nObject,
+             vector<int> nObject,
              ofColor color){
         
         this->tags = tags;
@@ -53,7 +53,7 @@ public:
 		float texture,
 		float audioAmplitude,
 		int nFaces,
-		int nObject,
+		vector<int> nObject,
 		ofColor color,
 		string thumbnailsPath) {
 
@@ -75,7 +75,7 @@ public:
 		float texture,
 		float audioAmplitude,
 		int nrFaces,
-		int nrObjects,
+		vector<int> nrObjects,
 		ofColor color) {
 
 		this->luminance = luminance;
@@ -129,7 +129,7 @@ public:
         return color;
     };
 
-    int getObjectNumber(){
+    vector<int> getObjects(){
         return nObject;
     };
     

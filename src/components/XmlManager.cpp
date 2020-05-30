@@ -37,7 +37,7 @@ XmlManager* XmlManager::getInstance() {
         instance = new XmlManager("metadata.xml");
     return instance;
 }
-
+/*
 map <string, string> XmlManager::getMetadataMap(string mediaName, bool isImage) {
 	map <string, string> result;
 	string tags[7] = { "luminance", "color", "nrFaces", "edgeDistribution", "textureCaracteristics", "nrTimes", "rhythm" };
@@ -71,7 +71,7 @@ map <string, string> XmlManager::getMetadataMap(string mediaName, bool isImage) 
 
 	return result;
 }
-
+*/
 Metadata* XmlManager::getMetadata(string mediaName, bool isImage) {
 	vector<std::string> tags = {};
 	float luminance = 0.0;
@@ -80,7 +80,7 @@ Metadata* XmlManager::getMetadata(string mediaName, bool isImage) {
 	float texture = 0.0;
 	float audioAmplitude = 0.0;
 	int nFaces = 0;
-	int nObject = 0;
+    vector<int> nObject = {};
 	ofColor color = ofColor(0,0,0);
 
 	if (findMedia(mediaName, isImage)) {
@@ -100,11 +100,20 @@ Metadata* XmlManager::getMetadata(string mediaName, bool isImage) {
 		XML.popTag(); // out of edges
 
 		luminance = (float) XML.getValue("luminance", -1.0);
-		rhythm = (float)XML.getValue("rhythm", -1.0);
+		rhythm = (float)XML.getValue("rhythm", 0.0);
 		texture = (float)XML.getValue("texture", -1.0);
 		audioAmplitude = (float)XML.getValue("audioAmplitude", -1.0);
 		nFaces = (int)XML.getValue("nFaces", -1);
-		nObject = (int)XML.getValue("nObject", -1);
+        
+        XML.pushTag("objects");
+        int nObjectstags = XML.getNumTags("object");
+        for(int a = 0; a < nObjectstags; a++){
+    
+            nObject.push_back(XML.getValue("object", 0, a));
+   
+        }
+        XML.popTag();
+	
 		color = ofColor(XML.getValue("color:red", 0), XML.getValue("color:green", 0), XML.getValue("color:blue", 0));
 
 		if (!isImage) {
@@ -177,7 +186,16 @@ bool XmlManager::setMetadata(string mediaName, bool isImage, Metadata metadata) 
 		XML.addValue("texture", metadata.getTextureValue());
 		XML.addValue("audioAmplitude", metadata.getAudioAmplitude());
 		XML.addValue("nFaces", metadata.getFacesNumber());
-		XML.addValue("nObject", metadata.getObjectNumber());
+        
+        XML.addTag("objects");
+        XML.pushTag("objects");
+        vector<int> nObjects = metadata.getObjects();
+        int nObjectsTags = nObjects.size();
+        for (int a = 0; a < nObjectsTags; a++) {
+            XML.addValue("object", nObjects[a]);
+        }
+        XML.popTag();
+
         
 		if(!isImage)
 			XML.addValue("rhythm", metadata.getRhythmValue());

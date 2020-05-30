@@ -46,7 +46,7 @@ void MetadataScreen::setup(){
     
     
     rythm = new ofxDatGuiLabel("Rythm:" + to_string((media->getMetadata())->getRhythmValue()));
-    rythm->setPosition(xInfo, yInfo + 50);
+    rythm->setPosition(xInfo, yInfo + 100);
     rythm->setTheme(theme);
     rythm->setWidth(end - xInfo, 60);
     rythm->setLabelUpperCase(false);
@@ -73,21 +73,29 @@ void MetadataScreen::setup(){
     
     
     nFaces = new ofxDatGuiLabel("Nº Faces:" + to_string((media->getMetadata())->getFacesNumber()));
-    nFaces->setPosition(xInfo, yInfo + 100);
+    nFaces->setPosition(xInfo, yInfo + 50);
     nFaces->setTheme(theme);
     nFaces->setWidth(end - xInfo, 110);
     nFaces->setLabelUpperCase(false);
     
+
+    vector<string> options2 = {};
     
-    nObject = new ofxDatGuiLabel("Nº objects:" + to_string((media->getMetadata())->getObjectNumber()));
-    nObject->setPosition(xInfo, yInfo + 150);
+    MediaManager* mediaManager = mediaManager->getInstance();
+    int s = mediaManager->getObjectsNames().size();
+    for (int i = 0; i < s; i++) {
+        options2.push_back(mediaManager->getObjectsNames()[i] + ":" + to_string( media->getMetadata()->getObjects()[i]));
+    }
+
+    nObject = new ofxDatGuiDropdown("Nº objects:", options2);
+    nObject->setPosition(xInfo, yInfo + 250);
     nObject->setTheme(theme);
     nObject->setWidth(end - xInfo, 160);
     nObject->setLabelUpperCase(false);
 
     
     texture = new ofxDatGuiLabel("Texture:"+ to_string((media->getMetadata())->getTextureValue()));
-    texture->setPosition(xInfo, yInfo+ 200);
+    texture->setPosition(xInfo, yInfo+ 150);
     texture->setTheme(theme);
     texture->setWidth(end - xInfo, 260);
     texture->setLabelUpperCase(false);
@@ -95,7 +103,7 @@ void MetadataScreen::setup(){
     colorLabel = new ofxDatGuiLabel("Color: ("+ to_string((media->getMetadata())->getColorValue().r)
                                     + "," +to_string((media->getMetadata())->getColorValue().g)
                                     + "," +to_string((media->getMetadata())->getColorValue().b) + ")");
-    colorLabel->setPosition(xInfo, yInfo+ 250);
+    colorLabel->setPosition(xInfo, yInfo+ 200);
     colorLabel->setTheme(theme);
     colorLabel->setWidth(end - xInfo, 260);
     colorLabel->setLabelUpperCase(false);
@@ -216,6 +224,13 @@ void MetadataScreen::drawPlayer(){
 }
 
 void MetadataScreen::draw(){
+    
+    int xInfo = getWidth()*0.7 + 30 + 20;
+    int yInfo =140;
+    
+    int end = getWidth() - 20;
+    
+    
     luminance->draw();
     
     edgeDistribution->draw();
@@ -224,7 +239,7 @@ void MetadataScreen::draw(){
     
     nObject->draw();
     
-	if (!media->isImage())
+	//if (!media->isImage())
 		rythm->draw();
     
     texture->draw();
@@ -232,11 +247,9 @@ void MetadataScreen::draw(){
     colorLabel->draw();
     ofSetColor(media->getMetadata()->getColorValue());
     
-    int xInfo = getWidth()*0.7 + 30 + 20;
-    int yInfo =140;
-      int end = getWidth() - 20;
+    
     colorLabel->setPosition(xInfo, yInfo+ 250);
-    ofDrawRectangle(end - 35, yInfo+ 265, 25, 25);
+    ofDrawRectangle(end - 35, yInfo+ 265 - 50, 25, 25);
     
     ofSetColor(0,0,0);
     
@@ -261,11 +274,35 @@ void MetadataScreen::draw(){
 }
 
 void MetadataScreen::update(){
+    int xInfo = getWidth()*0.7 + 30 + 20;
+    int yInfo =140;
+    int end = getWidth() - 20;
+    saveButton->setPosition(30 + getWidth()*0.7 + 10, getHeight() - 40);
+    saveButton->setWidth(end - xInfo + 10);
+    tags->setPosition(30, getHeight() - 10);
+    tags->setWidth(getWidth()*0.7, 2);
+    tagsLabel->setPosition(30, getHeight() - 40);
+    tagsLabel->setWidth(getWidth()*0.7, 260);
+    colorLabel->setPosition(xInfo, yInfo+ 200);
+    colorLabel->setWidth(end - xInfo, 260);
+    texture->setPosition(xInfo, yInfo+ 150);
+    texture->setWidth(end - xInfo, 260);
+    nObject->setPosition(xInfo, yInfo + 250);
+    nObject->setWidth(end - xInfo, 160);
+    nFaces->setPosition(xInfo, yInfo + 50);
+    nFaces->setWidth(end - xInfo, 110);
+    edgeDistribution->setPosition(xInfo, yInfo + 300);
+    edgeDistribution->setWidth(end - xInfo, 210);
+    rythm->setPosition(xInfo, yInfo + 100);
+    rythm->setWidth(end - xInfo, 60);
+    luminance->setPosition(xInfo, yInfo);
+    luminance->setWidth(end - xInfo, 10);
     saveButton->update();
     tags->update();
 	edgeDistribution->update();
 	texture->update();
 	colorLabel->update();
+    nObject->update();
     if(media->isVideo()){
         (media->getVideo())->update();
     }    

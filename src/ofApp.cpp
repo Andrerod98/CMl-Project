@@ -119,15 +119,32 @@ void ofApp::drawHelp(){
     theme->layout.height = 50;
     theme->font.ptr = ofxSmartFont::add(theme->font.file, theme->font.size);
     
-    shortcut.drawString("Shortchut", ofGetWidth()/2 - (ofGetWidth()*0.5)/2 + 10,80 + 20 );
-
-    ofxDatGuiLabel*  sh1 = new ofxDatGuiLabel("Luminance:");
+    ofSetColor(ofColor::white);
+    shortcut.drawString("Shortchuts", ofGetWidth()/2 - (ofGetWidth()*0.5)/2 + 10,80 + 20 +40);
     
-    sh1->setPosition(ofGetWidth()/2 - (ofGetWidth()*0.5)/2 + 10,80 + 20 + 10 + 50);
-    sh1->setTheme(theme);
-    sh1->setWidth(ofGetWidth()*0.5 - 30, 10);
-    sh1->setLabelUpperCase(false);
-    sh1->draw();
+    
+    vector<ofxDatGuiLabel*> shortcuts = {
+        new ofxDatGuiLabel("Back from live screen: B"),
+        new ofxDatGuiLabel("Go to gallery: G"),
+        new ofxDatGuiLabel("Go to Camera: C"),
+        new ofxDatGuiLabel("Next page: ->"),
+        new ofxDatGuiLabel("Previous page: <-"),
+        new ofxDatGuiLabel("Help: H"),
+        new ofxDatGuiLabel("Live mode: L"),
+        new ofxDatGuiLabel("Metadata: M"),
+ 
+    };
+    
+    for(int i = 0; i < shortcuts.size(); i++){
+        shortcuts[i]->setPosition(ofGetWidth()/2 - (ofGetWidth()*0.5)/2 + 10,80 + 20 + 10 + 40 + 50*i);
+        shortcuts[i]->setTheme(theme);
+        shortcuts[i]->setWidth(ofGetWidth()*0.5 - 30, 10);
+        shortcuts[i]->setLabelUpperCase(false);
+        shortcuts[i]->draw();
+    }
+    ofxDatGuiLabel*  sh1 = new ofxDatGuiLabel("Back from live screen: b");
+    
+
 }
 
 void ofApp::draw() {

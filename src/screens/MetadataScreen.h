@@ -13,6 +13,7 @@
 #include "Media.h"
 #include "ofxDatGui.h"
 #include "XmlManager.h"
+#include "MediaManager.h"
 #endif /* MetadataScreen_hpp */
 
 class MetadataScreen: public Screen{
@@ -33,7 +34,7 @@ class MetadataScreen: public Screen{
     ofxDatGuiLabel* rythm;
     ofxDatGuiLabel* texture;
     ofxDatGuiLabel* nFaces;
-    ofxDatGuiLabel* nObject;
+    ofxDatGuiDropdown* nObject;
     ofxDatGuiLabel* colorLabel;
     ofxDatGuiLabel* audioAmplitude;
     ofxDatGuiLabel* tagsLabel;

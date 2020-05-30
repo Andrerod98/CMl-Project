@@ -112,11 +112,11 @@ void Gallery::drawPage(int page) {
 				directory.allowExt("png");
 				directory.sort(); // in linux the file system doesn't return file lists ordered in alphabetical order   
 
-				images.at(0).load(directory.getPath(0));
+				/*images.at(0).load(directory.getPath(0));
 				images.at(1).load(directory.getPath(1));
 				images.at(2).load(directory.getPath(2));
 				images.at(3).load(directory.getPath(3));
-				images.at(4).load(directory.getPath(4));
+				images.at(4).load(directory.getPath(4));*/
 
 				
 			}
