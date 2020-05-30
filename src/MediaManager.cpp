@@ -60,6 +60,9 @@ void MediaManager::loadVideos() {
         ofVideoPlayer* video = new ofVideoPlayer();
         video->load(diretory.getPath(i));
         video->setLoopState(OF_LOOP_NORMAL);
+		video->play();
+		video->setPaused(true);
+		video->update();
         
         Metadata* meta = xmlManager->getMetadata(diretory.getName(i), false);        
         MediaGUI* media = new MediaGUI(video, diretory.getName(i), meta);
@@ -73,7 +76,6 @@ void MediaManager::loadVideos() {
 			media = new MediaGUI(video, diretory.getName(i), meta);
 		}
         
-       
         
         for(string tag: meta->getTags()){
             playlistManager->addToPlaylist(tag,media);
@@ -587,16 +589,16 @@ Metadata MediaManager::processMedia(Media* media) {
         ofImage image;
 		Mat imgSrc;
         vector<int> rythmVariance = {};
-        /// Establish the number of bins
+        // Establish the number of bins
         int histSize = 256;
         
-        /// Set the ranges ( for B,G,R) )
+        // Set the ranges ( for B,G,R) )
         float range[] = { 0, 256 } ;
         const float* histRange = { range };
 
         int max = video.getTotalNumFrames();
      
-        //normalize(current_hist, current_hist, 0, 255, NORM_MINMAX, -1, Mat() );
+        // normalize(current_hist, current_hist, 0, 255, NORM_MINMAX, -1, Mat() );
         Mat current_hist;
         Mat previous_hist;
         Mat image_gray;
@@ -604,6 +606,7 @@ Metadata MediaManager::processMedia(Media* media) {
 
 		video.play();
 		video.setPaused(true);
+		video.update();
 
         for (int i = 0; i < max; i++) {
             video.setFrame(i);
