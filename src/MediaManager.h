@@ -72,7 +72,7 @@ public:
     
     static ofImage processThumbnail(Media* media);
     
-    static float processLuminance(Media* media);
+    static pair<float, ofColor> processLuminanceAndColor(ofImage image);
     
     static ofColor processColor(Media* media);
     

@@ -20,17 +20,11 @@ void MetadataScreen::setup(){
     int end = getWidth() - 20;
     
     ofxDatGuiTheme* theme = new ofxDatGuiTheme();
-    theme->init();
-    
+    theme->init();    
     
     theme->font.size = 10;
     theme->layout.height = 50;
     theme->font.ptr = ofxSmartFont::add(theme->font.file, theme->font.size);
-    
-
-
-
-
 
     ofxDatGuiLabel* audioAmplitude;
     luminance = new ofxDatGuiLabel("Luminance:" + to_string((media->getMetadata())->getLuminanceValue()));
@@ -62,6 +56,20 @@ void MetadataScreen::setup(){
     //edgeDistribution->setTheme(theme);
     //edgeDistribution->setWidth(end - xInfo, 210);
     //edgeDistribution->setLabelUpperCase(false);
+
+	Metadata* metadata = media->getMetadata();
+	vector<int> edges = media->getMetadata()->getEdgeDistribution();
+	vector<string> options = vector<string>(5);
+	options.at(0) = "Vertical: " + to_string(edges.at(0));
+	options.at(1) = "Horizontal: " + to_string(edges.at(1));
+	options.at(2) = "45 Degree: " + to_string(edges.at(2));
+	options.at(3) = "135 Degree: " + to_string(edges.at(3));
+	options.at(4) = "Non Directional: " + to_string(edges.at(4));
+	edgeDistribution = new ofxDatGuiDropdown("Edge Distribution", options);
+	edgeDistribution->setPosition(xInfo, yInfo + 300);
+	edgeDistribution->setTheme(theme);
+	edgeDistribution->setWidth(end - xInfo, 210);
+	edgeDistribution->setLabelUpperCase(false);
     
     
     nFaces = new ofxDatGuiLabel("Nº Faces:" + to_string((media->getMetadata())->getFacesNumber()));
@@ -76,12 +84,10 @@ void MetadataScreen::setup(){
     nObject->setTheme(theme);
     nObject->setWidth(end - xInfo, 160);
     nObject->setLabelUpperCase(false);
-    
-    
-    
+
     
     texture = new ofxDatGuiLabel("Texture:"+ to_string((media->getMetadata())->getTextureValue()));
-    texture->setPosition(xInfo, yInfo+ 250);
+    texture->setPosition(xInfo, yInfo+ 200);
     texture->setTheme(theme);
     texture->setWidth(end - xInfo, 260);
     texture->setLabelUpperCase(false);
@@ -89,7 +95,7 @@ void MetadataScreen::setup(){
     colorLabel = new ofxDatGuiLabel("Color: ("+ to_string((media->getMetadata())->getColorValue().r)
                                     + "," +to_string((media->getMetadata())->getColorValue().g)
                                     + "," +to_string((media->getMetadata())->getColorValue().b) + ")");
-    colorLabel->setPosition(xInfo, yInfo+ 300);
+    colorLabel->setPosition(xInfo, yInfo+ 250);
     colorLabel->setTheme(theme);
     colorLabel->setWidth(end - xInfo, 260);
     colorLabel->setLabelUpperCase(false);
@@ -210,19 +216,16 @@ void MetadataScreen::drawPlayer(){
 }
 
 void MetadataScreen::draw(){
-    
-    
-    
-   
     luminance->draw();
     
-    //edgeDistribution->draw();
+    edgeDistribution->draw();
     
     nFaces->draw();
     
     nObject->draw();
     
-    rythm->draw();
+	if (!media->isImage())
+		rythm->draw();
     
     texture->draw();
     
@@ -232,8 +235,8 @@ void MetadataScreen::draw(){
     int xInfo = getWidth()*0.7 + 30 + 20;
     int yInfo =140;
       int end = getWidth() - 20;
-    colorLabel->setPosition(xInfo, yInfo+ 300);
-    ofDrawRectangle(end - 35, yInfo+ 315, 25, 25);
+    colorLabel->setPosition(xInfo, yInfo+ 250);
+    ofDrawRectangle(end - 35, yInfo+ 265, 25, 25);
     
     ofSetColor(0,0,0);
     
@@ -260,11 +263,12 @@ void MetadataScreen::draw(){
 void MetadataScreen::update(){
     saveButton->update();
     tags->update();
+	edgeDistribution->update();
+	texture->update();
+	colorLabel->update();
     if(media->isVideo()){
         (media->getVideo())->update();
-    }
-    
-    
+    }    
 }
 
 void MetadataScreen::mousePressed(int x, int y, int button){

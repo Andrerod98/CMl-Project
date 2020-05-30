@@ -171,8 +171,7 @@ void ofApp::update(Event event) {
             break;
         case METADATA_BUTTON_PRESS:
             header->setMetadataHeader(mediaManager->getSelectedMedia());
-            metadataScreen = new MetadataScreen("Metadata", ofGetWidth(),ofGetHeight()-settings::HEADER_HEIGHT,0,settings::HEADER_HEIGHT,mediaManager->getSelectedMedia());
-            
+            metadataScreen = new MetadataScreen("Metadata", ofGetWidth(),ofGetHeight()-settings::HEADER_HEIGHT,0,settings::HEADER_HEIGHT,mediaManager->getSelectedMedia());            
             
             currentScreen = metadataScreen;
             break;

@@ -54,7 +54,7 @@ void MediaManager::loadVideos() {
     diretory.allowExt("mov");
     diretory.sort();
     
-	cout << "Processing videos";
+	cout << "Processing videos ";
     
     for (int i = 0; i < (int)diretory.size(); i++) {
         ofVideoPlayer* video = new ofVideoPlayer();
@@ -65,7 +65,7 @@ void MediaManager::loadVideos() {
         MediaGUI* media = new MediaGUI(video, diretory.getName(i), meta);
 
 		// getting metadata
-		if (!xmlManager->exists(diretory.getName(i), true)) {
+		if (!xmlManager->exists(diretory.getName(i), false)) {
 			cout << ".";
 			xmlManager->createMedia(diretory.getName(i), false);
 			xmlManager->setMetadata(diretory.getName(i), false, processMedia(media));
@@ -239,14 +239,44 @@ ofImage MediaManager::processThumbnail(Media* media) {
 
 	// getting thumbnail (first frame of the video)
     
-	video.setFrame(0);
+	video.setFrame(10);
 	thumbnail.setFromPixels(video.getPixels());
 
 	return thumbnail;
 }
 
-float MediaManager::processLuminance(Media* media){
-	return 0.0f;
+pair<float,ofColor> MediaManager::processLuminanceAndColor(ofImage image){
+	//Luminance variables
+	float luminance = 0.0;
+	float sumLuminance = 0.0;
+
+	//Color - based on first moment
+	double sumRed, sumGreen, sumBlue;
+	sumRed = sumGreen = sumBlue = 0;
+	double red, green, blue;
+	ofColor color;
+
+	float width = image.getWidth();
+	float height = image.getHeight();
+
+	// for all pixels
+	for (int x = 0; x < width; x++) {
+		for (int y = 0; y < height; y++) {
+			color = image.getColor(x, y);
+			sumRed += color.r;
+			sumGreen += color.g;
+			sumBlue += color.b;
+			sumLuminance += (0.2125*color.r + 0.7154*color.g + 0.0721*color.b);
+		}
+	}
+
+	red = sumRed / (width * height);
+	green = sumGreen / (width * height);
+	blue = sumBlue / (width * height);
+	color = ofColor(red, green, blue);
+	luminance = sumLuminance / (width * height);
+
+	return pair<float, ofColor>(luminance, color);
 }
 
 ofColor MediaManager::processColor(Media* media){
@@ -410,14 +440,10 @@ inline void findKeyPointsHomography(vector<KeyPoint>& kpts1, vector<KeyPoint>& k
     findHomography(pts1, pts2, cv::RANSAC, 4, match_mask);
 }
 
-int MediaManager::processNTimesObject(ofImage image,ofImage media){
-    
-
-    
+int MediaManager::processNTimesObject(ofImage image,ofImage media){   
     Mat img_1 = ofxCv::toCv(image);
     Mat img_2 = ofxCv::toCv(media);
     
-
     cvtColor(img_1, img_1, cv::COLOR_RGB2GRAY);
     cvtColor(img_2, img_2, cv::COLOR_RGB2GRAY);
     Mat descriptors_1;
@@ -426,7 +452,6 @@ int MediaManager::processNTimesObject(ofImage image,ofImage media){
     Ptr<ORB> orb = ORB::create();
     orb->detectAndCompute(img_1, Mat(), keypoints_1, descriptors_1);
     orb->detectAndCompute(img_2, Mat(), keypoints_2, descriptors_2);
-
 
     // if one of the images has no descriptors return 0
     if (descriptors_1.empty() || descriptors_2.empty()) {
@@ -437,8 +462,6 @@ int MediaManager::processNTimesObject(ofImage image,ofImage media){
     BFMatcher matcher(cv::NORM_L2, true);
     matcher.match(descriptors_1, descriptors_2, matches);
 
-
-    
     std::sort(matches.begin(), matches.end());
     while (matches.front().distance * kDistanceCoef < matches.back().distance) {
         matches.pop_back();
@@ -452,7 +475,6 @@ int MediaManager::processNTimesObject(ofImage image,ofImage media){
 
     // Return the amount of "good matches"
     return matches.size();
-
 }
 
 float MediaManager::processRythm(Media* media){
@@ -470,6 +492,7 @@ Metadata MediaManager::processImage(ofImage image){
     
     //Color - based on first moment
     double sumRed, sumGreen, sumBlue;
+	sumRed = sumGreen = sumBlue = 0;
     double red, green, blue;
     ofColor color;
     //NFaces
@@ -512,18 +535,16 @@ Metadata MediaManager::processImage(ofImage image){
     for(int i = 0; i < dir.size(); i++){
         ofImage img;
         img.load(dir.getPath(i));
-        nObjects = processNTimesObject(img, image);
+        nObjects += processNTimesObject(img, image);
     }
     
     return Metadata(luminance, edgeDistribution, 0, texture, 0, nFaces, nObjects, color);
-
-    
 }
 
 int getVariance(Mat hist1, Mat hist2){
     Mat res;
     absdiff(hist1, hist2, res);
-    cout << sum(res)[0] << "\n";
+    //cout << sum(res)[0] << "\n";
     return sum(res)[0];
 }
 
@@ -541,17 +562,10 @@ Metadata MediaManager::processMedia(Media* media) {
 	float audioAmplitude = 0.0;
 	int nFaces = 0;
 	int nObject = 0;
-	ofColor color = ofColor(0,0,0);
+	ofColor color = ofColor(0,0,0);    
     
     float frameLuminance = 0;
-    //Color Variables
-   
-    double reds = 0;
-    double greens = 0;
-    double blues = 0;
-    float meanReds = 0;
-    float meanGreens = 0;
-    float meanBlues = 0;
+	pair<float, ofColor> luminanceAndColor;
     
     //Rhythm Variables
    
@@ -571,6 +585,7 @@ Metadata MediaManager::processMedia(Media* media) {
 	else {
 		ofVideoPlayer video = *media->getVideo();
         ofImage image;
+		Mat imgSrc;
         vector<int> rythmVariance = {};
         /// Establish the number of bins
         int histSize = 256;
@@ -580,86 +595,92 @@ Metadata MediaManager::processMedia(Media* media) {
         const float* histRange = { range };
 
         int max = video.getTotalNumFrames();
-        
-
-        
-        
-        
-       
      
         //normalize(current_hist, current_hist, 0, 255, NORM_MINMAX, -1, Mat() );
         Mat current_hist;
         Mat previous_hist;
         Mat image_gray;
-   
+		ofImage tempGray;
+
+		video.play();
+		video.setPaused(true);
+
         for (int i = 0; i < max; i++) {
             video.setFrame(i);
             image.setFromPixels(video.getPixels());
-            image_gray = ofxCv::toCv(image);
-            cv::cvtColor(image_gray, image_gray, CV_BGR2GRAY);
-            
-           // Metadata metadata = processImage(image);
-            
-
-       
+            imgSrc = ofxCv::toCv(image);
+            cv::cvtColor(imgSrc, image_gray, CV_BGR2GRAY);           
             
             if(i == 0){
-              //  color = metadata.getColorValue();
-               // texture = metadata.getTextureValue();
+				Metadata metadata = processImage(image);
+                texture = metadata.getTextureValue();
                 calcHist( &image_gray, 1, 0, Mat(), previous_hist, 1, &histSize, &histRange, true, false );
-                /*
+                
                 ofPixels pixels = video.getPixels();
                 
                 ofImage thumbnail = processThumbnail(media);
                 
                 thumbnail.save("teste.jpg");
                 
-                edgeDistribution = processEdges(thumbnail);
-                */
-            }else{
+                edgeDistribution = processEdges(image);
+                
+            }else {
                 calcHist( &image_gray, 1, 0, Mat(), current_hist, 1, &histSize, &histRange, true, false );
-                rythmVariance.push_back(getVariance(previous_hist, current_hist));
+                rhythmPerFrame.push_back(getVariance(previous_hist, current_hist));
                 previous_hist = current_hist.clone();
             }
             
-            
-            /*
-            sumLuminance += metadata.getLuminanceValue();
+			luminanceAndColor = processLuminanceAndColor(image);
+            sumLuminance += luminanceAndColor.first;
+			color = luminanceAndColor.second;
+			red += color.r;
+			green += color.g;
+			blue += color.b;
            
-            if (maxFaces < metadata.getFacesNumber())
-                maxFaces = metadata.getFacesNumber();
+			nFaces = processNFaces(image);
+            if (maxFaces < nFaces)
+                maxFaces = nFaces;
+
+			/*
                 
-            if (maxObjects < metadata.getObjectNumber())
-                maxObjects = metadata.getObjectNumber();
-            */
+			string path = "objects/";
+			ofDirectory dir(path);
+			dir.allowExt("jpg");
+			dir.listDir();
+
+			nObject = 0;
+			for (int i = 0; i < dir.size(); i++) {
+				ofImage img;
+				img.load(dir.getPath(i));
+				nObject += processNTimesObject(img, image);
+			}
+
+            if (maxObjects < nObject)
+                maxObjects = nObject;
+
+				*/
             
         }
-        
 
-     
         // Save average luminance
         luminance = sumLuminance / video.getTotalNumFrames();
-
         
         // Calculate mean of RGB colors of the Video
-      /*  meanReds    = reds  / (video.getTotalNumFrames() * image.getWidth() * image.getHeight());
-        meanGreens  = greens / (video.getTotalNumFrames() * image.getWidth() * image.getHeight());
-        meanBlues   = blues  / (video.getTotalNumFrames() * image.getWidth() * image.getHeight());
+        redMean    = red  / video.getTotalNumFrames();
+        greenMean  = green / video.getTotalNumFrames();
+        blueMean   = blue  / video.getTotalNumFrames();
         
-        color = ofColor(meanReds, meanGreens, meanBlues);
+        color = ofColor(redMean, greenMean, blueMean);
        
         // Calculate Rhythm Variations between each frame (based on luminance)
-        for (int i = 1; i < rhythmPerFrame.size(); i++) {
-            
+        for (int i = 1; i < rhythmPerFrame.size(); i++) {            
             float variation = std::abs(rhythmPerFrame.at(i - 1) - rhythmPerFrame.at(i));
             rhythmVariations.push_back(variation);
             rhythm += variation;
         }
         
         // Calculate Mean Rhythm
-        rhythm = rhythm / ( rhythmPerFrame.size() - 1 );
-        
-   
+        rhythm = rhythm / ( rhythmPerFrame.size() - 1 );       
         
         // CUT DETECTION
         // The greater the rhythm variation the better the frame is suited to become a "key" Frame
@@ -677,16 +698,14 @@ Metadata MediaManager::processMedia(Media* media) {
             
             video.setFrame(idx.at(i));
             image.setFromPixels(video.getPixels());
-
             
-            image.save("thumbnails/" + media->getFileName() + to_string(c) + ".png");
+            image.save("thumbnails/" + media->getFileName() + to_string(i) + ".png");
             
           //  settings.setValue("metadata:imageUrl" + std::to_string(c) , imagePath);
-        }
-         */
-        
+        } 
 
-    
+		nObject = maxObjects;
+		nFaces = maxFaces;
 	}
     
     /*

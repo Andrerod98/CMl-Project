@@ -29,7 +29,7 @@ class MetadataScreen: public Screen{
     ofImage replayButton;
     
     ofxDatGuiLabel* luminance;
-    ofxDatGuiLabel* edgeDistribution;
+    ofxDatGuiDropdown* edgeDistribution;
     ofxDatGuiLabel* rythm;
     ofxDatGuiLabel* texture;
     ofxDatGuiLabel* nFaces;
@@ -42,6 +42,7 @@ class MetadataScreen: public Screen{
     ofxDatGuiButton* saveButton;
     
     static vector<string> split(const string& str, const string& delim);
+
     
 public:
     MetadataScreen(string title,int width, int height,int x, int y, MediaGUI* media);
@@ -49,5 +50,6 @@ public:
     void update();
     void mousePressed(int x, int y, int button);
     void draw();
+
     
 };
