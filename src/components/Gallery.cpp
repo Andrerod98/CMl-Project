@@ -23,10 +23,11 @@ Gallery::Gallery(string title,int width, int height,int x, int y, int spaceBetwe
     
     createPositions();
     
-     mediaManager->setSize(itemWidth, itemHeight);
+    mediaManager->setSize(itemWidth, itemHeight);
 
-    
-   
+	miconCounter = 0;
+	currentMiconFrame = 0;
+	lastTime = ofGetElapsedTimeMillis();
 }
 
 void Gallery::setSize(int w, int h){
@@ -76,7 +77,6 @@ void Gallery::drawPage(int page) {
     
     int mediaStart = (page-1)*8;
     
-    
     ofFill();
     ofSetColor(255);
 
@@ -96,43 +96,47 @@ void Gallery::drawPage(int page) {
             
             
         }else if(mediaManager->getMedia(currentMediaIndex)->isVideo()){
-            ofSetHexColor(0xFFFFFF);
-			ofVideoPlayer* video = mediaManager->getMedia(currentMediaIndex)->getVideo();
-			string filename = mediaManager->getMedia(currentMediaIndex)->getFileName();
+			pair<map<string, ofImage>::iterator, bool> ret;
+			ret = micons.insert(pair<string, ofImage>(mediaManager->getMedia(currentMediaIndex)->getFileName(), ofImage()));
 
-			if (!video->isPaused())
-				(mediaManager->getMedia(currentMediaIndex)->getVideo())->draw(positions[i], itemWidth, itemHeight);
-			else { // draw micon
-				string thumbPath = xmlManager->getInstance()->getMetadata(filename, false)->getThumbPath();
-
-				vector<ofImage> images = vector<ofImage>(5);
-
-				//Load images
-				directory.listDir(thumbPath);
-				directory.allowExt("png");
-				directory.sort(); // in linux the file system doesn't return file lists ordered in alphabetical order   
-
-				images.at(0).load(directory.getPath(0));
-				images.at(1).load(directory.getPath(1));
-				images.at(2).load(directory.getPath(2));
-				images.at(3).load(directory.getPath(3));
-				images.at(4).load(directory.getPath(4));
-
-				
+			if (ret.second) {
+				ret.first->second.draw(positions[i], itemHeight, itemHeight);
+				mediaManager->drawMicon(currentMediaIndex, 0, &ret.first->second);
+				miconCounter++;
 			}
         }
-    }
-    
+    }    
 }
-
 
 void Gallery::update(){
     int nmedias=mediaManager->getNMedia();
+
+	float currentTime = ofGetElapsedTimeMillis();
+	if (currentTime - lastTime > 1000) {
+		if (currentMiconFrame == 4)
+			currentMiconFrame = 0;
+		else {
+			currentMiconFrame++;
+			lastTime = currentTime;
+		}
+	}
+	
+	int tempCounter = 0;
+
     for (int i = 0; i < nmedias; i++) {
         if(mediaManager->getMedia(i)->isVideo()){
-            (mediaManager->getMedia(i)->getVideo())->update();
-        }
-        
+
+			if(miconCounter == 0)
+				(mediaManager->getMedia(i)->getVideo())->update();
+			else {
+				if ((mediaManager->getMedia(i)->getVideo())->isPlaying())
+					(mediaManager->getMedia(i)->getVideo())->update();
+				else {
+					mediaManager->drawMicon(i, currentMiconFrame, &micons[mediaManager->getMedia(i)->getFileName()]);
+				}
+				tempCounter++;
+			}			
+        }        
     }
 }
 

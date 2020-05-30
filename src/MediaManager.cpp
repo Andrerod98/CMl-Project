@@ -742,4 +742,19 @@ float MediaManager::processGabor(ofImage image) {
 	return sumGabor / count;
 }
 
+void MediaManager::drawMicon(int index, int current, ofImage* thumb) {
+	if (!medias.at(index)->isImage()) {		
+		string thumbPath = xmlManager->getInstance()->getMetadata(medias.at(index)->getFileName(), false)->getThumbPath();
 
+		//Load images
+		directory.listDir(thumbPath);
+		directory.allowExt("png");
+		directory.sort(); // in linux the file system doesn't return file lists ordered in alphabetical order   
+
+		if (directory.size() != 0) {
+			thumb->load(directory.getPath(current));
+			cout << "currentMicon: " << directory.getPath(current) << endl;
+			thumb->update();
+		}
+	}
+}
