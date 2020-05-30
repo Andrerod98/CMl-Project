@@ -123,6 +123,8 @@ void MetadataScreen::setup(){
     saveButton->setLabelAlignment(ofxDatGuiAlignment::CENTER);
     saveButton->setStripeWidth(0);
     
+    saveButton->onButtonEvent(this, &MetadataScreen::onButtonEvent);
+    
     theme->layout.height = 30;
     tagsLabel = new ofxDatGuiLabel("Tags");
     tagsLabel->setPosition(30, getHeight() - 40);
@@ -152,7 +154,7 @@ void MetadataScreen::setup(){
     
     
    // tags->setStripe(ofColor::white, 50);
-    tags->onTextInputEvent(this, &MetadataScreen::onTextInputEvent);
+    //tags->onTextInputEvent(this, &MetadataScreen::onTextInputEvent);
     
     tags->setLabelUpperCase(false);
     
@@ -177,16 +179,19 @@ vector<string> MetadataScreen::split(const string& str, const string& delim)
     return tokens;
 }
 
-void MetadataScreen::onTextInputEvent(ofxDatGuiTextInputEvent e)
+void MetadataScreen::onButtonEvent(ofxDatGuiButtonEvent e)
 {
     // text input events carry the text of the input field //
-    cout << "Saving tags " << e.text << endl;
+    cout << "Saving tags " << tags->getText() << endl;
  
     std::string delimiter = "#";
     
+    if(tags->getText() == "")
+        return;
+    
     size_t pos = 0;
     std::string token;
-    std::string s = e.text;
+    std::string s = tags->getText();
     
     vector<std::string> r = {};
     vector<std::string> l = split(s, delimiter);
@@ -201,8 +206,12 @@ void MetadataScreen::onTextInputEvent(ofxDatGuiTextInputEvent e)
     
     this->media->getMetadata()->setTags(r);
     XmlManager *xml = xml->getInstance();
-    
+    PlaylistManager *pm = pm->getInstance();
     bool sucess = xml->setTags(this->media->getFileName(), this->media->isImage(), r);
+    if(sucess){
+        for(string s: r)
+            pm->addToPlaylist(s,media);
+    }
     cout << sucess;
     
     

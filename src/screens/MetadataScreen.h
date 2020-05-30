@@ -20,7 +20,7 @@ class MetadataScreen: public Screen{
     
     MediaGUI* media;
     
-    void onTextInputEvent(ofxDatGuiTextInputEvent e);
+    void onButtonEvent(ofxDatGuiButtonEvent e);
     
     void setup();
     void drawPlayer();

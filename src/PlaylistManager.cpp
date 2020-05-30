@@ -28,7 +28,7 @@ vector<MediaGUI*> PlaylistManager::getPlaylist(string tag){
 }
 
 void PlaylistManager::addToPlaylist(string tag, MediaGUI* media){
-    
+    std::transform(tag.begin(), tag.end(),tag.begin(), ::toupper);
     if ( playlists.find(tag) == playlists.end() ) {
         playlists.insert( pair<string, MediasVector>(tag, {}) );
     }

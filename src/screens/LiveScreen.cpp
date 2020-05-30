@@ -20,6 +20,7 @@ LiveScreen::LiveScreen(string title,int width, int height,int x, int y, Camera* 
 }
 
 void LiveScreen::setPlaylist(string name){
+    std::transform(name.begin(), name.end(),name.begin(), ::toupper);
     this->currentPlaylist = this->playlistManager->getPlaylist(name);
 
     this->currentVideo = 0;
@@ -29,7 +30,9 @@ void LiveScreen::setPlaylist(string name){
 
 void LiveScreen::draw(){
     
-
+    if(currentPlaylist.size() == 0){
+        return;
+    }
 
     
     if(media == NULL){
@@ -72,6 +75,9 @@ void LiveScreen::update(){
     if(media == NULL){
         return;
     }
+    if(currentPlaylist.size() == 0){
+        return;
+    }
     if(media->isImage()){
         (media->getImage())->update();
     }else if(media->isVideo()){
@@ -87,7 +93,6 @@ void LiveScreen::update(){
     
     
     if (currentTime - lastTime > 3000){
-        cout << "next";
         
        
         if(currentPlaylist.size() == currentVideo){

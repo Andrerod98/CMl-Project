@@ -1,7 +1,9 @@
 <metadata>
     <image>
         <filename>DSC09302.jpg</filename>
-        <tags></tags>
+        <tags>
+            <tag>#one</tag>
+        </tags>
         <edges>
             <vertical>4879</vertical>
             <horizontal>1520</horizontal>
@@ -25,7 +27,9 @@
     </image>
     <image>
         <filename>DSC09305.jpg</filename>
-        <tags></tags>
+        <tags>
+            <tag>#none</tag>
+        </tags>
         <edges>
             <vertical>7935</vertical>
             <horizontal>3292</horizontal>
@@ -50,23 +54,25 @@
     <video>
         <filename>fingers.mov</filename>
         <thumbnails>thumbnails/fingers/</thumbnails>
-        <tags></tags>
+        <tags>
+            <tag>#none</tag>
+        </tags>
         <edges>
-            <vertical>9057</vertical>
-            <horizontal>21736</horizontal>
-            <d45>18350</d45>
-            <d135>18102</d135>
-            <nonDirectional>19266</nonDirectional>
+            <vertical>10243</vertical>
+            <horizontal>21954</horizontal>
+            <d45>19210</d45>
+            <d135>18819</d135>
+            <nonDirectional>20246</nonDirectional>
         </edges>
-        <luminance>161.491760254</luminance>
-        <texture>15.258710861</texture>
+        <luminance>159.944931030</luminance>
+        <texture>17.544925690</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
-        <objects></objects>
+        <objects />
         <rhythm>0.000000000</rhythm>
         <color>
-            <red>131</red>
-            <green>171</green>
+            <red>136</red>
+            <green>167</green>
             <blue>154</blue>
         </color>
     </video>

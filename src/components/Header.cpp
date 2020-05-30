@@ -118,10 +118,10 @@ void Header::setFullHeader(){
     liveButton->setLabelColor(ofColor::red);
     liveButton->onButtonEvent(this, &Header::liveButtonPress);
     
-    configButton = new ofxDatGuiButton("Config");
+    configButton = new ofxDatGuiButton("Metadata");
     configButton->setTheme(theme);
-    configButton->setPosition(getWidth()-210, 40-15);
-    configButton->setWidth(70, 10);
+    configButton->setPosition(getWidth()-220, 40-15);
+    configButton->setWidth(80, 10);
     configButton->setLabelUpperCase(false);
     configButton->onButtonEvent(this, &Header::configButtonPress);
     configButton->setBackgroundColor(settings::SECONDARY_COLOR);
@@ -130,7 +130,7 @@ void Header::setFullHeader(){
     
     helpButton = new ofxDatGuiButton("Help");
     helpButton->setTheme(theme);
-    helpButton->setPosition(getWidth()-300, 40-15);
+    helpButton->setPosition(getWidth()-310, 40-15);
     helpButton->setWidth(70, 10);
     helpButton->setLabelUpperCase(false);
     helpButton->onButtonEvent(this, &Header::helpButtonPress);
@@ -139,7 +139,7 @@ void Header::setFullHeader(){
     
     refreshMetadata = new ofxDatGuiButton("Refresh Metadata");
     refreshMetadata->setTheme(theme);
-    refreshMetadata->setPosition(getWidth()-475, 40-15);
+    refreshMetadata->setPosition(getWidth()-485, 40-15);
     refreshMetadata->setWidth(150, 10);
     refreshMetadata->setLabelUpperCase(false);
 	refreshMetadata->onButtonEvent(this, &Header::refreshButtonPress);
@@ -150,9 +150,9 @@ void Header::setFullHeader(){
 }
 
 void Header::drawMetadataHeader(){
-    liveButton->draw();
-    helpButton->draw();
-    refreshMetadata->draw();
+    //liveButton->draw();
+    //helpButton->draw();
+    //refreshMetadata->draw();
     
     ofSetColor(255);
     title.drawString(this->media->getFileName(), 80, getHeight() / 2 + 5);
