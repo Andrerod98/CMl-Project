@@ -21,6 +21,7 @@ class Metadata{
     int nFaces;
     int nObject;
     ofColor color;
+	string thumbPath;
     
 public:
     
@@ -45,6 +46,29 @@ public:
         this->color = color;
     };
 
+	Metadata(vector<string> tags,
+		float luminance,
+		vector<int> edgeDistribution,
+		float rhythm,
+		float texture,
+		float audioAmplitude,
+		int nFaces,
+		int nObject,
+		ofColor color,
+		string thumbnailsPath) {
+
+		this->tags = tags;
+		this->luminance = luminance;
+		this->edgeDistribution = edgeDistribution;
+		this->rhythm = rhythm;
+		this->texture = texture;
+		this->audioAmplitude = audioAmplitude;
+		this->nFaces = nFaces;
+		this->nObject = nObject;
+		this->color = color;
+		this->thumbPath = thumbnailsPath;
+	};
+
 	Metadata(float luminance,
 		vector<int> edgeDistribution,
 		float rhythm,
@@ -63,8 +87,8 @@ public:
 		this->nObject = nrObjects;
 		this->color = color;
 	}
-    
-    vector<string> getTags(){
+
+	vector<string> getTags(){
         return tags;
     };
     
@@ -112,6 +136,10 @@ public:
     float getAudioAmplitude(){
         return audioAmplitude;
     };
+
+	string getThumbPath() {
+		return thumbPath;
+	}
 };
 
 #endif /* Metadata_h */

@@ -97,7 +97,29 @@ void Gallery::drawPage(int page) {
             
         }else if(mediaManager->getMedia(currentMediaIndex)->isVideo()){
             ofSetHexColor(0xFFFFFF);
-            (mediaManager->getMedia(currentMediaIndex)->getVideo())->draw(positions[i], itemWidth, itemHeight);
+			ofVideoPlayer* video = mediaManager->getMedia(currentMediaIndex)->getVideo();
+			string filename = mediaManager->getMedia(currentMediaIndex)->getFileName();
+
+			if (!video->isPaused())
+				(mediaManager->getMedia(currentMediaIndex)->getVideo())->draw(positions[i], itemWidth, itemHeight);
+			else { // draw micon
+				string thumbPath = xmlManager->getInstance()->getMetadata(filename, false)->getThumbPath();
+
+				vector<ofImage> images = vector<ofImage>(5);
+
+				//Load images
+				directory.listDir(thumbPath);
+				directory.allowExt("png");
+				directory.sort(); // in linux the file system doesn't return file lists ordered in alphabetical order   
+
+				images.at(0).load(directory.getPath(0));
+				images.at(1).load(directory.getPath(1));
+				images.at(2).load(directory.getPath(2));
+				images.at(3).load(directory.getPath(3));
+				images.at(4).load(directory.getPath(4));
+
+				
+			}
         }
     }
     

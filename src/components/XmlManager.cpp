@@ -107,6 +107,11 @@ Metadata* XmlManager::getMetadata(string mediaName, bool isImage) {
 		nObject = (int)XML.getValue("nObject", -1);
 		color = ofColor(XML.getValue("color:red", 0), XML.getValue("color:green", 0), XML.getValue("color:blue", 0));
 
+		if (!isImage) {
+			string thumbPath = XML.getValue("thumbnails", "thumbnails");
+			return new Metadata(tags, luminance, edgeDistribution, rhythm, texture, audioAmplitude, nFaces, nObject, color, thumbPath);
+		}
+
 		XML.popTag(); // out of media
 	}
 

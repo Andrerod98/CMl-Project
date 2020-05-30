@@ -82,8 +82,6 @@ public:
     
     bool inside(int x, int y){
         return position.x < x && position.x + width > x && position.y < y && position.y + height > y;
-    }
-    
-    
+    }    
 };
 #endif /* Media_h */

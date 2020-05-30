@@ -17,7 +17,7 @@
 #include "XmlManager.h"
 #include "PlaylistManager.h"
 #include "MediaManager.h"
-
+#include "XmlManager.h"
 
 #pragma once
 
@@ -30,13 +30,13 @@ class Gallery : public Screen{
     
     int itemWidth, itemHeight, spaceBetween;
     
-    
+	ofDirectory directory;
     
     int currentPage;
     
    
     MediaManager* mediaManager;
-    
+	XmlManager* xmlManager;
     
     
 

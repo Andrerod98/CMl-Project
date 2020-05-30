@@ -44,7 +44,6 @@ int MediaManager::getSelectedMediaIndex(){
     return selectedMedia;
 }
 
-
 //Loads videos from storega
 void MediaManager::loadVideos() {
     
@@ -121,6 +120,7 @@ void MediaManager::loadImages() {
     }
 	cout << " done" << endl;
 }
+
 void MediaManager::selectMedia(int i){
     selectedMedia = i;
 }
@@ -621,9 +621,7 @@ Metadata MediaManager::processMedia(Media* media) {
                 
                 ofPixels pixels = video.getPixels();
                 
-                ofImage thumbnail = processThumbnail(media);
-                
-                thumbnail.save("teste.jpg");
+                //ofImage thumbnail = processThumbnail(media);
                 
                 edgeDistribution = processEdges(image);
                 
@@ -702,7 +700,9 @@ Metadata MediaManager::processMedia(Media* media) {
             video.setFrame(idx.at(i));
             image.setFromPixels(video.getPixels());
             
-            image.save("thumbnails/" + media->getFileName() + to_string(i) + ".png");
+			string filename = media->getFileName().substr(0, media->getFileName().find("."));
+            image.save("thumbnails/" + filename + "/" + filename + to_string(c) + ".png");
+			xmlManager->setMetadata(media->getFileName(), false, "thumbnails", "thumbnails/" + filename + "/");
             
           //  settings.setValue("metadata:imageUrl" + std::to_string(c) , imagePath);
         } 
@@ -710,25 +710,6 @@ Metadata MediaManager::processMedia(Media* media) {
 		nObject = maxObjects;
 		nFaces = maxFaces;
 	}
-    
-    /*
-    
-    string path = "objects/";
-    ofDirectory dir(path);
-    //only show png files
-    dir.allowExt("jpg");
-    //populate the directory object
-    dir.listDir();
-    
-    //go through and print out all the paths
-    
-    for(int i = 0; i < dir.size(); i++){
-        ofImage image;
-        image.load(dir.getPath(i));
-        nObject = processNTimesObject(image, media);
-        cout << "Object:" << nObject;
-    }
-*/
 	return Metadata(luminance, edgeDistribution, rhythm, texture, audioAmplitude, nFaces, nObject, color);
 }
 

@@ -43,20 +43,21 @@
     </image>
     <video>
         <filename>fingers.mov</filename>
+        <thumbnails>thumbnails/fingers/</thumbnails>
         <tags></tags>
         <edges>
-            <vertical>3983</vertical>
-            <horizontal>5143</horizontal>
-            <d45>4624</d45>
-            <d135>5064</d135>
-            <nonDirectional>1714</nonDirectional>
+            <vertical>4002</vertical>
+            <horizontal>5120</horizontal>
+            <d45>4619</d45>
+            <d135>5051</d135>
+            <nonDirectional>1737</nonDirectional>
         </edges>
-        <luminance>117.424118042</luminance>
-        <texture>7.272836685</texture>
+        <luminance>117.389526367</luminance>
+        <texture>7.271481037</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
-        <nObject>100</nObject>
-        <rhythm>1210.583374023</rhythm>
+        <nObject>0</nObject>
+        <rhythm>1205.685180664</rhythm>
         <color>
             <red>133</red>
             <green>112</green>
