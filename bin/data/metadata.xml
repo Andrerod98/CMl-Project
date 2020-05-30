@@ -1,7 +1,7 @@
 <metadata>
     <image>
         <filename>DSC09302.jpg</filename>
-        <tags />
+        <tags></tags>
         <edges>
             <vertical>4879</vertical>
             <horizontal>1520</horizontal>
@@ -25,7 +25,7 @@
     </image>
     <image>
         <filename>DSC09305.jpg</filename>
-        <tags />
+        <tags></tags>
         <edges>
             <vertical>7935</vertical>
             <horizontal>3292</horizontal>
@@ -47,74 +47,27 @@
             <blue>145</blue>
         </color>
     </image>
-    <image>
-        <filename>Photo on 23-05-2020 at 23.04.jpg</filename>
-        <tags />
-        <edges>
-            <vertical>43009</vertical>
-            <horizontal>45790</horizontal>
-            <d45>49986</d45>
-            <d135>49992</d135>
-            <nonDirectional>19420</nonDirectional>
-        </edges>
-        <luminance>126.731010437</luminance>
-        <texture>3.416537762</texture>
-        <audioAmplitude>0.000000000</audioAmplitude>
-        <nFaces>1</nFaces>
-        <objects>
-            <object>50</object>
-            <object>50</object>
-        </objects>
-        <color>
-            <red>153</red>
-            <green>122</green>
-            <blue>88</blue>
-        </color>
-    </image>
     <video>
         <filename>fingers.mov</filename>
         <thumbnails>thumbnails/fingers/</thumbnails>
-        <tags />
+        <tags></tags>
         <edges>
-            <vertical>24637</vertical>
-            <horizontal>13644</horizontal>
-            <d45>25808</d45>
-            <d135>25714</d135>
-            <nonDirectional>13764</nonDirectional>
+            <vertical>35810</vertical>
+            <horizontal>21407</horizontal>
+            <d45>29439</d45>
+            <d135>29430</d135>
+            <nonDirectional>21891</nonDirectional>
         </edges>
-        <luminance>96.842506409</luminance>
-        <texture>10.578557968</texture>
+        <luminance>168.652374268</luminance>
+        <texture>28.339530945</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
-        <objects />
+        <objects></objects>
         <rhythm>0.000000000</rhythm>
         <color>
-            <red>92</red>
-            <green>97</green>
-            <blue>101</blue>
+            <red>168</red>
+            <green>168</green>
+            <blue>168</blue>
         </color>
-        <video>
-            <filename>fingers.mov</filename>
-            <thumbnails>thumbnails/fingers/</thumbnails>
-            <tags></tags>
-            <edges>
-                <vertical>9723</vertical>
-                <horizontal>2518</horizontal>
-                <d45>7148</d45>
-                <d135>7148</d135>
-                <nonDirectional>5380</nonDirectional>
-            </edges>
-            <luminance>6.292925835</luminance>
-            <texture>7.417717934</texture>
-            <audioAmplitude>0.000000000</audioAmplitude>
-            <nFaces>0</nFaces>
-            <objects></objects>
-            <rhythm>0.000000000</rhythm>
-            <color>
-                <red>6</red>
-                <green>6</green>
-                <blue>6</blue>
-            </color>
-        </video>
     </video>
 </metadata>

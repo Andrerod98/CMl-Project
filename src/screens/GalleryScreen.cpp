@@ -146,7 +146,7 @@ void GalleryScreen::drawPage(int page){
     if (currentPage == 1 && nPages > 1) {
         nextButton.draw(nextButtonX,nextButtonY, 50, 50);
     }
-    else if (currentPage == nPages) {
+    else if (currentPage == nPages && currentPage > 1) {
         backButton.draw(backButtonX,backButtonY, 50, 50);
     }
     else if (currentPage > 1 && nPages > currentPage) {

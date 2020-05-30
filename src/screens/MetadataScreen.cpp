@@ -84,7 +84,10 @@ void MetadataScreen::setup(){
     MediaManager* mediaManager = mediaManager->getInstance();
     int s = mediaManager->getObjectsNames().size();
     for (int i = 0; i < s; i++) {
+        
+        if(media->getMetadata()->getObjects().size() > i){
         options2.push_back(mediaManager->getObjectsNames()[i] + ":" + to_string( media->getMetadata()->getObjects()[i]));
+        }
     }
 
     nObject = new ofxDatGuiDropdown("Nº objects:", options2);

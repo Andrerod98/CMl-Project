@@ -162,7 +162,7 @@ bool XmlManager::setMetadata(string mediaName, bool isImage, string tag, string 
 
 bool XmlManager::setMetadata(string mediaName, bool isImage, Metadata metadata) {
 	if (findMedia(mediaName, isImage)) {
-		XML.removeTag("tags"); // removes previous content
+	
 		XML.addTag("tags");
 		XML.pushTag("tags");
 		vector<std::string> tags = metadata.getTags();
@@ -171,7 +171,7 @@ bool XmlManager::setMetadata(string mediaName, bool isImage, Metadata metadata) 
 		}
 		XML.popTag(); // out of tags 
         
-		XML.removeTag("edges");
+		
 		XML.addTag("edges");
 		XML.pushTag("edges");
 		vector<int> edges = metadata.getEdgeDistribution();
