@@ -609,8 +609,8 @@ Metadata MediaManager::processMedia(Media* media) {
         // normalize(current_hist, current_hist, 0, 255, NORM_MINMAX, -1, Mat() );
         Mat current_hist;
         Mat previous_hist;
-        Mat image_gray;
-		ofImage tempGray;
+        Mat imageGrayMat;
+
 
 		video.play();
 		video.setPaused(true);
@@ -619,24 +619,31 @@ Metadata MediaManager::processMedia(Media* media) {
         for (int i = 0; i < max; i++) {
             video.setFrame(i);
             image.setFromPixels(video.getPixels());
-            imgSrc = ofxCv::toCv(image);
-            cv::cvtColor(imgSrc, image_gray, CV_BGR2GRAY);           
+            imageGrayMat = ofxCv::toCv(image);
+            cv::cvtColor(imageGrayMat, imageGrayMat, CV_BGR2GRAY);
             
             if(i == 0){
-				Metadata metadata = processImage(image);
+                Metadata metadata = processImage(image);
                 texture = metadata.getTextureValue();
-                calcHist( &image_gray, 1, 0, Mat(), previous_hist, 1, &histSize, &histRange, true, false );
-                
-                ofPixels pixels = video.getPixels();
                 
                 //ofImage thumbnail = processThumbnail(media);
                 
                 edgeDistribution = processEdges(image);
                 
             }else {
-                calcHist( &image_gray, 1, 0, Mat(), current_hist, 1, &histSize, &histRange, true, false );
+                Mat current_hist;
+                Mat previous_hist;
+                
+                calcHist( &imageGrayMat, 1, 0, Mat(), current_hist, 1, &histSize, &histRange, true, false );
+                
+                video.previousFrame();
+                image.setFromPixels(video.getPixels());
+                imageGrayMat = ofxCv::toCv(image);
+                cv::cvtColor(imageGrayMat, imageGrayMat, CV_BGR2GRAY);
+                calcHist( &imageGrayMat, 1, 0, Mat(), previous_hist, 1, &histSize, &histRange, true, false );
+                
                 rhythmPerFrame.push_back(getVariance(previous_hist, current_hist));
-                previous_hist = current_hist.clone();
+                
             }
             
 			luminanceAndColor = processLuminanceAndColor(image);
@@ -688,32 +695,28 @@ Metadata MediaManager::processMedia(Media* media) {
             rhythm += variation;
         }
         
-        // Calculate Mean Rhythm
-        rhythm = rhythm / ( rhythmPerFrame.size() - 1 );       
-        
-        // CUT DETECTION
-        // The greater the rhythm variation the better the frame is suited to become a "key" Frame
-        // initialize original index locations
-        vector<size_t> idx(rhythmVariations.size());
-        iota(idx.begin(), idx.end(), 0);
-        
-        // sort indexes based on comparing values in rhythmVariations
-        sort(idx.begin(), idx.end(),
-             [&rhythmVariations](size_t i1, size_t i2) {return rhythmVariations[i1] < rhythmVariations[i2]; });
+        vector<float> sorted = rhythmPerFrame;
+        sort(sorted.begin(), sorted.end(), greater<int>());
         
         
-        // For the 5 frames with the greatest variations save the images for moving icons
-        for (int i = idx.size()-1, c = 0; c < 5 ; c++, i--) {
+        
+        
+        for (int i = 0 ; i < 5; i++) {
+            ofImage image;
             
-            video.setFrame(idx.at(i));
+            std::vector<float>::iterator it = std::find(rhythmPerFrame.begin(), rhythmPerFrame.end(), sorted[i]);
+            int index = std::distance(rhythmPerFrame.begin(), it);
+            
+            
+            video.setFrame(rhythmPerFrame.at(index+1));
             image.setFromPixels(video.getPixels());
             
-			string filename = media->getFileName().substr(0, media->getFileName().find("."));
-            image.save("thumbnails/" + filename + "/" + filename + to_string(c) + ".png");
-			xmlManager->setMetadata(media->getFileName(), false, "thumbnails", "thumbnails/" + filename + "/");
+            string filename = media->getFileName().substr(0, media->getFileName().find("."));
+            image.save("thumbnails/" + filename + "/" + filename + to_string(i) + ".png");
+            xmlManager->setMetadata(media->getFileName(), false, "thumbnails", "thumbnails/" + filename + "/");
             
-          //  settings.setValue("metadata:imageUrl" + std::to_string(c) , imagePath);
-        } 
+            //  settings.setValue("metadata:imageUrl" + std::to_string(c) , imagePath);
+        }
 
 		nObject = maxObjects;
 		nFaces = maxFaces;

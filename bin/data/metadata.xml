@@ -52,22 +52,22 @@
         <thumbnails>thumbnails/fingers/</thumbnails>
         <tags></tags>
         <edges>
-            <vertical>35810</vertical>
-            <horizontal>21407</horizontal>
-            <d45>29439</d45>
-            <d135>29430</d135>
-            <nonDirectional>21891</nonDirectional>
+            <vertical>9057</vertical>
+            <horizontal>21736</horizontal>
+            <d45>18350</d45>
+            <d135>18102</d135>
+            <nonDirectional>19266</nonDirectional>
         </edges>
-        <luminance>168.652374268</luminance>
-        <texture>28.339530945</texture>
+        <luminance>161.491760254</luminance>
+        <texture>15.258710861</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <objects></objects>
         <rhythm>0.000000000</rhythm>
         <color>
-            <red>168</red>
-            <green>168</green>
-            <blue>168</blue>
+            <red>131</red>
+            <green>171</green>
+            <blue>154</blue>
         </color>
     </video>
 </metadata>
