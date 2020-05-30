@@ -118,6 +118,7 @@ Metadata* XmlManager::getMetadata(string mediaName, bool isImage) {
 
 		if (!isImage) {
 			string thumbPath = XML.getValue("thumbnails", "thumbnails");
+			XML.popTag();
 			return new Metadata(tags, luminance, edgeDistribution, rhythm, texture, audioAmplitude, nFaces, nObject, color, thumbPath);
 		}
 
@@ -260,12 +261,13 @@ bool XmlManager::exists(string filename, bool isImage) {
 		if (nrVideos > 0) {
 			for (int i = 0; i < nrVideos; i++) {
 				name = XML.getValue("video:filename", "null", i);
-				//cout << "EXISTS filename: " << filename << " name found: " << name;
+				cout << filename << " at level: " << XML.getPushLevel() << endl;
+				cout << "EXISTS filename: " << filename << " name found: " << name;
 				if (name == filename) {
-					//cout << " FOUND" << endl;
+					cout << " FOUND" << endl;
 					return true;
 				}
-				//cout << " NOT FOUND" << endl;
+				cout << " NOT FOUND" << endl;
 			}
 		}
 	}

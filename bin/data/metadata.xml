@@ -1,7 +1,7 @@
 <metadata>
     <image>
         <filename>DSC09302.jpg</filename>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>4879</vertical>
             <horizontal>1520</horizontal>
@@ -25,7 +25,7 @@
     </image>
     <image>
         <filename>DSC09305.jpg</filename>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>7935</vertical>
             <horizontal>3292</horizontal>
@@ -50,8 +50,9 @@
     <video>
         <filename>fingers.mov</filename>
         <thumbnails>thumbnails/fingers/</thumbnails>
-        <tags></tags>
+        <tags />
         <edges>
+<<<<<<< Updated upstream
             <vertical>35810</vertical>
             <horizontal>21407</horizontal>
             <d45>29439</d45>
@@ -64,6 +65,20 @@
         <nFaces>0</nFaces>
         <objects></objects>
         <rhythm>0.000000000</rhythm>
+=======
+            <vertical>3997</vertical>
+            <horizontal>5159</horizontal>
+            <d45>4595</d45>
+            <d135>5088</d135>
+            <nonDirectional>1737</nonDirectional>
+        </edges>
+        <luminance>117.389350891</luminance>
+        <texture>7.271211147</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <rhythm>1201.898193359</rhythm>
+>>>>>>> Stashed changes
         <color>
             <red>168</red>
             <green>168</green>

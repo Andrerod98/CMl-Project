@@ -383,6 +383,12 @@ vector<int> MediaManager::processEdges(ofImage input) {
 	ofImage ndImg;
 	ofxCv::toOf(ndImage, ndImg);
 
+	vImg.save("vImage.png");
+	hImg.save("hImage.png");
+	d45Img.save("d45Image.png");
+	d135Img.save("d135Image.png");
+	ndImg.save("ndImage.png");
+
 	// loop through all pixels and count pixels with color above threshold
 	// since its grey scale, all components have the same value
 	ofColor color;
@@ -672,12 +678,12 @@ Metadata MediaManager::processMedia(Media* media) {
         }
 
         // Save average luminance
-        luminance = sumLuminance / video.getTotalNumFrames();
+        luminance = sumLuminance / max;
         
         // Calculate mean of RGB colors of the Video
-        redMean    = red  / video.getTotalNumFrames();
-        greenMean  = green / video.getTotalNumFrames();
-        blueMean   = blue  / video.getTotalNumFrames();
+        redMean    = red  / max;
+        greenMean  = green / max;
+        blueMean   = blue  / max;
         
         color = ofColor(redMean, greenMean, blueMean);
        
