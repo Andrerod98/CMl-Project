@@ -118,6 +118,7 @@ Metadata* XmlManager::getMetadata(string mediaName, bool isImage) {
 
 		if (!isImage) {
 			string thumbPath = XML.getValue("thumbnails", "thumbnails");
+			XML.popTag();
 			return new Metadata(tags, luminance, edgeDistribution, rhythm, texture, audioAmplitude, nFaces, nObject, color, thumbPath);
 		}
 
