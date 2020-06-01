@@ -433,11 +433,13 @@ vector<int> MediaManager::processEdges(ofImage input) {
 	ofImage ndImg;
 	ofxCv::toOf(ndImage, ndImg);
 
+	/*
 	vImg.save("vImage.png");
 	hImg.save("hImage.png");
 	d45Img.save("d45Image.png");
 	d135Img.save("d135Image.png");
 	ndImg.save("ndImage.png");
+	*/
 
 	// loop through all pixels and count pixels with color above threshold
 	// since its grey scale, all components have the same value
@@ -638,7 +640,7 @@ Metadata MediaManager::processMedia(Media* media) {
     float meanRhythm = 0;
     float rhythmFrame = 0;
     vector <float> rhythmPerFrame;
-    vector <float> rhythmVariations;
+    float rhythmVariations = 0;
 
     
     int maxFaces = 0;
@@ -679,27 +681,27 @@ Metadata MediaManager::processMedia(Media* media) {
             cv::cvtColor(imageGrayMat, imageGrayMat, CV_BGR2GRAY);
             
             if(i == 0){
-                Metadata metadata = processImage(image);
-                texture = metadata.getTextureValue();
+                texture = processGabor(image);
                 
                 //ofImage thumbnail = processThumbnail(media);
                 
                 edgeDistribution = processEdges(image);
+				//calcHist(&imageGrayMat, 1, 0, Mat(), current_hist, 1, &histSize, &histRange, true, false);
                 
             }else {
-                Mat current_hist;
-                Mat previous_hist;
-                
+                                
+				//previous_hist = current_hist;
                 calcHist( &imageGrayMat, 1, 0, Mat(), current_hist, 1, &histSize, &histRange, true, false );
+								
                 
                 video.previousFrame();
                 image.setFromPixels(video.getPixels());
                 imageGrayMat = ofxCv::toCv(image);
                 cv::cvtColor(imageGrayMat, imageGrayMat, CV_BGR2GRAY);
                 calcHist( &imageGrayMat, 1, 0, Mat(), previous_hist, 1, &histSize, &histRange, true, false );
-                
-                rhythmPerFrame.push_back(getVariance(previous_hist, current_hist));
-                
+            
+
+                rhythmPerFrame.push_back(getVariance(previous_hist, current_hist));                
             }
             
 			luminanceAndColor = processLuminanceAndColor(image);
@@ -744,14 +746,15 @@ Metadata MediaManager::processMedia(Media* media) {
         
         color = ofColor(redMean, greenMean, blueMean);
        
-		/*
-        // Calculate Rhythm Variations between each frame (based on luminance)
+		
+        // Calculate mean Rhythm Variation between each frame
         for (int i = 1; i < rhythmPerFrame.size(); i++) {            
             float variation = std::abs(rhythmPerFrame.at(i - 1) - rhythmPerFrame.at(i));
-            rhythmVariations.push_back(variation);
-            rhythm += variation;
+            rhythmVariations += variation;
         }
-        */
+
+		rhythm = rhythmVariations / max;
+        
         vector<float> sorted = rhythmPerFrame;
         sort(sorted.begin(), sorted.end(), greater<int>());        
         
