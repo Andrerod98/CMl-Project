@@ -47,6 +47,8 @@ public:
 
 	bool exists(string mediaName, bool isImage);
 
+	bool clearAll();
+
 private:
 	/*
 		If it finds the media with given filename, pushes the stack to it and returns true

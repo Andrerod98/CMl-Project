@@ -10,6 +10,7 @@
 #include "Media.h"
 #include "Settings.h"
 #include "XmlManager.h"
+#include "MediaManager.h"
 
 
 
@@ -18,7 +19,7 @@ class Header : public Screen, public Subject{
     ofxDatGuiButton* liveButton;
     ofxDatGuiButton* configButton;
     ofxDatGuiButton* helpButton;
-    ofxDatGuiButton* refreshMetadata;
+    ofxDatGuiFolder* refreshMetadata;
     
     ofImage backButton;
     

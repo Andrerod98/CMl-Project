@@ -54,7 +54,6 @@ void GalleryScreen::setup(){
     filtersFolder->setLabelColor(settings::FONT_COLOR);
     filtersFolder->setWidth(200,200);
     ofxDatGuiSlider* maxLuminance = filtersFolder->addSlider("Max Luminance", 0, 200);
-
     ofxDatGuiSlider* maxEdge= filtersFolder->addSlider("Max Edge distribution", 0, 200);
     ofxDatGuiSlider* maxNFaces=filtersFolder->addSlider("Max NFaces", 0, 200);
     ofxDatGuiSlider* maxNObject=filtersFolder->addSlider("Max NObject", 0, 200);
@@ -72,8 +71,6 @@ void GalleryScreen::setup(){
     typeMedia->setBackgroundColor(settings::MAIN_COLOR);
     typeMedia->setLabelColor(settings::FONT_COLOR);
     typeMedia->onDropdownEvent(this, &GalleryScreen::onDropdownEvent);
-    
-    
 }
 
 void GalleryScreen::onTextInputEvent(ofxDatGuiTextInputEvent e)
@@ -85,7 +82,6 @@ void GalleryScreen::onTextInputEvent(ofxDatGuiTextInputEvent e)
     this->mediaManager->search(e.text);
     currentPage = 1;
     this->nPages = ceil(mediaManager->getNMedia() / 8);
-
 }
 
 

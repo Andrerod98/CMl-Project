@@ -14,7 +14,6 @@ XmlManager::XmlManager(string filename) {
 			cout << "XML File: " << filename << " was not loaded!" << endl;
 	}
 
-
 	if (XML.tagExists("metadata")) {
 		XML.pushTag("metadata");
 		this->nrImages = XML.getNumTags("image");
@@ -30,6 +29,15 @@ XmlManager::XmlManager(string filename) {
 	}
 
 	this->xmlFileName = filename;
+}
+
+bool XmlManager::clearAll() {
+	while (XML.getPushLevel() != 0)
+		XML.popTag();
+
+	XML.clearTagContents("metadata");
+	XML.pushTag("metadata");
+	return XML.save(xmlFileName);
 }
 
 XmlManager* XmlManager::getInstance() {
@@ -261,13 +269,13 @@ bool XmlManager::exists(string filename, bool isImage) {
 		if (nrVideos > 0) {
 			for (int i = 0; i < nrVideos; i++) {
 				name = XML.getValue("video:filename", "null", i);
-				cout << filename << " at level: " << XML.getPushLevel() << endl;
-				cout << "EXISTS filename: " << filename << " name found: " << name;
+				//cout << filename << " at level: " << XML.getPushLevel() << endl;
+				//cout << "EXISTS filename: " << filename << " name found: " << name;
 				if (name == filename) {
-					cout << " FOUND" << endl;
+					//cout << " FOUND" << endl;
 					return true;
 				}
-				cout << " NOT FOUND" << endl;
+				//cout << " NOT FOUND" << endl;
 			}
 		}
 	}

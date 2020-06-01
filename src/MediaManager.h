@@ -101,6 +101,8 @@ public:
     void loadImages();
     
     void loadVideos();
+
+	void reloadMedia(bool softReset);
     
     void loadObjects();
     

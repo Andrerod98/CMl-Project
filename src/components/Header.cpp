@@ -137,6 +137,7 @@ void Header::setFullHeader(){
     helpButton->setBackgroundColor(settings::SECONDARY_COLOR);
     helpButton->setLabelColor(settings::FONT_COLOR);
     
+	/*
     refreshMetadata = new ofxDatGuiButton("Refresh Metadata");
     refreshMetadata->setTheme(theme);
     refreshMetadata->setPosition(getWidth()-485, 40-15);
@@ -145,6 +146,18 @@ void Header::setFullHeader(){
 	refreshMetadata->onButtonEvent(this, &Header::refreshButtonPress);
     refreshMetadata->setBackgroundColor(settings::SECONDARY_COLOR);
     refreshMetadata->setLabelColor(settings::FONT_COLOR);
+	*/
+
+	refreshMetadata = new ofxDatGuiFolder("Refresh Metadata");
+	refreshMetadata->setTheme(theme);
+	refreshMetadata->setPosition(getWidth() - 485, 40 - 15);
+	refreshMetadata->setWidth(150, 10);
+	refreshMetadata->setLabelUpperCase(false);
+	refreshMetadata->setBackgroundColor(settings::MAIN_COLOR);
+	refreshMetadata->setLabelColor(settings::FONT_COLOR);
+	refreshMetadata->addButton("Soft Reset");
+	refreshMetadata->addButton("Hard Reset");
+	refreshMetadata->onButtonEvent(this, &Header::refreshButtonPress);
     
     isMetadata = false;
 }
@@ -185,7 +198,7 @@ void Header::setMetadataHeader( Media* media){
     helpButton->setWidth(70, 10);
     helpButton->setLabelUpperCase(false);
     
-    refreshMetadata = new ofxDatGuiButton("Refresh Metadata");
+    refreshMetadata = new ofxDatGuiFolder("Refresh Metadata");
     refreshMetadata->setTheme(theme);
     refreshMetadata->setPosition(getWidth()-380, 40-15);
     refreshMetadata->setWidth(150, 10);
@@ -213,7 +226,12 @@ void Header::registerObserver(Observer *observer) {
     observers.push_back(observer);
 }
 void Header::refreshButtonPress(ofxDatGuiButtonEvent e) {
-
+	MediaManager* mediaManager = mediaManager->getInstance();
+	cout << "Refresh name: " << e.target->getName() << endl;
+	if (e.target->getName() == "Soft Reset") 
+		mediaManager->reloadMedia(true);
+	else if (e.target->getName() == "Hard Reset") 
+		mediaManager->reloadMedia(false);
 }
 
 void Header::removeObserver(Observer *observer) {

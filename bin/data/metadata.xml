@@ -50,19 +50,19 @@
     <video>
         <filename>fingers.mov</filename>
         <thumbnails>thumbnails/fingers/</thumbnails>
-        <tags></tags>
+        <tags />
         <edges>
-            <vertical>3983</vertical>
-            <horizontal>5162</horizontal>
-            <d45>4604</d45>
-            <d135>5077</d135>
-            <nonDirectional>1735</nonDirectional>
+            <vertical>3994</vertical>
+            <horizontal>5167</horizontal>
+            <d45>4612</d45>
+            <d135>5051</d135>
+            <nonDirectional>1731</nonDirectional>
         </edges>
-        <luminance>117.391296387</luminance>
-        <texture>7.271906376</texture>
+        <luminance>117.415206909</luminance>
+        <texture>7.270806313</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>1</nFaces>
-        <objects></objects>
+        <objects />
         <rhythm>0.000000000</rhythm>
         <color>
             <red>133</red>
@@ -70,4 +70,52 @@
             <blue>107</blue>
         </color>
     </video>
+    <image>
+        <filename>DSC09307.jpg</filename>
+        <tags></tags>
+        <edges>
+            <vertical>9282</vertical>
+            <horizontal>2983</horizontal>
+            <d45>5875</d45>
+            <d135>6702</d135>
+            <nonDirectional>2793</nonDirectional>
+        </edges>
+        <luminance>172.653671265</luminance>
+        <texture>5.706576824</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <objects>
+            <object>50</object>
+            <object>50</object>
+        </objects>
+        <color>
+            <red>184</red>
+            <green>171</green>
+            <blue>154</blue>
+        </color>
+    </image>
+    <image>
+        <filename>DSC09310.jpg</filename>
+        <tags></tags>
+        <edges>
+            <vertical>8414</vertical>
+            <horizontal>4042</horizontal>
+            <d45>5937</d45>
+            <d135>6831</d135>
+            <nonDirectional>4015</nonDirectional>
+        </edges>
+        <luminance>185.469146729</luminance>
+        <texture>7.198081970</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <objects>
+            <object>50</object>
+            <object>50</object>
+        </objects>
+        <color>
+            <red>201</red>
+            <green>183</green>
+            <blue>158</blue>
+        </color>
+    </image>
 </metadata>

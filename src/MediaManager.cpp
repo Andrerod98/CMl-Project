@@ -137,6 +137,28 @@ void MediaManager::loadImages() {
 	cout << " done" << endl;
 }
 
+void MediaManager::reloadMedia(bool softReset) {
+	medias.clear();
+	totalMedias.clear();
+	if (softReset) {
+		// only loads the new files
+		cout << "Starting Soft Reload" << endl;
+		loadImages();
+		loadVideos();
+		cout << "Soft Reload completed with success!" << endl;
+	}
+	else {
+		// reloads everything
+		if (xmlManager->clearAll()) {
+			cout << "Starting Hard Reload" << endl;
+			loadImages();
+			loadVideos();
+			cout << "Hard Reload completed with success!" << endl;
+		} 
+		else cout << "Error clearing XML file!" << endl;
+	}
+}
+
 void MediaManager::selectMedia(int i){
     selectedMedia = i;
 }
