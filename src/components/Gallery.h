@@ -57,7 +57,7 @@ public:
     void setSize(int w, int h);
     
     
-    
+    void mouseMoved(int x, int y);
     void search(string filename);
     
     void filterByType(string type);

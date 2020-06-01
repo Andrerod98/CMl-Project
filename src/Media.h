@@ -59,9 +59,15 @@ class MediaGUI : public Media{
     
     int width;
     int height;
+    
+    bool isPlaying;
+    
+    vector<ofImage> micons;
 
 public:
-    MediaGUI(ofVideoPlayer* video, string filename, Metadata* metadata):Media(filename, video, metadata){
+    MediaGUI(ofVideoPlayer* video, string filename, Metadata* metadata, vector<ofImage> micons):Media(filename, video, metadata){
+        this->micons = micons;
+        this->isPlaying = true;
     };
     
     MediaGUI(ofImage* image, string filename, Metadata* metadata):Media(filename, image, metadata){
@@ -73,6 +79,26 @@ public:
     
     ofVec2f getPosition(){
         return position;
+    }
+    
+    void pause(){
+        isPlaying = false;
+    }
+    
+    void play(){
+        isPlaying = true;
+    }
+    
+    bool playing(){
+        return isPlaying;
+    }
+    
+    int getMiconsLength(){
+        return micons.size();
+    }
+    
+    ofImage getMicon(int i){
+        return micons[i];
     }
     
     void setSize(int w, int h){
