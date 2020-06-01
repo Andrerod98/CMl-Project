@@ -11,8 +11,8 @@ Camera::Camera(){
     finder.setup("haarcascade_frontalface_default.xml");
     finder.setScaleHaar(2);
     
-    camWidth = 640;
-    camHeight = 480;
+    camWidth = 320;
+    camHeight = 240;
     
     vidGrabber.setVerbose(true);
     vidGrabber.setup(camWidth,camHeight);
@@ -31,7 +31,7 @@ void Camera::update(){
         ofImage image;
 
         image.setFromPixels(vidGrabber.getPixels());
-        //grayImg = colorImg;
+        grayImg = colorImg;
         finder.findHaarObjects(image);
         
         if(finder.blobs.size() != lastNPeople){

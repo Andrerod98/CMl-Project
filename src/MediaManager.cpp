@@ -694,27 +694,24 @@ Metadata MediaManager::processMedia(Media* media) {
         
         color = ofColor(redMean, greenMean, blueMean);
        
+		/*
         // Calculate Rhythm Variations between each frame (based on luminance)
         for (int i = 1; i < rhythmPerFrame.size(); i++) {            
             float variation = std::abs(rhythmPerFrame.at(i - 1) - rhythmPerFrame.at(i));
             rhythmVariations.push_back(variation);
             rhythm += variation;
         }
-        
+        */
         vector<float> sorted = rhythmPerFrame;
-        sort(sorted.begin(), sorted.end(), greater<int>());
-        
-        
-        
+        sort(sorted.begin(), sorted.end(), greater<int>());        
         
         for (int i = 0 ; i < 5; i++) {
             ofImage image;
             
             std::vector<float>::iterator it = std::find(rhythmPerFrame.begin(), rhythmPerFrame.end(), sorted[i]);
-            int index = std::distance(rhythmPerFrame.begin(), it);
+            int index = std::distance(rhythmPerFrame.begin(), it);            
             
-            
-            video.setFrame(rhythmPerFrame.at(index+1));
+            video.setFrame(index+1);
             image.setFromPixels(video.getPixels());
             
             string filename = media->getFileName().substr(0, media->getFileName().find("."));
