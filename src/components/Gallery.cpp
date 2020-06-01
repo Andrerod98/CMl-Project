@@ -96,39 +96,60 @@ void Gallery::drawPage(int page) {
             
         }else if(mediaManager->getMedia(currentMediaIndex)->isVideo()){
 			//(mediaManager->getMedia(currentMediaIndex)->getVideo())->draw(positions[i], itemWidth, itemHeight);
-			string filename = mediaManager->getMedia(currentMediaIndex)->getFileName();
-
-			if (micons.find(mediaManager->getMedia(currentMediaIndex)->getFileName()) == micons.end()) {
-				pair<map<string, ofImage>::iterator, bool> ret;
-				ret = micons.insert(pair<string, ofImage>(filename, mediaManager->drawMicon(filename, 0)));
-
-				if (ret.second) {
-					ret.first->second.draw(positions[i], itemHeight, itemHeight);
-					miconCounter++;
-				}
-			}			
+            
+            if (mediaManager->getMedia(currentMediaIndex)->playing()) {
+                mediaManager->getMedia(currentMediaIndex)->getMicon(currentMiconFrame).draw(positions[i], itemWidth, itemHeight);
+            }else{
+                mediaManager->getMedia(currentMediaIndex)->getMicon(0).draw(positions[i], itemWidth, itemHeight);
+            }
+           
+            
+			
         }
     }    
 }
 
+void Gallery::mouseMoved(int x, int y){
+    int start = (currentPage-1) * 8;
+    int end = (currentPage) * 8;
+    
+    if(end > mediaManager->getNMedia())
+        end =mediaManager->getNMedia();
+    for (int i = 0; i < end; i++) {
+        if(mediaManager->getMedia(i)->inside(x,y)){
+
+        if(mediaManager->getMedia(i)->isVideo()){
+         
+                mediaManager->getMedia(i)->play(); //(mediaManager->getMedia(i)->getVideo())->setPaused(!(mediaManager->getMedia(i)->getVideƒo())->isPaused());
+         
+        }}else{
+            mediaManager->getMedia(i)->pause();
+        }
+    }
+
+}
 void Gallery::update(){
     int nmedias=mediaManager->getNMedia();
-	bool changedMiconFrame = false;
 
+    
 	float currentTime = ofGetElapsedTimeMillis();
 	if (currentTime - lastTime > 1000) {
+        
+        
 		if (currentMiconFrame == 4)
 			currentMiconFrame = 0;
 		else {
 			currentMiconFrame++;
 			lastTime = currentTime;
 		}
-		changedMiconFrame = true;
-	}
-	
 
-    for (int i = 0; i < nmedias; i++) {
-        if(mediaManager->getMedia(i)->isVideo()){
+	}
+    
+   
+
+   // for (int i = 0; i < nmedias; i++) {
+        
+      /*  if(mediaManager->getMedia(i)->isVideo()){
 
 			if(miconCounter == 0)
 				(mediaManager->getMedia(i)->getVideo())->update();
@@ -140,8 +161,8 @@ void Gallery::update(){
 					micons.at(mediaManager->getMedia(i)->getFileName()).update();
 				}
 			}			
-        }        
-    }
+        }   */
+   // }
 }
 
 void Gallery::mousePressed(int x, int y, int button) {
@@ -156,10 +177,13 @@ void Gallery::mousePressed(int x, int y, int button) {
         if(mediaManager->getMedia(i)->inside(x,y)){
             mediaManager->selectMedia(i);
             
-            
+           /*
             if(mediaManager->getMedia(i)->isVideo()){
-                (mediaManager->getMedia(i)->getVideo())->setPaused(!(mediaManager->getMedia(i)->getVideo())->isPaused());
-            }
+                if(mediaManager->getMedia(i)->playing()){
+                    mediaManager->getMedia(i)->pause();
+                }  else{
+                   mediaManager->getMedia(i)->play(); //(mediaManager->getMedia(i)->getVideo())->setPaused(!(mediaManager->getMedia(i)->getVideo())->isPaused());
+                }}*/
         }
         
     }

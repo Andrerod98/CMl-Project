@@ -79,8 +79,24 @@ void MediaManager::loadVideos() {
 		video->setPaused(true);
 		video->update();
         
-        Metadata* meta = xmlManager->getMetadata(diretory.getName(i), false);        
-        MediaGUI* media = new MediaGUI(video, diretory.getName(i), meta);
+        Metadata* meta = xmlManager->getMetadata(diretory.getName(i), false);
+        
+        //thumbnails
+  
+        ofDirectory dir(meta->getThumbPath());
+        dir.allowExt("png");
+        dir.listDir();
+        dir.sort();
+        vector<ofImage> micons= {};
+        
+        for (int i = 0; i < (int)dir.size(); i++) {
+        
+            ofImage image;
+            image.load(dir.getPath(i));
+            micons.push_back(image);
+        }
+        
+        MediaGUI* media = new MediaGUI(video, diretory.getName(i), meta, micons);
 
 		// getting metadata
 		if (!xmlManager->exists(diretory.getName(i), false)) {
@@ -88,7 +104,19 @@ void MediaManager::loadVideos() {
 			xmlManager->createMedia(diretory.getName(i), false);
 			xmlManager->setMetadata(diretory.getName(i), false, processMedia(media));
 			meta = xmlManager->getMetadata(diretory.getName(i), false);
-			media = new MediaGUI(video, diretory.getName(i), meta);
+            ofDirectory dir(meta->getThumbPath());
+            dir.allowExt("png");
+            dir.listDir();
+            dir.sort();
+            vector<ofImage> micons= {};
+            
+            for (int i = 0; i < (int)dir.size(); i++) {
+                
+                ofImage image;
+                image.load(dir.getPath(i));
+                micons.push_back(image);
+            }
+			media = new MediaGUI(video, diretory.getName(i), meta, micons);
 		}
         
         
