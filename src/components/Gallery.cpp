@@ -84,7 +84,6 @@ void Gallery::drawPage(int page) {
         int currentMediaIndex = mediaStart + i;
         mediaManager->getMedia(currentMediaIndex)->setPosition(positions[i]);
         
-        
         if(currentMediaIndex == mediaManager->getSelectedMediaIndex()){
             ofSetColor(settings::FONT_COLOR);
             ofDrawRectRounded(positions[i] - (5), itemWidth + 10, itemHeight + 10, 5);;
@@ -96,20 +95,25 @@ void Gallery::drawPage(int page) {
             
             
         }else if(mediaManager->getMedia(currentMediaIndex)->isVideo()){
-			pair<map<string, ofImage>::iterator, bool> ret;
-			ret = micons.insert(pair<string, ofImage>(mediaManager->getMedia(currentMediaIndex)->getFileName(), ofImage()));
+			//(mediaManager->getMedia(currentMediaIndex)->getVideo())->draw(positions[i], itemWidth, itemHeight);
+			string filename = mediaManager->getMedia(currentMediaIndex)->getFileName();
 
-			if (ret.second) {
-				ret.first->second.draw(positions[i], itemHeight, itemHeight);
-				mediaManager->drawMicon(currentMediaIndex, 0, &ret.first->second);
-				miconCounter++;
-			}
+			if (micons.find(mediaManager->getMedia(currentMediaIndex)->getFileName()) == micons.end()) {
+				pair<map<string, ofImage>::iterator, bool> ret;
+				ret = micons.insert(pair<string, ofImage>(filename, mediaManager->drawMicon(filename, 0)));
+
+				if (ret.second) {
+					ret.first->second.draw(positions[i], itemHeight, itemHeight);
+					miconCounter++;
+				}
+			}			
         }
     }    
 }
 
 void Gallery::update(){
     int nmedias=mediaManager->getNMedia();
+	bool changedMiconFrame = false;
 
 	float currentTime = ofGetElapsedTimeMillis();
 	if (currentTime - lastTime > 1000) {
@@ -119,9 +123,9 @@ void Gallery::update(){
 			currentMiconFrame++;
 			lastTime = currentTime;
 		}
+		changedMiconFrame = true;
 	}
 	
-	int tempCounter = 0;
 
     for (int i = 0; i < nmedias; i++) {
         if(mediaManager->getMedia(i)->isVideo()){
@@ -131,10 +135,10 @@ void Gallery::update(){
 			else {
 				if ((mediaManager->getMedia(i)->getVideo())->isPlaying())
 					(mediaManager->getMedia(i)->getVideo())->update();
-				else {
-					mediaManager->drawMicon(i, currentMiconFrame, &micons[mediaManager->getMedia(i)->getFileName()]);
+				else if (changedMiconFrame) {
+					micons.at(mediaManager->getMedia(i)->getFileName()) = mediaManager->drawMicon(mediaManager->getMedia(i)->getFileName(), currentMiconFrame);
+					micons.at(mediaManager->getMedia(i)->getFileName()).update();
 				}
-				tempCounter++;
 			}			
         }        
     }

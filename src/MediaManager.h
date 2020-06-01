@@ -122,7 +122,7 @@ public:
     
     void selectMedia(int i);
 
-	void drawMicon(int index, int current, ofImage* thumb);
+	ofImage drawMicon(string filename, int current);
 };
 
 
