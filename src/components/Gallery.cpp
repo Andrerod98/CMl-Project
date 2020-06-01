@@ -23,10 +23,11 @@ Gallery::Gallery(string title,int width, int height,int x, int y, int spaceBetwe
     
     createPositions();
     
-     mediaManager->setSize(itemWidth, itemHeight);
+    mediaManager->setSize(itemWidth, itemHeight);
 
-    
-   
+	miconCounter = 0;
+	currentMiconFrame = 0;
+	lastTime = ofGetElapsedTimeMillis();
 }
 
 void Gallery::setSize(int w, int h){
@@ -76,14 +77,12 @@ void Gallery::drawPage(int page) {
     
     int mediaStart = (page-1)*8;
     
-    
     ofFill();
     ofSetColor(255);
 
     for (int i = 0; i < nMediasInPage; i++) {
         int currentMediaIndex = mediaStart + i;
         mediaManager->getMedia(currentMediaIndex)->setPosition(positions[i]);
-        
         
         if(currentMediaIndex == mediaManager->getSelectedMediaIndex()){
             ofSetColor(settings::FONT_COLOR);
@@ -96,43 +95,52 @@ void Gallery::drawPage(int page) {
             
             
         }else if(mediaManager->getMedia(currentMediaIndex)->isVideo()){
-            ofSetHexColor(0xFFFFFF);
-			ofVideoPlayer* video = mediaManager->getMedia(currentMediaIndex)->getVideo();
+			//(mediaManager->getMedia(currentMediaIndex)->getVideo())->draw(positions[i], itemWidth, itemHeight);
 			string filename = mediaManager->getMedia(currentMediaIndex)->getFileName();
 
-			if (!video->isPaused())
-				(mediaManager->getMedia(currentMediaIndex)->getVideo())->draw(positions[i], itemWidth, itemHeight);
-			else { // draw micon
-				string thumbPath = xmlManager->getInstance()->getMetadata(filename, false)->getThumbPath();
+			if (micons.find(mediaManager->getMedia(currentMediaIndex)->getFileName()) == micons.end()) {
+				pair<map<string, ofImage>::iterator, bool> ret;
+				ret = micons.insert(pair<string, ofImage>(filename, mediaManager->drawMicon(filename, 0)));
 
-				vector<ofImage> images = vector<ofImage>(5);
-
-				//Load images
-				directory.listDir(thumbPath);
-				directory.allowExt("png");
-				directory.sort(); // in linux the file system doesn't return file lists ordered in alphabetical order   
-
-				/*images.at(0).load(directory.getPath(0));
-				images.at(1).load(directory.getPath(1));
-				images.at(2).load(directory.getPath(2));
-				images.at(3).load(directory.getPath(3));
-				images.at(4).load(directory.getPath(4));*/
-
-				
-			}
+				if (ret.second) {
+					ret.first->second.draw(positions[i], itemHeight, itemHeight);
+					miconCounter++;
+				}
+			}			
         }
-    }
-    
+    }    
 }
-
 
 void Gallery::update(){
     int nmedias=mediaManager->getNMedia();
+	bool changedMiconFrame = false;
+
+	float currentTime = ofGetElapsedTimeMillis();
+	if (currentTime - lastTime > 1000) {
+		if (currentMiconFrame == 4)
+			currentMiconFrame = 0;
+		else {
+			currentMiconFrame++;
+			lastTime = currentTime;
+		}
+		changedMiconFrame = true;
+	}
+	
+
     for (int i = 0; i < nmedias; i++) {
         if(mediaManager->getMedia(i)->isVideo()){
-            (mediaManager->getMedia(i)->getVideo())->update();
-        }
-        
+
+			if(miconCounter == 0)
+				(mediaManager->getMedia(i)->getVideo())->update();
+			else {
+				if ((mediaManager->getMedia(i)->getVideo())->isPlaying())
+					(mediaManager->getMedia(i)->getVideo())->update();
+				else if (changedMiconFrame) {
+					micons.at(mediaManager->getMedia(i)->getFileName()) = mediaManager->drawMicon(mediaManager->getMedia(i)->getFileName(), currentMiconFrame);
+					micons.at(mediaManager->getMedia(i)->getFileName()).update();
+				}
+			}			
+        }        
     }
 }
 

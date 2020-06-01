@@ -25,8 +25,6 @@
 #include "opencv2/video/video.hpp"
 #include "opencv2/imgcodecs/imgcodecs.hpp"
 
-
-
 using std::cout;
 using std::cerr;
 using std::vector;
@@ -43,8 +41,6 @@ using cv::DMatch;
 using cv::BFMatcher;
 using cv::DrawMatchesFlags;
 using cv::ORB;
-
-
 
 class MediaManager{
     MediaManager();
@@ -69,8 +65,10 @@ class MediaManager{
     float maxTexture;
     float maxRythm;
     ofColor color;
-public:
-    
+
+	ofDirectory directory;
+
+public:    
     static MediaManager *getInstance();
     
     static ofImage processThumbnail(Media* media);
@@ -132,6 +130,8 @@ public:
     void filterByType(string type);
     
     void selectMedia(int i);
+
+	ofImage drawMicon(string filename, int current);
 };
 
 

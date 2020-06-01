@@ -58,6 +58,7 @@
             <tag>#none</tag>
         </tags>
         <edges>
+<<<<<<< HEAD
             <vertical>10243</vertical>
             <horizontal>21954</horizontal>
             <d45>19210</d45>
@@ -70,6 +71,20 @@
         <nFaces>0</nFaces>
         <objects />
         <rhythm>0.000000000</rhythm>
+=======
+            <vertical>3987</vertical>
+            <horizontal>5143</horizontal>
+            <d45>4625</d45>
+            <d135>5074</d135>
+            <nonDirectional>1714</nonDirectional>
+        </edges>
+        <luminance>117.387046814</luminance>
+        <texture>7.270368576</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <nObject>0</nObject>
+        <rhythm>1183.564819336</rhythm>
+>>>>>>> micons
         <color>
             <red>136</red>
             <green>167</green>

@@ -30,7 +30,10 @@ class Gallery : public Screen{
     
     int itemWidth, itemHeight, spaceBetween;
     
-	ofDirectory directory;
+	map<string, ofImage> micons;
+	int miconCounter;
+	int currentMiconFrame;
+	float lastTime;
     
     int currentPage;
     
@@ -52,7 +55,6 @@ public:
     void filter();
     
     void setSize(int w, int h);
-    
     
     
     
