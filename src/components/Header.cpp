@@ -229,9 +229,9 @@ void Header::refreshButtonPress(ofxDatGuiButtonEvent e) {
 	MediaManager* mediaManager = mediaManager->getInstance();
 	cout << "Refresh name: " << e.target->getName() << endl;
 	if (e.target->getName() == "Soft Reset") 
-		mediaManager->reloadMedia(true);
+		mediaManager->reloadNotify(true);
 	else if (e.target->getName() == "Hard Reset") 
-		mediaManager->reloadMedia(false);
+		mediaManager->reloadNotify(false);
 }
 
 void Header::removeObserver(Observer *observer) {

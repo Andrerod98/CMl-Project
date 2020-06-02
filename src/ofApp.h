@@ -23,6 +23,7 @@ class ofApp : public ofBaseApp, public Observer {
     ofxDatGuiButton* helpButton;
     ofxDatGuiToggle* darkButton;
     ofTrueTypeFont shortcut;
+	ofTrueTypeFont refresh;
     
     Camera* camera;
     
@@ -40,13 +41,12 @@ class ofApp : public ofBaseApp, public Observer {
     MediaManager* mediaManager;
     
     Header* header;
-
     
     void setButtons(int w, int h);
     void drawHeader();
     void drawHelp();
-    
-    bool helpShowing, liveMode;
+	void drawRefreshData();
+    bool helpShowing, liveMode, refreshShowing;
 public:
     void setup();
     void update();
@@ -65,7 +65,6 @@ public:
     virtual void update(Event event) ;
     
     void onButtonEvent(ofxDatGuiButtonEvent e);
-    
-    
+
 	XmlManager* xmlManager;
 };

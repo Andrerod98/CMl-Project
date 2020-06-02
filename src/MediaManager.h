@@ -24,6 +24,10 @@
 #include "opencv2/core/core.hpp"
 #include "opencv2/video/video.hpp"
 #include "opencv2/imgcodecs/imgcodecs.hpp"
+#include "ofxDatGui.h"
+#include "Events.h"
+#include "Subject.h"
+
 
 using std::cout;
 using std::cerr;
@@ -50,6 +54,9 @@ class MediaManager{
     vector<MediaGUI*> totalMedias;
     vector<string> objects;
     vector<ofImage> objectsImages;
+
+	vector<Observer *> observers;
+	bool resfreshMode;
     
     XmlManager* xmlManager;
     PlaylistManager* playlistManager;
@@ -102,7 +109,7 @@ public:
     
     void loadVideos();
 
-	void reloadMedia(bool softReset);
+	void reloadMedia();
     
     void loadObjects();
     
@@ -134,6 +141,10 @@ public:
     void selectMedia(int i);
 
 	ofImage drawMicon(string filename, int current);
+
+	void registerObserver(Observer *observer);
+	void notifyObservers(Event event);
+	void reloadNotify(bool isSoft);
 };
 
 

@@ -119,7 +119,6 @@ void MediaManager::loadVideos() {
 			media = new MediaGUI(video, diretory.getName(i), meta, micons);
 		}
         
-        
         for(string tag: meta->getTags()){
             playlistManager->addToPlaylist(tag,media);
         }
@@ -165,10 +164,17 @@ void MediaManager::loadImages() {
 	cout << " done" << endl;
 }
 
-void MediaManager::reloadMedia(bool softReset) {
+void MediaManager::reloadNotify(bool isSoft) {
+	notifyObservers(Event::REFRESH_DATA);
+	resfreshMode = isSoft;
+}
+
+void MediaManager::reloadMedia() {
+	ofSleepMillis(5000);
 	medias.clear();
 	totalMedias.clear();
-	if (softReset) {
+
+	if (resfreshMode) {
 		// only loads the new files
 		cout << "Starting Soft Reload" << endl;
 		loadImages();
@@ -185,6 +191,7 @@ void MediaManager::reloadMedia(bool softReset) {
 		} 
 		else cout << "Error clearing XML file!" << endl;
 	}
+	notifyObservers(Event::REFRESH_DATA);
 }
 
 void MediaManager::selectMedia(int i){
@@ -823,5 +830,15 @@ ofImage MediaManager::drawMicon(string filename, int current) {
 		thumb.load(directory.getPath(current));
 		cout << "currentMicon: " << directory.getPath(current) << endl;
 		return thumb;
+	}
+}
+
+void MediaManager::registerObserver(Observer *observer) {
+	observers.push_back(observer);
+}
+
+void MediaManager::notifyObservers(Event event) {
+	for (Observer *observer : observers) {
+		observer->update(event);
 	}
 }
