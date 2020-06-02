@@ -707,7 +707,6 @@ Metadata MediaManager::processMedia(Media* media) {
                 cv::cvtColor(imageGrayMat, imageGrayMat, CV_BGR2GRAY);
                 calcHist( &imageGrayMat, 1, 0, Mat(), previous_hist, 1, &histSize, &histRange, true, false );
             
-
                 rhythmPerFrame.push_back(getVariance(previous_hist, current_hist));                
             }
             
@@ -755,9 +754,8 @@ Metadata MediaManager::processMedia(Media* media) {
        
 		
         // Calculate mean Rhythm Variation between each frame
-        for (int i = 1; i < rhythmPerFrame.size(); i++) {            
-            float variation = std::abs(rhythmPerFrame.at(i - 1) - rhythmPerFrame.at(i));
-            rhythmVariations += variation;
+        for (int i = 0; i < rhythmPerFrame.size(); i++) {            
+            rhythmVariations += rhythmPerFrame.at(i);
         }
 
 		rhythm = rhythmVariations / max;
