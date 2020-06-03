@@ -1,121 +1,123 @@
 <metadata>
     <image>
         <filename>DSC09302.jpg</filename>
-        <tags />
+        <tags></tags>
         <edges>
-            <vertical>4950</vertical>
-            <horizontal>1518</horizontal>
-            <d45>2872</d45>
-            <d135>3505</d135>
-            <nonDirectional>2097</nonDirectional>
+            <vertical>4879</vertical>
+            <horizontal>1520</horizontal>
+            <d45>2854</d45>
+            <d135>3488</d135>
+            <nonDirectional>2080</nonDirectional>
         </edges>
-        <luminance>173.041259766</luminance>
-        <texture>3.771570206</texture>
+        <luminance>172.709625244</luminance>
+        <texture>3.762146711</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <objects>
-            <object>41</object>
-            <object>50</object>
+            <object>40</object>
+            <object>34</object>
         </objects>
         <color>
-            <red>188</red>
+            <red>187</red>
             <green>170</green>
-            <blue>152</blue>
+            <blue>151</blue>
         </color>
     </image>
     <image>
         <filename>DSC09305.jpg</filename>
-        <tags />
+        <tags></tags>
         <edges>
-            <vertical>7928</vertical>
-            <horizontal>3274</horizontal>
-            <d45>5188</d45>
-            <d135>5617</d135>
-            <nonDirectional>2885</nonDirectional>
+            <vertical>7935</vertical>
+            <horizontal>3292</horizontal>
+            <d45>5165</d45>
+            <d135>5636</d135>
+            <nonDirectional>2881</nonDirectional>
         </edges>
-        <luminance>175.533432007</luminance>
-        <texture>5.152708054</texture>
+        <luminance>175.198638916</luminance>
+        <texture>5.152142525</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <objects>
-            <object>50</object>
-            <object>50</object>
+            <object>406</object>
+            <object>65</object>
         </objects>
         <color>
-            <red>194</red>
+            <red>193</red>
             <green>172</green>
-            <blue>147</blue>
+            <blue>145</blue>
         </color>
     </image>
     <video>
         <filename>fingers.mov</filename>
         <thumbnails>thumbnails/fingers/</thumbnails>
-        <tags />
+        <tags></tags>
         <edges>
-            <vertical>3994</vertical>
-            <horizontal>5167</horizontal>
-            <d45>4612</d45>
-            <d135>5051</d135>
-            <nonDirectional>1731</nonDirectional>
+            <vertical>6138</vertical>
+            <horizontal>12236</horizontal>
+            <d45>10237</d45>
+            <d135>10319</d135>
+            <nonDirectional>15639</nonDirectional>
         </edges>
-        <luminance>117.415206909</luminance>
-        <texture>7.270806313</texture>
+        <luminance>13.764224052</luminance>
+        <texture>4.516201973</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
-        <nFaces>1</nFaces>
-        <objects />
+        <nFaces>0</nFaces>
+        <objects></objects>
         <rhythm>0.000000000</rhythm>
         <color>
-            <red>133</red>
-            <green>112</green>
-            <blue>107</blue>
+            <red>15</red>
+            <green>13</green>
+            <blue>8</blue>
         </color>
     </video>
-    <image>
-        <filename>DSC09307.jpg</filename>
-        <tags></tags>
-        <edges>
-            <vertical>9282</vertical>
-            <horizontal>2983</horizontal>
-            <d45>5875</d45>
-            <d135>6702</d135>
-            <nonDirectional>2793</nonDirectional>
-        </edges>
-        <luminance>172.653671265</luminance>
-        <texture>5.706576824</texture>
-        <audioAmplitude>0.000000000</audioAmplitude>
-        <nFaces>0</nFaces>
-        <objects>
-            <object>50</object>
-            <object>50</object>
-        </objects>
-        <color>
-            <red>184</red>
-            <green>171</green>
-            <blue>154</blue>
-        </color>
-    </image>
-    <image>
-        <filename>DSC09310.jpg</filename>
-        <tags></tags>
-        <edges>
-            <vertical>8414</vertical>
-            <horizontal>4042</horizontal>
-            <d45>5937</d45>
-            <d135>6831</d135>
-            <nonDirectional>4015</nonDirectional>
-        </edges>
-        <luminance>185.469146729</luminance>
-        <texture>7.198081970</texture>
-        <audioAmplitude>0.000000000</audioAmplitude>
-        <nFaces>0</nFaces>
-        <objects>
-            <object>50</object>
-            <object>50</object>
-        </objects>
-        <color>
-            <red>201</red>
-            <green>183</green>
-            <blue>158</blue>
-        </color>
-    </image>
 </metadata>
+<image>
+    <filename>DSC09302.jpg</filename>
+</image>
+<image>
+    <filename>DSC09305.jpg</filename>
+    <tags />
+    <edges>
+        <vertical>7935</vertical>
+        <horizontal>3292</horizontal>
+        <d45>5165</d45>
+        <d135>5636</d135>
+        <nonDirectional>2881</nonDirectional>
+    </edges>
+    <luminance>175.198638916</luminance>
+    <texture>5.152142525</texture>
+    <audioAmplitude>0.000000000</audioAmplitude>
+    <nFaces>0</nFaces>
+    <objects>
+        <object>50</object>
+        <object>50</object>
+    </objects>
+    <color>
+        <red>193</red>
+        <green>172</green>
+        <blue>145</blue>
+    </color>
+</image>
+<video>
+    <filename>fingers.mov</filename>
+    <thumbnails>thumbnails/fingers/</thumbnails>
+    <tags />
+    <edges>
+        <vertical>2955</vertical>
+        <horizontal>15585</horizontal>
+        <d45>11880</d45>
+        <d135>11396</d135>
+        <nonDirectional>11816</nonDirectional>
+    </edges>
+    <luminance>179.039077759</luminance>
+    <texture>9.333129883</texture>
+    <audioAmplitude>0.000000000</audioAmplitude>
+    <nFaces>0</nFaces>
+    <objects />
+    <rhythm>0.000000000</rhythm>
+    <color>
+        <red>200</red>
+        <green>175</green>
+        <blue>147</blue>
+    </color>
+</video>
