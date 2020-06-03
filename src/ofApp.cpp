@@ -13,7 +13,7 @@ void ofApp::setup() {
     xmlManager = xmlManager->getInstance();
     playlistManager = playlistManager->getInstance();
     mediaManager = mediaManager->getInstance();
-	mediaManager->registerObserver(this);
+
     
     gallery = new Gallery("image_gallery",galleryWidth,ofGetHeight()-HEADER_HEIGHT - (padding*2) - 200,60,250, 30);
     
@@ -142,9 +142,7 @@ void ofApp::update(Event event) {
             currentScreen = metadataScreen;
             break;
 		case REFRESH_DATA:
-			refreshShowing = !refreshShowing;
-			cout << "refreshShowing: " << refreshShowing << endl;
-			break;
+	
         default:
             break;
     }

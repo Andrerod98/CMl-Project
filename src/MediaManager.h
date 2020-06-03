@@ -142,9 +142,8 @@ public:
 
 	ofImage drawMicon(string filename, int current);
 
-	void registerObserver(Observer *observer);
-	void notifyObservers(Event event);
-	void reloadNotify(bool isSoft);
+    void softReload();
+    void hardReload();
 };
 
 

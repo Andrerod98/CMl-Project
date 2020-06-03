@@ -67,6 +67,7 @@ void MediaManager::loadVideos() {
     //Load videos
     diretory.listDir("videos/");
     diretory.allowExt("mov");
+    diretory.allowExt("mp4");
     diretory.sort();
     
 	cout << "Processing videos ";
@@ -74,16 +75,17 @@ void MediaManager::loadVideos() {
     for (int i = 0; i < (int)diretory.size(); i++) {
         ofVideoPlayer* video = new ofVideoPlayer();
         video->load(diretory.getPath(i));
-        video->setLoopState(OF_LOOP_NORMAL);
-		video->play();
+       // video->setLoopState(OF_LOOP_NORMAL);
+		//video->pause();
 		video->setPaused(true);
 		video->update();
+        video->setVolume(0);
         
         Metadata* meta = xmlManager->getMetadata(diretory.getName(i), false);
         
         //thumbnails
   
-        ofDirectory dir(meta->getThumbPath());
+        ofDirectory dir(meta->getThumbPath() );
         dir.allowExt("png");
         dir.listDir();
         dir.sort();
@@ -164,37 +166,34 @@ void MediaManager::loadImages() {
 	cout << " done" << endl;
 }
 
-void MediaManager::reloadNotify(bool isSoft) {
-	notifyObservers(Event::REFRESH_DATA);
-	resfreshMode = isSoft;
-	reloadMedia();
+void MediaManager::hardReload() {
+    medias.clear();
+    totalMedias.clear();
+    if (xmlManager->clearAll()) {
+        cout << "Starting Hard Reload" << endl;
+        loadImages();
+        loadVideos();
+        cout << "Hard Reload completed with success!" << endl;
+    }
+    else cout << "Error clearing XML file!" << endl;
+    
+    
+    filter();
+    selectMedia(0);
 }
 
-void MediaManager::reloadMedia() {
-	medias.clear();
-	totalMedias.clear();
-
-	if (resfreshMode) {
-		// only loads the new files
-		cout << "Starting Soft Reload" << endl;
-		loadImages();
-		loadVideos();
-		cout << "Soft Reload completed with success!" << endl;
-	}
-	else {
-		// reloads everything
-		if (xmlManager->clearAll()) {
-			cout << "Starting Hard Reload" << endl;
-			loadImages();
-			loadVideos();
-			cout << "Hard Reload completed with success!" << endl;
-		} 
-		else cout << "Error clearing XML file!" << endl;
-	}
-	selectMedia(0);
-	filter();
-	notifyObservers(Event::REFRESH_DATA);
+void MediaManager::softReload() {
+    medias.clear();
+    totalMedias.clear();
+    cout << "Starting Soft Reload" << endl;
+    loadImages();
+    loadVideos();
+    cout << "Soft Reload completed with success!" << endl;
+    
+    filter();
+    selectMedia(0);
 }
+
 
 void MediaManager::selectMedia(int i){
     selectedMedia = i;
@@ -814,6 +813,7 @@ float MediaManager::processGabor(ofImage image) {
 	return sumGabor / count;
 }
 
+/*
 ofImage MediaManager::drawMicon(string filename, int current) {
 	ofImage thumb;
 	string thumbPath = xmlManager->getInstance()->getMetadata(filename, false)->getThumbPath();
@@ -831,12 +831,4 @@ ofImage MediaManager::drawMicon(string filename, int current) {
 	}
 }
 
-void MediaManager::registerObserver(Observer *observer) {
-	observers.push_back(observer);
-}
-
-void MediaManager::notifyObservers(Event event) {
-	for (Observer *observer : observers) {
-		observer->update(event);
-	}
-}
+*/

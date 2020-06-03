@@ -99,11 +99,14 @@ void Gallery::drawPage(int page) {
         }else if(mediaManager->getMedia(currentMediaIndex)->isVideo()){
 			//(mediaManager->getMedia(currentMediaIndex)->getVideo())->draw(positions[i], itemWidth, itemHeight);
             
-            if (mediaManager->getMedia(currentMediaIndex)->playing()) {
-                mediaManager->getMedia(currentMediaIndex)->getMicon(currentMiconFrame).draw(positions[i], itemWidth, itemHeight);
-            }else{
-                mediaManager->getMedia(currentMediaIndex)->getMicon(0).draw(positions[i], itemWidth, itemHeight);
+            if( mediaManager->getMedia(currentMediaIndex)->getMiconsLength() > 0){
+                if (mediaManager->getMedia(currentMediaIndex)->playing()) {
+                    mediaManager->getMedia(currentMediaIndex)->getMicon(currentMiconFrame).draw(positions[i], itemWidth, itemHeight);
+                }else{
+                    mediaManager->getMedia(currentMediaIndex)->getMicon(0).draw(positions[i], itemWidth, itemHeight);
+                }
             }
+           
            
             
 			

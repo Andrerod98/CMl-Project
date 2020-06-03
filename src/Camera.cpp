@@ -31,7 +31,7 @@ void Camera::update(){
         ofImage image;
 
         image.setFromPixels(vidGrabber.getPixels());
-        grayImg = colorImg;
+        //grayImg = colorImg;
         finder.findHaarObjects(image);
         
         if(finder.blobs.size() != lastNPeople){

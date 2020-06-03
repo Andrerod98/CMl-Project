@@ -54,12 +54,12 @@ void GalleryScreen::setup(){
     filtersFolder->setLabelColor(FONT_COLOR);
     filtersFolder->setWidth(200,200);
     ofxDatGuiSlider* maxLuminance = filtersFolder->addSlider("Max Luminance", 0, 200);
-    ofxDatGuiSlider* maxEdge= filtersFolder->addSlider("Max Edge distribution", 0, 200);
-    ofxDatGuiSlider* maxNFaces=filtersFolder->addSlider("Max NFaces", 0, 200);
-    ofxDatGuiSlider* maxNObject=filtersFolder->addSlider("Max NObject", 0, 200);
+    //ofxDatGuiSlider* maxEdge= filtersFolder->addSlider("Max Edge distribution", 0, 200);
+    ofxDatGuiSlider* maxNFaces=filtersFolder->addSlider("Max NFaces", 0, 30);
+    //ofxDatGuiSlider* maxNObject=filtersFolder->addSlider("Max NObject", 0, 200);
     ofxDatGuiSlider* maxRythm =filtersFolder->addSlider("Max Rythm", 0, 200);
-    ofxDatGuiSlider* maxTexture=filtersFolder->addSlider("Max Texture", 0, 200);
-    ofxDatGuiColorPicker* color= filtersFolder->addColorPicker("Color:");
+    ofxDatGuiSlider* maxTexture=filtersFolder->addSlider("Max Texture", 0, 50);
+    //ofxDatGuiColorPicker* color= filtersFolder->addColorPicker("Color:");
     filtersFolder->addButton("Apply");
     filtersFolder->onSliderEvent(this, &GalleryScreen::onSliderEvent);
     filtersFolder->onColorPickerEvent(this, &GalleryScreen::onColorPickerEvent);
