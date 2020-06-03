@@ -10,7 +10,7 @@
 #include "Events.h"
 #include "MetadataScreen.h"
 #include "LiveScreen.h"
-#include "Settings.h"
+#include "Constants.h"
 #include "MediaManager.h"
 #include <math.h>
 #include "XmlManager.h"

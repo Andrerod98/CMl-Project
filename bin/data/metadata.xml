@@ -50,6 +50,7 @@
     <video>
         <filename>fingers.mov</filename>
         <thumbnails>thumbnails/fingers/</thumbnails>
+<<<<<<< HEAD
         <tags></tags>
         <edges>
             <vertical>6138</vertical>
@@ -68,6 +69,50 @@
             <red>15</red>
             <green>13</green>
             <blue>8</blue>
+=======
+        <tags></tags>
+        <edges>
+            <vertical>3989</vertical>
+            <horizontal>5133</horizontal>
+            <d45>4632</d45>
+            <d135>5069</d135>
+            <nonDirectional>1688</nonDirectional>
+        </edges>
+        <luminance>118.594734192</luminance>
+        <texture>7.271577358</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <objects></objects>
+        <rhythm>0.000000000</rhythm>
+        <color>
+            <red>135</red>
+            <green>113</green>
+            <blue>109</blue>
+        </color>
+    </video>
+    <image>
+        <filename>DSC09347.jpg</filename>
+        <tags></tags>
+        <edges>
+            <vertical>14991</vertical>
+            <horizontal>5188</horizontal>
+            <d45>10010</d45>
+            <d135>8673</d135>
+            <nonDirectional>7082</nonDirectional>
+        </edges>
+        <luminance>180.859527588</luminance>
+        <texture>5.208194733</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <objects>
+            <object>1</object>
+            <object>50</object>
+        </objects>
+        <color>
+            <red>189</red>
+            <green>179</green>
+            <blue>171</blue>
+>>>>>>> 44f3527d61af5bb2b1c69993bafaba2296214d7a
         </color>
     </video>
 </metadata>

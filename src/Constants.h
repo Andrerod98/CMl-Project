@@ -5,11 +5,11 @@
 //  Created by User on 30/04/2020.
 //
 
-#ifndef Settings_h
-#define Settings_h
+#ifndef Constants_h
+#define Constants_h
 #pragma once
 
-namespace settings{
+namespace constants{
     static const int HEADER_HEIGHT = 80;
     
     //Dark Mode
@@ -27,4 +27,4 @@ namespace settings{
     static const string BACK_ARROW_BUTTON = "icons/back.png";
     
 };
-#endif /* Settings_h */
+#endif /* Constants_h */

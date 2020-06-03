@@ -167,10 +167,10 @@ void MediaManager::loadImages() {
 void MediaManager::reloadNotify(bool isSoft) {
 	notifyObservers(Event::REFRESH_DATA);
 	resfreshMode = isSoft;
+	reloadMedia();
 }
 
 void MediaManager::reloadMedia() {
-	ofSleepMillis(5000);
 	medias.clear();
 	totalMedias.clear();
 
@@ -191,12 +191,15 @@ void MediaManager::reloadMedia() {
 		} 
 		else cout << "Error clearing XML file!" << endl;
 	}
+	selectMedia(0);
+	filter();
 	notifyObservers(Event::REFRESH_DATA);
 }
 
 void MediaManager::selectMedia(int i){
     selectedMedia = i;
 }
+
 MediaGUI* MediaManager::getSelectedMedia(){
     return medias[selectedMedia];
 }
@@ -690,8 +693,6 @@ Metadata MediaManager::processMedia(Media* media) {
             if(i == 0){
                 texture = processGabor(image);
                 
-                //ofImage thumbnail = processThumbnail(media);
-                
                 edgeDistribution = processEdges(image);
 				//calcHist(&imageGrayMat, 1, 0, Mat(), current_hist, 1, &histSize, &histRange, true, false);
                 
@@ -700,7 +701,6 @@ Metadata MediaManager::processMedia(Media* media) {
 				//previous_hist = current_hist;
                 calcHist( &imageGrayMat, 1, 0, Mat(), current_hist, 1, &histSize, &histRange, true, false );
 								
-                
                 video.previousFrame();
                 image.setFromPixels(video.getPixels());
                 imageGrayMat = ofxCv::toCv(image);

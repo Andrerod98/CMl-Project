@@ -8,7 +8,7 @@
 #include "GalleryScreen.h"
 #include "ofMain.h"
 
-using namespace settings;
+using namespace constants;
 
 
 GalleryScreen::GalleryScreen(string title,int width, int height,int x, int y,int padding, Gallery* gallery):Screen(title, width, height,x,y){
@@ -41,17 +41,17 @@ void GalleryScreen::setup(){
     theme->font.ptr = ofxSmartFont::add(theme->font.file, theme->font.size);
     searchInput = new ofxDatGuiTextInput("Search", "Write what you want to search...");
     searchInput->setTheme(theme);
-    searchInput->setBackgroundColor(settings::MAIN_COLOR);
-    searchInput->setLabelColor(settings::FONT_COLOR);
-    searchInput->setStripeColor(settings::MAIN_COLOR);
+    searchInput->setBackgroundColor(MAIN_COLOR);
+    searchInput->setLabelColor(FONT_COLOR);
+    searchInput->setStripeColor(MAIN_COLOR);
     searchInput->onTextInputEvent(this, &GalleryScreen::onTextInputEvent);
     
     theme->layout.labelWidth = 200;
     theme->layout.width = 200;
     filtersFolder = new ofxDatGuiFolder("Filters", ofColor::white);
     filtersFolder->setTheme(theme);
-    filtersFolder->setBackgroundColor(settings::MAIN_COLOR);
-    filtersFolder->setLabelColor(settings::FONT_COLOR);
+    filtersFolder->setBackgroundColor(MAIN_COLOR);
+    filtersFolder->setLabelColor(FONT_COLOR);
     filtersFolder->setWidth(200,200);
     ofxDatGuiSlider* maxLuminance = filtersFolder->addSlider("Max Luminance", 0, 200);
     ofxDatGuiSlider* maxEdge= filtersFolder->addSlider("Max Edge distribution", 0, 200);
@@ -68,8 +68,8 @@ void GalleryScreen::setup(){
     vector<string> options = {"All", "Videos", "Images"};
     typeMedia = new ofxDatGuiDropdown("All",options);
     typeMedia->setTheme(theme);
-    typeMedia->setBackgroundColor(settings::MAIN_COLOR);
-    typeMedia->setLabelColor(settings::FONT_COLOR);
+    typeMedia->setBackgroundColor(MAIN_COLOR);
+    typeMedia->setLabelColor(FONT_COLOR);
     typeMedia->onDropdownEvent(this, &GalleryScreen::onDropdownEvent);
 }
 
@@ -190,7 +190,12 @@ void GalleryScreen::draw(){
 }
 
 void GalleryScreen::update(){
-    
+	if (nPages != ceil(mediaManager->getNMedia() / 8)) {
+		nPages = ceil(mediaManager->getNMedia() / 8);
+		currentPage = 1;
+	}
+
+
     screen->update();
     searchInput->update();
     filtersFolder->update();

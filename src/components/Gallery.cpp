@@ -6,7 +6,9 @@
 //
 
 #include "Gallery.h"
-#include "Settings.h"
+#include "Constants.h"
+
+using namespace constants;
 
 const int NIMAGES = 4;
 
@@ -85,7 +87,7 @@ void Gallery::drawPage(int page) {
         mediaManager->getMedia(currentMediaIndex)->setPosition(positions[i]);
         
         if(currentMediaIndex == mediaManager->getSelectedMediaIndex()){
-            ofSetColor(settings::FONT_COLOR);
+            ofSetColor(FONT_COLOR);
             ofDrawRectRounded(positions[i] - (5), itemWidth + 10, itemHeight + 10, 5);;
             //TODO selected
             ofSetColor(255);
