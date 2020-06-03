@@ -190,7 +190,12 @@ void GalleryScreen::draw(){
 }
 
 void GalleryScreen::update(){
-    
+	if (nPages != ceil(mediaManager->getNMedia() / 8)) {
+		nPages = ceil(mediaManager->getNMedia() / 8);
+		currentPage = 1;
+	}
+
+
     screen->update();
     searchInput->update();
     filtersFolder->update();
