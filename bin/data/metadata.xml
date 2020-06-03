@@ -71,51 +71,27 @@
         </color>
     </video>
     <image>
-        <filename>DSC09307.jpg</filename>
+        <filename>DSC09347.jpg</filename>
         <tags></tags>
         <edges>
-            <vertical>9282</vertical>
-            <horizontal>2983</horizontal>
-            <d45>5875</d45>
-            <d135>6702</d135>
-            <nonDirectional>2793</nonDirectional>
+            <vertical>14991</vertical>
+            <horizontal>5188</horizontal>
+            <d45>10010</d45>
+            <d135>8673</d135>
+            <nonDirectional>7082</nonDirectional>
         </edges>
-        <luminance>172.653671265</luminance>
-        <texture>5.706576824</texture>
+        <luminance>180.859527588</luminance>
+        <texture>5.208194733</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <objects>
-            <object>50</object>
-            <object>50</object>
-        </objects>
-        <color>
-            <red>184</red>
-            <green>171</green>
-            <blue>154</blue>
-        </color>
-    </image>
-    <image>
-        <filename>DSC09310.jpg</filename>
-        <tags></tags>
-        <edges>
-            <vertical>8414</vertical>
-            <horizontal>4042</horizontal>
-            <d45>5937</d45>
-            <d135>6831</d135>
-            <nonDirectional>4015</nonDirectional>
-        </edges>
-        <luminance>185.469146729</luminance>
-        <texture>7.198081970</texture>
-        <audioAmplitude>0.000000000</audioAmplitude>
-        <nFaces>0</nFaces>
-        <objects>
-            <object>50</object>
+            <object>1</object>
             <object>50</object>
         </objects>
         <color>
-            <red>201</red>
-            <green>183</green>
-            <blue>158</blue>
+            <red>189</red>
+            <green>179</green>
+            <blue>171</blue>
         </color>
     </image>
 </metadata>

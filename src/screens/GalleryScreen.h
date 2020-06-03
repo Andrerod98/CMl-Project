@@ -12,7 +12,7 @@
 
 #include "Gallery.h"
 #include "ofxDatGui.h"
-#include "Settings.h"
+#include "Constants.h"
 
 
 class GalleryScreen : public Screen{

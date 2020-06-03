@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="ofApp">
+    <Position X="24.25" Y="4.75" Width="2.75" />
+    <InheritanceLine Type="Observer" FixedFromPoint="true">
+      <Path>
+        <Point X="28.5" Y="3.853" />
+        <Point X="28.5" Y="4.45" />
+        <Point X="25.625" Y="4.45" />
+        <Point X="25.625" Y="4.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>EChAAkQQAlAABMgAAAKMAgAJAgAQCAAIIEggiCBMAAg=</HashCode>
+      <FileName>src\ofApp.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlaylistManager">
+    <Position X="8" Y="8.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAQAAAAAAAAAAAAAABAAAQAAAAAAAAAEAg=</HashCode>
+      <FileName>src\PlaylistManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Subject">
+    <Position X="4.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAIAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>src\Subject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Observer">
+    <Position X="27.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>src\Observer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Metadata">
+    <Position X="4.5" Y="7.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AARAAAkAAAARAACCAABAAABAAQAQBgKkAABAAAAEgIg=</HashCode>
+      <FileName>src\Metadata.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MediaManager">
+    <Position X="0.5" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AEKIKBwBDIBUIZggAogIUFARAQJkQAaBAWAADAAjA4I=</HashCode>
+      <FileName>src\MediaManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Media">
+    <Position X="11.5" Y="6" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAABDAQAAAAAAAABBEAAAAkAAAAAAAAAAACEAAAAQ=</HashCode>
+      <FileName>src\Media.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MediaGUI">
+    <Position X="11.5" Y="10.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACIIAAAAAAAAwAUAgAIAACAACAAAEEAAAAIAAAIAA=</HashCode>
+      <FileName>src\Media.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Camera">
+    <Position X="4.5" Y="3" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AEBKAAAACAQAICEABgAAAAAQAAAAEAAAAAAACAAEAAA=</HashCode>
+      <FileName>src\Camera.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraScreen">
+    <Position X="11.25" Y="2.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAqIAAIAAAAAAAAEAAAAAECAACAEAAA=</HashCode>
+      <FileName>src\screens\CameraScreen.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GalleryScreen">
+    <Position X="21" Y="2.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ACIAAgAAwAAAgEhAACIAEAQICQAAAAAAAEBAAyAGAJA=</HashCode>
+      <FileName>src\screens\GalleryScreen.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LiveScreen">
+    <Position X="24.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAkAAAAAAAAIIAgAAAAAAAAAAAAABDCAEABA=</HashCode>
+      <FileName>src\screens\LiveScreen.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MetadataScreen">
+    <Position X="14.25" Y="2.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEABJAEiKAAMAAAAAABAIAgKkAABQBCAEAAA=</HashCode>
+      <FileName>src\screens\MetadataScreen.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Screen" Collapsed="true">
+    <Position X="17" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAABAAAQAAAAEQARAIAAAAAAAAAQAAEAABgAGAEAAA=</HashCode>
+      <FileName>src\screens\Screen.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gallery">
+    <Position X="17.75" Y="2.25" Width="2.5" />
+    <InheritanceLine Type="Screen" FixedToPoint="true">
+      <Path>
+        <Point X="17.75" Y="1.312" />
+        <Point X="17.75" Y="1.875" />
+        <Point X="19" Y="1.875" />
+        <Point X="19" Y="2.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AGACggAAAIAAAJgAAAIAMlAAAAEAQAAAACQAAiAEAAA=</HashCode>
+      <FileName>src\components\Gallery.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Header">
+    <Position X="8" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>BAAIQBAQaAAAIEgAAAIIAAABgQQBigBEAGAgDCAEAQA=</HashCode>
+      <FileName>src\components\Header.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XmlManager">
+    <Position X="17.75" Y="8.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAgAEgAAAAAACAEACAAAABACIQUCQAAEEAAAAA=</HashCode>
+      <FileName>src\components\XmlManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Event">
+    <Position X="14.75" Y="8.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAABCAQAABAgAJAAAAAAAAIAEAAABAAA=</HashCode>
+      <FileName>src\Events.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

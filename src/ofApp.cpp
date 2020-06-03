@@ -1,7 +1,9 @@
 #include "ofApp.h"
 
+using namespace constants;
+
 void ofApp::setup() {
-    ofBackground(settings::SECONDARY_COLOR);
+    ofBackground(SECONDARY_COLOR);
     shortcut.load("fonts/Roboto-Medium.ttf", 26);
 
     ofSetVerticalSync(true);
@@ -13,18 +15,18 @@ void ofApp::setup() {
     mediaManager = mediaManager->getInstance();
 	mediaManager->registerObserver(this);
     
-    gallery = new Gallery("image_gallery",galleryWidth,ofGetHeight()-settings::HEADER_HEIGHT - (padding*2) - 200,60,250, 30);
+    gallery = new Gallery("image_gallery",galleryWidth,ofGetHeight()-HEADER_HEIGHT - (padding*2) - 200,60,250, 30);
     
-    galleryScreen = new GalleryScreen("GALLERY", ofGetWidth(),ofGetHeight()-settings::HEADER_HEIGHT,0,settings::HEADER_HEIGHT,20,gallery);
+    galleryScreen = new GalleryScreen("GALLERY", ofGetWidth(),ofGetHeight()-HEADER_HEIGHT,0,HEADER_HEIGHT,20,gallery);
     
     camera = new Camera();
-    cameraScreen = new CameraScreen("CAMERA",ofGetWidth(),ofGetHeight()-settings::HEADER_HEIGHT,0,settings::HEADER_HEIGHT, camera);
+    cameraScreen = new CameraScreen("CAMERA",ofGetWidth(),ofGetHeight()-HEADER_HEIGHT,0,HEADER_HEIGHT, camera);
 
     liveScreen = new LiveScreen("Live", ofGetWidth(),ofGetHeight(),0,0,camera, playlistManager);
     
     vector<string> screens = {"GALLERY", "CAMERA"};
     
-    header = new Header("screen_selector", ofGetWidth(),settings::HEADER_HEIGHT,0,0, screens);
+    header = new Header("screen_selector", ofGetWidth(),HEADER_HEIGHT,0,0, screens);
     
     header->registerObserver(this);
     
@@ -95,8 +97,8 @@ void ofApp::drawRefreshData() {
 	ofSetColor(ofColor::white);
 	refresh.drawString("Refreshing", ofGetWidth() / 2 - (ofGetWidth()*0.5) / 2 + 10, 80 + 20 + 40);
 
-	if (refreshShowing)
-		mediaManager->reloadMedia();
+//	if (refreshShowing)
+		
 }
 
 void ofApp::draw() {
@@ -136,7 +138,7 @@ void ofApp::update(Event event) {
             break;
         case METADATA_BUTTON_PRESS:
             header->setMetadataHeader(mediaManager->getSelectedMedia());
-            metadataScreen = new MetadataScreen("Metadata", ofGetWidth(),ofGetHeight()-settings::HEADER_HEIGHT,0,settings::HEADER_HEIGHT,mediaManager->getSelectedMedia());           
+            metadataScreen = new MetadataScreen("Metadata", ofGetWidth(),ofGetHeight()-HEADER_HEIGHT,0,HEADER_HEIGHT,mediaManager->getSelectedMedia());           
             currentScreen = metadataScreen;
             break;
 		case REFRESH_DATA:
@@ -202,22 +204,22 @@ void ofApp::windowResized(int w, int h) {
     int padding = 10;
     int galleryWidth = w-(padding*4)-100;
     
-    gallery->setSize(galleryWidth,h-settings::HEADER_HEIGHT - (padding*2) - 200);
+    gallery->setSize(galleryWidth,h-HEADER_HEIGHT - (padding*2) - 200);
     
     galleryScreen->setWidth(w);
-    galleryScreen->setHeight(h-settings::HEADER_HEIGHT);
+    galleryScreen->setHeight(h-HEADER_HEIGHT);
     
     cameraScreen->setWidth(w);
-    cameraScreen->setHeight(h-settings::HEADER_HEIGHT);
+    cameraScreen->setHeight(h-HEADER_HEIGHT);
     cameraScreen->setup();
     
     header->setWidth(w);
-    header->setHeight(settings::HEADER_HEIGHT);
+    header->setHeight(HEADER_HEIGHT);
     
     
     
     currentScreen->setWidth(w);
-    currentScreen->setHeight(h - settings::HEADER_HEIGHT);
+    currentScreen->setHeight(h - HEADER_HEIGHT);
     
     liveScreen->setWidth(w);
     liveScreen->setHeight(h);

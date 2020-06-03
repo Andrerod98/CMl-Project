@@ -8,7 +8,7 @@
 #include "Subject.h"
 #include "ofxDatGui.h"
 #include "Media.h"
-#include "Settings.h"
+#include "Constants.h"
 #include "XmlManager.h"
 #include "MediaManager.h"
 

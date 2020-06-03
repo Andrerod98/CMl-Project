@@ -1,6 +1,6 @@
 #include "Header.h"
 
-
+using namespace constants;
 
 Header::Header(string title,int width, int height,int x, int y, vector<string> screens): Screen(title, width, height, x, y){
     
@@ -32,13 +32,13 @@ void Header::drawTabs() {
     int i = 1;
     int a = 0;
     for (string screenTitle : screens) {
-        ofSetColor(settings::FONT_COLOR);
+        ofSetColor(FONT_COLOR);
     
         
         title.drawString(screenTitle, (containerWidth /(screens.size()*2)) * i - (title.stringWidth(screenTitle) / 2), (containerHeight* 0.75 - title.stringHeight(screenTitle) * 0.5));
         
         if(a == currentScreen){
-            ofSetColor(settings::FONT_COLOR);
+            ofSetColor(FONT_COLOR);
             ofDrawLine((containerWidth /(screens.size()*2)) * i - (title.stringWidth(screenTitle) / 2), (containerHeight* 0.75 - title.stringHeight(screenTitle) * 0.5) + 10, (containerWidth /(screens.size()*2)) * i - (title.stringWidth(screenTitle) / 2) + title.stringWidth(screenTitle) , (containerHeight* 0.75 - title.stringHeight(screenTitle) * 0.5) + 10);
         }
         
@@ -59,7 +59,7 @@ void Header::drawTabs() {
 
 void Header::draw(){
     ofFill();
-    ofSetColor(settings::MAIN_COLOR); // fill color
+    ofSetColor(MAIN_COLOR); // fill color
     ofDrawRectangle(0, 0, ofGetWindowWidth(), getHeight());
     
     if(isMetadata)
@@ -114,7 +114,7 @@ void Header::setFullHeader(){
     
     liveButton->setStripeColor(ofColor::red);
     //liveButton->setBorder(settings::FONT_COLOR, 1);
-    liveButton->setBackgroundColor(settings::SECONDARY_COLOR);
+    liveButton->setBackgroundColor(SECONDARY_COLOR);
     liveButton->setLabelColor(ofColor::red);
     liveButton->onButtonEvent(this, &Header::liveButtonPress);
     
@@ -124,8 +124,8 @@ void Header::setFullHeader(){
     configButton->setWidth(80, 10);
     configButton->setLabelUpperCase(false);
     configButton->onButtonEvent(this, &Header::configButtonPress);
-    configButton->setBackgroundColor(settings::SECONDARY_COLOR);
-    configButton->setLabelColor(settings::FONT_COLOR);
+    configButton->setBackgroundColor(SECONDARY_COLOR);
+    configButton->setLabelColor(FONT_COLOR);
     
     
     helpButton = new ofxDatGuiButton("Help");
@@ -134,8 +134,8 @@ void Header::setFullHeader(){
     helpButton->setWidth(70, 10);
     helpButton->setLabelUpperCase(false);
     helpButton->onButtonEvent(this, &Header::helpButtonPress);
-    helpButton->setBackgroundColor(settings::SECONDARY_COLOR);
-    helpButton->setLabelColor(settings::FONT_COLOR);
+    helpButton->setBackgroundColor(SECONDARY_COLOR);
+    helpButton->setLabelColor(FONT_COLOR);
     
 	/*
     refreshMetadata = new ofxDatGuiButton("Refresh Metadata");
@@ -153,8 +153,8 @@ void Header::setFullHeader(){
 	refreshMetadata->setPosition(getWidth() - 485, 40 - 15);
 	refreshMetadata->setWidth(150, 10);
 	refreshMetadata->setLabelUpperCase(false);
-	refreshMetadata->setBackgroundColor(settings::MAIN_COLOR);
-	refreshMetadata->setLabelColor(settings::FONT_COLOR);
+	refreshMetadata->setBackgroundColor(MAIN_COLOR);
+	refreshMetadata->setLabelColor(FONT_COLOR);
 	refreshMetadata->addButton("Soft Reset");
 	refreshMetadata->addButton("Hard Reset");
 	refreshMetadata->onButtonEvent(this, &Header::refreshButtonPress);
@@ -189,7 +189,7 @@ void Header::setMetadataHeader( Media* media){
     liveButton->setLabelUpperCase(false);
     
     ofColor color(0, 0, 0);
-    liveButton->setBackgroundColor(settings::SECONDARY_COLOR);
+    liveButton->setBackgroundColor(SECONDARY_COLOR);
     liveButton->setStripeColor(ofColor::red);
     
     helpButton = new ofxDatGuiButton("Help");
