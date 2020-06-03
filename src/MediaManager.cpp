@@ -540,10 +540,40 @@ int MediaManager::processNTimesObject(ofImage image,ofImage media){
     }
 
     vector< cv::DMatch>  matches;
-    BFMatcher matcher(cv::NORM_L2, true);
+    BFMatcher matcher(cv::NORM_HAMMING, true);
     matcher.match(descriptors_1, descriptors_2, matches);
+    
+    if(matches.size() < 4)
+        return 0;
+    
+    double minDist, maxDist;
+    minDist = maxDist, maxDist;
+    minDist = maxDist = matches[0].distance;
+    for(int i = 1; i < matches.size(); i++){
+        double dist = matches[i].distance;
+        if(dist < minDist){
+            minDist = dist;
+        }
+        
+        if(dist > maxDist){
+            maxDist = dist;
+        }
+    }
+    
+    vector<DMatch> goodMatches;
+    
+    double fTh = 4 * minDist;
+    
+    for(int i = 0 ; i < matches.size(); i++){
 
-    std::sort(matches.begin(), matches.end());
+        if(matches[i].distance <= max(fTh, 0.02))
+            goodMatches.push_back(matches[i]);
+    }
+    
+    if(goodMatches.size() < 4)
+        return 0;
+        
+   /* std::sort(matches.begin(), matches.end());
     while (matches.front().distance * kDistanceCoef < matches.back().distance) {
         matches.pop_back();
     }
@@ -555,7 +585,8 @@ int MediaManager::processNTimesObject(ofImage image,ofImage media){
     findKeyPointsHomography(keypoints_1, keypoints_2, matches, match_mask);
 
     // Return the amount of "good matches"
-    return matches.size();
+    return matches.size();*/
+    return goodMatches.size();
 }
 
 float MediaManager::processRythm(Media* media){
@@ -634,11 +665,13 @@ Metadata MediaManager::processMedia(Media* media) {
 	redMean = greenMean = blueMean = 0.0;
 
 	vector<int> edgeDistribution = {};
+    //NObject
+    vector<int> nObject = {};
 	float rhythm = 0.0;
 	float texture = 0.0;
 	float audioAmplitude = 0.0;
 	int nFaces = 0;
-	int nObject = 0;
+
 	ofColor color = ofColor(0,0,0);    
     
     float frameLuminance = 0;
@@ -693,6 +726,11 @@ Metadata MediaManager::processMedia(Media* media) {
                 texture = processGabor(image);
                 
                 edgeDistribution = processEdges(image);
+                
+                for(ofImage img: objectsImages){
+                    
+                    nObject.push_back(processNTimesObject(img, image));
+                }
 				//calcHist(&imageGrayMat, 1, 0, Mat(), current_hist, 1, &histSize, &histRange, true, false);
                 
             }else {
@@ -733,11 +771,12 @@ Metadata MediaManager::processMedia(Media* media) {
 				img.load(dir.getPath(i));
 				nObject += processNTimesObject(img, image);
 			}
+*/
+            
+         //   if (maxObjects < nObject)
+           //     maxObjects = nObject;
 
-            if (maxObjects < nObject)
-                maxObjects = nObject;
-
-				*/
+				
             
         }
 
@@ -778,10 +817,10 @@ Metadata MediaManager::processMedia(Media* media) {
             //  settings.setValue("metadata:imageUrl" + std::to_string(c) , imagePath);
         }
 
-		nObject = maxObjects;
+		
 		nFaces = maxFaces;
 	}
-    return Metadata(luminance, edgeDistribution, rhythm, texture, audioAmplitude, nFaces, {}, color);
+    return Metadata(luminance, edgeDistribution, rhythm, texture, audioAmplitude, nFaces, nObject, color);
 }
 
 float MediaManager::processGabor(ofImage image) {

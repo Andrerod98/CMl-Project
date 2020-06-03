@@ -27,6 +27,7 @@
 #include "ofxDatGui.h"
 #include "Events.h"
 #include "Subject.h"
+#include <algorithm>
 
 
 using std::cout;

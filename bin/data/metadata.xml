@@ -14,8 +14,8 @@
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <objects>
-            <object>50</object>
-            <object>47</object>
+            <object>40</object>
+            <object>34</object>
         </objects>
         <color>
             <red>187</red>
@@ -38,8 +38,8 @@
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <objects>
-            <object>50</object>
-            <object>50</object>
+            <object>406</object>
+            <object>65</object>
         </objects>
         <color>
             <red>193</red>
@@ -62,8 +62,8 @@
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <objects>
-            <object>17</object>
-            <object>50</object>
+            <object>4</object>
+            <object>62</object>
         </objects>
         <color>
             <red>188</red>
@@ -86,8 +86,8 @@
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <objects>
-            <object>50</object>
-            <object>50</object>
+            <object>88</object>
+            <object>75</object>
         </objects>
         <color>
             <red>124</red>
@@ -110,8 +110,8 @@
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <objects>
-            <object>50</object>
-            <object>50</object>
+            <object>64</object>
+            <object>45</object>
         </objects>
         <color>
             <red>136</red>
@@ -134,8 +134,8 @@
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <objects>
-            <object>50</object>
-            <object>50</object>
+            <object>94</object>
+            <object>70</object>
         </objects>
         <color>
             <red>72</red>
@@ -158,8 +158,8 @@
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <objects>
-            <object>50</object>
-            <object>50</object>
+            <object>79</object>
+            <object>69</object>
         </objects>
         <color>
             <red>39</red>
@@ -182,8 +182,8 @@
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
         <objects>
-            <object>50</object>
-            <object>50</object>
+            <object>89</object>
+            <object>55</object>
         </objects>
         <color>
             <red>77</red>
@@ -196,22 +196,25 @@
         <thumbnails>thumbnails/Duck Army/</thumbnails>
         <tags></tags>
         <edges>
-            <vertical>41140</vertical>
-            <horizontal>227804</horizontal>
-            <d45>189153</d45>
-            <d135>191604</d135>
-            <nonDirectional>75164</nonDirectional>
+            <vertical>27215</vertical>
+            <horizontal>95088</horizontal>
+            <d45>79660</d45>
+            <d135>78103</d135>
+            <nonDirectional>50022</nonDirectional>
         </edges>
-        <luminance>84.638801575</luminance>
-        <texture>14.415289879</texture>
+        <luminance>10.358156204</luminance>
+        <texture>5.889221668</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
-        <objects></objects>
+        <objects>
+            <object>97</object>
+            <object>83</object>
+        </objects>
         <rhythm>0.000000000</rhythm>
         <color>
-            <red>78</red>
-            <green>85</green>
-            <blue>97</blue>
+            <red>10</red>
+            <green>10</green>
+            <blue>10</blue>
         </color>
     </video>
     <video>
@@ -219,22 +222,25 @@
         <thumbnails>thumbnails/Good evening/</thumbnails>
         <tags></tags>
         <edges>
-            <vertical>12904</vertical>
-            <horizontal>47093</horizontal>
-            <d45>44583</d45>
-            <d135>44721</d135>
-            <nonDirectional>19394</nonDirectional>
+            <vertical>8836</vertical>
+            <horizontal>19385</horizontal>
+            <d45>15008</d45>
+            <d135>14991</d135>
+            <nonDirectional>14526</nonDirectional>
         </edges>
-        <luminance>144.339141846</luminance>
-        <texture>19.275016785</texture>
+        <luminance>52.372516632</luminance>
+        <texture>14.464468002</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
-        <objects></objects>
+        <objects>
+            <object>78</object>
+            <object>82</object>
+        </objects>
         <rhythm>0.000000000</rhythm>
         <color>
-            <red>192</red>
-            <green>128</green>
-            <blue>156</blue>
+            <red>53</red>
+            <green>52</green>
+            <blue>50</blue>
         </color>
     </video>
     <video>
@@ -242,25 +248,467 @@
         <thumbnails>thumbnails/Kid dance/</thumbnails>
         <tags></tags>
         <edges>
-            <vertical>8421</vertical>
-            <horizontal>52625</horizontal>
-            <d45>40901</d45>
-            <d135>42703</d135>
-            <nonDirectional>16254</nonDirectional>
+            <vertical>22294</vertical>
+            <horizontal>39588</horizontal>
+            <d45>31835</d45>
+            <d135>31897</d135>
+            <nonDirectional>31428</nonDirectional>
         </edges>
-        <luminance>48.029716492</luminance>
-        <texture>19.791702271</texture>
+        <luminance>48.249416351</luminance>
+        <texture>17.058389664</texture>
         <audioAmplitude>0.000000000</audioAmplitude>
         <nFaces>0</nFaces>
-        <objects></objects>
+        <objects>
+            <object>86</object>
+            <object>89</object>
+        </objects>
         <rhythm>0.000000000</rhythm>
         <color>
-            <red>54</red>
-            <green>44</green>
-            <blue>61</blue>
+            <red>47</red>
+            <green>48</green>
+            <blue>49</blue>
         </color>
     </video>
     <video>
         <filename>Lebron James.mp4</filename>
+        <thumbnails>thumbnails/Lebron James/</thumbnails>
+        <tags></tags>
+        <edges>
+            <vertical>21905</vertical>
+            <horizontal>38644</horizontal>
+            <d45>30586</d45>
+            <d135>30222</d135>
+            <nonDirectional>30085</nonDirectional>
+        </edges>
+        <luminance>44.094696045</luminance>
+        <texture>17.484888077</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <objects>
+            <object>86</object>
+            <object>78</object>
+        </objects>
+        <rhythm>0.000000000</rhythm>
+        <color>
+            <red>45</red>
+            <green>43</green>
+            <blue>44</blue>
+        </color>
+    </video>
+    <video>
+        <filename>Mr Postman.mp4</filename>
+        <thumbnails>thumbnails/Mr Postman/</thumbnails>
+        <tags></tags>
+        <edges>
+            <vertical>20555</vertical>
+            <horizontal>30801</horizontal>
+            <d45>24397</d45>
+            <d135>23893</d135>
+            <nonDirectional>25793</nonDirectional>
+        </edges>
+        <luminance>31.080247879</luminance>
+        <texture>16.850347519</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <objects>
+            <object>77</object>
+            <object>84</object>
+        </objects>
+        <rhythm>0.000000000</rhythm>
+        <color>
+            <red>30</red>
+            <green>31</green>
+            <blue>29</blue>
+        </color>
+    </video>
+    <video>
+        <filename>NaeNae to anything .mp4</filename>
+        <thumbnails>thumbnails/NaeNae to anything /</thumbnails>
+        <tags></tags>
+        <edges>
+            <vertical>20555</vertical>
+            <horizontal>30801</horizontal>
+            <d45>24397</d45>
+            <d135>23893</d135>
+            <nonDirectional>25793</nonDirectional>
+        </edges>
+        <luminance>31.080232620</luminance>
+        <texture>16.850347519</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <objects>
+            <object>77</object>
+            <object>84</object>
+        </objects>
+        <rhythm>0.000000000</rhythm>
+        <color>
+            <red>30</red>
+            <green>31</green>
+            <blue>29</blue>
+        </color>
+    </video>
+    <video>
+        <filename>Okay, Obey, OJ Vine.mp4</filename>
+        <thumbnails>thumbnails/Okay, Obey, OJ Vine/</thumbnails>
+        <tags></tags>
+        <edges>
+            <vertical>13175</vertical>
+            <horizontal>20900</horizontal>
+            <d45>16251</d45>
+            <d135>16454</d135>
+            <nonDirectional>18211</nonDirectional>
+        </edges>
+        <luminance>40.558795929</luminance>
+        <texture>17.011514664</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <objects>
+            <object>86</object>
+            <object>68</object>
+        </objects>
+        <rhythm>0.000000000</rhythm>
+        <color>
+            <red>39</red>
+            <green>40</green>
+            <blue>42</blue>
+        </color>
+    </video>
+    <video>
+        <filename>Squidward Dab.mp4</filename>
+        <thumbnails>thumbnails/Squidward Dab/</thumbnails>
+        <tags></tags>
+        <edges>
+            <vertical>27581</vertical>
+            <horizontal>40976</horizontal>
+            <d45>34174</d45>
+            <d135>33117</d135>
+            <nonDirectional>35608</nonDirectional>
+        </edges>
+        <luminance>43.433967590</luminance>
+        <texture>19.317031860</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <objects>
+            <object>90</object>
+            <object>82</object>
+        </objects>
+        <rhythm>0.000000000</rhythm>
+        <color>
+            <red>43</red>
+            <green>43</green>
+            <blue>44</blue>
+        </color>
+    </video>
+    <video>
+        <filename>Turn those lights off.mp4</filename>
+        <thumbnails>thumbnails/Turn those lights off/</thumbnails>
+        <tags></tags>
+        <edges>
+            <vertical>70301</vertical>
+            <horizontal>184826</horizontal>
+            <d45>160225</d45>
+            <d135>159288</d135>
+            <nonDirectional>111692</nonDirectional>
+        </edges>
+        <luminance>25.298543930</luminance>
+        <texture>14.857957840</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <objects>
+            <object>77</object>
+            <object>75</object>
+        </objects>
+        <rhythm>0.000000000</rhythm>
+        <color>
+            <red>25</red>
+            <green>25</green>
+            <blue>25</blue>
+        </color>
+    </video>
+    <video>
+        <filename>Vertical Bars .mp4</filename>
+        <thumbnails>thumbnails/Vertical Bars /</thumbnails>
+        <tags></tags>
+        <edges>
+            <vertical>41173</vertical>
+            <horizontal>137552</horizontal>
+            <d45>115684</d45>
+            <d135>116027</d135>
+            <nonDirectional>77722</nonDirectional>
+        </edges>
+        <luminance>12.445313454</luminance>
+        <texture>6.968867302</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <objects>
+            <object>78</object>
+            <object>74</object>
+        </objects>
+        <rhythm>0.000000000</rhythm>
+        <color>
+            <red>12</red>
+            <green>12</green>
+            <blue>12</blue>
+        </color>
+    </video>
+    <video>
+        <filename>Walmart Rat Scare .mp4</filename>
+        <thumbnails>thumbnails/Walmart Rat Scare /</thumbnails>
+        <tags></tags>
+        <edges>
+            <vertical>6753</vertical>
+            <horizontal>19967</horizontal>
+            <d45>15776</d45>
+            <d135>15871</d135>
+            <nonDirectional>11859</nonDirectional>
+        </edges>
+        <luminance>8.055754662</luminance>
+        <texture>3.712917328</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <objects>
+            <object>68</object>
+            <object>76</object>
+        </objects>
+        <rhythm>0.000000000</rhythm>
+        <color>
+            <red>8</red>
+            <green>8</green>
+            <blue>8</blue>
+        </color>
+    </video>
+    <video>
+        <filename>Why you always lying .mp4</filename>
+        <thumbnails>thumbnails/Why you always lying /</thumbnails>
+        <tags></tags>
+        <edges>
+            <vertical>6753</vertical>
+            <horizontal>19967</horizontal>
+            <d45>15776</d45>
+            <d135>15871</d135>
+            <nonDirectional>11859</nonDirectional>
+        </edges>
+        <luminance>8.055754662</luminance>
+        <texture>3.712917328</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <objects>
+            <object>68</object>
+            <object>76</object>
+        </objects>
+        <rhythm>0.000000000</rhythm>
+        <color>
+            <red>8</red>
+            <green>8</green>
+            <blue>8</blue>
+        </color>
+    </video>
+    <video>
+        <filename>YOU CALL ME A BANANA! .mp4</filename>
+        <thumbnails>thumbnails/YOU CALL ME A BANANA! /</thumbnails>
+        <tags></tags>
+        <edges>
+            <vertical>6753</vertical>
+            <horizontal>19967</horizontal>
+            <d45>15776</d45>
+            <d135>15871</d135>
+            <nonDirectional>11859</nonDirectional>
+        </edges>
+        <luminance>8.055740356</luminance>
+        <texture>3.712917328</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <objects>
+            <object>68</object>
+            <object>76</object>
+        </objects>
+        <rhythm>0.000000000</rhythm>
+        <color>
+            <red>8</red>
+            <green>8</green>
+            <blue>8</blue>
+        </color>
+    </video>
+    <video>
+        <filename>fingers 2.mov</filename>
+        <thumbnails>thumbnails/fingers 2/</thumbnails>
+        <tags></tags>
+        <edges>
+            <vertical>1415</vertical>
+            <horizontal>3164</horizontal>
+            <d45>2413</d45>
+            <d135>2428</d135>
+            <nonDirectional>2364</nonDirectional>
+        </edges>
+        <luminance>1.121628046</luminance>
+        <texture>1.510134578</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <objects>
+            <object>40</object>
+            <object>38</object>
+        </objects>
+        <rhythm>0.000000000</rhythm>
+        <color>
+            <red>1</red>
+            <green>1</green>
+            <blue>1</blue>
+        </color>
+    </video>
+    <video>
+        <filename>fingers copy 2.mov</filename>
+        <thumbnails>thumbnails/fingers copy 2/</thumbnails>
+        <tags></tags>
+        <edges>
+            <vertical>1990</vertical>
+            <horizontal>3809</horizontal>
+            <d45>2771</d45>
+            <d135>2759</d135>
+            <nonDirectional>3352</nonDirectional>
+        </edges>
+        <luminance>1.394948125</luminance>
+        <texture>1.744812489</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <objects>
+            <object>46</object>
+            <object>63</object>
+        </objects>
+        <rhythm>0.000000000</rhythm>
+        <color>
+            <red>1</red>
+            <green>1</green>
+            <blue>1</blue>
+        </color>
+    </video>
+    <video>
+        <filename>fingers copy 3.mov</filename>
+        <thumbnails>thumbnails/fingers copy 3/</thumbnails>
+        <tags></tags>
+        <edges>
+            <vertical>1998</vertical>
+            <horizontal>3365</horizontal>
+            <d45>2418</d45>
+            <d135>2400</d135>
+            <nonDirectional>3432</nonDirectional>
+        </edges>
+        <luminance>1.046584964</luminance>
+        <texture>1.339885235</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <objects>
+            <object>36</object>
+            <object>30</object>
+        </objects>
+        <rhythm>0.000000000</rhythm>
+        <color>
+            <red>1</red>
+            <green>1</green>
+            <blue>1</blue>
+        </color>
+    </video>
+    <video>
+        <filename>fingers copy 4.mov</filename>
+        <thumbnails>thumbnails/fingers copy 4/</thumbnails>
+        <tags></tags>
+        <edges>
+            <vertical>1998</vertical>
+            <horizontal>3365</horizontal>
+            <d45>2418</d45>
+            <d135>2400</d135>
+            <nonDirectional>3432</nonDirectional>
+        </edges>
+        <luminance>1.046584964</luminance>
+        <texture>1.339885235</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <objects>
+            <object>36</object>
+            <object>30</object>
+        </objects>
+        <rhythm>0.000000000</rhythm>
+        <color>
+            <red>1</red>
+            <green>1</green>
+            <blue>1</blue>
+        </color>
+    </video>
+    <video>
+        <filename>fingers copy.mov</filename>
+        <thumbnails>thumbnails/fingers copy/</thumbnails>
+        <tags></tags>
+        <edges>
+            <vertical>1998</vertical>
+            <horizontal>3365</horizontal>
+            <d45>2418</d45>
+            <d135>2400</d135>
+            <nonDirectional>3432</nonDirectional>
+        </edges>
+        <luminance>1.046584964</luminance>
+        <texture>1.339885235</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <objects>
+            <object>36</object>
+            <object>30</object>
+        </objects>
+        <rhythm>0.000000000</rhythm>
+        <color>
+            <red>1</red>
+            <green>1</green>
+            <blue>1</blue>
+        </color>
+    </video>
+    <video>
+        <filename>fingers.mov</filename>
+        <thumbnails>thumbnails/fingers/</thumbnails>
+        <tags></tags>
+        <edges>
+            <vertical>2159</vertical>
+            <horizontal>3349</horizontal>
+            <d45>2393</d45>
+            <d135>2392</d135>
+            <nonDirectional>3584</nonDirectional>
+        </edges>
+        <luminance>1.022128582</luminance>
+        <texture>1.309572339</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <objects>
+            <object>41</object>
+            <object>36</object>
+        </objects>
+        <rhythm>0.000000000</rhythm>
+        <color>
+            <red>1</red>
+            <green>1</green>
+            <blue>1</blue>
+        </color>
+    </video>
+    <video>
+        <filename>motions.mp4</filename>
+        <thumbnails>thumbnails/motions/</thumbnails>
+        <tags></tags>
+        <edges>
+            <vertical>5711</vertical>
+            <horizontal>9140</horizontal>
+            <d45>6603</d45>
+            <d135>6641</d135>
+            <nonDirectional>9897</nonDirectional>
+        </edges>
+        <luminance>0.939452529</luminance>
+        <texture>1.198295355</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>0</nFaces>
+        <objects>
+            <object>24</object>
+            <object>40</object>
+        </objects>
+        <rhythm>0.000000000</rhythm>
+        <color>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+        </color>
     </video>
 </metadata>
