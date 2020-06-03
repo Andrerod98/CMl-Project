@@ -1,7 +1,7 @@
 <metadata>
     <image>
         <filename>DSC09302.jpg</filename>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>4879</vertical>
             <horizontal>1520</horizontal>
@@ -25,7 +25,7 @@
     </image>
     <image>
         <filename>DSC09305.jpg</filename>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>7935</vertical>
             <horizontal>3292</horizontal>
@@ -49,7 +49,7 @@
     </image>
     <image>
         <filename>DSC09347.jpg</filename>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>14923</vertical>
             <horizontal>5182</horizontal>
@@ -73,7 +73,7 @@
     </image>
     <image>
         <filename>photo-1503710683168-b58707681b9c.jpeg</filename>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>27802</vertical>
             <horizontal>33452</horizontal>
@@ -97,7 +97,7 @@
     </image>
     <image>
         <filename>photo-1519093560741-46c36f8c65a0.jpeg</filename>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>2661</vertical>
             <horizontal>33130</horizontal>
@@ -121,7 +121,7 @@
     </image>
     <image>
         <filename>photo-1519391280856-d299f0ab3931.jpeg</filename>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>16654</vertical>
             <horizontal>19937</horizontal>
@@ -145,7 +145,7 @@
     </image>
     <image>
         <filename>photo-1545936288-8ff229caf7ec.jpeg</filename>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>5379</vertical>
             <horizontal>6976</horizontal>
@@ -169,7 +169,7 @@
     </image>
     <image>
         <filename>photo-1563818072824-ed3d6ff52955.jpeg</filename>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>18102</vertical>
             <horizontal>25846</horizontal>
@@ -194,7 +194,7 @@
     <video>
         <filename>Duck Army.mp4</filename>
         <thumbnails>thumbnails/Duck Army/</thumbnails>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>27215</vertical>
             <horizontal>95088</horizontal>
@@ -220,7 +220,7 @@
     <video>
         <filename>Good evening.mp4</filename>
         <thumbnails>thumbnails/Good evening/</thumbnails>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>8836</vertical>
             <horizontal>19385</horizontal>
@@ -246,7 +246,7 @@
     <video>
         <filename>Kid dance.mp4</filename>
         <thumbnails>thumbnails/Kid dance/</thumbnails>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>22294</vertical>
             <horizontal>39588</horizontal>
@@ -272,7 +272,7 @@
     <video>
         <filename>Lebron James.mp4</filename>
         <thumbnails>thumbnails/Lebron James/</thumbnails>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>21905</vertical>
             <horizontal>38644</horizontal>
@@ -298,7 +298,7 @@
     <video>
         <filename>Mr Postman.mp4</filename>
         <thumbnails>thumbnails/Mr Postman/</thumbnails>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>20555</vertical>
             <horizontal>30801</horizontal>
@@ -324,7 +324,7 @@
     <video>
         <filename>NaeNae to anything .mp4</filename>
         <thumbnails>thumbnails/NaeNae to anything /</thumbnails>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>20555</vertical>
             <horizontal>30801</horizontal>
@@ -350,7 +350,7 @@
     <video>
         <filename>Okay, Obey, OJ Vine.mp4</filename>
         <thumbnails>thumbnails/Okay, Obey, OJ Vine/</thumbnails>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>13175</vertical>
             <horizontal>20900</horizontal>
@@ -376,7 +376,7 @@
     <video>
         <filename>Squidward Dab.mp4</filename>
         <thumbnails>thumbnails/Squidward Dab/</thumbnails>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>27581</vertical>
             <horizontal>40976</horizontal>
@@ -402,7 +402,7 @@
     <video>
         <filename>Turn those lights off.mp4</filename>
         <thumbnails>thumbnails/Turn those lights off/</thumbnails>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>70301</vertical>
             <horizontal>184826</horizontal>
@@ -428,7 +428,7 @@
     <video>
         <filename>Vertical Bars .mp4</filename>
         <thumbnails>thumbnails/Vertical Bars /</thumbnails>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>41173</vertical>
             <horizontal>137552</horizontal>
@@ -454,7 +454,7 @@
     <video>
         <filename>Walmart Rat Scare .mp4</filename>
         <thumbnails>thumbnails/Walmart Rat Scare /</thumbnails>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>6753</vertical>
             <horizontal>19967</horizontal>
@@ -480,7 +480,7 @@
     <video>
         <filename>Why you always lying .mp4</filename>
         <thumbnails>thumbnails/Why you always lying /</thumbnails>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>6753</vertical>
             <horizontal>19967</horizontal>
@@ -506,7 +506,7 @@
     <video>
         <filename>YOU CALL ME A BANANA! .mp4</filename>
         <thumbnails>thumbnails/YOU CALL ME A BANANA! /</thumbnails>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>6753</vertical>
             <horizontal>19967</horizontal>
@@ -532,7 +532,7 @@
     <video>
         <filename>fingers 2.mov</filename>
         <thumbnails>thumbnails/fingers 2/</thumbnails>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>1415</vertical>
             <horizontal>3164</horizontal>
@@ -558,7 +558,7 @@
     <video>
         <filename>fingers copy 2.mov</filename>
         <thumbnails>thumbnails/fingers copy 2/</thumbnails>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>1990</vertical>
             <horizontal>3809</horizontal>
@@ -584,7 +584,7 @@
     <video>
         <filename>fingers copy 3.mov</filename>
         <thumbnails>thumbnails/fingers copy 3/</thumbnails>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>1998</vertical>
             <horizontal>3365</horizontal>
@@ -610,7 +610,7 @@
     <video>
         <filename>fingers copy 4.mov</filename>
         <thumbnails>thumbnails/fingers copy 4/</thumbnails>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>1998</vertical>
             <horizontal>3365</horizontal>
@@ -636,7 +636,7 @@
     <video>
         <filename>fingers copy.mov</filename>
         <thumbnails>thumbnails/fingers copy/</thumbnails>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>1998</vertical>
             <horizontal>3365</horizontal>
@@ -662,7 +662,7 @@
     <video>
         <filename>fingers.mov</filename>
         <thumbnails>thumbnails/fingers/</thumbnails>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>2159</vertical>
             <horizontal>3349</horizontal>
@@ -688,7 +688,7 @@
     <video>
         <filename>motions.mp4</filename>
         <thumbnails>thumbnails/motions/</thumbnails>
-        <tags></tags>
+        <tags />
         <edges>
             <vertical>5711</vertical>
             <horizontal>9140</horizontal>
@@ -711,4 +711,28 @@
             <blue>0</blue>
         </color>
     </video>
+    <image>
+        <filename>1493458748-beauty-face-517.jpg</filename>
+        <tags></tags>
+        <edges>
+            <vertical>13162</vertical>
+            <horizontal>15064</horizontal>
+            <d45>14367</d45>
+            <d135>13664</d135>
+            <nonDirectional>9845</nonDirectional>
+        </edges>
+        <luminance>132.000595093</luminance>
+        <texture>2.795061350</texture>
+        <audioAmplitude>0.000000000</audioAmplitude>
+        <nFaces>1</nFaces>
+        <objects>
+            <object>89</object>
+            <object>71</object>
+        </objects>
+        <color>
+            <red>128</red>
+            <green>132</green>
+            <blue>141</blue>
+        </color>
+    </image>
 </metadata>
